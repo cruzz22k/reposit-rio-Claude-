@@ -1,8 +1,1043 @@
-{ "title": "O que aconteceria se você nascesse na Coreia do Norte?", "duration": 16,
-  "shots": [
-    { "id": "a001", "start": 0, "end": 4, "line": "O que aconteceria se você nascesse na Coreia do Norte?", "scene": "3D: avenida monumental de Pyongyang ao entardecer, torre com chama, multidão em formação; título", "captions": false },
-    { "id": "a002", "start": 4, "end": 8, "line": "o governo já tem uma ficha sua. Ela se chama songbun.", "scene": "Berçário à noite: funcionário de sobretudo ao lado do berço, ficha SONGBUN carimbada", "in": {"type": "dip", "dur": 0.5} },
-    { "id": "a003", "start": 8, "end": 12, "line": "Tem os retratos de Kim Il Sung e Kim Jong Il.", "scene": "Rosto gigante da criança de lenço vermelho olhando para os dois retratos na parede" },
-    { "id": "a004", "start": 12, "end": 16, "line": "você arriscaria atravessar o rio… ou ficaria?", "scene": "3D: rio na fronteira à noite, torre de vigia com holofote, luzes da China na outra margem", "in": {"type": "dip", "dur": 0.5} }
-  ],
-  "music": [ {"start": 0, "end": 16, "mood": "mystery", "intensity": 0.4} ], "sfx": [] }
+{
+ "title": "O que aconteceria se você nascesse na Coreia do Norte?",
+ "duration": 142.5,
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "end": 3.15,
+   "line": "O que aconteceria se você nascesse na Coreia do Norte?",
+   "scene": "3D: avenida de Pyongyang ao entardecer, torre com chama, formação; título",
+   "set": "avenida3d",
+   "captions": false,
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "riser",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s02",
+   "start": 3.15,
+   "end": 6.0,
+   "line": "No dia em que você nasce, antes mesmo do seu primeiro banho,",
+   "scene": "Berçário à noite, bebê no berço, bacia de banho ainda fumegando, push-in",
+   "set": "bercario",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s03",
+   "start": 6.0,
+   "end": 8.25,
+   "line": "o governo já tem uma ficha sua.",
+   "scene": "Funcionário de sobretudo ao lado do berço segura uma ficha; a ficha salta na tela",
+   "set": "bercario",
+   "sfx": [
+    {
+     "at": 0.9,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s04",
+   "start": 8.25,
+   "end": 9.8,
+   "line": "Ela se chama songbun.",
+   "scene": "Insert: a ficha SONGBUN enche a tela, carimbo vermelho bate em \"songbun\"",
+   "set": "bercario",
+   "sfx": [
+    {
+     "at": 0.95,
+     "name": "impact",
+     "gain": -8
+    }
+   ]
+  },
+  {
+   "id": "s05",
+   "start": 9.8,
+   "end": 13.4,
+   "line": "É uma classificação que diz o quanto a sua família é leal ao regime.",
+   "scene": "Blueprint: família de traço, medidor LEALDADE AO REGIME enchendo",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "blip",
+     "gain": -14
+    },
+    {
+     "at": 1.2,
+     "name": "counter",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "start": 13.4,
+   "end": 15.05,
+   "line": "E ela não depende de nada que você",
+   "scene": "Rosto gigante do bebê, confuso, berçário desfocado",
+   "set": "bercario",
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s07",
+   "start": 15.05,
+   "end": 17.55,
+   "line": "fez. Depende do que seus avós fizeram.",
+   "scene": "Blueprint: árvore genealógica, avós no alto, setas douradas descem até o bebê",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "swish",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s08",
+   "start": 17.55,
+   "end": 19.25,
+   "line": "Se seu avô lutou ao lado do partido,",
+   "scene": "Flashback sépia: o avô com fuzil no morro ao lado da bandeira vermelha, fumaça",
+   "set": "guerra",
+   "in": {
+    "type": "dipWhite",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "impact",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s09",
+   "start": 19.25,
+   "end": 20.6,
+   "line": "você nasce no topo.",
+   "scene": "Pirâmide do songbun (LEAL / VACILANTE / HOSTIL), o bebê sobe ao topo dourado",
+   "set": "piramide",
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "shimmer",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 20.6,
+   "end": 22.35,
+   "line": "Pode morar na capital, Pyongyang,",
+   "scene": "3D: Pyongyang vista do alto, rótulo PYONGYANG",
+   "set": "avenida3d",
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "city",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s11",
+   "start": 22.35,
+   "end": 24.2,
+   "line": "e estudar nas melhores escolas.",
+   "scene": "Criança de lenço vermelho subindo a escadaria de uma escola grandiosa, luz dourada",
+   "set": "escola",
+   "amb": {
+    "name": "city",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s12",
+   "start": 24.2,
+   "end": 25.85,
+   "line": "Mas se ele foi visto como inimigo,",
+   "scene": "Pirâmide: o marcador cai até a base HOSTIL, vermelha",
+   "set": "piramide",
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "stinger",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 25.85,
+   "end": 27.55,
+   "line": "essa marca vai te acompanhar.",
+   "scene": "Criança andando numa rua cinzenta; a sombra na parede é um carimbo vermelho que a segue",
+   "set": "rua",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s14",
+   "start": 27.55,
+   "end": 32.25,
+   "line": "Ela pode decidir onde você mora, onde trabalha e até com quem você pode casar.",
+   "scene": "Três ícones carimbados: casa (mora), mina (trabalha), alianças (casar)",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.1,
+     "name": "hit",
+     "gain": -12
+    },
+    {
+     "at": 2.35,
+     "name": "hit",
+     "gain": -12
+    },
+    {
+     "at": 4.0,
+     "name": "hit",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 32.25,
+   "end": 35.35,
+   "line": "Você cresce numa casa onde a parede mais importante da sala",
+   "scene": "Sala: família sentada à mesa baixa, parede do fundo com dois retratos iluminados, push-in",
+   "set": "casa",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s16",
+   "start": 35.35,
+   "end": 36.85,
+   "line": "não tem foto da família.",
+   "scene": "Close na parede: contorno pontilhado de uma foto de família, riscado",
+   "set": "casa",
+   "sfx": [
+    {
+     "at": 1.0,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 36.85,
+   "end": 39.45,
+   "line": "Tem os retratos de Kim Il Sung e Kim Jong Il.",
+   "scene": "Rosto gigante da criança de lenço vermelho olhando para os dois retratos",
+   "set": "casa",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s18",
+   "start": 39.45,
+   "end": 41.4,
+   "line": "Eles precisam estar sempre limpos.",
+   "scene": "A mãe num banquinho limpando o retrato com um pano branco; brilho",
+   "set": "casa",
+   "sfx": [
+    {
+     "at": 1.2,
+     "name": "shimmer",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s19",
+   "start": 41.4,
+   "end": 42.5,
+   "line": "Os vizinhos sabem disso.",
+   "scene": "Janela: silhuetas de vizinhos espiando de fora",
+   "set": "casa",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s20",
+   "start": 42.5,
+   "end": 44.1,
+   "line": "E podem aparecer pra conferir.",
+   "scene": "A porta abre: a chefe do bairro passa o dedo na moldura; a família em pé, rígida",
+   "set": "casa",
+   "sfx": [
+    {
+     "at": 0.15,
+     "name": "impact",
+     "gain": -16
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s21",
+   "start": 44.1,
+   "end": 46.82,
+   "line": "Aos sete anos, você entra na União das Crianças.",
+   "scene": "Cerimônia: fileiras de crianças num palco com bandeiras vermelhas; selo 7 ANOS",
+   "set": "cerimonia",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "murmur",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s22",
+   "start": 46.82,
+   "end": 48.55,
+   "line": "Ganha um lenço vermelho,",
+   "scene": "Rosto gigante da criança; o lenço vermelho é amarrado no pescoço",
+   "set": "cerimonia",
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "swish",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 48.55,
+   "end": 52.95,
+   "line": "mas antes precisa decorar o juramento, as regras e os poemas dos líderes.",
+   "scene": "Noite, criança na mesa com abajur; livros JURAMENTO, REGRAS, POEMAS caem na pilha",
+   "set": "quarto",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   },
+   "sfx": [
+    {
+     "at": 1.6,
+     "name": "hit",
+     "gain": -16
+    },
+    {
+     "at": 2.5,
+     "name": "hit",
+     "gain": -16
+    },
+    {
+     "at": 3.3,
+     "name": "hit",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 52.95,
+   "end": 54.7,
+   "line": "Na primavera, as aulas param.",
+   "scene": "Sala de aula vazia, flores de primavera na janela, carteiras vazias",
+   "set": "classe",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s25",
+   "start": 54.7,
+   "end": 57.1,
+   "line": "Você e sua turma vão pro campo plantar arroz,",
+   "scene": "3D: arrozal com crianças curvadas plantando em fileiras, montanhas, água refletindo",
+   "set": "arroz3d",
+   "in": {
+    "type": "whip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s26",
+   "start": 57.1,
+   "end": 58.82,
+   "line": "do amanhecer até a noite,",
+   "scene": "Perfil da criança plantando; o céu vai do amanhecer à noite",
+   "set": "arrozal",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s27",
+   "start": 58.82,
+   "end": 60.22,
+   "line": "por cerca de um mês.",
+   "scene": "Rosto cansado da criança; contador DIA 1 → DIA 30",
+   "set": "arrozal",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "counter",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "start": 60.22,
+   "end": 63.38,
+   "line": "Aos doze, você recebe um broche com o rosto dos líderes.",
+   "scene": "Macro: broche vermelho com os líderes preso no peito; selo 12 ANOS",
+   "set": "insert",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 1.4,
+     "name": "ding",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 63.38,
+   "end": 66.12,
+   "line": "A partir dali, nunca mais sai de casa sem ele.",
+   "scene": "Manhã: a criança sai de casa, o broche brilha no peito",
+   "set": "rua",
+   "amb": {
+    "name": "city",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s30",
+   "start": 66.12,
+   "end": 68.8,
+   "line": "Aos treze, começam as sessões de autocrítica.",
+   "scene": "Sala de reunião: crianças em fileiras, professora à frente; selo 13 ANOS",
+   "set": "classe",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s31",
+   "start": 68.8,
+   "end": 73.0,
+   "line": "Toda semana, você fica de pé na frente dos outros, confessa o que fez de errado…",
+   "scene": "De pé na frente da turma, cabeça baixa, confessando; holofote",
+   "set": "classe",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s32",
+   "start": 73.0,
+   "end": 75.85,
+   "line": "e depois escuta todo mundo apontar seus defeitos.",
+   "scene": "Rosto gigante assustado; braços apontando de todos os lados",
+   "set": "classe",
+   "sfx": [
+    {
+     "at": 0.7,
+     "name": "stinger",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 75.85,
+   "end": 78.02,
+   "line": "E você também tem que apontar os deles.",
+   "scene": "Agora você aponta para outro colega, relutante",
+   "set": "classe",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s34",
+   "start": 78.02,
+   "end": 80.58,
+   "line": "Seus pais ainda lembram da fome dos anos 90.",
+   "scene": "Noite, pais à mesa com uma vela, tigela vazia; lembrança sépia ANOS 90",
+   "set": "casa",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s35",
+   "start": 80.58,
+   "end": 83.9,
+   "line": "Centenas de milhares de pessoas morreram, talvez milhões.",
+   "scene": "Grade de pequenas figuras se apagando; CENTENAS DE MILHARES → TALVEZ MILHÕES",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "heartbeat",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s36",
+   "start": 83.9,
+   "end": 86.2,
+   "line": "Foi aí que surgiram os mercados clandestinos,",
+   "scene": "Mercado clandestino à noite: barracas com lampiões, lonas, gente",
+   "set": "mercado",
+   "amb": {
+    "name": "murmur",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s37",
+   "start": 86.2,
+   "end": 88.6,
+   "line": "onde muita família ainda tira o sustento.",
+   "scene": "A mãe vendendo sobre uma lona, um comprador; dinheiro passa de mão",
+   "set": "mercado",
+   "amb": {
+    "name": "murmur",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s38",
+   "start": 88.6,
+   "end": 90.22,
+   "line": "E o seu corpo sente isso:",
+   "scene": "Rosto gigante do adolescente, preocupado",
+   "set": "casa"
+  },
+  {
+   "id": "s39",
+   "start": 90.22,
+   "end": 95.82,
+   "line": "jovens que fugiram de lá chegam a ser até dez centímetros mais baixos que os sul-coreanos da mesma idade.",
+   "scene": "Blueprint: dois jovens lado a lado, régua, cota 10 CM; NORTE x SUL",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 2.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s40",
+   "start": 95.82,
+   "end": 98.98,
+   "line": "O rádio da sua casa vem lacrado. Só pega o governo.",
+   "scene": "Macro: rádio com o dial lacrado, ponteiro preso numa estação",
+   "set": "insert",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 1.4,
+     "name": "glitch",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s41",
+   "start": 98.98,
+   "end": 101.4,
+   "line": "Internet de verdade? Você nunca viu.",
+   "scene": "Rosto do adolescente iluminado por uma tela; ícone do globo riscado",
+   "set": "quarto",
+   "sfx": [
+    {
+     "at": 1.6,
+     "name": "buzz",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "s42",
+   "start": 101.4,
+   "end": 103.65,
+   "line": "Só existe uma rede interna, vigiada.",
+   "scene": "Rede fechada de nós dentro de um muro, um olho vigiando: REDE INTERNA",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s43",
+   "start": 103.65,
+   "end": 106.52,
+   "line": "Se te pegarem com uma novela sul-coreana num pendrive,",
+   "scene": "Debaixo da coberta, de noite, vendo novela no pendrive; lanterna entra pela porta",
+   "set": "quarto",
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   },
+   "sfx": [
+    {
+     "at": 0.55,
+     "name": "impact",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "start": 106.52,
+   "end": 109.8,
+   "line": "você pode pegar de 5 a 15 anos de trabalho forçado.",
+   "scene": "Campo de trabalho forçado ao amanhecer, cerca, figuras com picaretas; 5 A 15 ANOS",
+   "set": "campo",
+   "sfx": [
+    {
+     "at": 1.2,
+     "name": "counter",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s45",
+   "start": 109.8,
+   "end": 112.9,
+   "line": "Pra visitar um parente em outra cidade, você precisa de autorização.",
+   "scene": "Posto de controle na estrada: guarda, cancela, você mostra o salvo-conduto",
+   "set": "rua",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 2.5,
+     "name": "impact",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s46",
+   "start": 112.9,
+   "end": 115.4,
+   "line": "Aos 17, você vai pro exército.",
+   "scene": "3D: soldados marchando no pátio do quartel, bandeiras; selo 17 ANOS",
+   "set": "quartel3d",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s47",
+   "start": 115.4,
+   "end": 118.78,
+   "line": "Os homens ficam cerca de dez anos. As mulheres, sete.",
+   "scene": "Barras de tempo: HOMENS 10 ANOS, MULHERES 7 ANOS",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.4,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 2.8,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s48",
+   "start": 118.78,
+   "end": 120.3,
+   "line": "Você entra adolescente…",
+   "scene": "Portão do quartel: você entra adolescente, farda grande demais",
+   "set": "quartel",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s49",
+   "start": 120.3,
+   "end": 121.85,
+   "line": "e sai com quase trinta.",
+   "scene": "Mesmo enquadramento: você sai adulto, cansado; contador 17 → 29",
+   "set": "quartel",
+   "in": {
+    "type": "flash",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "flash",
+     "gain": -12
+    },
+    {
+     "at": 0.2,
+     "name": "counter",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s50",
+   "start": 121.85,
+   "end": 123.55,
+   "line": "Um dia, você ouve um boato:",
+   "scene": "Noite, rua escura: alguém sussurra no seu ouvido",
+   "set": "rua",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s51",
+   "start": 123.55,
+   "end": 126.5,
+   "line": "do outro lado do rio, na China, a vida é diferente.",
+   "scene": "3D: o rio na fronteira, luzes da China do outro lado",
+   "set": "rio3d",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "shimmer",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s52",
+   "start": 126.5,
+   "end": 128.2,
+   "line": "Mas atravessar é crime.",
+   "scene": "Close na cerca de arame, placa vermelha PROIBIDO, holofote varrendo",
+   "set": "rio",
+   "sfx": [
+    {
+     "at": 1.25,
+     "name": "stinger",
+     "gain": -10
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s53",
+   "start": 128.2,
+   "end": 131.0,
+   "line": "Se a polícia chinesa te pega, você é mandado de volta.",
+   "scene": "Polícia chinesa com luzes de sirene; você levado; seta de volta",
+   "set": "rio",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "carpass",
+     "gain": -16
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s54",
+   "start": 131.0,
+   "end": 134.2,
+   "line": "E quem volta pode passar anos num campo de reeducação.",
+   "scene": "Campo de reeducação na neve, torres de vigia, barracões",
+   "set": "campo",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -18
+   }
+  },
+  {
+   "id": "s55",
+   "start": 134.2,
+   "end": 136.3,
+   "line": "E a sua família pode ser punida junto.",
+   "scene": "A porta da casa dos pais abre com lanterna; pais assustados",
+   "set": "casa",
+   "sfx": [
+    {
+     "at": 0.25,
+     "name": "impact",
+     "gain": -10
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s56",
+   "start": 136.3,
+   "end": 137.27,
+   "line": "Então me diz:",
+   "scene": "Rosto gigante seu, adulto, olhando para nós",
+   "set": "rio",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "s57",
+   "start": 137.27,
+   "end": 139.1,
+   "line": "você arriscaria atravessar o rio…",
+   "scene": "3D: o rio de novo, câmera avança sobre a água",
+   "set": "rio3d",
+   "amb": {
+    "name": "wind",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s58",
+   "start": 139.1,
+   "end": 140.1,
+   "line": "ou ficaria?",
+   "scene": "Você na janela de casa, à noite, olhando para fora",
+   "set": "casa",
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s59",
+   "start": 140.1,
+   "end": 142.5,
+   "line": "Comenta aí.",
+   "scene": "Tela final: a pergunta, balão de comentário, elenco",
+   "set": "fim",
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "captions": false,
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 32.25,
+   "mood": "mystery",
+   "intensity": 0.35
+  },
+  {
+   "start": 32.25,
+   "end": 66.12,
+   "mood": "mystery",
+   "intensity": 0.45
+  },
+  {
+   "start": 66.12,
+   "end": 95.82,
+   "mood": "sad",
+   "intensity": 0.4
+  },
+  {
+   "start": 95.82,
+   "end": 121.85,
+   "mood": "tension",
+   "intensity": 0.55
+  },
+  {
+   "start": 121.85,
+   "end": 136.3,
+   "mood": "dark",
+   "intensity": 0.6
+  },
+  {
+   "start": 136.3,
+   "end": 142.5,
+   "mood": "sad",
+   "intensity": 0.35
+  }
+ ],
+ "sfx": []
+}
