@@ -19,5 +19,12 @@
   "enabled": true,
   "gainDb": -6
  },
- "loudness": -14
+ "loudness": -14,
+ "captionStyle": {
+  "y": 1395,
+  "size": 68,
+  "max": 3,
+  "maxW": 850,
+  "cx": 505
+ }
 }

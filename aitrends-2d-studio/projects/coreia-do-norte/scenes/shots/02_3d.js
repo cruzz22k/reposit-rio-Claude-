@@ -102,7 +102,7 @@ registerShot('s01', { kind: '3d', init: (T) => buildAvenue(T),
     const d = info.dur; animAvenue(s, t);
     T.dolly(s.stage.camera, ease.inOut(t / d) * d, [[0, { pos: [0, 2.2, 21], look: [0, 22, -160] }], [d, { pos: [0, 6.5, 14], look: [0, 32, -160] }]]);
   },
-  overlay(g, t, info) { UI.titleCard(g, t + 0.3, { lines: ['O QUE ACONTECERIA', 'SE VOCÊ NASCESSE NA', 'COREIA DO NORTE?'], dur: info.dur + 0.5, y: E.H * V(0.42, 0.74) }); },
+  overlay(g, t, info) { UI.titleCard(g, t + 0.3, { lines: ['O QUE ACONTECERIA', 'SE VOCÊ NASCESSE NA', 'COREIA DO NORTE?'], dur: info.dur + 0.5, y: E.H * V(0.42, 0.6) }); },
 });
 // s10 — "Pode morar na capital, Pyongyang," — a cidade vista do alto
 registerShot('s10', { kind: '3d', init: (T) => buildAvenue(T),
