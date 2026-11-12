@@ -1,0 +1,8 @@
+{ "title": "O que aconteceria se você nascesse na Coreia do Norte?", "duration": 16,
+  "shots": [
+    { "id": "a001", "start": 0, "end": 4, "line": "O que aconteceria se você nascesse na Coreia do Norte?", "scene": "3D: avenida monumental de Pyongyang ao entardecer, torre com chama, multidão em formação; título", "captions": false },
+    { "id": "a002", "start": 4, "end": 8, "line": "o governo já tem uma ficha sua. Ela se chama songbun.", "scene": "Berçário à noite: funcionário de sobretudo ao lado do berço, ficha SONGBUN carimbada", "in": {"type": "dip", "dur": 0.5} },
+    { "id": "a003", "start": 8, "end": 12, "line": "Tem os retratos de Kim Il Sung e Kim Jong Il.", "scene": "Rosto gigante da criança de lenço vermelho olhando para os dois retratos na parede" },
+    { "id": "a004", "start": 12, "end": 16, "line": "você arriscaria atravessar o rio… ou ficaria?", "scene": "3D: rio na fronteira à noite, torre de vigia com holofote, luzes da China na outra margem", "in": {"type": "dip", "dur": 0.5} }
+  ],
+  "music": [ {"start": 0, "end": 16, "mood": "mystery", "intensity": 0.4} ], "sfx": [] }

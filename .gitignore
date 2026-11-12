@@ -2,3 +2,4 @@ node_modules/
 **/build/
 __pycache__/
 *.pyc
+aitrends-2d-studio/projects/*/out/
