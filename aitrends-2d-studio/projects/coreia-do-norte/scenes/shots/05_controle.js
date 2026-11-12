@@ -91,8 +91,8 @@ registerShot('s39', { draw(g, t, info) {
   const a1 = ease.out(prog(t, 0.1, 0.5)), a2 = ease.out(prog(t, 0.3, 0.7));
   g.save(); g.globalAlpha *= a1; UI.lineFigure(g, { x: xN, y: base, s: sN, pose: POSES.stand, color: bp }); g.restore();
   g.save(); g.globalAlpha *= a2; UI.lineFigure(g, { x: xS, y: base, s: sS, pose: POSES.stand, color: u.cream, facing: -1 }); g.restore();
-  text(g, 'NORTE', xN, base + 60, { size: 44, color: bp, font: FONTS.ui, weight: 900, spacing: 4, alpha: a1 });
-  text(g, 'SUL', xS, base + 60, { size: 44, color: u.cream, font: FONTS.ui, weight: 900, spacing: 4, alpha: a2 });
+  text(g, 'NORTE', xN - 160, base - 40, { size: 44, color: bp, font: FONTS.ui, weight: 900, spacing: 4, alpha: a1 });
+  text(g, 'SUL', xS + 150, base - 40, { size: 44, color: u.cream, font: FONTS.ui, weight: 900, spacing: 4, alpha: a2 });
   const pl = ease.out(prog(t, 1.4, 2.2));
   g.setLineDash([16, 12]); g.lineWidth = 3;
   g.strokeStyle = alpha(bp, 0.7 * pl); g.beginPath(); g.moveTo(xN - 160, topN); g.lineTo(lerp(xN - 160, E.W - 80, pl), topN); g.stroke();
