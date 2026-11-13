@@ -1,0 +1,36 @@
+{
+ "title": "Teste de estilo toon",
+ "aspect": "9:16",
+ "resolution": "1080p",
+ "fps": 24,
+ "style": "midnight",
+ "voiceover": "input/voiceover.wav",
+ "script": null,
+ "duration": 8.5,
+ "captions": true,
+ "bars": "none",
+ "fadeIn": 0.3,
+ "fadeOut": 0.5,
+ "music": {
+  "enabled": true,
+  "gainDb": -17
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14,
+ "captionStyle": {
+  "y": 1250,
+  "size": 60,
+  "max": 1,
+  "maxW": 900,
+  "cx": 540,
+  "hi": "#ffffff",
+  "upper": false,
+  "font": "Nunito",
+  "weight": 900,
+  "stroke": 0,
+  "shadow": 14
+ }
+}

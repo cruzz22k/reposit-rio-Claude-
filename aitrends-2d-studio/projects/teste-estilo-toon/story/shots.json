@@ -1,0 +1,29 @@
+{
+ "title": "Teste de estilo toon",
+ "duration": 8.5,
+ "shots": [
+  {
+   "id": "t1",
+   "start": 0,
+   "end": 3.05,
+   "line": "",
+   "scene": "Jardim à noite: personagem chibi andando na trilha de pedra entre flores que brilham"
+  },
+  {
+   "id": "t2",
+   "start": 3.05,
+   "end": 5.45,
+   "line": "",
+   "scene": "Close do rosto"
+  },
+  {
+   "id": "t3",
+   "start": 5.45,
+   "end": 8.5,
+   "line": "",
+   "scene": "Uma luz acende na mão"
+  }
+ ],
+ "music": [],
+ "sfx": []
+}

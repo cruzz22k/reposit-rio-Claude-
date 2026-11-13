@@ -81,11 +81,11 @@ export function endScreen(g, t, o = {}) {
 }
 // Word-level captions (great for 9:16). Shows a 3–4 word phrase, current word highlighted.
 export function captions(g, globalT, o = {}) {
-  const words = E.words; if (!words.length) return; const { y = V(E.H - 150, E.H * 0.79), size = V(58, 74), max = 4, color = '#ffffff', hi = S().ui.gold, maxW = E.W * 0.88, cx = E.W / 2 } = o;
+  const words = E.words; if (!words.length) return; const { y = V(E.H - 150, E.H * 0.79), size = V(58, 74), max = 4, color = '#ffffff', hi = S().ui.gold, maxW = E.W * 0.88, cx = E.W / 2, upper = true, font = FONTS.title, weight = 700, stroke = 0.16, shadow = 0 } = o;
   let i = -1; for (let k = words.length - 1; k >= 0; k--) if (globalT >= words[k].start - 0.05) { if (globalT <= words[k].end + 0.35) i = k; break; } if (i < 0) return;
-  const st = Math.floor(i / max) * max, group = words.slice(st, st + max); const strs = group.map(w => w.word.trim().toUpperCase());
-  const w0 = strs.map(s => measure(g, s, size)).reduce((a, b) => a + b, 0) + size * 0.3 * (strs.length - 1);
+  const st = Math.floor(i / max) * max, group = words.slice(st, st + max); const strs = group.map(w => upper ? w.word.trim().toUpperCase() : w.word.trim());
+  const w0 = strs.map(s => measure(g, s, size, font, weight)).reduce((a, b) => a + b, 0) + size * 0.3 * (strs.length - 1);
   const sz = size * Math.min(1, maxW / w0);   // shrink long phrases to fit the frame
-  const gap = sz * 0.3, widths = strs.map(s => measure(g, s, sz)), total = widths.reduce((a, b) => a + b, 0) + gap * (strs.length - 1);
-  let x = cx - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, color: cur ? hi : color, stroke: sz * 0.16, strokeColor: 'rgba(0,0,0,.85)' }); g.restore(); x += widths[k] + gap; });
+  const gap = sz * 0.3, widths = strs.map(s => measure(g, s, sz, font, weight)), total = widths.reduce((a, b) => a + b, 0) + gap * (strs.length - 1);
+  let x = cx - total / 2; strs.forEach((s, k) => { const cur = st + k === i; const pop = cur ? 1 + 0.08 * ease.out(prog(globalT, group[k].start, group[k].start + 0.12)) : 1; g.save(); g.translate(x + widths[k] / 2, y); g.scale(pop, pop); text(g, s, 0, 0, { size: sz, color: cur ? hi : color, stroke: sz * stroke, strokeColor: 'rgba(0,0,0,.85)', font, weight, glow: shadow, glowColor: 'rgba(0,0,0,.9)' }); g.restore(); x += widths[k] + gap; });
 }
