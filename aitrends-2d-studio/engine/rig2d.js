@@ -86,6 +86,7 @@ export const EXPR = {
 // face(g, headX, headY, r, {expr, talk, blink, look:[x,y], front, color, facing})  — also used for giant close-ups
 export function face(g, hx, hy, r, o = {}) {
   const ex = { ...(EXPR[o.expr] || EXPR.neutral), ...(o.override || {}) };
+  if (ex.hidden) return;   // silhueta sem rosto (pessoas reais / líderes)
   const col = o.color || S().feature, ink = S().ink;
   const fx = hx + (o.front ? 0 : r * 0.34), fy = hy - r * 0.08;
   const look = o.look || ex.look || [0, 0];

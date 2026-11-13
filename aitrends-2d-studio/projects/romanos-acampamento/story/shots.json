@@ -1,0 +1,915 @@
+{
+ "title": "O que aconteceria se você atacasse um exército romano enquanto ele dormia?",
+ "duration": 138.5,
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "end": 4.45,
+   "line": "O que aconteceria se você atacasse um exército romano enquanto ele dormia?",
+   "scene": "Abertura/capa: acampamento romano no pântano sob a lua, floresta; título",
+   "set": "acampamento",
+   "captions": false,
+   "in": {
+    "type": "fade",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "riser",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s02",
+   "start": 4.45,
+   "end": 6.3,
+   "line": "Germânia. Ano 15.",
+   "scene": "Floresta densa à noite; rótulo GERMÂNIA / ANO 15",
+   "set": "floresta",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s03",
+   "start": 6.3,
+   "end": 7.85,
+   "line": "Você é um guerreiro germânico,",
+   "scene": "Você, guerreiro germânico com lança, entre as árvores, luz da lua",
+   "set": "floresta",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s04",
+   "start": 7.85,
+   "end": 9.95,
+   "line": "escondido na floresta, no meio da noite.",
+   "scene": "Você agachado atrás de um tronco, espiando; arbustos desfocados na frente",
+   "set": "floresta",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s05",
+   "start": 9.95,
+   "end": 12.1,
+   "line": "Seis anos atrás, o seu povo destruiu",
+   "scene": "Flashback: coluna romana numa trilha, guerreiros saltam das árvores",
+   "set": "emboscada",
+   "in": {
+    "type": "dipWhite",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "impact",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s06",
+   "start": 12.1,
+   "end": 14.75,
+   "line": "três legiões romanas inteiras numa emboscada.",
+   "scene": "Três águias de legião em traço, riscadas uma a uma; ANO 9",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "hit",
+     "gain": -12
+    },
+    {
+     "at": 0.6,
+     "name": "hit",
+     "gain": -12
+    },
+    {
+     "at": 1.0,
+     "name": "hit",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "start": 14.75,
+   "end": 18.4,
+   "line": "E agora, outro exército romano está preso no meio do pântano,",
+   "scene": "Coluna romana atolada no pântano com neblina, estandartes",
+   "set": "pantano",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "amb": {
+    "name": "rain",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s08",
+   "start": 18.4,
+   "end": 21.1,
+   "line": "cansado, sem comida, cercado.",
+   "scene": "Rosto do legionário: cansado, faminto, olha em volta",
+   "set": "pantano"
+  },
+  {
+   "id": "s09",
+   "start": 21.1,
+   "end": 23.2,
+   "line": "Você olha para o acampamento deles",
+   "scene": "Por cima do ombro: você em primeiro plano olhando o acampamento com tochas",
+   "set": "acampamento",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s10",
+   "start": 23.2,
+   "end": 24.7,
+   "line": "e percebe uma coisa estranha.",
+   "scene": "Rosto seu, desconfiado",
+   "set": "floresta"
+  },
+  {
+   "id": "s11",
+   "start": 24.7,
+   "end": 28.75,
+   "line": "Eles não dormiram simplesmente no chão. Mesmo exaustos, antes de deitar,",
+   "scene": "Legionários exaustos cavando a vala com pás à luz de tochas",
+   "set": "obra",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "footstep",
+     "gain": -16
+    },
+    {
+     "at": 1.6,
+     "name": "footstep",
+     "gain": -16
+    },
+    {
+     "at": 2.6,
+     "name": "footstep",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 28.75,
+   "end": 30.75,
+   "line": "cavaram uma vala em volta de tudo.",
+   "scene": "Planta vista de cima: o quadrado do acampamento e a vala desenhando-se em volta",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "swish",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 30.75,
+   "end": 34.35,
+   "line": "Quase três metros de fundo e mais três e meio de largura.",
+   "scene": "Corte da vala: cotas 3 M de fundo e 3,5 M de largura, figura para escala",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "pop",
+     "gain": -12
+    },
+    {
+     "at": 2.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 34.35,
+   "end": 36.2,
+   "line": "Com a terra, levantaram um muro.",
+   "scene": "Corte: a terra sobe e vira o muro ao lado da vala",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "whoosh",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 36.2,
+   "end": 38.9,
+   "line": "E em cima do muro, fincaram estacas pontudas, que",
+   "scene": "Soldados fincando estacas pontudas no alto do muro",
+   "set": "obra",
+   "sfx": [
+    {
+     "at": 0.8,
+     "name": "hit",
+     "gain": -14
+    },
+    {
+     "at": 1.6,
+     "name": "hit",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s16",
+   "start": 38.9,
+   "end": 41.05,
+   "line": "cada soldado carregava nas costas.",
+   "scene": "Um legionário marchando com duas estacas amarradas nas costas",
+   "set": "obra",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s17",
+   "start": 41.05,
+   "end": 43.3,
+   "line": "Eles fazem isso toda santa noite.",
+   "scene": "Lapso de tempo: noites passando sobre o acampamento; TODA NOITE",
+   "set": "acampamento",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "tick",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 43.3,
+   "end": 46.7,
+   "line": "Lá dentro, as sentinelas trocam de turno quatro vezes por noite,",
+   "scene": "Sentinelas no passadiço trocando de turno; relógio de 4 turnos",
+   "set": "dentro",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   },
+   "sfx": [
+    {
+     "at": 2.3,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 46.7,
+   "end": 48.55,
+   "line": "sempre com o som de uma trombeta.",
+   "scene": "A trombeta curva soando, ondas de som",
+   "set": "insert",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "powerup",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "start": 48.55,
+   "end": 51.5,
+   "line": "E se um romano dorme no posto, os próprios colegas",
+   "scene": "Sentinela cochilando no posto, apoiado na lança",
+   "set": "dentro",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s21",
+   "start": 51.5,
+   "end": 53.0,
+   "line": "espancam ele até a morte.",
+   "scene": "Sombras de soldados com porretes na lona de uma tenda",
+   "set": "dentro",
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "hit",
+     "gain": -10
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s22",
+   "start": 53.0,
+   "end": 55.8,
+   "line": "Você passa a noite gritando e cantando com os outros guerreiros,",
+   "scene": "Guerreiros na beira da floresta, tochas, gritando e cantando",
+   "set": "floresta",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "murmur",
+    "gain": -18
+   }
+  },
+  {
+   "id": "s23",
+   "start": 55.8,
+   "end": 57.55,
+   "line": "só pra não deixar eles dormirem.",
+   "scene": "Dentro da tenda: romano deitado de olhos abertos, som atravessando a lona",
+   "set": "dentro",
+   "amb": {
+    "name": "murmur",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s24",
+   "start": 57.55,
+   "end": 58.4,
+   "line": "E funciona.",
+   "scene": "Rosto do romano com olheiras",
+   "set": "dentro"
+  },
+  {
+   "id": "s25",
+   "start": 58.4,
+   "end": 62.35,
+   "line": "De madrugada, um cavalo se solta lá dentro e sai correndo entre as barracas.",
+   "scene": "Um cavalo solto galopa entre as barracas de madrugada",
+   "set": "dentro",
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "footstep",
+     "gain": -10
+    },
+    {
+     "at": 0.8,
+     "name": "footstep",
+     "gain": -10
+    },
+    {
+     "at": 1.2,
+     "name": "footstep",
+     "gain": -10
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s26",
+   "start": 62.35,
+   "end": 66.1,
+   "line": "Os romanos acham que vocês invadiram e correm pros portões, em pânico.",
+   "scene": "Romanos correndo em pânico para o portão",
+   "set": "dentro",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "murmur",
+    "gain": -18
+   }
+  },
+  {
+   "id": "s27",
+   "start": 66.1,
+   "end": 70.1,
+   "line": "O general deles, Cecina, se joga no chão, deitado na frente do portão,",
+   "scene": "O general (silhueta sem rosto) deitado atravessado no portão; O GENERAL / CECINA",
+   "set": "portao",
+   "sfx": [
+    {
+     "at": 1.4,
+     "name": "impact",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "murmur",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s28",
+   "start": 70.1,
+   "end": 72.65,
+   "line": "pra que ninguém fuja sem pisar em cima dele.",
+   "scene": "Soldados param na frente do general, sem coragem de pisar",
+   "set": "portao",
+   "amb": {
+    "name": "murmur",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s29",
+   "start": 72.65,
+   "end": 74.9,
+   "line": "O seu líder, Armínio, quer esperar.",
+   "scene": "Conselho na floresta: Armínio (silhueta sem rosto); O LÍDER / ARMÍNIO",
+   "set": "floresta",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s30",
+   "start": 74.9,
+   "end": 78.15,
+   "line": "Deixa eles saírem. No pântano, a gente acaba com eles.",
+   "scene": "Plano em traço: romanos saem do acampamento e são emboscados no pântano",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "swish",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "start": 78.15,
+   "end": 81.8,
+   "line": "Mas o tio dele, Inguiomero, quer atacar agora, ao amanhecer.",
+   "scene": "Inguiomero (silhueta sem rosto) ergue a espada; O TIO / INGUIOMERO",
+   "set": "floresta",
+   "sfx": [
+    {
+     "at": 1.8,
+     "name": "stinger",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s32",
+   "start": 81.8,
+   "end": 83.35,
+   "line": "E a maioria concorda com ele.",
+   "scene": "Os guerreiros erguem as lanças, concordando",
+   "set": "floresta",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "cheer",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 83.35,
+   "end": 84.3,
+   "line": "O sol nasce.",
+   "scene": "O sol nasce sobre o pântano e o acampamento",
+   "set": "acampamento",
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s34",
+   "start": 84.3,
+   "end": 87.85,
+   "line": "Você sai da floresta correndo, com centenas de guerreiros do seu lado.",
+   "scene": "Você corre para fora da floresta com centenas de guerreiros",
+   "set": "campo",
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "whoosh",
+     "gain": -10
+    }
+   ],
+   "amb": {
+    "name": "murmur",
+    "gain": -18
+   }
+  },
+  {
+   "id": "s35",
+   "start": 87.85,
+   "end": 90.55,
+   "line": "Pula dentro da vala. A lama chega no seu joelho.",
+   "scene": "Você pula na vala; a lama chega no joelho",
+   "set": "vala",
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "impact",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "murmur",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s36",
+   "start": 90.55,
+   "end": 93.95,
+   "line": "Vocês jogam galhos pra encher o buraco e começam a escalar o muro.",
+   "scene": "Guerreiros jogam feixes de galhos e escalam o muro",
+   "set": "vala",
+   "amb": {
+    "name": "murmur",
+    "gain": -20
+   }
+  },
+  {
+   "id": "s37",
+   "start": 93.95,
+   "end": 96.1,
+   "line": "Lá em cima, quase ninguém defendendo.",
+   "scene": "Alto do muro quase vazio, um ou dois defensores",
+   "set": "vala",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s38",
+   "start": 96.1,
+   "end": 97.6,
+   "line": "Parece fácil demais.",
+   "scene": "Rosto seu: sorriso que vira desconfiança",
+   "set": "vala"
+  },
+  {
+   "id": "s39",
+   "start": 97.6,
+   "end": 100.05,
+   "line": "Você chega no topo e vê o truque.",
+   "scene": "Você no alto do muro olhando para dentro",
+   "set": "muro",
+   "sfx": [
+    {
+     "at": 1.6,
+     "name": "riser",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s40",
+   "start": 100.05,
+   "end": 103.8,
+   "line": "Entre o muro e as barracas tem um espaço vazio de uns 60 metros.",
+   "scene": "Corte: muro, espaço vazio de 60 M, barracas",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 3.1,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s41",
+   "start": 103.8,
+   "end": 106.5,
+   "line": "Nenhuma lança sua alcança quem está lá dentro.",
+   "scene": "A lança arremessada cai no vazio, longe das barracas",
+   "set": "muro",
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "swish",
+     "gain": -10
+    },
+    {
+     "at": 1.6,
+     "name": "hit",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s42",
+   "start": 106.5,
+   "end": 108.4,
+   "line": "Aí, uma trombeta toca.",
+   "scene": "A trombeta toca de novo, forte",
+   "set": "insert",
+   "in": {
+    "type": "flash",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.7,
+     "name": "powerup",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s43",
+   "start": 108.4,
+   "end": 110.0,
+   "line": "Portões se abrem dos lados.",
+   "scene": "Os portões laterais se abrem, romanos saindo em formação",
+   "set": "portao",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "impact",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "start": 110.0,
+   "end": 114.15,
+   "line": "Os romanos saem correndo pra fora e dão a volta por trás de você.",
+   "scene": "Vista de cima: setas vermelhas saem dos portões e cercam os germânicos por trás",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "swish",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s45",
+   "start": 114.15,
+   "end": 116.4,
+   "line": "Agora quem está preso é você.",
+   "scene": "Rosto seu, assustado",
+   "set": "vala",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "heartbeat",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s46",
+   "start": 116.4,
+   "end": 120.45,
+   "line": "Espremido dentro da vala, de costas pros inimigos, sem espaço pra lutar.",
+   "scene": "Guerreiros espremidos na vala; escudos romanos atrás",
+   "set": "vala",
+   "amb": {
+    "name": "murmur",
+    "gain": -18
+   }
+  },
+  {
+   "id": "s47",
+   "start": 120.45,
+   "end": 122.7,
+   "line": "Seus companheiros caem um atrás do outro.",
+   "scene": "Companheiros caindo um atrás do outro",
+   "set": "vala",
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "hit",
+     "gain": -14
+    },
+    {
+     "at": 1.1,
+     "name": "hit",
+     "gain": -14
+    },
+    {
+     "at": 1.8,
+     "name": "hit",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s48",
+   "start": 122.7,
+   "end": 124.8,
+   "line": "Inguiomero sai gravemente ferido.",
+   "scene": "Inguiomero ferido carregado pelos seus",
+   "set": "campo",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s49",
+   "start": 124.8,
+   "end": 126.3,
+   "line": "Armínio consegue fugir.",
+   "scene": "Armínio foge para dentro da floresta",
+   "set": "floresta",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s50",
+   "start": 126.3,
+   "end": 131.6,
+   "line": "E aquele exército cansado, cercado e com fome, sobrevive e volta pra casa.",
+   "scene": "A coluna romana marchando de volta ao entardecer",
+   "set": "pantano",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s51",
+   "start": 131.6,
+   "end": 132.45,
+   "line": "Então me diz:",
+   "scene": "Rosto seu olhando para nós",
+   "set": "floresta",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "s52",
+   "start": 132.45,
+   "end": 136.25,
+   "line": "você atacaria de madrugada ou esperaria eles saírem do acampamento?",
+   "scene": "Você na beira da floresta à noite, diante do acampamento: atacar ou esperar",
+   "set": "acampamento",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s53",
+   "start": 136.25,
+   "end": 138.5,
+   "line": "Comenta aí.",
+   "scene": "Tela final: pergunta, ATACAR / ESPERAR, COMENTA AÍ, três personagens",
+   "set": "fim",
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "captions": false,
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 14.75,
+   "mood": "mystery",
+   "intensity": 0.4
+  },
+  {
+   "start": 14.75,
+   "end": 53.0,
+   "mood": "tension",
+   "intensity": 0.4
+  },
+  {
+   "start": 53.0,
+   "end": 83.35,
+   "mood": "tension",
+   "intensity": 0.6
+  },
+  {
+   "start": 83.35,
+   "end": 106.5,
+   "mood": "action",
+   "intensity": 0.65
+  },
+  {
+   "start": 106.5,
+   "end": 126.3,
+   "mood": "dark",
+   "intensity": 0.7
+  },
+  {
+   "start": 126.3,
+   "end": 138.5,
+   "mood": "sad",
+   "intensity": 0.35
+  }
+ ],
+ "sfx": []
+}
