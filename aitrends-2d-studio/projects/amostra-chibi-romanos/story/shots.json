@@ -1,0 +1,75 @@
+{
+ "title": "Amostra chibi 3D",
+ "duration": 10.5,
+ "shots": [
+  {
+   "id": "c1",
+   "start": 0,
+   "end": 4.45,
+   "line": "O que aconteceria se você atacasse um exército romano enquanto ele dormia?",
+   "scene": "Acampamento romano à noite visto da floresta; título",
+   "captions": false,
+   "in": {
+    "type": "fade",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "riser",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "c2",
+   "start": 4.45,
+   "end": 6.3,
+   "line": "Germânia. Ano 15.",
+   "scene": "Floresta à noite; GERMÂNIA / ANO 15",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "c3",
+   "start": 6.3,
+   "end": 7.85,
+   "line": "Você é um guerreiro germânico,",
+   "scene": "O guerreiro chibi com lança entre as árvores",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "c4",
+   "start": 7.85,
+   "end": 10.5,
+   "line": "escondido na floresta, no meio da noite.",
+   "scene": "Close: agachado atrás de um tronco, espiando o acampamento",
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 10.5,
+   "mood": "mystery",
+   "intensity": 0.4
+  }
+ ],
+ "sfx": []
+}
