@@ -191,7 +191,10 @@ function sleeveColor(o, far) { const c = o.top === 'labcoat' ? '#f3f0f6' : o.top
 
 // ---------- main draw ----------
 // drawFigure(g, { x, y, s, facing, pose, rot, outfit, expr, talk, blink, look, rim:{dir:[x,y], color, w}, dim, alpha, prop, shadow })
+// piscada automática: cada personagem pisca num ritmo próprio (semente = posição) quando o.blink não é dado
+export const autoBlink = (seed = 0) => { const p = 2.6 + (Math.abs(Math.sin(seed * 12.9898)) * 1.6), x = ((E.time || 0) + seed * 0.37) % p; return x > p - 0.12; };
 export function drawFigure(g, o) {
+  if (o.blink === undefined) o = { ...o, blink: autoBlink(o.x || 0) };
   const st = S(), ink = o.ink || st.ink, far = o.inkFar || st.inkFar;
   const p = o.pose || POSES.stand, s = (o.s ?? 1) * (o.outfit?.kid ? 0.72 : 1), f = o.facing ?? 1;
   const of = { ...(o.outfit || {}), _ink: ink };
@@ -265,6 +268,7 @@ export function headPos(o) { const p = o.pose || POSES.stand, s = (o.s ?? 1) * (
 // ---------- giant close-up head (fills the frame) ----------
 // bigFace(g, cx, cy, r, { outfit, expr, talk, blink, look, rimColor, rimSide:-1|1, tilt })
 export function bigFace(g, cx, cy, r, o = {}) {
+  if (o.blink === undefined) o = { ...o, blink: autoBlink(cx * 0.7 + 3) };
   const st = S(), ink = st.ink, of = o.outfit || {}, rc = o.rimColor || '#ffc68a', side = o.rimSide ?? -1;
   g.save(); g.translate(cx, cy); if (o.tilt) g.rotate(o.tilt);
   // shoulders / clothing at the bottom

@@ -1,10 +1,11 @@
 // shots/01_noite.js — a noite: título, Germânia, a emboscada antiga, o pântano, a vala, o muro, as estacas, as sentinelas (s01–s21).
 import { E, V, S, registerShot, mood, layer, blurLayer, veil, ease, prog, clamp, lerp, shake, seg, circle, ring, rr, poly, glow, alpha, shade, mix, linGrad, backdrop, text, FONTS, rng } from '/engine/core.js';
-import { drawFigure, POSES, posesAt, breathe, walkPose, bigFace } from '/engine/rig2d.js';
+import { drawFigure, POSES, posesAt, breathe, walkPose, bigFace, blendPose } from '/engine/rig2d.js';
 import * as FX from '/engine/fx2d.js';
 import * as UI from '/engine/ui2d.js';
 import { forest, marsh, campOutside, campInside, torch, spear, shield, cornu, tent, stakes } from '../sets/world.js';
 import { labelTitle, bpTitle, cross, joint, ground } from '../sets/common.js';
+import { camPath, focus, dof, bokeh, fogDrift, shafts, foreLeaves } from '/engine/cine.js';
 import { VOCE, GUERREIRO, ROMANO, GOLD } from '../cast.js';
 
 const rimOf = (c, dir = [0.5, -1]) => ({ color: c, dir, w: 5 });
@@ -29,42 +30,64 @@ export function romanFace(g, cx, cy, r, o) {
 }
 const sepia = (g, a = 0.55) => { g.save(); g.globalCompositeOperation = 'color'; g.fillStyle = `rgba(150,100,60,${a})`; g.fillRect(0, 0, E.W, E.H); g.restore(); };
 
-// s01 — abertura/capa
+// s01 — abertura/capa (versão cinematográfica: câmera na mão, névoa em movimento, bokeh das tochas, silhuetas em primeiro plano)
 registerShot('s01', { draw(g, t, info) {
-  const k = ease.inOut(t / info.dur), cam = { z: 1.0 + 0.06 * k, y: 30 * k };
+  const d = info.dur, cam = camPath(t, d, { z: 1.0, y: 0 }, { z: 1.08, y: 36 }, { hand: 4, seed: 2 });
   const { GY } = campOutside(g, t, cam, { time: 'night', big: true });
-  layer(g, { z: 1 + 0.1 * k, x: -20 * k }, 1.3, (g) => {
-    for (const [x, s, sp] of [[150, 2.6, -1.35], [360, 2.2, -1.5], [930, 2.8, -1.75]]) withSpear(g, { x, y: GY + 330, s, facing: x > 600 ? -1 : 1, outfit: { top: 'none' }, pose: breathe(POSES.stand, t, 0.4, x), face: { hidden: true }, rim: rimOf(MOON, [0, -1]) }, sp, 420);
+  layer(g, cam, 0.6, (g) => fogDrift(g, t, GY - 220, 200, '#5a6a9a', { a: 0.2, speed: 14, seed: 3 }));
+  const fg = camPath(t, d, { z: 1.0, x: 0 }, { z: 1.12, x: -24 }, { hand: 6, seed: 2 });
+  layer(g, fg, 1.3, (g) => {
+    for (const [x, s, sp, ph] of [[150, 2.6, -1.35, 0], [360, 2.2, -1.5, 1.7], [930, 2.8, -1.75, 3.1]]) {
+      const look = Math.sin(t * 0.6 + ph) * 0.4, pose = breathe({ ...POSES.stand, head: [3 + look * 6, -208] }, t, 0.6, x);
+      withSpear(g, { x, y: GY + 330, s, facing: x > 600 ? -1 : 1, outfit: { top: 'none' }, pose, face: { hidden: true }, rim: rimOf(MOON, [0, -1]) }, sp + Math.sin(t * 0.8 + ph) * 0.02, 420);
+    }
   });
-  FX.fog(g, GY + 120, 240, '#4a5a8a', 0.25);
-  FX.dust(g, t, { count: 40, color: '#cfd8ff', a: 0.25 });
-  UI.titleCard(g, t + 0.2, { lines: ['O QUE ACONTECERIA', 'SE VOCÊ ATACASSE UM', 'EXÉRCITO ROMANO', 'ENQUANTO ELE DORMIA?'], dur: info.dur + 0.4, y: E.H * 0.3 });
+  fogDrift(g, t, GY + 80, 260, '#4a5a8a', { a: 0.24, speed: 22, seed: 7 });
+  bokeh(g, t, { count: 7, color: '#ffb45a', a: 0.12, seed: 5, rMin: 40, rMax: 120 });
+  FX.dust(g, t, { count: 50, color: '#cfd8ff', a: 0.3 });
+  UI.titleCard(g, t + 0.2, { lines: ['O QUE ACONTECERIA', 'SE VOCÊ ATACASSE UM', 'EXÉRCITO ROMANO', 'ENQUANTO ELE DORMIA?'], dur: d + 0.4, y: E.H * 0.3 });
 } });
 
-// s02 — "Germânia. Ano 15."
+// s02 — "Germânia. Ano 15." — feixes de luar entre as árvores, névoa deslizando, câmera subindo devagar
 registerShot('s02', { draw(g, t, info) {
-  const k = ease.inOut(t / info.dur); forest(g, t, { z: 1.05 + 0.05 * k, x: -40 * k }, { time: 'night' });
-  FX.dust(g, t, { count: 40, color: MOON, a: 0.3 });
+  const cam = camPath(t, info.dur, { z: 1.04, x: 20, y: 40 }, { z: 1.1, x: -30, y: -10 }, { hand: 4, seed: 4 });
+  const { GY } = forest(g, t, cam, { time: 'night' });
+  layer(g, cam, 0.4, (g) => shafts(g, t, E.W / 2 + 260, 300, { angle: Math.PI * 0.62, spread: 0.5, len: 2000, color: '#bcc8ff', a: 0.1 }));
+  layer(g, cam, 0.7, (g) => fogDrift(g, t, GY - 300, 300, '#6a7aaa', { a: 0.18, speed: 12, seed: 9 }));
+  foreLeaves(g, t, cam, { side: 1, y: E.H * 0.05, amount: 14, seed: 6 });
+  FX.dust(g, t, { count: 60, color: MOON, a: 0.32 });
   labelTitle(g, t, 'GERMÂNIA', 'ANO 15', E.H * 0.3, { at: 0.1, big: 110 });
 } });
 
-// s03 — "Você é um guerreiro germânico,"
+// s03 — "Você é um guerreiro germânico," — foco passa do galho em primeiro plano para você; você vira a cabeça e firma a lança
 registerShot('s03', { draw(g, t, info) {
-  const k = ease.inOut(t / info.dur), cam = { z: 1.12 + 0.06 * k, x: 20 };
-  const { GY, CX } = forest(g, t, cam, { time: 'night' });
-  layer(g, cam, 1, (g) => withSpear(g, { x: CX - 40, y: GY, s: 2.5, facing: 1, outfit: VOCE, pose: breathe({ ...POSES.stand, eF: [16, -150], hF: [28, -170] }, t, 0.5, 1), expr: 'determined', look: [0.5, 0], rim: rimOf(MOON, [1, -0.6]) }));
-  FX.dust(g, t, { count: 40, color: MOON, a: 0.3 });
+  const d = info.dur, cam = camPath(t, d, { z: 1.1, x: 40 }, { z: 1.2, x: 10 }, { hand: 5, seed: 6 }), bgBlur = focus(t, 0.0, 0.7, 0, 5);
+  const { GY, CX } = (bgBlur > 0.4 ? (() => { let r; blurLayer(g, bgBlur, (g) => { r = forest(g, t, cam, { time: 'night' }); }); return r; })() : forest(g, t, cam, { time: 'night' }));
+  layer(g, cam, 0.8, (g) => fogDrift(g, t, GY - 200, 200, '#6a7aaa', { a: 0.16, speed: 14, seed: 2 }));
+  const turn = ease.inOut(prog(t, 0.3, 0.9)), grip = ease.outBack(prog(t, 0.7, 1.1));
+  const pose = breathe({ ...POSES.stand, head: [lerp(-4, 8, turn), -208], eF: [16, lerp(-140, -156, grip)], hF: [28, lerp(-160, -176, grip)] }, t, 0.7, 1);
+  layer(g, cam, 1, (g) => withSpear(g, { x: CX - 40, y: GY, s: 2.5, facing: 1, outfit: VOCE, pose, expr: t < 0.85 ? 'neutral' : 'determined', look: [lerp(-0.6, 0.6, turn), 0], rim: rimOf(MOON, [1, -0.6]) }, -Math.PI / 2 + 0.15, 330));
+  dof(g, focus(t, 0.0, 0.7, 2, 16), cam, 1.7, (g) => { g.fillStyle = '#04060a'; g.beginPath(); g.moveTo(-100, 300); g.quadraticCurveTo(300, 420, 560, 360); g.lineTo(560, 400); g.quadraticCurveTo(300, 470, -100, 380); g.fill(); for (let i = 0; i < 7; i++) { g.beginPath(); g.ellipse(60 + i * 70, 380 + Math.sin(i) * 30, 50, 18, 0.4, 0, 7); g.fill(); } });
+  bokeh(g, t, { count: 6, color: '#a9b8ff', a: 0.1, seed: 8 });
+  FX.dust(g, t, { count: 50, color: MOON, a: 0.32 });
 } });
 
-// s04 — "escondido na floresta, no meio da noite."
+// s04 — "escondido na floresta, no meio da noite." — você se abaixa (antecipação), espia por trás do tronco; a luz das tochas bate do outro lado
 registerShot('s04', { draw(g, t, info) {
-  const k = ease.inOut(t / info.dur), cam = { z: 1.2 + 0.05 * k, x: -30 + 30 * k };
+  const d = info.dur, cam = camPath(t, d, { z: 1.22, x: -40 }, { z: 1.3, x: 0 }, { hand: 4, seed: 9 });
   const { GY, CX } = forest(g, t, cam, { time: 'night' });
+  layer(g, cam, 0.6, (g) => { for (let i = 0; i < 5; i++) { const x = CX + 300 + i * 160, f = 1 + 0.15 * Math.sin(t * 11 + i); glow(g, x, GY - 260, 70 * f, TORCH, 0.5); } });
+  const down = ease.inOut(prog(t, 0.0, 0.45)), peek = ease.inOut(prog(t, 1.0, 1.5)) - ease.inOut(prog(t, 1.9, 2.3)) * 0.4;
+  const crouch = { ...POSES.crouch, head: [lerp(16, 34, peek), lerp(-150, -156, peek)], sh: [lerp(8, 18, peek), -118] };
+  const pose = breathe(blendPose(POSES.stand, crouch, down), t, 0.8, 2);
   layer(g, cam, 1, (g) => {
-    drawFigure(g, { x: CX - 120, y: GY, s: 2.4, facing: 1, outfit: VOCE, pose: breathe({ ...POSES.crouch, head: [22, -148] }, t, 0.4, 2), expr: 'neutral', look: [1, -0.1], rim: rimOf(MOON, [1, -0.4]) });
-    g.fillStyle = '#1a2032'; g.fillRect(CX + 60, -E.H, 170, E.H * 2.5); g.fillStyle = alpha(MOON, 0.55); g.fillRect(CX + 60, -E.H, 7, E.H * 2.5); g.fillStyle = 'rgba(0,0,0,.25)'; for (let i = 0; i < 9; i++) g.fillRect(CX + 90 + (i % 3) * 40, -E.H + i * 260, 6, 160);
+    drawFigure(g, { x: CX - 130, y: GY, s: 2.4, facing: 1, outfit: VOCE, pose, expr: peek > 0.5 ? 'determined' : 'neutral', look: [1, -0.1], rim: rimOf(TORCH, [1, -0.3]) });
+    g.fillStyle = '#1a2032'; g.fillRect(CX + 60, -E.H, 170, E.H * 2.5); g.fillStyle = alpha(MOON, 0.55); g.fillRect(CX + 60, -E.H, 7, E.H * 2.5); g.fillStyle = alpha(TORCH, 0.35); g.fillRect(CX + 223, -E.H, 7, E.H * 2.5);
+    g.fillStyle = 'rgba(0,0,0,.25)'; for (let i = 0; i < 9; i++) g.fillRect(CX + 90 + (i % 3) * 40, -E.H + i * 260, 6, 160);
   });
-  blurLayer(g, 10, (g) => { g.fillStyle = '#04060a'; for (let i = 0; i < 6; i++) { g.beginPath(); g.ellipse(-60 + i * 230, E.H * 0.95, 220, 160, 0, 0, 7); g.fill(); } }, cam, 1.7);
+  fogDrift(g, t, GY - 60, 220, '#4a5a8a', { a: 0.2, speed: 18, seed: 4 });
+  blurLayer(g, 12, (g) => { g.fillStyle = '#04060a'; for (let i = 0; i < 6; i++) { g.beginPath(); g.ellipse(-60 + i * 230, E.H * 0.95 + Math.sin(t + i) * 8, 220, 160, 0, 0, 7); g.fill(); } }, cam, 1.7);
+  bokeh(g, t, { count: 6, color: TORCH, a: 0.12, seed: 2 });
 } });
 
 // s05 — "Seis anos atrás, o seu povo destruiu" — a emboscada antiga (sépia)

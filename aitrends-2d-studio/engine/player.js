@@ -86,6 +86,7 @@ const BARS = () => ({ none: 0, wide: V(60, 0), scope: V(138, 170), thin: V(30, 6
 const barVal = (s) => (typeof (s?.bars ?? E.cfg.bars) === 'number' ? (s.bars ?? E.cfg.bars) : BARS()[s?.bars ?? E.cfg.bars ?? V('wide', 'none')] ?? 0);
 
 window.renderFrame = function (f) {
+  E.time = f / E.fps;   // tempo global (piscadas automáticas e outros efeitos)
   const t = f / E.fps, i = shotIndexAt(t), shot = E.shots[i], lt = t - shot.start;
   drawShot(bufA, shot, lt);
   const tr = shot.in || { type: 'cut' }, tdur = tr.dur ?? (tr.type === 'whip' ? 0.35 : 0.5);
