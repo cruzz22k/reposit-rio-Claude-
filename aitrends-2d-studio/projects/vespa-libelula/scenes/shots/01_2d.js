@@ -58,8 +58,8 @@ registerShot('s08', { draw(g, t, info) {
 
 // s09 — "Cada olho dela tem cerca de 30 mil lentes."
 registerShot('s09', { draw(g, t, info) {
-  UI.blueprint(g); const bp = UI.bpStroke(), u = U(), k = ease.inOut(t / info.dur), cx = E.W / 2, cy = 920, R = 360;
-  g.save(); zoomAt(g, cx, cy, 1 + 0.25 * k);
+  UI.blueprint(g); const bp = UI.bpStroke(), u = U(), k = ease.inOut(t / info.dur), cx = E.W / 2, cy = 960, R = 290;
+  g.save(); zoomAt(g, cx, cy, 1 + 0.15 * k);
   circle(g, cx, cy, R, alpha('#3fd0c8', 0.12)); ring(g, cx, cy, R, 5, '#3fd0c8');
   g.save(); g.beginPath(); g.arc(cx, cy, R - 4, 0, 7); g.clip();
   const shown = ease.inOut(prog(t, 0.2, 1.6));
@@ -67,7 +67,7 @@ registerShot('s09', { draw(g, t, info) {
   g.restore(); g.restore();
   labelTitle(g, t, 'CADA OLHO', 'TEM CERCA DE', 300, { at: 0.1, big: 46 });
   const n = Math.round(30000 * ease.out(prog(t, 1.55, 2.3)));
-  if (t > 1.55) { text(g, n.toLocaleString('pt-BR'), cx, 1400 - 60, { size: 110, color: GOLD, glow: 22, glowColor: alpha(GOLD, 0.6) }); text(g, 'LENTES', cx, 1430, { size: 40, color: u.cream, font: FONTS.ui, weight: 900, spacing: 8 }); }
+  if (t > 1.55) { text(g, n.toLocaleString('pt-BR'), cx, 480, { size: 104, color: GOLD, glow: 22, glowColor: alpha(GOLD, 0.6) }); text(g, 'LENTES', cx, 565, { size: 40, color: u.cream, font: FONTS.ui, weight: 900, spacing: 8 }); }
 } });
 
 // ícone de libélula vista de cima (blueprint)
