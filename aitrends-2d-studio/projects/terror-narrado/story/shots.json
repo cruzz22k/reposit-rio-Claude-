@@ -1,0 +1,80 @@
+{
+ "title": "Narrado",
+ "duration": 10.0,
+ "shots": [
+  {
+   "id": "n1",
+   "start": 0,
+   "end": 1.75,
+   "line": "Na casa da minha avó,",
+   "scene": "A casa antiga à noite, uma janela acesa, névoa (foto antiga, zoom lento)",
+   "amb": {
+    "name": "wind",
+    "gain": -18
+   }
+  },
+  {
+   "id": "n2",
+   "start": 1.75,
+   "end": 4.1,
+   "line": "tinha uma porta que ninguém podia abrir.",
+   "scene": "O corredor escuro, a porta no fim com luz por baixo",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "roomtone",
+    "gain": -18
+   },
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "heartbeat",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "n3",
+   "start": 4.1,
+   "end": 10.0,
+   "line": "Toda noite, às três da manhã... ela abria sozinha.",
+   "scene": "A porta entreaberta; abre mais sozinha; dedos pálidos na borda",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "roomtone",
+    "gain": -18
+   },
+   "sfx": [
+    {
+     "at": 3.0,
+     "name": "riser",
+     "gain": -12
+    },
+    {
+     "at": 4.5,
+     "name": "stinger",
+     "gain": -4
+    },
+    {
+     "at": 4.55,
+     "name": "impact",
+     "gain": -8
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 10,
+   "mood": "dark",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": []
+}

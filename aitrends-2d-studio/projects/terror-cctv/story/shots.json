@@ -1,0 +1,53 @@
+{
+ "title": "CCTV",
+ "duration": 10.0,
+ "shots": [
+  {
+   "id": "h1",
+   "start": 0,
+   "end": 10.0,
+   "line": "",
+   "scene": "CCTV do posto 24h; regras digitadas; a bomba 3 pisca; uma figura aparece e some, depois surge perto",
+   "amb": {
+    "name": "hum",
+    "gain": -16
+   },
+   "sfx": [
+    {
+     "at": 0.9,
+     "name": "tick",
+     "gain": -20
+    },
+    {
+     "at": 6.0,
+     "name": "buzz",
+     "gain": -12
+    },
+    {
+     "at": 8.45,
+     "name": "glitch",
+     "gain": -8
+    },
+    {
+     "at": 8.6,
+     "name": "stinger",
+     "gain": -3
+    },
+    {
+     "at": 9.4,
+     "name": "glitch",
+     "gain": -6
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 10,
+   "mood": "dark",
+   "intensity": 0.25
+  }
+ ],
+ "sfx": []
+}

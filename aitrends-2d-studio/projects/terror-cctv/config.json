@@ -1,0 +1,23 @@
+{
+ "title": "Amostra terror - camera de seguranca",
+ "aspect": "9:16",
+ "resolution": "1080p",
+ "fps": 24,
+ "style": "dusk",
+ "voiceover": "input/voiceover.wav",
+ "script": null,
+ "duration": 10.0,
+ "captions": false,
+ "bars": "none",
+ "fadeIn": 0.0,
+ "fadeOut": 0.0,
+ "music": {
+  "enabled": true,
+  "gainDb": -14
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14
+}
