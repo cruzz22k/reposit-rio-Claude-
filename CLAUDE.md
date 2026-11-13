@@ -1,5 +1,5 @@
 # Vídeos do canal "O que aconteceria se..."
 
 - Seguir a skill `estilo-o-que-aconteceria` e o estúdio em `aitrends-2d-studio/`.
-- **Exceção pedida pelo usuário em 13/11/2026 (vale sobre a regra "sem 3D low-poly" da skill):** todo vídeo novo leva algumas cenas em 3D, como no vídeo da Coreia do Norte, por exemplo o plano largo com o título, uma vista do alto da cidade ou do lugar, e um ou dois cenários grandes (quartel, rio). Referência de código: `aitrends-2d-studio/projects/coreia-do-norte/scenes/shots/02_3d.js`. O resto do vídeo continua em 2D.
+- **Só 2D, sem cenas em 3D.** Preferência confirmada pelo usuário em 13/11/2026: ele testou cenas em 3D (vídeo da vespa) e preferiu o formato todo em 2D, como no vídeo do acampamento romano (`aitrends-2d-studio/projects/romanos-acampamento`).
 - Nunca rode duas renderizações ao mesmo tempo no mesmo projeto: elas compartilham `build/parts` e uma apaga a outra.
