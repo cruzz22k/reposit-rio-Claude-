@@ -1,0 +1,2000 @@
+{
+ "source": "whisper-small islands + texto corrigido à mão",
+ "words": [
+  {
+   "word": "O",
+   "start": 0.083,
+   "end": 0.202
+  },
+  {
+   "word": "que",
+   "start": 0.202,
+   "end": 0.417
+  },
+  {
+   "word": "aconteceria",
+   "start": 0.417,
+   "end": 1.015
+  },
+  {
+   "word": "se",
+   "start": 1.015,
+   "end": 1.182
+  },
+  {
+   "word": "você",
+   "start": 1.182,
+   "end": 1.445
+  },
+  {
+   "word": "fosse",
+   "start": 1.445,
+   "end": 1.755
+  },
+  {
+   "word": "uma",
+   "start": 1.755,
+   "end": 1.97
+  },
+  {
+   "word": "vespa",
+   "start": 1.97,
+   "end": 2.281
+  },
+  {
+   "word": "e",
+   "start": 2.361,
+   "end": 2.489
+  },
+  {
+   "word": "cruzasse",
+   "start": 2.489,
+   "end": 2.976
+  },
+  {
+   "word": "com",
+   "start": 2.976,
+   "end": 3.207
+  },
+  {
+   "word": "uma",
+   "start": 3.207,
+   "end": 3.437
+  },
+  {
+   "word": "libélula?",
+   "start": 3.437,
+   "end": 3.924
+  },
+  {
+   "word": "Você",
+   "start": 4.422,
+   "end": 4.647
+  },
+  {
+   "word": "é",
+   "start": 4.647,
+   "end": 4.75
+  },
+  {
+   "word": "uma",
+   "start": 4.75,
+   "end": 4.934
+  },
+  {
+   "word": "vespa.",
+   "start": 4.934,
+   "end": 5.201
+  },
+  {
+   "word": "Tem",
+   "start": 5.674,
+   "end": 5.925
+  },
+  {
+   "word": "ferrão.",
+   "start": 5.925,
+   "end": 6.343
+  },
+  {
+   "word": "Tem",
+   "start": 6.442,
+   "end": 6.69
+  },
+  {
+   "word": "veneno.",
+   "start": 6.69,
+   "end": 7.103
+  },
+  {
+   "word": "Quase",
+   "start": 7.363,
+   "end": 7.646
+  },
+  {
+   "word": "todo",
+   "start": 7.646,
+   "end": 7.885
+  },
+  {
+   "word": "bicho",
+   "start": 7.885,
+   "end": 8.167
+  },
+  {
+   "word": "do",
+   "start": 8.167,
+   "end": 8.32
+  },
+  {
+   "word": "seu",
+   "start": 8.32,
+   "end": 8.515
+  },
+  {
+   "word": "tamanho",
+   "start": 8.515,
+   "end": 8.885
+  },
+  {
+   "word": "foge",
+   "start": 9.0,
+   "end": 9.274
+  },
+  {
+   "word": "de",
+   "start": 9.274,
+   "end": 9.449
+  },
+  {
+   "word": "você.",
+   "start": 9.449,
+   "end": 9.723
+  },
+  {
+   "word": "Uma",
+   "start": 10.035,
+   "end": 10.258
+  },
+  {
+   "word": "tarde",
+   "start": 10.258,
+   "end": 10.58
+  },
+  {
+   "word": "quente,",
+   "start": 10.58,
+   "end": 10.951
+  },
+  {
+   "word": "perto",
+   "start": 11.059,
+   "end": 11.356
+  },
+  {
+   "word": "de",
+   "start": 11.356,
+   "end": 11.516
+  },
+  {
+   "word": "um",
+   "start": 11.516,
+   "end": 11.676
+  },
+  {
+   "word": "lago,",
+   "start": 11.676,
+   "end": 11.927
+  },
+  {
+   "word": "você",
+   "start": 11.927,
+   "end": 12.178
+  },
+  {
+   "word": "sai",
+   "start": 12.178,
+   "end": 12.384
+  },
+  {
+   "word": "voando",
+   "start": 12.384,
+   "end": 12.727
+  },
+  {
+   "word": "atrás",
+   "start": 12.727,
+   "end": 13.023
+  },
+  {
+   "word": "de",
+   "start": 13.023,
+   "end": 13.183
+  },
+  {
+   "word": "comida.",
+   "start": 13.183,
+   "end": 13.526
+  },
+  {
+   "word": "Lá",
+   "start": 13.777,
+   "end": 13.945
+  },
+  {
+   "word": "no",
+   "start": 13.945,
+   "end": 14.113
+  },
+  {
+   "word": "alto,",
+   "start": 14.113,
+   "end": 14.377
+  },
+  {
+   "word": "você",
+   "start": 14.377,
+   "end": 14.64
+  },
+  {
+   "word": "vê",
+   "start": 14.64,
+   "end": 14.808
+  },
+  {
+   "word": "uma",
+   "start": 14.808,
+   "end": 15.024
+  },
+  {
+   "word": "libélula",
+   "start": 15.024,
+   "end": 15.48
+  },
+  {
+   "word": "parada",
+   "start": 15.657,
+   "end": 15.948
+  },
+  {
+   "word": "no",
+   "start": 15.948,
+   "end": 16.084
+  },
+  {
+   "word": "ar",
+   "start": 16.084,
+   "end": 16.22
+  },
+  {
+   "word": "como",
+   "start": 16.22,
+   "end": 16.434
+  },
+  {
+   "word": "um",
+   "start": 16.434,
+   "end": 16.57
+  },
+  {
+   "word": "helicóptero.",
+   "start": 16.57,
+   "end": 17.055
+  },
+  {
+   "word": "Parece",
+   "start": 17.569,
+   "end": 17.963
+  },
+  {
+   "word": "inofensiva.",
+   "start": 17.963,
+   "end": 18.568
+  },
+  {
+   "word": "Ela",
+   "start": 18.935,
+   "end": 19.138
+  },
+  {
+   "word": "não",
+   "start": 19.138,
+   "end": 19.341
+  },
+  {
+   "word": "é.",
+   "start": 19.341,
+   "end": 19.454
+  },
+  {
+   "word": "Cada",
+   "start": 19.725,
+   "end": 19.982
+  },
+  {
+   "word": "olho",
+   "start": 19.982,
+   "end": 20.238
+  },
+  {
+   "word": "dela",
+   "start": 20.238,
+   "end": 20.495
+  },
+  {
+   "word": "tem",
+   "start": 20.495,
+   "end": 20.705
+  },
+  {
+   "word": "cerca",
+   "start": 20.705,
+   "end": 21.008
+  },
+  {
+   "word": "de",
+   "start": 21.008,
+   "end": 21.171
+  },
+  {
+   "word": "30",
+   "start": 21.269,
+   "end": 21.556
+  },
+  {
+   "word": "mil",
+   "start": 21.556,
+   "end": 21.924
+  },
+  {
+   "word": "lentes.",
+   "start": 21.924,
+   "end": 22.539
+  },
+  {
+   "word": "Os",
+   "start": 22.703,
+   "end": 22.946
+  },
+  {
+   "word": "dois",
+   "start": 22.946,
+   "end": 23.329
+  },
+  {
+   "word": "juntos",
+   "start": 23.329,
+   "end": 23.85
+  },
+  {
+   "word": "enxergam",
+   "start": 23.85,
+   "end": 24.51
+  },
+  {
+   "word": "quase",
+   "start": 24.51,
+   "end": 24.962
+  },
+  {
+   "word": "360",
+   "start": 24.962,
+   "end": 25.275
+  },
+  {
+   "word": "graus:",
+   "start": 25.275,
+   "end": 25.727
+  },
+  {
+   "word": "frente,",
+   "start": 26.095,
+   "end": 26.47
+  },
+  {
+   "word": "pros",
+   "start": 26.554,
+   "end": 26.816
+  },
+  {
+   "word": "lados",
+   "start": 26.816,
+   "end": 27.125
+  },
+  {
+   "word": "e",
+   "start": 27.125,
+   "end": 27.243
+  },
+  {
+   "word": "pra",
+   "start": 27.243,
+   "end": 27.457
+  },
+  {
+   "word": "trás,",
+   "start": 27.457,
+   "end": 27.719
+  },
+  {
+   "word": "ao",
+   "start": 27.822,
+   "end": 27.991
+  },
+  {
+   "word": "mesmo",
+   "start": 27.991,
+   "end": 28.304
+  },
+  {
+   "word": "tempo.",
+   "start": 28.304,
+   "end": 28.617
+  },
+  {
+   "word": "Ela",
+   "start": 28.994,
+   "end": 29.192
+  },
+  {
+   "word": "já",
+   "start": 29.192,
+   "end": 29.346
+  },
+  {
+   "word": "te",
+   "start": 29.346,
+   "end": 29.5
+  },
+  {
+   "word": "viu",
+   "start": 29.5,
+   "end": 29.698
+  },
+  {
+   "word": "antes",
+   "start": 29.817,
+   "end": 30.179
+  },
+  {
+   "word": "de",
+   "start": 30.179,
+   "end": 30.374
+  },
+  {
+   "word": "você",
+   "start": 30.374,
+   "end": 30.681
+  },
+  {
+   "word": "vê-la.",
+   "start": 30.681,
+   "end": 30.987
+  },
+  {
+   "word": "E",
+   "start": 31.174,
+   "end": 31.276
+  },
+  {
+   "word": "ela",
+   "start": 31.276,
+   "end": 31.459
+  },
+  {
+   "word": "não",
+   "start": 31.459,
+   "end": 31.643
+  },
+  {
+   "word": "vem",
+   "start": 31.643,
+   "end": 31.826
+  },
+  {
+   "word": "atrás",
+   "start": 31.826,
+   "end": 32.091
+  },
+  {
+   "word": "de",
+   "start": 32.091,
+   "end": 32.233
+  },
+  {
+   "word": "você",
+   "start": 32.233,
+   "end": 32.457
+  },
+  {
+   "word": "como",
+   "start": 32.457,
+   "end": 32.682
+  },
+  {
+   "word": "um",
+   "start": 32.682,
+   "end": 32.824
+  },
+  {
+   "word": "leão",
+   "start": 32.824,
+   "end": 33.048
+  },
+  {
+   "word": "correndo",
+   "start": 33.048,
+   "end": 33.435
+  },
+  {
+   "word": "atrás",
+   "start": 33.435,
+   "end": 33.7
+  },
+  {
+   "word": "de",
+   "start": 33.7,
+   "end": 33.843
+  },
+  {
+   "word": "uma",
+   "start": 33.843,
+   "end": 34.026
+  },
+  {
+   "word": "zebra.",
+   "start": 34.026,
+   "end": 34.291
+  },
+  {
+   "word": "Ela",
+   "start": 34.486,
+   "end": 34.772
+  },
+  {
+   "word": "calcula",
+   "start": 34.772,
+   "end": 35.313
+  },
+  {
+   "word": "onde",
+   "start": 35.416,
+   "end": 35.666
+  },
+  {
+   "word": "você",
+   "start": 35.666,
+   "end": 35.916
+  },
+  {
+   "word": "vai",
+   "start": 35.916,
+   "end": 36.121
+  },
+  {
+   "word": "estar",
+   "start": 36.121,
+   "end": 36.417
+  },
+  {
+   "word": "e",
+   "start": 36.692,
+   "end": 36.8
+  },
+  {
+   "word": "voa",
+   "start": 36.8,
+   "end": 36.995
+  },
+  {
+   "word": "direto",
+   "start": 36.995,
+   "end": 37.32
+  },
+  {
+   "word": "para",
+   "start": 37.32,
+   "end": 37.558
+  },
+  {
+   "word": "esse",
+   "start": 37.558,
+   "end": 37.796
+  },
+  {
+   "word": "ponto.",
+   "start": 37.796,
+   "end": 38.077
+  },
+  {
+   "word": "Ela",
+   "start": 38.396,
+   "end": 38.613
+  },
+  {
+   "word": "mantém",
+   "start": 38.613,
+   "end": 38.975
+  },
+  {
+   "word": "você",
+   "start": 38.975,
+   "end": 39.241
+  },
+  {
+   "word": "sempre",
+   "start": 39.241,
+   "end": 39.603
+  },
+  {
+   "word": "no",
+   "start": 39.603,
+   "end": 39.772
+  },
+  {
+   "word": "mesmo",
+   "start": 39.772,
+   "end": 40.086
+  },
+  {
+   "word": "lugar",
+   "start": 40.086,
+   "end": 40.4
+  },
+  {
+   "word": "da",
+   "start": 40.4,
+   "end": 40.569
+  },
+  {
+   "word": "visão",
+   "start": 40.569,
+   "end": 40.882
+  },
+  {
+   "word": "dela,",
+   "start": 40.882,
+   "end": 41.148
+  },
+  {
+   "word": "chegando",
+   "start": 41.296,
+   "end": 41.698
+  },
+  {
+   "word": "mais",
+   "start": 41.698,
+   "end": 41.93
+  },
+  {
+   "word": "perto",
+   "start": 41.93,
+   "end": 42.205
+  },
+  {
+   "word": "e",
+   "start": 42.557,
+   "end": 42.669
+  },
+  {
+   "word": "mais",
+   "start": 42.669,
+   "end": 42.914
+  },
+  {
+   "word": "perto,",
+   "start": 42.914,
+   "end": 43.204
+  },
+  {
+   "word": "até",
+   "start": 43.866,
+   "end": 44.063
+  },
+  {
+   "word": "a",
+   "start": 44.063,
+   "end": 44.173
+  },
+  {
+   "word": "rota",
+   "start": 44.173,
+   "end": 44.413
+  },
+  {
+   "word": "de",
+   "start": 44.413,
+   "end": 44.567
+  },
+  {
+   "word": "vocês",
+   "start": 44.567,
+   "end": 44.851
+  },
+  {
+   "word": "dois",
+   "start": 44.851,
+   "end": 45.092
+  },
+  {
+   "word": "se",
+   "start": 45.092,
+   "end": 45.246
+  },
+  {
+   "word": "cruzar.",
+   "start": 45.246,
+   "end": 45.574
+  },
+  {
+   "word": "Ela",
+   "start": 45.871,
+   "end": 46.092
+  },
+  {
+   "word": "vem",
+   "start": 46.092,
+   "end": 46.314
+  },
+  {
+   "word": "por",
+   "start": 46.314,
+   "end": 46.535
+  },
+  {
+   "word": "baixo",
+   "start": 46.535,
+   "end": 46.855
+  },
+  {
+   "word": "e",
+   "start": 46.92,
+   "end": 47.076
+  },
+  {
+   "word": "por",
+   "start": 47.076,
+   "end": 47.356
+  },
+  {
+   "word": "trás,",
+   "start": 47.356,
+   "end": 47.698
+  },
+  {
+   "word": "bem",
+   "start": 47.855,
+   "end": 48.091
+  },
+  {
+   "word": "no",
+   "start": 48.091,
+   "end": 48.275
+  },
+  {
+   "word": "ponto",
+   "start": 48.337,
+   "end": 48.589
+  },
+  {
+   "word": "em",
+   "start": 48.589,
+   "end": 48.725
+  },
+  {
+   "word": "que",
+   "start": 48.725,
+   "end": 48.9
+  },
+  {
+   "word": "você",
+   "start": 48.9,
+   "end": 49.113
+  },
+  {
+   "word": "não",
+   "start": 49.113,
+   "end": 49.288
+  },
+  {
+   "word": "consegue",
+   "start": 49.288,
+   "end": 49.656
+  },
+  {
+   "word": "enxergar.",
+   "start": 49.656,
+   "end": 50.025
+  },
+  {
+   "word": "Pra",
+   "start": 50.288,
+   "end": 50.51
+  },
+  {
+   "word": "ela,",
+   "start": 50.51,
+   "end": 50.731
+  },
+  {
+   "word": "o",
+   "start": 50.731,
+   "end": 50.854
+  },
+  {
+   "word": "céu",
+   "start": 50.854,
+   "end": 51.076
+  },
+  {
+   "word": "claro",
+   "start": 51.076,
+   "end": 51.396
+  },
+  {
+   "word": "faz",
+   "start": 51.396,
+   "end": 51.618
+  },
+  {
+   "word": "você",
+   "start": 51.618,
+   "end": 51.888
+  },
+  {
+   "word": "parecer",
+   "start": 51.888,
+   "end": 52.307
+  },
+  {
+   "word": "uma",
+   "start": 52.307,
+   "end": 52.529
+  },
+  {
+   "word": "manchinha",
+   "start": 52.529,
+   "end": 53.046
+  },
+  {
+   "word": "escura.",
+   "start": 53.046,
+   "end": 53.415
+  },
+  {
+   "word": "Impossível",
+   "start": 53.571,
+   "end": 54.136
+  },
+  {
+   "word": "de",
+   "start": 54.136,
+   "end": 54.308
+  },
+  {
+   "word": "perder.",
+   "start": 54.308,
+   "end": 54.676
+  },
+  {
+   "word": "Você",
+   "start": 54.919,
+   "end": 55.173
+  },
+  {
+   "word": "nem",
+   "start": 55.173,
+   "end": 55.381
+  },
+  {
+   "word": "percebe",
+   "start": 55.381,
+   "end": 55.773
+  },
+  {
+   "word": "que",
+   "start": 55.773,
+   "end": 55.981
+  },
+  {
+   "word": "está",
+   "start": 55.981,
+   "end": 56.235
+  },
+  {
+   "word": "sendo",
+   "start": 56.235,
+   "end": 56.535
+  },
+  {
+   "word": "caçada.",
+   "start": 56.535,
+   "end": 56.881
+  },
+  {
+   "word": "Quatro",
+   "start": 57.289,
+   "end": 57.732
+  },
+  {
+   "word": "asas",
+   "start": 57.732,
+   "end": 58.058
+  },
+  {
+   "word": "dela",
+   "start": 58.058,
+   "end": 58.383
+  },
+  {
+   "word": "se",
+   "start": 58.383,
+   "end": 58.59
+  },
+  {
+   "word": "movem,",
+   "start": 58.59,
+   "end": 58.974
+  },
+  {
+   "word": "cada",
+   "start": 58.974,
+   "end": 59.299
+  },
+  {
+   "word": "uma",
+   "start": 59.299,
+   "end": 59.565
+  },
+  {
+   "word": "sozinha.",
+   "start": 59.565,
+   "end": 60.068
+  },
+  {
+   "word": "Para",
+   "start": 60.157,
+   "end": 60.423
+  },
+  {
+   "word": "no",
+   "start": 60.423,
+   "end": 60.592
+  },
+  {
+   "word": "ar,",
+   "start": 60.592,
+   "end": 60.761
+  },
+  {
+   "word": "sobe",
+   "start": 60.909,
+   "end": 61.194
+  },
+  {
+   "word": "reto,",
+   "start": 61.194,
+   "end": 61.48
+  },
+  {
+   "word": "dá",
+   "start": 61.766,
+   "end": 61.989
+  },
+  {
+   "word": "meia-volta,",
+   "start": 61.989,
+   "end": 62.657
+  },
+  {
+   "word": "voa",
+   "start": 62.765,
+   "end": 63.125
+  },
+  {
+   "word": "até",
+   "start": 63.191,
+   "end": 63.38
+  },
+  {
+   "word": "de",
+   "start": 63.38,
+   "end": 63.528
+  },
+  {
+   "word": "ré.",
+   "start": 63.528,
+   "end": 63.675
+  },
+  {
+   "word": "Pode",
+   "start": 64.001,
+   "end": 64.281
+  },
+  {
+   "word": "passar",
+   "start": 64.281,
+   "end": 64.663
+  },
+  {
+   "word": "de",
+   "start": 64.663,
+   "end": 64.841
+  },
+  {
+   "word": "50",
+   "start": 64.903,
+   "end": 65.072
+  },
+  {
+   "word": "quilômetros",
+   "start": 65.072,
+   "end": 65.677
+  },
+  {
+   "word": "por",
+   "start": 65.773,
+   "end": 65.931
+  },
+  {
+   "word": "hora.",
+   "start": 65.931,
+   "end": 66.124
+  },
+  {
+   "word": "Em",
+   "start": 66.367,
+   "end": 66.476
+  },
+  {
+   "word": "testes",
+   "start": 66.476,
+   "end": 66.709
+  },
+  {
+   "word": "de",
+   "start": 66.709,
+   "end": 66.818
+  },
+  {
+   "word": "laboratório,",
+   "start": 66.818,
+   "end": 67.207
+  },
+  {
+   "word": "libélulas",
+   "start": 67.281,
+   "end": 68.089
+  },
+  {
+   "word": "acertaram",
+   "start": 68.089,
+   "end": 68.898
+  },
+  {
+   "word": "cerca",
+   "start": 68.898,
+   "end": 69.398
+  },
+  {
+   "word": "de",
+   "start": 69.398,
+   "end": 69.668
+  },
+  {
+   "word": "95%",
+   "start": 69.668,
+   "end": 69.937
+  },
+  {
+   "word": "dos",
+   "start": 69.937,
+   "end": 70.284
+  },
+  {
+   "word": "ataques.",
+   "start": 70.284,
+   "end": 70.938
+  },
+  {
+   "word": "Um",
+   "start": 71.4,
+   "end": 71.542
+  },
+  {
+   "word": "leão",
+   "start": 71.542,
+   "end": 71.765
+  },
+  {
+   "word": "acerta",
+   "start": 71.765,
+   "end": 72.07
+  },
+  {
+   "word": "mais",
+   "start": 72.07,
+   "end": 72.293
+  },
+  {
+   "word": "ou",
+   "start": 72.293,
+   "end": 72.435
+  },
+  {
+   "word": "menos",
+   "start": 72.435,
+   "end": 72.698
+  },
+  {
+   "word": "um",
+   "start": 72.698,
+   "end": 72.84
+  },
+  {
+   "word": "em",
+   "start": 72.84,
+   "end": 72.983
+  },
+  {
+   "word": "cada",
+   "start": 72.983,
+   "end": 73.206
+  },
+  {
+   "word": "quatro.",
+   "start": 73.206,
+   "end": 73.51
+  },
+  {
+   "word": "Então,",
+   "start": 74.121,
+   "end": 74.592
+  },
+  {
+   "word": "de",
+   "start": 74.592,
+   "end": 74.846
+  },
+  {
+   "word": "repente,",
+   "start": 74.918,
+   "end": 75.314
+  },
+  {
+   "word": "você",
+   "start": 75.417,
+   "end": 75.688
+  },
+  {
+   "word": "sente:",
+   "start": 75.688,
+   "end": 76.008
+  },
+  {
+   "word": "seis",
+   "start": 76.359,
+   "end": 76.764
+  },
+  {
+   "word": "pernas",
+   "start": 76.864,
+   "end": 77.124
+  },
+  {
+   "word": "cheias",
+   "start": 77.124,
+   "end": 77.385
+  },
+  {
+   "word": "de",
+   "start": 77.385,
+   "end": 77.506
+  },
+  {
+   "word": "espinhos",
+   "start": 77.506,
+   "end": 77.836
+  },
+  {
+   "word": "se",
+   "start": 77.941,
+   "end": 78.365
+  },
+  {
+   "word": "fecham",
+   "start": 78.477,
+   "end": 78.8
+  },
+  {
+   "word": "em",
+   "start": 78.8,
+   "end": 78.951
+  },
+  {
+   "word": "volta",
+   "start": 78.951,
+   "end": 79.23
+  },
+  {
+   "word": "de",
+   "start": 79.23,
+   "end": 79.381
+  },
+  {
+   "word": "você,",
+   "start": 79.381,
+   "end": 79.618
+  },
+  {
+   "word": "formando",
+   "start": 79.755,
+   "end": 80.155
+  },
+  {
+   "word": "uma",
+   "start": 80.155,
+   "end": 80.344
+  },
+  {
+   "word": "cestinha.",
+   "start": 80.344,
+   "end": 80.744
+  },
+  {
+   "word": "Você",
+   "start": 80.971,
+   "end": 81.195
+  },
+  {
+   "word": "tenta",
+   "start": 81.195,
+   "end": 81.46
+  },
+  {
+   "word": "virar",
+   "start": 81.46,
+   "end": 81.725
+  },
+  {
+   "word": "o",
+   "start": 81.725,
+   "end": 81.826
+  },
+  {
+   "word": "ferrão,",
+   "start": 81.826,
+   "end": 82.132
+  },
+  {
+   "word": "mas",
+   "start": 82.353,
+   "end": 82.529
+  },
+  {
+   "word": "ela",
+   "start": 82.529,
+   "end": 82.705
+  },
+  {
+   "word": "já",
+   "start": 82.705,
+   "end": 82.842
+  },
+  {
+   "word": "está",
+   "start": 82.842,
+   "end": 83.057
+  },
+  {
+   "word": "segurando",
+   "start": 83.057,
+   "end": 83.467
+  },
+  {
+   "word": "você",
+   "start": 83.467,
+   "end": 83.682
+  },
+  {
+   "word": "pelo",
+   "start": 83.682,
+   "end": 83.897
+  },
+  {
+   "word": "lado",
+   "start": 83.897,
+   "end": 84.112
+  },
+  {
+   "word": "certo.",
+   "start": 84.112,
+   "end": 84.366
+  },
+  {
+   "word": "As",
+   "start": 84.762,
+   "end": 84.937
+  },
+  {
+   "word": "mandíbulas",
+   "start": 84.937,
+   "end": 85.51
+  },
+  {
+   "word": "dela",
+   "start": 85.51,
+   "end": 85.785
+  },
+  {
+   "word": "mordem,",
+   "start": 85.785,
+   "end": 86.159
+  },
+  {
+   "word": "e,",
+   "start": 86.37,
+   "end": 86.46
+  },
+  {
+   "word": "dependendo",
+   "start": 86.46,
+   "end": 86.873
+  },
+  {
+   "word": "do",
+   "start": 86.873,
+   "end": 86.998
+  },
+  {
+   "word": "tamanho",
+   "start": 86.998,
+   "end": 87.303
+  },
+  {
+   "word": "da",
+   "start": 87.303,
+   "end": 87.429
+  },
+  {
+   "word": "presa,",
+   "start": 87.523,
+   "end": 87.882
+  },
+  {
+   "word": "ela",
+   "start": 87.882,
+   "end": 88.13
+  },
+  {
+   "word": "come",
+   "start": 88.197,
+   "end": 88.526
+  },
+  {
+   "word": "você",
+   "start": 88.526,
+   "end": 88.856
+  },
+  {
+   "word": "ali",
+   "start": 88.856,
+   "end": 89.125
+  },
+  {
+   "word": "mesmo,",
+   "start": 89.125,
+   "end": 89.514
+  },
+  {
+   "word": "no",
+   "start": 89.576,
+   "end": 89.748
+  },
+  {
+   "word": "meio",
+   "start": 89.748,
+   "end": 90.017
+  },
+  {
+   "word": "do",
+   "start": 90.017,
+   "end": 90.189
+  },
+  {
+   "word": "voo.",
+   "start": 90.189,
+   "end": 90.409
+  },
+  {
+   "word": "As",
+   "start": 90.672,
+   "end": 90.819
+  },
+  {
+   "word": "suas",
+   "start": 90.819,
+   "end": 91.05
+  },
+  {
+   "word": "listras",
+   "start": 91.05,
+   "end": 91.408
+  },
+  {
+   "word": "amarelas",
+   "start": 91.408,
+   "end": 91.807
+  },
+  {
+   "word": "e",
+   "start": 91.807,
+   "end": 91.912
+  },
+  {
+   "word": "pretas,",
+   "start": 91.991,
+   "end": 92.374
+  },
+  {
+   "word": "que",
+   "start": 92.434,
+   "end": 92.663
+  },
+  {
+   "word": "avisam",
+   "start": 92.663,
+   "end": 93.044
+  },
+  {
+   "word": "todo",
+   "start": 93.044,
+   "end": 93.323
+  },
+  {
+   "word": "mundo",
+   "start": 93.323,
+   "end": 93.653
+  },
+  {
+   "word": "que",
+   "start": 93.653,
+   "end": 93.882
+  },
+  {
+   "word": "você",
+   "start": 93.882,
+   "end": 94.161
+  },
+  {
+   "word": "é",
+   "start": 94.161,
+   "end": 94.288
+  },
+  {
+   "word": "perigosa?",
+   "start": 94.288,
+   "end": 94.771
+  },
+  {
+   "word": "Num",
+   "start": 94.841,
+   "end": 95.015
+  },
+  {
+   "word": "estudo,",
+   "start": 95.015,
+   "end": 95.304
+  },
+  {
+   "word": "as",
+   "start": 95.304,
+   "end": 95.439
+  },
+  {
+   "word": "libélulas",
+   "start": 95.439,
+   "end": 95.844
+  },
+  {
+   "word": "ficaram",
+   "start": 95.844,
+   "end": 96.172
+  },
+  {
+   "word": "só",
+   "start": 96.172,
+   "end": 96.307
+  },
+  {
+   "word": "um",
+   "start": 96.307,
+   "end": 96.442
+  },
+  {
+   "word": "pouco",
+   "start": 96.869,
+   "end": 97.094
+  },
+  {
+   "word": "mais",
+   "start": 97.094,
+   "end": 97.284
+  },
+  {
+   "word": "desconfiadas",
+   "start": 97.284,
+   "end": 97.921
+  },
+  {
+   "word": "de",
+   "start": 97.921,
+   "end": 98.078
+  },
+  {
+   "word": "alvos",
+   "start": 98.078,
+   "end": 98.371
+  },
+  {
+   "word": "com",
+   "start": 98.371,
+   "end": 98.573
+  },
+  {
+   "word": "formato",
+   "start": 98.573,
+   "end": 98.956
+  },
+  {
+   "word": "de",
+   "start": 98.956,
+   "end": 99.113
+  },
+  {
+   "word": "vespa.",
+   "start": 99.113,
+   "end": 99.406
+  },
+  {
+   "word": "Quase",
+   "start": 99.786,
+   "end": 100.197
+  },
+  {
+   "word": "nada.",
+   "start": 100.197,
+   "end": 100.544
+  },
+  {
+   "word": "E",
+   "start": 100.773,
+   "end": 100.892
+  },
+  {
+   "word": "ela",
+   "start": 100.892,
+   "end": 101.106
+  },
+  {
+   "word": "não",
+   "start": 101.106,
+   "end": 101.32
+  },
+  {
+   "word": "para.",
+   "start": 101.32,
+   "end": 101.581
+  },
+  {
+   "word": "Uma",
+   "start": 101.801,
+   "end": 102.001
+  },
+  {
+   "word": "pesquisadora",
+   "start": 102.001,
+   "end": 102.601
+  },
+  {
+   "word": "de",
+   "start": 102.601,
+   "end": 102.756
+  },
+  {
+   "word": "Harvard",
+   "start": 102.756,
+   "end": 103.134
+  },
+  {
+   "word": "viu",
+   "start": 103.134,
+   "end": 103.333
+  },
+  {
+   "word": "uma",
+   "start": 103.333,
+   "end": 103.533
+  },
+  {
+   "word": "libélula",
+   "start": 103.533,
+   "end": 103.955
+  },
+  {
+   "word": "comer",
+   "start": 103.955,
+   "end": 104.244
+  },
+  {
+   "word": "30",
+   "start": 104.377,
+   "end": 104.627
+  },
+  {
+   "word": "moscas",
+   "start": 104.627,
+   "end": 105.163
+  },
+  {
+   "word": "seguidas,",
+   "start": 105.163,
+   "end": 105.842
+  },
+  {
+   "word": "e",
+   "start": 106.023,
+   "end": 106.123
+  },
+  {
+   "word": "ela",
+   "start": 106.123,
+   "end": 106.304
+  },
+  {
+   "word": "só",
+   "start": 106.304,
+   "end": 106.444
+  },
+  {
+   "word": "parou",
+   "start": 106.444,
+   "end": 106.705
+  },
+  {
+   "word": "porque",
+   "start": 106.705,
+   "end": 107.006
+  },
+  {
+   "word": "a",
+   "start": 107.006,
+   "end": 107.106
+  },
+  {
+   "word": "comida",
+   "start": 107.106,
+   "end": 107.407
+  },
+  {
+   "word": "acabou.",
+   "start": 107.407,
+   "end": 107.708
+  },
+  {
+   "word": "Isso",
+   "start": 107.967,
+   "end": 108.266
+  },
+  {
+   "word": "tudo",
+   "start": 108.266,
+   "end": 108.565
+  },
+  {
+   "word": "é",
+   "start": 108.565,
+   "end": 108.701
+  },
+  {
+   "word": "fruto",
+   "start": 108.701,
+   "end": 109.055
+  },
+  {
+   "word": "de",
+   "start": 109.055,
+   "end": 109.245
+  },
+  {
+   "word": "mais",
+   "start": 109.245,
+   "end": 109.544
+  },
+  {
+   "word": "de",
+   "start": 109.544,
+   "end": 109.735
+  },
+  {
+   "word": "300",
+   "start": 109.735,
+   "end": 109.979
+  },
+  {
+   "word": "milhões",
+   "start": 109.979,
+   "end": 110.442
+  },
+  {
+   "word": "de",
+   "start": 110.442,
+   "end": 110.632
+  },
+  {
+   "word": "anos",
+   "start": 110.632,
+   "end": 110.931
+  },
+  {
+   "word": "de",
+   "start": 110.931,
+   "end": 111.121
+  },
+  {
+   "word": "evolução.",
+   "start": 111.121,
+   "end": 111.638
+  },
+  {
+   "word": "Algumas",
+   "start": 111.85,
+   "end": 112.351
+  },
+  {
+   "word": "libélulas",
+   "start": 112.351,
+   "end": 112.969
+  },
+  {
+   "word": "antigas",
+   "start": 112.969,
+   "end": 113.47
+  },
+  {
+   "word": "tinham",
+   "start": 113.47,
+   "end": 113.912
+  },
+  {
+   "word": "asas",
+   "start": 113.912,
+   "end": 114.236
+  },
+  {
+   "word": "de",
+   "start": 114.236,
+   "end": 114.442
+  },
+  {
+   "word": "60",
+   "start": 114.442,
+   "end": 114.648
+  },
+  {
+   "word": "cm",
+   "start": 114.648,
+   "end": 114.855
+  },
+  {
+   "word": "de",
+   "start": 114.855,
+   "end": 115.061
+  },
+  {
+   "word": "ponta",
+   "start": 115.061,
+   "end": 115.444
+  },
+  {
+   "word": "a",
+   "start": 115.444,
+   "end": 115.591
+  },
+  {
+   "word": "ponta.",
+   "start": 115.591,
+   "end": 115.974
+  },
+  {
+   "word": "Mas",
+   "start": 116.353,
+   "end": 116.531
+  },
+  {
+   "word": "a",
+   "start": 116.531,
+   "end": 116.63
+  },
+  {
+   "word": "natureza",
+   "start": 116.63,
+   "end": 117.006
+  },
+  {
+   "word": "tem",
+   "start": 117.006,
+   "end": 117.185
+  },
+  {
+   "word": "uma",
+   "start": 117.185,
+   "end": 117.363
+  },
+  {
+   "word": "reviravolta.",
+   "start": 117.363,
+   "end": 117.858
+  },
+  {
+   "word": "Às",
+   "start": 118.262,
+   "end": 118.485
+  },
+  {
+   "word": "vezes,",
+   "start": 118.485,
+   "end": 118.899
+  },
+  {
+   "word": "quem",
+   "start": 118.899,
+   "end": 119.249
+  },
+  {
+   "word": "caça",
+   "start": 119.323,
+   "end": 119.78
+  },
+  {
+   "word": "é",
+   "start": 119.89,
+   "end": 120.048
+  },
+  {
+   "word": "você.",
+   "start": 120.048,
+   "end": 120.397
+  },
+  {
+   "word": "Já",
+   "start": 120.651,
+   "end": 120.824
+  },
+  {
+   "word": "registraram",
+   "start": 120.824,
+   "end": 121.441
+  },
+  {
+   "word": "vespas",
+   "start": 121.441,
+   "end": 121.812
+  },
+  {
+   "word": "atacando",
+   "start": 121.812,
+   "end": 122.281
+  },
+  {
+   "word": "libélulas",
+   "start": 122.281,
+   "end": 122.8
+  },
+  {
+   "word": "e",
+   "start": 122.8,
+   "end": 122.923
+  },
+  {
+   "word": "arrancando",
+   "start": 122.923,
+   "end": 123.491
+  },
+  {
+   "word": "pedaços",
+   "start": 123.554,
+   "end": 124.064
+  },
+  {
+   "word": "delas",
+   "start": 124.064,
+   "end": 124.454
+  },
+  {
+   "word": "no",
+   "start": 124.454,
+   "end": 124.664
+  },
+  {
+   "word": "ar.",
+   "start": 124.664,
+   "end": 124.874
+  },
+  {
+   "word": "Então",
+   "start": 125.171,
+   "end": 125.479
+  },
+  {
+   "word": "me",
+   "start": 125.479,
+   "end": 125.645
+  },
+  {
+   "word": "diz:",
+   "start": 125.645,
+   "end": 125.859
+  },
+  {
+   "word": "se",
+   "start": 126.052,
+   "end": 126.187
+  },
+  {
+   "word": "você",
+   "start": 126.187,
+   "end": 126.399
+  },
+  {
+   "word": "fosse",
+   "start": 126.399,
+   "end": 126.649
+  },
+  {
+   "word": "a",
+   "start": 126.649,
+   "end": 126.746
+  },
+  {
+   "word": "vespa,",
+   "start": 126.746,
+   "end": 126.996
+  },
+  {
+   "word": "tentaria",
+   "start": 127.343,
+   "end": 127.855
+  },
+  {
+   "word": "fugir",
+   "start": 127.855,
+   "end": 128.205
+  },
+  {
+   "word": "ou",
+   "start": 128.459,
+   "end": 128.608
+  },
+  {
+   "word": "atacaria",
+   "start": 128.608,
+   "end": 129.011
+  },
+  {
+   "word": "primeiro?",
+   "start": 129.011,
+   "end": 129.414
+  },
+  {
+   "word": "Comenta",
+   "start": 129.634,
+   "end": 130.003
+  },
+  {
+   "word": "aí.",
+   "start": 130.003,
+   "end": 130.155
+  }
+ ]
+}

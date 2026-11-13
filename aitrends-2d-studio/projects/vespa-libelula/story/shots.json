@@ -1,0 +1,699 @@
+{
+ "title": "O que aconteceria se você fosse uma vespa e cruzasse com uma libélula?",
+ "duration": 131.9,
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0.0,
+   "end": 4.3,
+   "line": "O que aconteceria se você fosse uma vespa e cruzasse com uma libélula?",
+   "scene": "3D: lago numa tarde quente, juncos, libélula parada no ar; título por cima (capa)",
+   "set": "lago3d",
+   "captions": false,
+   "in": {
+    "type": "fade",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "riser",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s02",
+   "start": 4.3,
+   "end": 5.55,
+   "line": "Você é uma vespa.",
+   "scene": "Rosto da vespa (você); rótulo VOCÊ / VESPA",
+   "set": "ceu",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "buzz",
+     "gain": -18
+    }
+   ]
+  },
+  {
+   "id": "s03",
+   "start": 5.55,
+   "end": 7.25,
+   "line": "Tem ferrão. Tem veneno.",
+   "scene": "Perfil da vespa: ferrão brilha, gota de veneno; rótulos FERRÃO e VENENO",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 0.35,
+     "name": "ding",
+     "gain": -14
+    },
+    {
+     "at": 1.1,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s04",
+   "start": 7.25,
+   "end": 9.9,
+   "line": "Quase todo bicho do seu tamanho foge de você.",
+   "scene": "Bichinhos fugindo da vespa no jardim",
+   "set": "jardim",
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "whoosh",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s05",
+   "start": 9.9,
+   "end": 13.65,
+   "line": "Uma tarde quente, perto de um lago, você sai voando atrás de comida.",
+   "scene": "3D: a vespa sobrevoa o lago à tarde",
+   "set": "lago3d",
+   "in": {
+    "type": "dip",
+    "dur": 0.35
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "buzz",
+     "gain": -18
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s06",
+   "start": 13.65,
+   "end": 15.5,
+   "line": "Lá no alto, você vê uma libélula",
+   "scene": "Rosto da vespa olhando para cima",
+   "set": "ceu",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s07",
+   "start": 15.5,
+   "end": 17.45,
+   "line": "parada no ar como um helicóptero.",
+   "scene": "3D: a libélula parada no ar, asas borradas, câmera girando em volta",
+   "set": "lago3d",
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "hum",
+     "gain": -18
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s08",
+   "start": 17.45,
+   "end": 19.6,
+   "line": "Parece inofensiva. Ela não é.",
+   "scene": "Rosto da libélula: fofa, depois o olhar muda em \"Ela não é\"",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 1.5,
+     "name": "stinger",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s09",
+   "start": 19.6,
+   "end": 22.55,
+   "line": "Cada olho dela tem cerca de 30 mil lentes.",
+   "scene": "Olho composto em hexágonos; contador 30.000 LENTES",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.6,
+     "name": "counter",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "start": 22.55,
+   "end": 28.85,
+   "line": "Os dois juntos enxergam quase 360 graus: frente, pros lados e pra trás, ao mesmo tempo.",
+   "scene": "Vista de cima: campo de visão abrindo até 360°; FRENTE, LADOS, TRÁS",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 2.4,
+     "name": "swish",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "start": 28.85,
+   "end": 31.05,
+   "line": "Ela já te viu antes de você vê-la.",
+   "scene": "A libélula ao longe já olhando; a vespa distraída em primeiro plano",
+   "set": "ceu",
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s12",
+   "start": 31.05,
+   "end": 34.35,
+   "line": "E ela não vem atrás de você como um leão correndo atrás de uma zebra.",
+   "scene": "Leão correndo atrás de uma zebra, em silhueta; riscado",
+   "set": "savana",
+   "in": {
+    "type": "whip",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "whoosh",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "start": 34.35,
+   "end": 38.25,
+   "line": "Ela calcula onde você vai estar e voa direto para esse ponto.",
+   "scene": "Rota da vespa tracejada; X dourado onde ela vai estar; libélula em linha reta até o X",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.1,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 38.25,
+   "end": 43.7,
+   "line": "Ela mantém você sempre no mesmo lugar da visão dela, chegando mais perto e mais perto,",
+   "scene": "Visão da libélula com mira: a vespa fica sempre no mesmo ponto, cada vez maior",
+   "set": "pov",
+   "sfx": [
+    {
+     "at": 0.5,
+     "name": "heartbeat",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 43.7,
+   "end": 45.7,
+   "line": "até a rota de vocês dois se cruzar.",
+   "scene": "As duas rotas se cruzam com um clarão",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.4,
+     "name": "impact",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 45.7,
+   "end": 50.15,
+   "line": "Ela vem por baixo e por trás, bem no ponto em que você não consegue enxergar.",
+   "scene": "Perfil: campo de visão da vespa para a frente, ponto cego vermelho embaixo e atrás; a libélula sobe por ali",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 2.5,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "start": 50.15,
+   "end": 54.75,
+   "line": "Pra ela, o céu claro faz você parecer uma manchinha escura. Impossível de perder.",
+   "scene": "Visão de baixo: céu claro, a vespa como manchinha escura dentro do alvo",
+   "set": "pov",
+   "sfx": [
+    {
+     "at": 3.3,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 54.75,
+   "end": 57.1,
+   "line": "Você nem percebe que está sendo caçada.",
+   "scene": "A vespa voando tranquila; a sombra da libélula logo atrás e embaixo",
+   "set": "ceu",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s19",
+   "start": 57.1,
+   "end": 60.0,
+   "line": "Quatro asas dela se movem, cada uma sozinha.",
+   "scene": "3D: close da libélula, as quatro asas batendo cada uma num ritmo",
+   "set": "lago3d",
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "hum",
+     "gain": -16
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s20",
+   "start": 60.0,
+   "end": 63.85,
+   "line": "Para no ar, sobe reto, dá meia-volta, voa até de ré.",
+   "scene": "Manobras em traço: PARA, SOBE, MEIA-VOLTA, DE RÉ",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "blip",
+     "gain": -14
+    },
+    {
+     "at": 0.95,
+     "name": "blip",
+     "gain": -14
+    },
+    {
+     "at": 1.8,
+     "name": "blip",
+     "gain": -14
+    },
+    {
+     "at": 3.2,
+     "name": "blip",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "start": 63.85,
+   "end": 66.2,
+   "line": "Pode passar de 50 quilômetros por hora.",
+   "scene": "Libélula em disparada com linhas de velocidade; 50 KM/H",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "whoosh",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "start": 66.2,
+   "end": 71.25,
+   "line": "Em testes de laboratório, libélulas acertaram cerca de 95% dos ataques.",
+   "scene": "Barras: LIBÉLULAS 95% dos ataques",
+   "set": "blueprint",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 3.4,
+     "name": "ding",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 71.25,
+   "end": 74.0,
+   "line": "Um leão acerta mais ou menos um em cada quatro.",
+   "scene": "Barras: LEÃO 1 EM 4 (25%)",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 74.0,
+   "end": 76.2,
+   "line": "Então, de repente, você sente:",
+   "scene": "Rosto da vespa em choque",
+   "set": "ceu",
+   "in": {
+    "type": "flash",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "impact",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "start": 76.2,
+   "end": 80.85,
+   "line": "seis pernas cheias de espinhos se fecham em volta de você, formando uma cestinha.",
+   "scene": "Macro: seis pernas espinhosas se fecham em volta da vespa como uma cestinha",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 2.0,
+     "name": "hit",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "start": 80.85,
+   "end": 84.6,
+   "line": "Você tenta virar o ferrão, mas ela já está segurando você pelo lado certo.",
+   "scene": "A vespa tenta curvar o ferrão; a libélula segura por trás",
+   "set": "ceu",
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s27",
+   "start": 84.6,
+   "end": 90.5,
+   "line": "As mandíbulas dela mordem, e, dependendo do tamanho da presa, ela come você ali mesmo, no meio do voo.",
+   "scene": "Rosto da libélula com as mandíbulas abrindo e fechando",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 1.2,
+     "name": "hit",
+     "gain": -10
+    }
+   ]
+  },
+  {
+   "id": "s28",
+   "start": 90.5,
+   "end": 94.7,
+   "line": "As suas listras amarelas e pretas, que avisam todo mundo que você é perigosa?",
+   "scene": "Close das listras amarelas e pretas brilhando como aviso",
+   "set": "ceu",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "sfx": [
+    {
+     "at": 0.6,
+     "name": "shimmer",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 94.7,
+   "end": 100.6,
+   "line": "Num estudo, as libélulas ficaram só um pouco mais desconfiadas de alvos com formato de vespa. Quase nada.",
+   "scene": "Dois alvos (mosca x vespa) com desconfiança quase igual; QUASE NADA",
+   "set": "blueprint",
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 5.2,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "start": 100.6,
+   "end": 101.65,
+   "line": "E ela não para.",
+   "scene": "A libélula seguindo em frente",
+   "set": "ceu"
+  },
+  {
+   "id": "s31",
+   "start": 101.65,
+   "end": 107.8,
+   "line": "Uma pesquisadora de Harvard viu uma libélula comer 30 moscas seguidas, e ela só parou porque a comida acabou.",
+   "scene": "Laboratório: libélula comendo moscas, contador até 30",
+   "set": "lab",
+   "sfx": [
+    {
+     "at": 2.8,
+     "name": "counter",
+     "gain": -14
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s32",
+   "start": 107.8,
+   "end": 111.7,
+   "line": "Isso tudo é fruto de mais de 300 milhões de anos de evolução.",
+   "scene": "Linha do tempo: 300 MILHÕES DE ANOS",
+   "set": "blueprint",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "bars": "none",
+   "sfx": [
+    {
+     "at": 1.8,
+     "name": "riser",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "s33",
+   "start": 111.7,
+   "end": 116.2,
+   "line": "Algumas libélulas antigas tinham asas de 60 cm de ponta a ponta.",
+   "scene": "3D: floresta pré-histórica de samambaias com uma libélula gigante; uma pessoa para escala; 60 CM",
+   "set": "floresta3d",
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "hum",
+     "gain": -16
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   }
+  },
+  {
+   "id": "s34",
+   "start": 116.2,
+   "end": 118.1,
+   "line": "Mas a natureza tem uma reviravolta.",
+   "scene": "Rosto da vespa, determinado",
+   "set": "ceu",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "s35",
+   "start": 118.1,
+   "end": 120.5,
+   "line": "Às vezes, quem caça é você.",
+   "scene": "A vespa parte para cima da libélula; QUEM CAÇA / É VOCÊ",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 0.9,
+     "name": "stinger",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s36",
+   "start": 120.5,
+   "end": 125.0,
+   "line": "Já registraram vespas atacando libélulas e arrancando pedaços delas no ar.",
+   "scene": "A vespa ataca a libélula no ar; pedaço de asa voa",
+   "set": "ceu",
+   "sfx": [
+    {
+     "at": 1.5,
+     "name": "hit",
+     "gain": -10
+    },
+    {
+     "at": 3.0,
+     "name": "hit",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "s37",
+   "start": 125.0,
+   "end": 125.9,
+   "line": "Então me diz:",
+   "scene": "Rosto da vespa olhando para nós",
+   "set": "ceu",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "s38",
+   "start": 125.9,
+   "end": 129.5,
+   "line": "se você fosse a vespa, tentaria fugir ou atacaria primeiro?",
+   "scene": "A vespa entre duas escolhas: FUGIR? / ATACAR?",
+   "set": "ceu"
+  },
+  {
+   "id": "s39",
+   "start": 129.5,
+   "end": 131.9,
+   "line": "Comenta aí.",
+   "scene": "Tela final: pergunta, FUGIR / ATACAR, COMENTA AÍ, três personagens",
+   "set": "fim",
+   "in": {
+    "type": "fade",
+    "dur": 0.4
+   },
+   "captions": false,
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 17.45,
+   "mood": "playful",
+   "intensity": 0.35
+  },
+  {
+   "start": 17.45,
+   "end": 54.75,
+   "mood": "mystery",
+   "intensity": 0.45
+  },
+  {
+   "start": 54.75,
+   "end": 74.0,
+   "mood": "tension",
+   "intensity": 0.55
+  },
+  {
+   "start": 74.0,
+   "end": 107.8,
+   "mood": "dark",
+   "intensity": 0.6
+  },
+  {
+   "start": 107.8,
+   "end": 118.1,
+   "mood": "wonder",
+   "intensity": 0.45
+  },
+  {
+   "start": 118.1,
+   "end": 131.9,
+   "mood": "action",
+   "intensity": 0.5
+  }
+ ],
+ "sfx": []
+}
