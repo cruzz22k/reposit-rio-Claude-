@@ -1,0 +1,14 @@
+{
+ "title": "ormuz-documentario-v1",
+ "voiceover": "input/narracao-v2.wav",
+ "loudness": -14,
+ "music": {
+  "enabled": true,
+  "gainDb": -24,
+  "seed": 4
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ }
+}

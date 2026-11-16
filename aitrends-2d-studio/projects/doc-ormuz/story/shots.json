@@ -1,0 +1,142 @@
+{
+ "duration": 68.06,
+ "shots": [
+  {
+   "id": "tudo",
+   "start": 0,
+   "end": 68.06
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 25.2,
+   "mood": "dark",
+   "intensity": 0.35
+  },
+  {
+   "start": 25.2,
+   "end": 44.0,
+   "mood": "tension",
+   "intensity": 0.3
+  },
+  {
+   "start": 44.0,
+   "end": 68.06,
+   "mood": "dark",
+   "intensity": 0.45
+  }
+ ],
+ "sfx": [
+  {
+   "t": 2.5749999999999997,
+   "name": "build/sfx/caneta_curta.wav",
+   "gain": -14
+  },
+  {
+   "t": 5.14,
+   "name": "build/sfx/papel.wav",
+   "gain": -11
+  },
+  {
+   "t": 10.85,
+   "name": "build/sfx/caneta_circulo.wav",
+   "gain": -14
+  },
+  {
+   "t": 59.015,
+   "name": "build/sfx/caneta_minas.wav",
+   "gain": -14
+  },
+  {
+   "t": 60.945,
+   "name": "build/sfx/caneta_curta.wav",
+   "gain": -15
+  },
+  {
+   "t": 7.3,
+   "name": "whoosh",
+   "dur": 2.2,
+   "gain": -15,
+   "seed": 3,
+   "pitch": 0.8
+  },
+  {
+   "t": 21.18,
+   "name": "whoosh",
+   "dur": 1.7,
+   "gain": -13,
+   "seed": 5,
+   "pitch": 0.7
+  },
+  {
+   "t": 25.1,
+   "name": "whoosh",
+   "dur": 3.2,
+   "gain": -16,
+   "seed": 7,
+   "pitch": 0.6
+  },
+  {
+   "t": 37.45,
+   "name": "whoosh",
+   "dur": 2.8,
+   "gain": -15,
+   "seed": 9,
+   "pitch": 0.75
+  },
+  {
+   "t": 44.4,
+   "name": "whoosh",
+   "dur": 3.0,
+   "gain": -21,
+   "seed": 11,
+   "pitch": 0.6
+  },
+  {
+   "t": 59.7,
+   "name": "whoosh",
+   "dur": 1.8,
+   "gain": -15,
+   "seed": 13,
+   "pitch": 0.8
+  },
+  {
+   "t": 53.994,
+   "name": "build/sfx/carimbo.wav",
+   "gain": -7
+  },
+  {
+   "t": 53.994,
+   "name": "impact",
+   "dur": 2.5,
+   "gain": -12,
+   "pitch": 0.8,
+   "seed": 3
+  },
+  {
+   "t": 25.22,
+   "name": "impact",
+   "dur": 3.0,
+   "gain": -13,
+   "pitch": 0.65,
+   "seed": 4
+  },
+  {
+   "t": 41.521,
+   "name": "impact",
+   "dur": 3.0,
+   "gain": -12,
+   "pitch": 0.65,
+   "seed": 5
+  },
+  {
+   "t": 67.01,
+   "name": "impact",
+   "dur": 3.0,
+   "gain": -13,
+   "pitch": 0.6,
+   "seed": 6
+  }
+ ]
+}

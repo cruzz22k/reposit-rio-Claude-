@@ -1,0 +1,1210 @@
+{
+"words": [
+{
+"s": 1,
+"word": "Existe",
+"start": 0.5,
+"end": 0.915
+},
+{
+"s": 1,
+"word": "um",
+"start": 0.915,
+"end": 1.025
+},
+{
+"s": 1,
+"word": "corredor",
+"start": 1.025,
+"end": 1.445
+},
+{
+"s": 1,
+"word": "de",
+"start": 1.445,
+"end": 1.65
+},
+{
+"s": 1,
+"word": "água",
+"start": 1.65,
+"end": 2.09
+},
+{
+"s": 1,
+"word": "com",
+"start": 2.09,
+"end": 2.255
+},
+{
+"s": 1,
+"word": "só",
+"start": 2.255,
+"end": 2.465
+},
+{
+"s": 1,
+"word": "três",
+"start": 2.465,
+"end": 2.735
+},
+{
+"s": 1,
+"word": "quilômetros",
+"start": 2.735,
+"end": 3.265
+},
+{
+"s": 1,
+"word": "de",
+"start": 3.265,
+"end": 3.42
+},
+{
+"s": 1,
+"word": "largura",
+"start": 3.42,
+"end": 3.965
+},
+{
+"s": 2,
+"word": "É",
+"start": 4.315,
+"end": 4.435
+},
+{
+"s": 2,
+"word": "menos",
+"start": 4.435,
+"end": 4.835
+},
+{
+"s": 2,
+"word": "que",
+"start": 4.835,
+"end": 4.975
+},
+{
+"s": 2,
+"word": "o",
+"start": 4.975,
+"end": 5.02
+},
+{
+"s": 2,
+"word": "comprimento",
+"start": 5.02,
+"end": 5.625
+},
+{
+"s": 2,
+"word": "da",
+"start": 5.625,
+"end": 5.79
+},
+{
+"s": 2,
+"word": "praia",
+"start": 5.79,
+"end": 6.115
+},
+{
+"s": 2,
+"word": "de",
+"start": 6.115,
+"end": 6.225
+},
+{
+"s": 2,
+"word": "Copacabana",
+"start": 6.225,
+"end": 6.985
+},
+{
+"s": 3,
+"word": "Ele",
+"start": 7.535,
+"end": 7.68
+},
+{
+"s": 3,
+"word": "fica",
+"start": 7.68,
+"end": 7.94
+},
+{
+"s": 3,
+"word": "no",
+"start": 7.94,
+"end": 8.03
+},
+{
+"s": 3,
+"word": "Estreito",
+"start": 8.03,
+"end": 8.4
+},
+{
+"s": 3,
+"word": "de",
+"start": 8.4,
+"end": 8.52
+},
+{
+"s": 3,
+"word": "Ormuz",
+"start": 8.52,
+"end": 9.03
+},
+{
+"s": 3,
+"word": "entre",
+"start": 9.03,
+"end": 9.375
+},
+{
+"s": 3,
+"word": "o",
+"start": 9.375,
+"end": 9.5
+},
+{
+"s": 3,
+"word": "Irã",
+"start": 9.5,
+"end": 9.845
+},
+{
+"s": 3,
+"word": "e",
+"start": 9.845,
+"end": 9.95
+},
+{
+"s": 3,
+"word": "Omã",
+"start": 9.95,
+"end": 10.495
+},
+{
+"s": 3,
+"word": "a",
+"start": 10.495,
+"end": 10.74
+},
+{
+"s": 3,
+"word": "única",
+"start": 10.74,
+"end": 11.035
+},
+{
+"s": 3,
+"word": "saída",
+"start": 11.035,
+"end": 11.395
+},
+{
+"s": 3,
+"word": "do",
+"start": 11.395,
+"end": 11.495
+},
+{
+"s": 3,
+"word": "Golfo",
+"start": 11.495,
+"end": 11.85
+},
+{
+"s": 3,
+"word": "Pérsico",
+"start": 11.85,
+"end": 12.285
+},
+{
+"s": 3,
+"word": "para",
+"start": 12.285,
+"end": 12.435
+},
+{
+"s": 3,
+"word": "o",
+"start": 12.435,
+"end": 12.52
+},
+{
+"s": 3,
+"word": "oceano",
+"start": 12.52,
+"end": 12.995
+},
+{
+"s": 4,
+"word": "Em",
+"start": 13.466,
+"end": 13.671
+},
+{
+"s": 4,
+"word": "dois",
+"start": 13.671,
+"end": 13.961
+},
+{
+"s": 4,
+"word": "mil",
+"start": 13.961,
+"end": 14.101
+},
+{
+"s": 4,
+"word": "e",
+"start": 14.101,
+"end": 14.206
+},
+{
+"s": 4,
+"word": "vinte",
+"start": 14.206,
+"end": 14.501
+},
+{
+"s": 4,
+"word": "e",
+"start": 14.501,
+"end": 14.631
+},
+{
+"s": 4,
+"word": "cinco",
+"start": 14.631,
+"end": 15.216
+},
+{
+"s": 4,
+"word": "passavam",
+"start": 15.216,
+"end": 15.711
+},
+{
+"s": 4,
+"word": "por",
+"start": 15.711,
+"end": 15.861
+},
+{
+"s": 4,
+"word": "ali",
+"start": 15.861,
+"end": 16.121
+},
+{
+"s": 4,
+"word": "vinte",
+"start": 16.121,
+"end": 16.451
+},
+{
+"s": 4,
+"word": "milhões",
+"start": 16.451,
+"end": 16.896
+},
+{
+"s": 4,
+"word": "de",
+"start": 16.896,
+"end": 17.026
+},
+{
+"s": 4,
+"word": "barris",
+"start": 17.026,
+"end": 17.391
+},
+{
+"s": 4,
+"word": "de",
+"start": 17.391,
+"end": 17.531
+},
+{
+"s": 4,
+"word": "petróleo",
+"start": 17.531,
+"end": 18.006
+},
+{
+"s": 4,
+"word": "por",
+"start": 18.006,
+"end": 18.221
+},
+{
+"s": 4,
+"word": "dia",
+"start": 18.221,
+"end": 18.581
+},
+{
+"s": 5,
+"word": "Mais",
+"start": 18.903,
+"end": 19.208
+},
+{
+"s": 5,
+"word": "de",
+"start": 19.208,
+"end": 19.353
+},
+{
+"s": 5,
+"word": "cinco",
+"start": 19.353,
+"end": 19.688
+},
+{
+"s": 5,
+"word": "vezes",
+"start": 19.688,
+"end": 20.093
+},
+{
+"s": 5,
+"word": "tudo",
+"start": 20.093,
+"end": 20.338
+},
+{
+"s": 5,
+"word": "o",
+"start": 20.338,
+"end": 20.538
+},
+{
+"s": 5,
+"word": "que",
+"start": 20.538,
+"end": 20.598
+},
+{
+"s": 5,
+"word": "o",
+"start": 20.598,
+"end": 20.693
+},
+{
+"s": 5,
+"word": "Brasil",
+"start": 20.693,
+"end": 21.063
+},
+{
+"s": 5,
+"word": "produz",
+"start": 21.063,
+"end": 21.653
+},
+{
+"s": 6,
+"word": "Um",
+"start": 21.984,
+"end": 22.099
+},
+{
+"s": 6,
+"word": "em",
+"start": 22.099,
+"end": 22.284
+},
+{
+"s": 6,
+"word": "cada",
+"start": 22.284,
+"end": 22.584
+},
+{
+"s": 6,
+"word": "cinco",
+"start": 22.584,
+"end": 22.919
+},
+{
+"s": 6,
+"word": "barris",
+"start": 22.919,
+"end": 23.349
+},
+{
+"s": 6,
+"word": "consumidos",
+"start": 23.349,
+"end": 23.954
+},
+{
+"s": 6,
+"word": "no",
+"start": 23.954,
+"end": 24.089
+},
+{
+"s": 6,
+"word": "planeta",
+"start": 24.089,
+"end": 24.574
+},
+{
+"s": 7,
+"word": "Em",
+"start": 25.318,
+"end": 25.468
+},
+{
+"s": 7,
+"word": "mil",
+"start": 25.468,
+"end": 25.568
+},
+{
+"s": 7,
+"word": "novecentos",
+"start": 25.568,
+"end": 26.103
+},
+{
+"s": 7,
+"word": "e",
+"start": 26.103,
+"end": 26.248
+},
+{
+"s": 7,
+"word": "oitenta",
+"start": 26.248,
+"end": 26.613
+},
+{
+"s": 7,
+"word": "e",
+"start": 26.613,
+"end": 26.778
+},
+{
+"s": 7,
+"word": "quatro",
+"start": 26.778,
+"end": 27.268
+},
+{
+"s": 7,
+"word": "na",
+"start": 27.268,
+"end": 27.393
+},
+{
+"s": 7,
+"word": "guerra",
+"start": 27.393,
+"end": 27.578
+},
+{
+"s": 7,
+"word": "entre",
+"start": 27.578,
+"end": 27.913
+},
+{
+"s": 7,
+"word": "Irã",
+"start": 27.913,
+"end": 28.143
+},
+{
+"s": 7,
+"word": "e",
+"start": 28.143,
+"end": 28.263
+},
+{
+"s": 7,
+"word": "Iraque",
+"start": 28.263,
+"end": 28.873
+},
+{
+"s": 7,
+"word": "os",
+"start": 28.873,
+"end": 29.078
+},
+{
+"s": 7,
+"word": "petroleiros",
+"start": 29.078,
+"end": 29.683
+},
+{
+"s": 7,
+"word": "viraram",
+"start": 29.683,
+"end": 30.133
+},
+{
+"s": 7,
+"word": "alvo",
+"start": 30.133,
+"end": 30.413
+},
+{
+"s": 8,
+"word": "Até",
+"start": 30.764,
+"end": 30.939
+},
+{
+"s": 8,
+"word": "mil",
+"start": 30.939,
+"end": 31.059
+},
+{
+"s": 8,
+"word": "novecentos",
+"start": 31.059,
+"end": 31.619
+},
+{
+"s": 8,
+"word": "e",
+"start": 31.619,
+"end": 31.734
+},
+{
+"s": 8,
+"word": "oitenta",
+"start": 31.734,
+"end": 32.209
+},
+{
+"s": 8,
+"word": "e",
+"start": 32.209,
+"end": 32.419
+},
+{
+"s": 8,
+"word": "oito",
+"start": 32.419,
+"end": 32.874
+},
+{
+"s": 8,
+"word": "quatrocentos",
+"start": 32.874,
+"end": 33.539
+},
+{
+"s": 8,
+"word": "e",
+"start": 33.539,
+"end": 33.654
+},
+{
+"s": 8,
+"word": "cinquenta",
+"start": 33.654,
+"end": 34.154
+},
+{
+"s": 8,
+"word": "e",
+"start": 34.154,
+"end": 34.334
+},
+{
+"s": 8,
+"word": "um",
+"start": 34.334,
+"end": 34.429
+},
+{
+"s": 8,
+"word": "navios",
+"start": 34.429,
+"end": 34.819
+},
+{
+"s": 8,
+"word": "foram",
+"start": 34.819,
+"end": 35.054
+},
+{
+"s": 8,
+"word": "atingidos",
+"start": 35.054,
+"end": 35.914
+},
+{
+"s": 8,
+"word": "mais",
+"start": 35.914,
+"end": 36.364
+},
+{
+"s": 8,
+"word": "de",
+"start": 36.364,
+"end": 36.439
+},
+{
+"s": 8,
+"word": "um",
+"start": 36.439,
+"end": 36.554
+},
+{
+"s": 8,
+"word": "por",
+"start": 36.554,
+"end": 36.719
+},
+{
+"s": 8,
+"word": "semana",
+"start": 36.719,
+"end": 37.194
+},
+{
+"s": 9,
+"word": "Mesmo",
+"start": 37.825,
+"end": 38.115
+},
+{
+"s": 9,
+"word": "assim",
+"start": 38.115,
+"end": 38.49
+},
+{
+"s": 9,
+"word": "a",
+"start": 38.49,
+"end": 38.6
+},
+{
+"s": 9,
+"word": "passagem",
+"start": 38.6,
+"end": 39.165
+},
+{
+"s": 9,
+"word": "nunca",
+"start": 39.165,
+"end": 39.485
+},
+{
+"s": 9,
+"word": "tinha",
+"start": 39.485,
+"end": 39.735
+},
+{
+"s": 9,
+"word": "sido",
+"start": 39.735,
+"end": 40.03
+},
+{
+"s": 9,
+"word": "fechada",
+"start": 40.03,
+"end": 40.605
+},
+{
+"s": 10,
+"word": "Até",
+"start": 41.081,
+"end": 41.321
+},
+{
+"s": 10,
+"word": "março",
+"start": 41.321,
+"end": 41.766
+},
+{
+"s": 10,
+"word": "de",
+"start": 41.766,
+"end": 41.916
+},
+{
+"s": 10,
+"word": "dois",
+"start": 41.916,
+"end": 42.201
+},
+{
+"s": 10,
+"word": "mil",
+"start": 42.201,
+"end": 42.411
+},
+{
+"s": 10,
+"word": "e",
+"start": 42.411,
+"end": 42.516
+},
+{
+"s": 10,
+"word": "vinte",
+"start": 42.516,
+"end": 42.851
+},
+{
+"s": 10,
+"word": "e",
+"start": 42.851,
+"end": 42.906
+},
+{
+"s": 10,
+"word": "seis",
+"start": 42.906,
+"end": 43.396
+},
+{
+"s": 11,
+"word": "O",
+"start": 44.125,
+"end": 44.225
+},
+{
+"s": 11,
+"word": "Irã",
+"start": 44.225,
+"end": 44.515
+},
+{
+"s": 11,
+"word": "fechou",
+"start": 44.515,
+"end": 44.805
+},
+{
+"s": 11,
+"word": "o",
+"start": 44.805,
+"end": 44.86
+},
+{
+"s": 11,
+"word": "estreito",
+"start": 44.86,
+"end": 45.49
+},
+{
+"s": 11,
+"word": "e",
+"start": 45.49,
+"end": 45.57
+},
+{
+"s": 11,
+"word": "o",
+"start": 45.57,
+"end": 45.64
+},
+{
+"s": 11,
+"word": "mundo",
+"start": 45.64,
+"end": 45.89
+},
+{
+"s": 11,
+"word": "perdeu",
+"start": 45.89,
+"end": 46.255
+},
+{
+"s": 11,
+"word": "dez",
+"start": 46.255,
+"end": 46.5
+},
+{
+"s": 11,
+"word": "milhões",
+"start": 46.5,
+"end": 46.915
+},
+{
+"s": 11,
+"word": "de",
+"start": 46.915,
+"end": 47.025
+},
+{
+"s": 11,
+"word": "barris",
+"start": 47.025,
+"end": 47.385
+},
+{
+"s": 11,
+"word": "por",
+"start": 47.385,
+"end": 47.595
+},
+{
+"s": 11,
+"word": "dia",
+"start": 47.595,
+"end": 48.0
+},
+{
+"s": 11,
+"word": "a",
+"start": 48.0,
+"end": 48.255
+},
+{
+"s": 11,
+"word": "maior",
+"start": 48.255,
+"end": 48.59
+},
+{
+"s": 11,
+"word": "interrupção",
+"start": 48.59,
+"end": 49.205
+},
+{
+"s": 11,
+"word": "da",
+"start": 49.205,
+"end": 49.3
+},
+{
+"s": 11,
+"word": "história",
+"start": 49.3,
+"end": 49.68
+},
+{
+"s": 11,
+"word": "do",
+"start": 49.68,
+"end": 49.785
+},
+{
+"s": 11,
+"word": "petróleo",
+"start": 49.785,
+"end": 50.315
+},
+{
+"s": 11,
+"word": "segundo",
+"start": 50.315,
+"end": 50.67
+},
+{
+"s": 11,
+"word": "o",
+"start": 50.67,
+"end": 50.78
+},
+{
+"s": 11,
+"word": "Banco",
+"start": 50.78,
+"end": 51.02
+},
+{
+"s": 11,
+"word": "Mundial",
+"start": 51.02,
+"end": 51.57
+},
+{
+"s": 12,
+"word": "Em",
+"start": 52.109,
+"end": 52.309
+},
+{
+"s": 12,
+"word": "julho",
+"start": 52.309,
+"end": 52.739
+},
+{
+"s": 12,
+"word": "depois",
+"start": 52.739,
+"end": 53.134
+},
+{
+"s": 12,
+"word": "de",
+"start": 53.134,
+"end": 53.219
+},
+{
+"s": 12,
+"word": "uma",
+"start": 53.219,
+"end": 53.419
+},
+{
+"s": 12,
+"word": "trégua",
+"start": 53.419,
+"end": 53.844
+},
+{
+"s": 12,
+"word": "fechou",
+"start": 53.844,
+"end": 54.244
+},
+{
+"s": 12,
+"word": "de",
+"start": 54.244,
+"end": 54.374
+},
+{
+"s": 12,
+"word": "novo",
+"start": 54.374,
+"end": 54.819
+},
+{
+"s": 13,
+"word": "E",
+"start": 55.27,
+"end": 55.335
+},
+{
+"s": 13,
+"word": "neste",
+"start": 55.335,
+"end": 55.69
+},
+{
+"s": 13,
+"word": "fim",
+"start": 55.69,
+"end": 55.865
+},
+{
+"s": 13,
+"word": "de",
+"start": 55.865,
+"end": 55.955
+},
+{
+"s": 13,
+"word": "semana",
+"start": 55.955,
+"end": 56.46
+},
+{
+"s": 13,
+"word": "o",
+"start": 56.46,
+"end": 56.655
+},
+{
+"s": 13,
+"word": "Irã",
+"start": 56.655,
+"end": 57.06
+},
+{
+"s": 13,
+"word": "disse",
+"start": 57.06,
+"end": 57.39
+},
+{
+"s": 13,
+"word": "que",
+"start": 57.39,
+"end": 57.49
+},
+{
+"s": 13,
+"word": "dois",
+"start": 57.49,
+"end": 57.765
+},
+{
+"s": 13,
+"word": "petroleiros",
+"start": 57.765,
+"end": 58.365
+},
+{
+"s": 13,
+"word": "bateram",
+"start": 58.365,
+"end": 58.78
+},
+{
+"s": 13,
+"word": "em",
+"start": 58.78,
+"end": 58.905
+},
+{
+"s": 13,
+"word": "minas",
+"start": 58.905,
+"end": 59.24
+},
+{
+"s": 13,
+"word": "ali",
+"start": 59.24,
+"end": 59.55
+},
+{
+"s": 14,
+"word": "No",
+"start": 60.15,
+"end": 60.27
+},
+{
+"s": 14,
+"word": "corredor",
+"start": 60.27,
+"end": 60.715
+},
+{
+"s": 14,
+"word": "de",
+"start": 60.715,
+"end": 60.835
+},
+{
+"s": 14,
+"word": "três",
+"start": 60.835,
+"end": 61.12
+},
+{
+"s": 14,
+"word": "quilômetros",
+"start": 61.12,
+"end": 61.73
+},
+{
+"s": 14,
+"word": "onde",
+"start": 61.73,
+"end": 61.96
+},
+{
+"s": 14,
+"word": "passavam",
+"start": 61.96,
+"end": 62.41
+},
+{
+"s": 14,
+"word": "oitenta",
+"start": 62.41,
+"end": 62.865
+},
+{
+"s": 14,
+"word": "e",
+"start": 62.865,
+"end": 63.04
+},
+{
+"s": 14,
+"word": "cinco",
+"start": 63.04,
+"end": 63.305
+},
+{
+"s": 14,
+"word": "navios",
+"start": 63.305,
+"end": 63.775
+},
+{
+"s": 14,
+"word": "por",
+"start": 63.775,
+"end": 63.97
+},
+{
+"s": 14,
+"word": "dia",
+"start": 63.97,
+"end": 64.555
+},
+{
+"s": 14,
+"word": "nas",
+"start": 64.555,
+"end": 64.815
+},
+{
+"s": 14,
+"word": "últimas",
+"start": 64.815,
+"end": 65.27
+},
+{
+"s": 14,
+"word": "vinte",
+"start": 65.27,
+"end": 65.685
+},
+{
+"s": 14,
+"word": "e",
+"start": 65.685,
+"end": 65.84
+},
+{
+"s": 14,
+"word": "quatro",
+"start": 65.84,
+"end": 66.085
+},
+{
+"s": 14,
+"word": "horas",
+"start": 66.085,
+"end": 66.435
+},
+{
+"s": 14,
+"word": "passaram",
+"start": 66.435,
+"end": 66.81
+},
+{
+"s": 14,
+"word": "nove",
+"start": 66.81,
+"end": 67.16
+}
+]
+}
