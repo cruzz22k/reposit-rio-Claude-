@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Arquivo Morto — Vol. 1</title>
+<style>
+  @font-face { font-family: 'Playfair'; src: url('../../node_modules/@fontsource/playfair-display/files/playfair-display-latin-900-normal.woff2'); font-weight: 900; }
+  @font-face { font-family: 'Playfair'; src: url('../../node_modules/@fontsource/playfair-display/files/playfair-display-latin-400-italic.woff2'); font-style: italic; }
+  @font-face { font-family: 'Texto'; src: url('../../node_modules/@fontsource/nunito/files/nunito-latin-400-normal.woff2'); font-weight: 400; }
+  @font-face { font-family: 'Texto'; src: url('../../node_modules/@fontsource/nunito/files/nunito-latin-700-normal.woff2'); font-weight: 700; }
+  @page { size: A5; margin: 0; }
+  :root { --papel: #efe6d4; --tinta: #1e1a16; --vermelho: #a8221a; --escuro: #0d0b09; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Texto', sans-serif; color: var(--tinta); font-size: 10.5pt; line-height: 1.6; }
+  .pagina { width: 148mm; height: 210mm; padding: 18mm 16mm; page-break-after: always; position: relative; overflow: hidden; background: var(--papel); }
+  .pagina.escura { background: var(--escuro); color: #e8dcc4; }
+  .mono { font-family: 'DejaVu Sans Mono', monospace; }
+  h1, h2 { font-family: 'Playfair', serif; font-weight: 900; margin: 0; }
+  h2 { font-size: 22pt; line-height: 1.1; margin-bottom: 4mm; }
+  .rotulo { font-family: 'DejaVu Sans Mono', monospace; font-size: 8pt; letter-spacing: 3px; color: var(--vermelho); text-transform: uppercase; }
+  p { margin: 0 0 3.2mm; text-align: justify; hyphens: auto; }
+  .capa { display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; padding: 22mm 14mm; }
+  .capa h1 { font-size: 46pt; letter-spacing: 4px; line-height: 0.95; }
+  .capa h1 span { display: block; color: var(--vermelho); letter-spacing: 10px; }
+  .capa .sub { font-family: 'DejaVu Sans Mono', monospace; font-size: 10pt; letter-spacing: 2px; color: #c8bca4; }
+  .capa .aviso { font-size: 7.5pt; color: #8a8070; font-style: italic; }
+  .doc { background: #ddd2bc; border: 1px solid #b8aa90; padding: 4mm 5mm; margin: 4mm 0; font-family: 'DejaVu Sans Mono', monospace; font-size: 8.5pt; line-height: 1.5; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
+  .doc.bilhete { background: #f4eedf; transform: rotate(-1.2deg); font-family: 'Playfair', serif; font-style: italic; font-size: 13pt; text-align: center; padding: 6mm; }
+  .pistas { border-left: 3px solid var(--vermelho); padding: 2mm 0 2mm 5mm; margin: 4mm 0; }
+  .pistas li { margin-bottom: 1.5mm; }
+  .sumario { list-style: none; padding: 0; margin: 0; font-size: 10pt; }
+  .sumario li { display: flex; gap: 3mm; border-bottom: 1px dotted #b8aa90; padding: 1.6mm 0; }
+  .sumario .n { font-family: 'DejaVu Sans Mono', monospace; color: var(--vermelho); width: 9mm; }
+  .sumario .bloq { color: #8a8070; }
+  .rodape { position: absolute; bottom: 9mm; left: 16mm; right: 16mm; font-family: 'DejaVu Sans Mono', monospace; font-size: 7pt; color: #8a7a60; display: flex; justify-content: space-between; }
+  .escura .rodape { color: #6a6050; }
+  table { width: 100%; border-collapse: collapse; font-size: 7.6pt; }
+  td, th { border-bottom: 1px solid #b8aa90; padding: 1mm 1.5mm; text-align: right; }
+  th:first-child, td:first-child { text-align: left; }
+  .carimbo { display: inline-block; border: 2.5px solid var(--vermelho); color: var(--vermelho); padding: 1mm 4mm; font-family: 'DejaVu Sans Mono', monospace; font-weight: 700; letter-spacing: 2px; transform: rotate(-8deg); }
+  .centro { text-align: center; }
+  .solucao { background: var(--escuro); color: #e8dcc4; }
+  .solucao p { color: #d8ccb4; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="pagina escura capa">
+  <div class="sub">VOLUME 1</div>
+  <div>
+    <h1>ARQUIVO<span>MORTO</span></h1>
+    <p class="sub" style="margin-top:8mm; text-align:center">13 CASAS QUE NÃO<br>DEVERIAM EXISTIR</p>
+  </div>
+  <svg width="120" height="200" viewBox="0 0 70 120" style="opacity:.55">
+    <rect x="1" y="1" width="68" height="118" fill="none" stroke="#d8ccb4" stroke-width="2"/>
+    <line x1="40" y1="1" x2="40" y2="119" stroke="#d8ccb4" stroke-width="1.5"/>
+    <line x1="1" y1="70" x2="40" y2="70" stroke="#d8ccb4" stroke-width="1.5"/>
+    <line x1="40" y1="35" x2="69" y2="35" stroke="#d8ccb4" stroke-width="1.5"/>
+    <rect x="40" y="75" width="29" height="15" fill="#a8221a"/>
+  </svg>
+  <div class="aviso">Obra de ficção. Os endereços, nomes e documentos deste arquivo foram inventados.</div>
+</section>
+
+<!-- APRESENTAÇÃO -->
+<section class="pagina">
+  <div class="rotulo">Antes de abrir</div>
+  <h2>Como ler este arquivo</h2>
+  <p>Durante anos eu recebi envelopes. Plantas de casas, fotografias, contas de luz, bilhetes achados atrás de rodapés. Quem mandava sempre escrevia a mesma coisa no verso: <em>"tem alguma coisa errada aqui, mas eu não sei o quê."</em></p>
+  <p>Este volume reúne treze desses envelopes. Cada caso traz a história contada por quem morou na casa e os documentos que vieram junto. Leia com calma. Olhe as medidas. Some os números. A resposta quase sempre está no papel, e não na história.</p>
+  <p>No fim de cada caso há uma lista de pistas. A solução fica separada, nas últimas páginas do caso, para você tentar descobrir antes.</p>
+  <p>Um conselho: não leia à noite. E, se em algum momento você ouvir três batidas na parede, não bata de volta.</p>
+  <p style="text-align:right; font-family:'Playfair',serif; font-style:italic; font-size:12pt">— O Arquivista</p>
+  <div class="rodape"><span>ARQUIVO MORTO · VOL. 1</span><span>02</span></div>
+</section>
+
+<!-- SUMÁRIO -->
+<section class="pagina">
+  <div class="rotulo">Índice do arquivo</div>
+  <h2>Os 13 casos</h2>
+  <ul class="sumario">
+    <li><span class="n">001</span><span>A casa que sobra</span></li>
+    <li><span class="n">002</span><span>O corredor que encolhe</span></li>
+    <li><span class="n">003</span><span>A janela que dá para dentro</span></li>
+    <li><span class="n">004</span><span>O porão que não estava na escritura</span></li>
+    <li><span class="n">005</span><span>A escada de treze degraus</span></li>
+    <li><span class="n">006</span><span>O quarto das crianças sem crianças</span></li>
+    <li><span class="n">007</span><span>A casa com duas cozinhas</span></li>
+    <li><span class="n">008</span><span>O apartamento 7B, que não existe</span></li>
+    <li><span class="n">009</span><span>O sítio onde os relógios atrasam</span></li>
+    <li><span class="n">010</span><span>A casa espelhada</span></li>
+    <li><span class="n">011</span><span>O sótão que respira</span></li>
+    <li><span class="n">012</span><span>A porta pintada</span></li>
+    <li><span class="n">013</span><span>A planta desenhada por quem morreu</span></li>
+  </ul>
+  <p class="mono" style="font-size:8pt; margin-top:5mm; color:#8a7a60">Nesta amostra: caso 001 completo, com documentos, pistas e solução.</p>
+  <div class="rodape"><span>ARQUIVO MORTO · VOL. 1</span><span>03</span></div>
+</section>
+
+<!-- CASO 001 -->
+<section class="pagina">
+  <div class="rotulo">Caso 001 · Rua das Acácias, 214</div>
+  <h2>A casa que sobra</h2>
+  <p>A gente se mudou para a Rua das Acácias em março de 2009. Eu tinha onze anos. A casa era barata demais para o tamanho, e o meu pai dizia que era sorte. A minha mãe dizia que era sorte demais.</p>
+  <p>Era uma casa térrea, comprida, de tijolo pintado de cinza. Sala e quarto dos meus pais de um lado; do outro, a cozinha, o meu quarto e o banheiro, um atrás do outro, como vagões de trem. O meu quarto era o do meio.</p>
+  <p>Na primeira semana, eu reparei que a parede entre o meu quarto e o banheiro era mais grossa que as outras. Dava para sentir no batente da porta: no quarto, a parede terminava num lugar; no banheiro, recomeçava muito depois. Eu achei que casa velha era assim.</p>
+  <p>As batidas começaram no segundo mês.</p>
+  <p>Sempre perto das três da manhã. Sempre três. Não era um estalo de cano nem madeira assentando. Era o som de nós de dedos contra o reboco, devagar, com um intervalo igual entre uma batida e outra. Vinham da parede grossa, mais ou menos na altura da minha cabeça, quando eu estava deitado.</p>
+  <div class="rodape"><span>CASO 001</span><span>04</span></div>
+</section>
+<section class="pagina">
+  <p>Eu contei para o meu pai. Ele bateu na parede com a mão aberta, ouviu um som oco e disse que era o encanamento passando por dentro. Fazia sentido. O banheiro estava logo ali.</p>
+  <p>Numa noite de junho, eu não dormi. Esperei as três batidas, com o relógio digital brilhando vermelho do lado da cama. Elas vieram às 3h02. E então, sem saber muito bem por quê, eu fechei a mão e bati de volta. Três vezes.</p>
+  <p>Silêncio.</p>
+  <p>Depois, muito devagar, alguém do outro lado respondeu. Três batidas. No mesmo ritmo que as minhas.</p>
+  <p>Eu não contei isso para ninguém. Passei os meses seguintes dormindo virado para o outro lado, com o travesseiro sobre a cabeça. As batidas continuaram toda noite, até o dia em que a gente se mudou, em 2012.</p>
+  <p>Na entrega das chaves, a moça da imobiliária comentou, puxando conversa, que a casa tinha ficado vazia por onze anos antes de nós. Ninguém queria alugar. Ninguém sabia dizer por quê.</p>
+  <p>Foi só em 2019, organizando os papéis do meu pai depois que ele morreu, que eu encontrei os documentos que estão nas próximas páginas. A planta que ele pediu para a prefeitura. E uma conta de luz antiga, que tinha vindo junto com o contrato.</p>
+  <div class="rodape"><span>CASO 001</span><span>05</span></div>
+</section>
+
+<!-- DOCUMENTOS -->
+<section class="pagina">
+  <div class="rotulo">Documento 1 · Planta baixa (prefeitura)</div>
+  <div class="doc centro">
+    <svg width="215" height="330" viewBox="-14 -6 104 160">
+      <g font-family="DejaVu Sans Mono" font-size="3.6" fill="#1e1a16">
+        <rect x="0" y="0" width="70" height="120" fill="none" stroke="#1e1a16" stroke-width="2"/>
+        <line x1="40" y1="0" x2="40" y2="120" stroke="#1e1a16" stroke-width="1.2"/>
+        <line x1="0" y1="70" x2="40" y2="70" stroke="#1e1a16" stroke-width="1.2"/>
+        <line x1="40" y1="35" x2="70" y2="35" stroke="#1e1a16" stroke-width="1.2"/>
+        <rect x="40" y="75" width="30" height="15" fill="#2a2420"/>
+        <line x1="40" y1="90" x2="70" y2="90" stroke="#1e1a16" stroke-width="1.2"/>
+        <text x="20" y="35" text-anchor="middle">SALA</text>
+        <text x="20" y="96" text-anchor="middle">QUARTO DOS PAIS</text>
+        <text x="55" y="18" text-anchor="middle">COZINHA</text>
+        <text x="55" y="56" text-anchor="middle">MEU QUARTO</text>
+        <text x="55" y="106" text-anchor="middle">BANHEIRO</text>
+        <line x1="78" y1="0" x2="78" y2="120" stroke="#1e1a16" stroke-width="0.5"/>
+        <text x="84" y="62" transform="rotate(-90 84 62)" text-anchor="middle">12,00 m</text>
+        <line x1="0" y1="128" x2="70" y2="128" stroke="#1e1a16" stroke-width="0.5"/>
+        <text x="35" y="134" text-anchor="middle">7,00 m</text>
+        <text x="-8" y="62" transform="rotate(-90 -8 62)" text-anchor="middle" fill="#3a5a8a">Cozinha 3,50 · Quarto 4,00 · Banheiro 3,00</text>
+      </g>
+    </svg>
+  </div>
+  <div class="rotulo" style="margin-top:3mm">Documento 2 · Encontrado atrás do rodapé do quarto</div>
+  <div class="doc bilhete">Não responda quando ele bater.<br>Ele só bate porque sabe que você está acordado.<br><br>— A.</div>
+  <div class="rodape"><span>CASO 001 · DOCUMENTOS</span><span>06</span></div>
+</section>
+<section class="pagina">
+  <div class="rotulo">Documento 3 · Histórico de consumo de energia</div>
+  <div class="doc">
+    <div>CIA. DE ENERGIA ELÉTRICA · UNIDADE: R. DAS ACÁCIAS, 214</div>
+    <div style="margin:2mm 0">SITUAÇÃO DO IMÓVEL NO PERÍODO: <b>DESOCUPADO</b></div>
+    <table>
+      <tr><th>ANO</th><th>CONSUMO MÉDIO (kWh/mês)</th><th>FATURAS</th></tr>
+      <tr><td>1998</td><td>96</td><td>12/12 pagas</td></tr>
+      <tr><td>1999</td><td>101</td><td>12/12 pagas</td></tr>
+      <tr><td>2000</td><td>98</td><td>12/12 pagas</td></tr>
+      <tr><td>2001</td><td>104</td><td>12/12 pagas</td></tr>
+      <tr><td>2002</td><td>99</td><td>12/12 pagas</td></tr>
+      <tr><td>2003</td><td>103</td><td>12/12 pagas</td></tr>
+      <tr><td>2004</td><td>97</td><td>12/12 pagas</td></tr>
+      <tr><td>2005</td><td>102</td><td>12/12 pagas</td></tr>
+      <tr><td>2006</td><td>100</td><td>12/12 pagas</td></tr>
+      <tr><td>2007</td><td>98</td><td>12/12 pagas</td></tr>
+      <tr><td>2008</td><td>101</td><td>12/12 pagas</td></tr>
+    </table>
+    <div style="margin-top:2mm">PAGAMENTO: EM ESPÉCIE, NA AGÊNCIA DO BAIRRO.</div>
+    <div style="text-align:right; margin-top:2mm"><span class="carimbo">PAGO</span></div>
+  </div>
+  <div class="pistas">
+    <div class="rotulo" style="margin-bottom:2mm">Pistas</div>
+    <ol>
+      <li>Some as três medidas de dentro do lado direito da planta e compare com o comprimento da casa.</li>
+      <li>Repare onde fica o retângulo escuro da planta e de que lado do quarto o narrador dormia.</li>
+      <li>Uma casa vazia por onze anos consumiu energia todo mês, quase sempre a mesma quantidade.</li>
+      <li>Quem paga uma conta em dinheiro, na agência, não precisa dizer o próprio nome.</li>
+    </ol>
+  </div>
+  <div class="rodape"><span>CASO 001 · DOCUMENTOS</span><span>07</span></div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="pagina solucao">
+  <div class="rotulo">Caso 001 · Solução</div>
+  <h2 style="color:#e8dcc4">O que havia na parede</h2>
+  <p>As medidas de dentro somam dez metros e meio. A casa tem doze. O metro e meio que falta fica exatamente entre o quarto do narrador e o banheiro: o retângulo escuro da planta, que a prefeitura registrou como "parede de alvenaria".</p>
+  <p>Um metro e meio não é uma parede. É um cômodo estreito, do comprimento da casa de lado a lado, sem porta e sem janela.</p>
+  <p>Em 2019, quando a casa foi posta abaixo para a construção de um prédio, os operários abriram esse espaço. Dentro, encontraram uma cadeira virada para a parede do quarto. Na altura de quem está deitado na cama do outro lado, havia um furo do tamanho de uma moeda, tapado por dentro com um pedaço de papel.</p>
+  <p>Encontraram também uma extensão elétrica ligada ao circuito do banheiro, um aquecedor pequeno e uma lâmpada. Isso explica a conta de luz: cerca de cem quilowatts-hora por mês, durante onze anos em que a casa esteve "vazia".</p>
+  <p>E encontraram as marcas. Riscos feitos com prego no reboco, em grupos de cinco. Os operários contaram mais de quatro mil.</p>
+  <p>Uma por noite.</p>
+  <p>Os riscos terminam numa data escrita a lápis, a única coisa legível na parede: o dia em que a família do narrador entregou as chaves.</p>
+  <p>Ninguém nunca descobriu quem era "A.". Nem para onde a pessoa da parede foi depois de 2012.</p>
+  <div class="rodape"><span>CASO 001 · SOLUÇÃO</span><span>08</span></div>
+</section>
+
+<!-- FINAL -->
+<section class="pagina escura capa">
+  <div class="sub">FIM DA AMOSTRA</div>
+  <div>
+    <h1 style="font-size:30pt">Ainda faltam<span style="font-size:30pt; letter-spacing:4px">12 casas.</span></h1>
+    <p style="text-align:center; margin-top:8mm; color:#c8bca4">O volume completo traz os 13 casos do Arquivo Morto, cada um com a história, os documentos originais, as pistas e a solução.</p>
+  </div>
+  <div class="sub">ARQUIVO MORTO · VOL. 1</div>
+</section>
+
+</body>
+</html>

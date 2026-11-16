@@ -1,0 +1,285 @@
+{
+ "title": "Arquivo Morto - Caso 001",
+ "duration": 66.3,
+ "shots": [
+  {
+   "id": "e01",
+   "start": 0.0,
+   "end": 5.1,
+   "line": "Esta é a planta da casa que a minha família alugou em 2009.",
+   "scene": "A pasta do Arquivo Morto abre sobre a mesa; a planta da casa desliza para a luz do abajur",
+   "amb": {
+    "name": "roomtone",
+    "gain": -20
+   },
+   "sfx": [
+    {
+     "at": 0.3,
+     "name": "swish",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "start": 5.1,
+   "end": 7.1,
+   "line": "Olhe com calma.",
+   "scene": "Câmera de documento avança devagar sobre a planta",
+   "amb": {
+    "name": "roomtone",
+    "gain": -20
+   }
+  },
+  {
+   "id": "e03",
+   "start": 7.1,
+   "end": 12.05,
+   "line": "Sala. Cozinha. Dois quartos. Um banheiro. Parece normal.",
+   "scene": "Os cômodos acendem um a um: sala, cozinha, quartos, banheiro",
+   "amb": {
+    "name": "roomtone",
+    "gain": -20
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "tick",
+     "gain": -16
+    },
+    {
+     "at": 0.9,
+     "name": "tick",
+     "gain": -16
+    },
+    {
+     "at": 1.6,
+     "name": "tick",
+     "gain": -16
+    },
+    {
+     "at": 2.3,
+     "name": "tick",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "e04",
+   "start": 12.05,
+   "end": 18.45,
+   "line": "Agora, repare nas medidas. Por fora, a casa tem 12 metros de comprimento.",
+   "scene": "A cota de fora: 12 M",
+   "amb": {
+    "name": "roomtone",
+    "gain": -20
+   },
+   "sfx": [
+    {
+     "at": 4.4,
+     "name": "pop",
+     "gain": -14
+    }
+   ]
+  },
+  {
+   "id": "e05",
+   "start": 18.45,
+   "end": 24.95,
+   "line": "Mas, se você somar os cômodos por dentro, dá 10,5. Falta 1,5 metro.",
+   "scene": "As cotas de dentro somam 10,5 M; a diferença de 1,5 M em vermelho",
+   "amb": {
+    "name": "roomtone",
+    "gain": -20
+   },
+   "sfx": [
+    {
+     "at": 3.45,
+     "name": "pop",
+     "gain": -14
+    },
+    {
+     "at": 4.95,
+     "name": "stinger",
+     "gain": -8
+    }
+   ]
+  },
+  {
+   "id": "e06",
+   "start": 24.95,
+   "end": 33.0,
+   "line": "Entre o meu quarto e o banheiro, existe um espaço que não aparece em lugar nenhum. Sem porta. Sem janela.",
+   "scene": "Zoom no espaço entre o quarto e o banheiro: sem porta, sem janela",
+   "amb": {
+    "name": "hum",
+    "gain": -22
+   },
+   "sfx": [
+    {
+     "at": 0.2,
+     "name": "riser",
+     "gain": -16
+    }
+   ]
+  },
+  {
+   "id": "e07",
+   "start": 33.0,
+   "end": 40.25,
+   "line": "Toda noite, perto das 3 da manhã, alguém batia na parede do meu quarto. Três batidas.",
+   "scene": "Foto da parede do quarto às 3 da manhã; três batidas",
+   "in": {
+    "type": "dip",
+    "dur": 0.3
+   },
+   "amb": {
+    "name": "roomtone",
+    "gain": -18
+   },
+   "sfx": [
+    {
+     "at": 5.55,
+     "name": "hit",
+     "gain": -4
+    },
+    {
+     "at": 5.95,
+     "name": "hit",
+     "gain": -4
+    },
+    {
+     "at": 6.35,
+     "name": "hit",
+     "gain": -4
+    }
+   ]
+  },
+  {
+   "id": "e08",
+   "start": 40.25,
+   "end": 46.2,
+   "line": "Eu achava que era o encanamento. Até o dia em que eu bati de volta.",
+   "scene": "Close da parede; você bate de volta",
+   "amb": {
+    "name": "roomtone",
+    "gain": -18
+   },
+   "sfx": [
+    {
+     "at": 4.9,
+     "name": "hit",
+     "gain": -6
+    }
+   ]
+  },
+  {
+   "id": "e09",
+   "start": 46.2,
+   "end": 48.9,
+   "line": "E alguém respondeu.",
+   "scene": "Escuro. Três batidas respondem",
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   },
+   "sfx": [
+    {
+     "at": 1.9,
+     "name": "hit",
+     "gain": -2
+    },
+    {
+     "at": 2.25,
+     "name": "hit",
+     "gain": -2
+    },
+    {
+     "at": 2.6,
+     "name": "hit",
+     "gain": -2
+    }
+   ]
+  },
+  {
+   "id": "e10",
+   "start": 48.9,
+   "end": 55.1,
+   "line": "Quando a gente se mudou, a imobiliária disse que a casa tinha ficado vazia por 11 anos.",
+   "scene": "Polaroid da casa vazia; carimbo VAZIA 11 ANOS",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "amb": {
+    "name": "wind",
+    "gain": -22
+   },
+   "sfx": [
+    {
+     "at": 5.3,
+     "name": "impact",
+     "gain": -12
+    }
+   ]
+  },
+  {
+   "id": "e11",
+   "start": 55.1,
+   "end": 58.6,
+   "line": "Então... quem pagava a conta de luz?",
+   "scene": "A conta de luz: consumo todo mês nos 11 anos; PAGO",
+   "amb": {
+    "name": "hum",
+    "gain": -20
+   },
+   "sfx": [
+    {
+     "at": 2.5,
+     "name": "stinger",
+     "gain": -6
+    }
+   ]
+  },
+  {
+   "id": "e12",
+   "start": 58.6,
+   "end": 66.3,
+   "line": "Este é o caso 1 do Arquivo Morto. Os outros 12, com as plantas completas, estão no link.",
+   "scene": "Encerramento: CASO 1 DE 13, capa do e-book, ARQUIVO COMPLETO NO LINK",
+   "in": {
+    "type": "dip",
+    "dur": 0.4
+   },
+   "captions": false,
+   "sfx": [
+    {
+     "at": 0.4,
+     "name": "pop",
+     "gain": -12
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 24.95,
+   "mood": "mystery",
+   "intensity": 0.3
+  },
+  {
+   "start": 24.95,
+   "end": 48.9,
+   "mood": "dark",
+   "intensity": 0.45
+  },
+  {
+   "start": 48.9,
+   "end": 66.3,
+   "mood": "dark",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": []
+}
