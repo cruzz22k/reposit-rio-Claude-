@@ -55,11 +55,11 @@ function tomada4(t) {
   camera2D(t, W / 2, 1000, 1.05, { amp: 3 }); fundo(); g.save(); g.globalAlpha = 0.92; papel(g, VEG, 90, 420); g.restore();
   casa(g, t, -99, { cor: LAPIS, x: easeInOut(prog(t, P(5, 'X'), 0.4)) });
   const L4 = ['Ele mudou de casa.', 'Agora é a sua.', 'Ele bate porque sabe que você está acordado.', 'Não responda.     — A.'], ts = [P(6, 'Ele mudou'), P(6, 'Agora'), P(6, 'Ele bate'), P(6, 'Não responda')];
-  g.save(); g.fillStyle = 'rgba(223,224,214,0.85)'; g.fillRect(100, 1540, 880, 250); g.restore();
-  L4.forEach((s, i) => escrita(g, s, 130, 1590 + i * 56, (t - ts[i]) / (0.25 + s.length * 0.04), -0.08, { tam: 36, cor: LAPIS }));
-  if (t > P(5, 'A.')) circulo(g, 130 + 360, 1590 + 3 * 56 - 10, 50, 30, easeInOut(prog(t, P(5, 'A.'), 0.5)), { seed: 9 });
+  g.save(); g.fillStyle = 'rgba(223,224,214,0.9)'; g.fillRect(100, 300, 880, 250); g.restore();
+  L4.forEach((s, i) => escrita(g, s, 130, 350 + i * 56, (t - ts[i]) / (0.25 + s.length * 0.04), -0.08, { tam: 36, cor: LAPIS }));
+  if (t > P(5, 'A.')) circulo(g, 130 + 360, 350 + 3 * 56 - 10, 50, 30, easeInOut(prog(t, P(5, 'A.'), 0.5)), { seed: 9 });
   g.restore(); tag('ATRÁS DA MESA', S(5), t);
-  return { focos: [{ x: 540, y: t < S(6) ? 1100 : 1350, r: 950 }], amb: 0.2, mult: 1 };
+  return { focos: [{ x: 540, y: t < S(6) ? 1100 : 700, r: 1000 }], amb: 0.2, mult: 1 };
 }
 const B1 = papelTex(480, 380, 41, '#f4eedf'), B2 = papelTex(480, 380, 42, '#dfe0d6');
 function tomada5(t) {
