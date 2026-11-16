@@ -1,0 +1,76 @@
+{
+ "duration": 21.3,
+ "shots": [
+  {
+   "id": "tudo",
+   "start": 0,
+   "end": 21.3
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 21.3,
+   "mood": "mystery",
+   "intensity": 0.35
+  }
+ ],
+ "sfx": [
+  {
+   "t": 1.05,
+   "name": "build/sfx/giz_titulo.wav",
+   "gain": -16
+  },
+  {
+   "t": 11.222372093023257,
+   "name": "build/sfx/caneta_1.wav",
+   "gain": -15
+  },
+  {
+   "t": 11.322372093023256,
+   "name": "build/sfx/giz_metade.wav",
+   "gain": -19
+  },
+  {
+   "t": 16.629283018867927,
+   "name": "build/sfx/caneta_2.wav",
+   "gain": -15
+  },
+  {
+   "t": 16.679283018867928,
+   "name": "build/sfx/giz_nove.wav",
+   "gain": -19
+  },
+  {
+   "t": 17.129283018867927,
+   "name": "build/sfx/giz_seta.wav",
+   "gain": -20
+  },
+  {
+   "t": 19.1969696969697,
+   "name": "build/sfx/caneta_sub.wav",
+   "gain": -16
+  },
+  {
+   "t": 3.6620000000000004,
+   "name": "build/sfx/papel.wav",
+   "gain": -22
+  },
+  {
+   "t": 14.291,
+   "name": "whoosh",
+   "dur": 2.0,
+   "gain": -24,
+   "seed": 3,
+   "pitch": 0.6
+  },
+  {
+   "t": 18.560000000000002,
+   "name": "impact",
+   "dur": 3.0,
+   "gain": -16,
+   "pitch": 0.6,
+   "seed": 4
+  }
+ ]
+}
