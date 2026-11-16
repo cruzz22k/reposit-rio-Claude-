@@ -41,7 +41,7 @@ cues = [
   {'t': S(1) + 0.55, 'name': FX['giz_titulo'], 'gain': -16, 'what': 'giz: título'},
   {'t': Pw(3, 'metade'), 'name': FX['caneta_1'], 'gain': -15, 'what': 'círculo no anúncio'},
   {'t': Pw(3, 'metade') + 0.1, 'name': FX['giz_metade'], 'gain': -19, 'what': 'giz: metade do preço'},
-  {'t': Pw(4, 'nove'), 'name': FX['caneta_2'], 'gain': -15, 'what': 'círculo nos 9,00 m'},
+  {'t': S(5) + 0.15, 'name': FX['caneta_2'], 'gain': -15, 'what': 'círculo nos 9,00 m'},
   {'t': Pw(4, 'nove') + 0.05, 'name': FX['giz_nove'], 'gain': -19, 'what': 'giz: 9,00 m ?'},
   {'t': Pw(4, 'nove') + 0.5, 'name': FX['giz_seta'], 'gain': -20, 'what': 'giz: seta'},
   {'t': Pw(5, 'pintura'), 'name': FX['caneta_sub'], 'gain': -16, 'what': 'sublinhado: pintura nova'},

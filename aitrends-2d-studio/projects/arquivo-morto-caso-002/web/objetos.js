@@ -197,7 +197,7 @@ function formaChave(dentes) {
 export function chaves(x, z, ang = 0, { n = 1 } = {}) {
   const grp = new THREE.Group();
   const metal = new THREE.MeshStandardMaterial({ color: '#c9c3b2', metalness: 1, roughness: 0.32 });
-  const latao = new THREE.MeshStandardMaterial({ color: '#c8a35a', metalness: 1, roughness: 0.3 });
+  const latao = new THREE.MeshStandardMaterial({ color: '#8f7440', metalness: 1, roughness: 0.42 });
   const argola = new THREE.Mesh(new THREE.TorusGeometry(1.7, 0.11, 10, 48), metal); argola.rotation.x = Math.PI / 2; argola.position.y = 0.12; grp.add(argola);
   for (let i = 0; i < n; i++) {
     const geo = new THREE.ExtrudeGeometry(formaChave(11 + i * 7), { depth: 0.16, bevelEnabled: true, bevelThickness: 0.03, bevelSize: 0.03, bevelSegments: 2, curveSegments: 18 });

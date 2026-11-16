@@ -77,7 +77,7 @@ const vistoria = O.papel(21, 29.7, (g, w, h, p) => {
   g.save(); g.translate(w * 0.58, h * 0.9); g.rotate(-0.04); tipo(g, 'vistoriadora', 0, 0, p * 0.9, '#23306a', 'Caneta'); g.restore();
 }, { seed: 35 });
 vistoria.position.set(-34, 0, -42); vistoria.rotation.y = -0.07;
-O.circuloCaneta(vistoria, 11.95, 7.5, 1.55, 0.62, P(4, 'nove'), 0.7, { seed: 7 });
+O.circuloCaneta(vistoria, 11.95, 7.5, 1.55, 0.62, S(5) + 0.15, 0.7, { seed: 7 });
 O.sublinha(vistoria, 12.3, 9.25, 16.8, P(5, 'pintura'), 0.5);
 
 // caderno da Lúcia no quarto
@@ -96,10 +96,10 @@ O.marcaCafe(-48, 30, 4.2);
 // ---------- giz ----------
 const gizes = [
   O.giz('', 2, 166, { tam: 5.2, t0: S(1) + 0.55, dur: 1.5, ang: -0.04, linhas: ['O corredor', 'que encolhe'] }),
-  O.giz('metade do preço', 17, 128, { tam: 3.0, t0: P(3, 'metade') + 0.1, dur: 1.0, ang: -0.08 }),
-  O.giz('9,00 m ?', 20, zS - M(9.0) + 1.5, { tam: 3.6, t0: P(4, 'nove') + 0.05, dur: 0.8 }),
+  O.giz('', 23, 128, { linhas: ['metade', 'do preço'], tam: 2.7, t0: P(3, 'metade') + 0.1, dur: 1.0, ang: -0.08 }),
+  O.giz('9,00 m ?', 15.5, zS - M(9.0) + 1.5, { tam: 2.8, t0: P(4, 'nove') + 0.05, dur: 0.8 }),
 ];
-const tracos = [O.tracoGiz([[13, zS - M(9.0) + 2], [9, zS - M(9.0) + 0.5], [2, zS - M(9.0)]], { t0: P(4, 'nove') + 0.5, dur: 0.4, larg: 0.3 })];
+const tracos = [O.tracoGiz([[10.5, zS - M(9.0) + 1.2], [7, zS - M(9.0) + 0.3], [1.5, zS - M(9.0)]], { t0: P(4, 'nove') + 0.5, dur: 0.4, larg: 0.3 })];
 const papeis = [contrato, recorte, vistoria];
 
 // ---------- câmera ----------
@@ -112,7 +112,7 @@ const K = [
   [S(3) + 0.25, 18, 116, 74, -0.10, 0.32, 0.4],
   [E(3) + 0.1, 22, 115, 60, -0.14, 0.28, 0.42],
   [S(4) + 0.6, 0, 50, 110, 0.0, 0.66, 0.3],
-  [P(4, 'nove') + 0.2, 2, -34, 104, 0.02, 0.62, 0.3],
+  [P(4, 'nove') + 0.2, 5, -36, 104, 0.02, 0.62, 0.3],
   [S(5) + 0.1, -30, -44, 92, -0.03, 0.40, 0.36],
   [E(5) + 0.5, -34, -42, 80, -0.05, 0.32, 0.4],
   [E(5) + 1.6, -26, -36, 104, -0.07, 0.40, 0.36],
@@ -134,7 +134,7 @@ function world(t) {
 function sppAt(t) {
   if (SPP) return SPP;
   const a = world(t - 0.02), b = world(t + 0.02), v = Math.hypot(a.x - b.x, a.z - b.z, a.D - b.D) / 0.04;
-  return Math.round(clamp(14 + v * 0.6, 14, 30));
+  return Math.round(clamp(12 + v * 0.5, 12, 22));
 }
 window.TOTAL_FRAMES = Math.ceil(FIM * FPS);
 window.renderAt = f => { const t = f / FPS, spp = sppAt(t); hud.clearRect(0, 0, W, H); renderFrame(t, spp, world, { fade: 1 - smooth(0, 0.6, t) }); return spp; };
