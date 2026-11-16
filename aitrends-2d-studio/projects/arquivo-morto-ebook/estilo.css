@@ -66,3 +66,53 @@
   .doc.recorte, .doc.recorte p { font-weight: 400; }
   .doc.recorte b { font-weight: 700; }
   .doc.recorte h4 { font-weight: 900; }
+  /* ===== volume completo, edição detalhada ===== */
+  table.esq td, table.esq th { text-align: left; vertical-align: top; }
+  /* ficha do caso */
+  .ficha { background: #e6d8bb; background-image: linear-gradient(90deg, rgba(120,90,50,.08) 0 1px, transparent 1px 100%); background-size: 6mm 6mm; }
+  .ficha .aba { position: absolute; top: 0; right: 22mm; width: 38mm; height: 10mm; background: #d4c29c; border: 1px solid #b29a6c; border-top: 0; font-family: 'DejaVu Sans Mono', monospace; font-size: 7pt; letter-spacing: 2px; text-align: center; line-height: 10mm; color: #5a4a30; }
+  .ficha .num { font-family: 'DejaVu Sans Mono', monospace; font-weight: 700; font-size: 30pt; letter-spacing: 4px; color: var(--vermelho); margin-top: 6mm; line-height: 1; }
+  .ficha h2 { margin: 2mm 0 5mm; }
+  .ficha-tab { font-size: 8.6pt; margin-bottom: 5mm; }
+  .ficha-tab th { width: 30mm; font-family: 'DejaVu Sans Mono', monospace; font-size: 6.8pt; letter-spacing: 1.5px; color: #6a5a40; text-transform: uppercase; font-weight: 400; vertical-align: top; padding-top: 1.6mm; }
+  .ficha-tab td { text-align: left; padding: 1.4mm 1.5mm; }
+  .ficha-tab ul { margin: 0; padding-left: 4mm; }
+  .bolas { letter-spacing: 1.5mm; color: var(--vermelho); font-size: 11pt; }
+  .bolas .off { color: #b8aa90; }
+  .pergunta { border: 1.5px solid var(--tinta); padding: 4mm 5mm; background: #f3ead6; font-family: 'Playfair', serif; font-size: 13pt; font-style: italic; line-height: 1.35; }
+  .pergunta span { display: block; font-family: 'DejaVu Sans Mono', monospace; font-style: normal; font-size: 7pt; letter-spacing: 2px; color: var(--vermelho); margin-bottom: 2mm; }
+  .ficha .carimbo { position: absolute; right: 18mm; bottom: 26mm; font-size: 14pt; padding: 2mm 5mm; opacity: .85; }
+  .ficha .instr { font-size: 8.2pt; color: #5a4a30; margin-top: 4mm; }
+  /* anotações do leitor */
+  .anot .campo { margin-bottom: 3.2mm; }
+  .anot .campo b { font-family: 'DejaVu Sans Mono', monospace; font-size: 7.6pt; letter-spacing: 1.5px; text-transform: uppercase; color: var(--vermelho); }
+  .anot .linhas { background-image: repeating-linear-gradient(transparent 0 7.2mm, #b8aa90 7.2mm 7.45mm); }
+  .anot .l2 { height: 15mm; } .anot .l3 { height: 22.5mm; } .anot .l4 { height: 30mm; }
+  .anot .caixas { font-family: 'DejaVu Sans Mono', monospace; font-size: 8pt; margin-top: 2mm; }
+  .anot .caixas span { margin-right: 5mm; }
+  .anot .dica { font-size: 8.2pt; color: #6a5a40; margin-top: 3mm; }
+  /* solução detalhada */
+  .sol-h { font-family: 'DejaVu Sans Mono', monospace; font-size: 8pt; letter-spacing: 2.5px; text-transform: uppercase; color: #d9584a; margin: 4mm 0 2mm; font-weight: 400; }
+  .solucao table.linha-tempo { font-size: 7.8pt; }
+  .solucao table.linha-tempo td { border-bottom: 1px solid #3a3228; color: #d8ccb4; text-align: left; vertical-align: top; padding: 1.2mm 1.5mm; line-height: 1.38; }
+  .solucao table.linha-tempo td:first-child { width: 24mm; font-family: 'DejaVu Sans Mono', monospace; font-size: 7pt; color: #e8dcc4; white-space: nowrap; }
+  .pistas-sol { font-size: 8.4pt; line-height: 1.45; padding-left: 5mm; margin: 0; color: #d8ccb4; }
+  .pistas-sol li { margin-bottom: 1.4mm; }
+  .pistas-sol b { color: #e8dcc4; }
+  .nota-arq { font-family: 'Playfair', serif; font-style: italic; font-size: 9.6pt; color: #c8bca4 !important; border-top: 1px solid #3a3228; padding-top: 2.5mm; margin-top: 3.5mm; text-align: left; }
+  /* guia, legenda, placar, índice */
+  .legenda { display: grid; grid-template-columns: 22mm 1fr; gap: 2mm 4mm; align-items: center; font-size: 8.6pt; margin: 3mm 0; }
+  .legenda svg { width: 22mm; height: 10mm; }
+  .passos { padding-left: 5mm; font-size: 9.4pt; } .passos li { margin-bottom: 1.8mm; }
+  .placar td, .placar th { text-align: center; font-size: 8pt; padding: 1.4mm 1mm; }
+  .placar td:nth-child(2) { text-align: left; }
+  .placar .cx { display: inline-block; width: 3.2mm; height: 3.2mm; border: 1px solid var(--tinta); }
+  .indice-docs { font-size: 7.6pt; line-height: 1.32; columns: 2; column-gap: 6mm; }
+  .indice-docs .caso { font-family: 'DejaVu Sans Mono', monospace; color: var(--vermelho); font-size: 7pt; letter-spacing: 1.5px; margin-top: 1.8mm; break-after: avoid; }
+  .indice-docs .item { display: flex; gap: 2mm; break-inside: avoid; } .indice-docs .item span:first-child { flex: 1; } .indice-docs .item .pg { color: #6a5a40; }
+  .anot h2 { margin-bottom: 2mm; } .anot .campo { margin-bottom: 2.4mm; }
+  .anot .l2 { height: 13mm; } .anot .l3 { height: 19.5mm; }
+  .placar td, .placar th { padding: 0.9mm 1mm; font-size: 7.6pt; line-height: 1.3; }
+  .denso .doc { margin: 2.5mm 0; padding: 3mm 4mm; }
+  .denso .doc.bilhete { font-size: 11pt; padding: 3.5mm; }
+  .denso .doc.zap .msg { margin: 1mm 14mm 1mm 0; padding: 1.1mm 2.5mm; line-height: 1.35; }

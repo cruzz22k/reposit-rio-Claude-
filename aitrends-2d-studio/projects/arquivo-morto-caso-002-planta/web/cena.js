@@ -7,7 +7,7 @@ const TL = await (await fetch('/project/input/timeline-v1.json')).json();
 const S = i => TL[i - 1].start, E = i => TL[i - 1].end;
 const P = (i, w) => { const f = TL[i - 1], k = f.text.indexOf(w); if (k < 0) throw new Error('palavra não achada: ' + w); return f.start + (f.end - f.start) * k / f.text.length; };
 const Q = new URLSearchParams(location.search);
-const FIM = Q.get('fim') ? +Q.get('fim') : 21.3;
+const FIM = Q.get('fim') ? +Q.get('fim') : E(18) + 1.4;
 const T2 = 3.35, T3 = 10.1, T4 = 13.65;                 // trocas de cena (a luz pisca)
 const CLARO = '#f6ecd8', VERM_TXT = '#e0402f', TINTA = '#2a241c';
 const caminho = (c, pl) => { c.beginPath(); pl.forEach((q, i) => i ? c.lineTo(q[0], q[1]) : c.moveTo(q[0], q[1])); c.closePath(); };
@@ -18,6 +18,7 @@ const HP = 1.8, ESP = 0.14, ZF = 14;                    // altura do corte das p
 const PAREDES = [[0, 0, 1.0, 0], [2.6, 0, 4.2, 0], [5.1, 0, 6, 0], [0, 0, 0, 1.5], [0, 3.5, 0, 8], [0, 8.8, 0, 10], [6, 0, 6, 5], [0, 5, 2.2, 5], [3.3, 5, 4.5, 5], [5.5, 5, 7.5, 5],
   [0, 7, 2.2, 7], [0, 10, 2.2, 10], [2.2, 5, 2.2, 8], [2.2, 8.8, 2.2, ZF], [3.3, 5, 3.3, 12.6], [3.3, 13.4, 3.3, ZF], [3.3, 9.5, 7.5, 9.5],
   [7.5, 5, 7.5, 6], [7.5, 7.5, 7.5, 11], [7.5, 12.6, 7.5, ZF], [3.3, ZF, 5, ZF], [6.5, ZF, 7.5, ZF], [2.2, ZF, 3.3, ZF]];
+const FUNDO_I = PAREDES.length - 1;
 const JANELAS = [[1.0, 0, 2.6, 0], [0, 1.5, 0, 3.5], [0, 8, 0, 8.8], [7.5, 6, 7.5, 7.5], [7.5, 11, 7.5, 12.6], [5, ZF, 6.5, ZF]];
 const PORTAS = [[4.2, 0, 0.9, 0, 1], [2.2, 8, 0.8, Math.PI / 2, 1], [3.3, 13.4, 0.8, -Math.PI / 2, 1], [4.5, 5, 1.0, 0, 1]];   // dobradiça x,z, raio, ângulo fechada, sentido
 const tSobe = z => 13.95 + 0.75 * z / ZF;
@@ -370,7 +371,7 @@ function tomada4(t) {
     const m = [(face[0][0] + face[2][0]) / 2, (face[0][1] + face[2][1]) / 2], fx = clamp(m[0] - 520, 70, W - 420), fy = clamp(m[1] - 430, 330, H);
     tinta(g, [m, [fx + 340, fy + 16], [fx - 10, fy + 16]], prog(t, tp - 0.1, 0.4), { w: 2.2, cor: COR.verm, over: 0 });
     datilo(g, 'PINTURA NOVA', fx, fy, (t - tp) / 0.5 * 12, { fonte: 'Maquina', tam: 44, cor: VERM_TXT, esp: 2 });
-    datilo(g, 'cor gelo  ·  sem marcas', fx, fy + 52, (t - tp - 0.5) / 0.6 * 23, { fonte: 'MaquinaR', tam: 26, cor: COR.cinza, esp: 1 });
+    datilo(g, 'cor gelo  ·  rodapé novo', fx, fy + 52, (t - tp - 0.5) / 0.6 * 24, { fonte: 'MaquinaR', tam: 26, cor: COR.cinza, esp: 1 });
   }
   // o espaço atrás da parede aparece por um instante (tracejado), e some
   const tg = 20.3, fr = Math.floor((t - tg) * FPS), on = t >= tg && [0, 1, 2, 5, 6, 11, 12, 13, 14].includes(fr);
@@ -386,29 +387,363 @@ function tomada4(t) {
   return { focos, amb: 0.17, mult: 1 };
 }
 
+// ======================= SEGUNDA PARTE: frases 6 a 18 =======================
+const T5 = 20.95, T5b = 25.3, T6 = 29.1, T7 = 41.85, T8 = 45.62, T9 = 52.5, T10 = 55.62, T11 = 65.45, T12 = 70.4;
+const TROCAS = [T2, T3, T4, T5, T5b, T6, T7, T8, T9, T10, T11, T12];
+const TACOS = (() => { const l = []; for (let x = 0.1; x < 5.9; x += 0.5) for (let z = 0.1; z < 4.9; z += 0.5) { const v = ((x * 2 + z * 2) | 0) % 2; for (let k = 1; k < 4; k++) l.push(v ? [[x + k * 0.125, 0, z], [x + k * 0.125, 0, z + 0.5]] : [[x, 0, z + k * 0.125], [x + 0.5, 0, z + k * 0.125]]); } return l; })();
+const LAMP = [2.75, 9.4], INTER = [3.1, 12.9];
+function rot3(cam, s, p3, k, { min = 9, max = 40, cor = COR.cinza, alpha = 0.7, fonte = 'Maquina', alinh = 'center', dx = 0, dy = 0, esp = 0 } = {}) {
+  const q = cam.pt(p3); if (!q) return null; const e = clamp(cam.esc(p3) * k, min, max);
+  g.save(); g.globalAlpha = alpha; g.fillStyle = cor; g.font = `${e}px ${fonte}`; g.letterSpacing = esp + 'px'; g.textAlign = alinh; g.textBaseline = 'middle'; g.fillText(s, q[0] + dx, q[1] + dy); g.restore(); return q;
+}
+// o apartamento já montado, com a parede falsa em zF; devolve pontos úteis para a luz
+function apto(cam, t, o = {}) {
+  const zF = o.zF ?? ZF, zw = zF - ESP / 2, Rz = (lista, op) => riscos(g, lista.flatMap(pts => cam.linha(pts)), op);
+  fundo();
+  Rz(Array.from({ length: 4 }, (_, i) => [[2.42 + i * 0.22, 0, 5], [2.42 + i * 0.22, 0, zw]]), { w: 1.1, alpha: 0.14 });
+  Rz(TACOS, { w: 0.8, alpha: 0.08 });
+  Rz([[[1.3, 0.01, 0.9], [3.1, 0.01, 0.9], [3.1, 0.01, 3.4], [1.3, 0.01, 3.4], [1.3, 0.01, 0.9]]], { w: 1.1, alpha: 0.35, dash: [4, 5] });
+  Rz([[[0.1, 0.01, 9.0], [1.2, 0.01, 9.9]], [[1.2, 0.01, 9.0], [0.1, 0.01, 9.9]]], { w: 1, alpha: 0.35 });
+  Rz(PORTAS.map(([x, z, r, a0, s]) => Array.from({ length: 17 }, (_, k) => { const a = a0 + s * k / 16 * Math.PI / 2; return [x + Math.cos(a) * r, 0.01, z + Math.sin(a) * r]; })), { w: 1.2, alpha: 0.4, dash: [7, 7] });
+  // luz do corredor, fio e interruptor
+  const [lx, lz] = LAMP, luz = o.luz || 0;
+  const pl = cam.pt([lx, 0.01, lz]);
+  if (luz > 0 && pl) { const r = cam.esc([lx, 0, lz]) * 2.2, gr = g.createRadialGradient(pl[0], pl[1], 0, pl[0], pl[1], r); gr.addColorStop(0, `rgba(255,205,130,${0.55 * luz})`); gr.addColorStop(1, 'rgba(255,205,130,0)'); g.fillStyle = gr; g.fillRect(pl[0] - r, pl[1] - r, r * 2, r * 2); }
+  Rz([arco3(lx, 0.01, lz, 0.2, 0, 6.3, 20), [[lx - 0.14, 0.01, lz - 0.14], [lx + 0.14, 0.01, lz + 0.14]], [[lx - 0.14, 0.01, lz + 0.14], [lx + 0.14, 0.01, lz - 0.14]], arco3(INTER[0], 0.01, INTER[1], 0.08, 0, 6.3, 10)], { w: 1.4, alpha: 0.7, cor: luz > 0.5 ? CLARO : COR.osso });
+  const fio = [Array.from({ length: 20 }, (_, k) => { const s = k / 19; return [lerp(INTER[0], lx, s) + 0.32 * Math.sin(s * Math.PI), 0.01, lerp(INTER[1] - 0.08, lz + 0.2, s)]; })];
+  Rz(fio, { w: 1.1, alpha: 0.5, dash: [5, 6] }); if (o.fio) Rz(fio, { w: 2.6, alpha: o.fio, cor: COR.ambar, dash: [5, 6] });
+  rot3(cam, 'S', [INTER[0], 0.01, INTER[1]], 0.14, { min: 8, max: 28, cor: COR.osso, alpha: 0.75 });
+  COMODOS.forEach(([s, a, x, z]) => { rot3(cam, s, [x, 0, z], 0.3, { max: 56, esp: 3 }); rot3(cam, a, [x, 0, z - 0.45], 0.19, { fonte: 'MaquinaR', max: 34, alpha: 0.6 }); });
+  if (o.cotas !== false) COTAS.forEach(([a, b, txt]) => { const A = cam.pt([a[0], 0, a[1]]), B = cam.pt([b[0], 0, b[1]]); if (A && B) cota(g, A, B, 1, txt, { tam: clamp(cam.esc([(a[0] + b[0]) / 2, 0, (a[1] + b[1]) / 2]) * 0.26, 9, 30), w: 1.2, alpha: 0.5, cor: COR.cinza, lado: (a[0] < 0 || a[1] < 0) ? 1 : -1 }); });
+  // tapete no chão (a parte que sobra sobe na parede, desenhada depois)
+  let sobe = 0;
+  if (o.tapete) {
+    const { L, p } = o.tapete, z0 = 5.05, zEnd = z0 + L * p, zFl = Math.min(zEnd, zw - 0.005), x0 = 2.33, x1 = 3.17, y = 0.015; sobe = Math.max(0, zEnd - zw);
+    const fl = cam.poli([[x0, y, z0], [x1, y, z0], [x1, y, zFl], [x0, y, zFl]]); if (fl) { caminho(g, fl); g.fillStyle = '#5e2b20'; g.fill(); }
+    const inset = (d) => [[x0 + d, y, z0 + d], [x1 - d, y, z0 + d], [x1 - d, y, Math.max(z0 + d, zFl - d)], [x0 + d, y, Math.max(z0 + d, zFl - d)], [x0 + d, y, z0 + d]];
+    const mot = []; for (let z = z0 + 0.35; z < zFl - 0.3; z += 0.5) mot.push([[2.75, y, z - 0.16], [2.95, y, z], [2.75, y, z + 0.16], [2.55, y, z], [2.75, y, z - 0.16]]);
+    const franja = []; for (let x = x0 + 0.03; x < x1; x += 0.05) franja.push([[x, y, z0], [x, y, z0 - 0.07]]);
+    Rz([inset(0.06), inset(0.1)], { w: 1.2, alpha: 0.8, cor: '#d9a07a' }); Rz(mot, { w: 1, alpha: 0.7, cor: '#d9a07a' }); Rz(franja, { w: 0.8, alpha: 0.7, cor: COR.osso });
+  }
+  // rastro das posições antigas da parede (tracejado vermelho no chão)
+  if (o.rastro) Rz(o.rastro.map(r => [[2.27, 0.02, r.z], [3.23, 0.02, r.z]]), { w: 2, alpha: 0.8, cor: COR.verm, dash: [6, 5] });
+  // medida a laser
+  const ca = cam.pt([2.75, 0.02, 5.0]), cb = cam.pt([2.75, 0.02, zw]);
+  if (o.mede && ca && cb) cota(g, ca, cb, o.mede, null, { cor: CLARO, w: 2.2 });
+  // blocos
+  const vis = BLOCOS.map(b => b.i === FUNDO_I ? { ...b, z0: zF - ESP / 2, z1: zF + ESP / 2 } : b).map(b => ({ ...b, d: cam.prof([(b.x0 + b.x1) / 2, b.h / 2, (b.z0 + b.z1) / 2]) })).sort((a, b) => b.d - a.d);
+  for (const b of vis) {
+    const [cl, ct, ea] = COR_BLOCO[b.tipo], hb = b.h;
+    const c = [[b.x0, 0, b.z0], [b.x1, 0, b.z0], [b.x1, 0, b.z1], [b.x0, 0, b.z1]], tp = c.map(q => [q[0], hb, q[2]]);
+    const faces = [[c[0], c[1], tp[1], tp[0], [0, 0, -1]], [c[1], c[2], tp[2], tp[1], [1, 0, 0]], [c[2], c[3], tp[3], tp[2], [0, 0, 1]], [c[3], c[0], tp[0], tp[3], [-1, 0, 0]]];
+    for (const f of faces) { const n = f[4], m = [(f[0][0] + f[2][0]) / 2, hb / 2, (f[0][2] + f[2][2]) / 2]; if ((cam.p[0] - m[0]) * n[0] + (cam.p[2] - m[2]) * n[2] <= 0) continue; const p2 = cam.poli(f.slice(0, 4)); if (!p2) continue; caminho(g, p2); g.fillStyle = cl; g.fill(); if (b.tipo === 'parede') tinta(g, [...p2, p2[0]], 1, { w: 1.5, alpha: ea, over: 0, seed: (b.i || 0) + 3 }); else riscos(g, [[...p2, p2[0]]], { w: 1.1, alpha: ea }); }
+    const pt = cam.poli(tp); if (pt) { caminho(g, pt); g.fillStyle = b.i === FUNDO_I && o.fundoNovo ? '#c9b9a0' : ct; g.fill(); if (b.tipo === 'parede') tinta(g, [...pt, pt[0]], 1, { w: 1.8, over: 4, seed: (b.i || 0) + 7 }); else riscos(g, [[...pt, pt[0]]], { w: 1.2, alpha: 0.85 }); }
+    if (b.linhas) Rz(b.linhas(hb + 0.002), { w: b.tipo === 'janela' ? 1.6 : 1.1, alpha: b.tipo === 'janela' ? 0.9 : 0.7, cor: b.tipo === 'janela' ? CLARO : COR.osso });
+  }
+  Rz([[[2.27, 0.08, 5.1], [2.27, 0.08, 8]], [[2.27, 0.08, 8.8], [2.27, 0.08, zw]], [[3.23, 0.08, 5.1], [3.23, 0.08, 12.6]], [[3.23, 0.08, 13.4], [3.23, 0.08, zw]], [[2.27, 0.08, zw], [3.23, 0.08, zw]]], { w: 1.2, alpha: 0.55 });
+  // a sobra do tapete dobrada contra a parede
+  if (sobe > 0) { const wl = cam.poli([[2.33, 0, zw - 0.01], [3.17, 0, zw - 0.01], [3.17, sobe, zw - 0.01], [2.33, sobe, zw - 0.01]]); if (wl) { caminho(g, wl); g.fillStyle = '#7a3a2b'; g.fill(); riscos(g, [[...wl, wl[0]]], { w: 1.4, cor: '#e0aa80', alpha: 0.9 }); } }
+  // Lúcia dormindo (sem rosto): cobertor e a cabeça no travesseiro
+  if (o.pessoa) {
+    const y = 0.53, cob = cam.poli([[4.85, y, 11.85], [6.45, y, 11.85], [6.45, y, 13.1], [5.9, y, 13.2], [5.4, y, 13.12], [4.85, y, 13.18]]);
+    if (cob) { caminho(g, cob); g.fillStyle = '#3a3128'; g.fill(); riscos(g, [[...cob, cob[0]]], { w: 1.3, alpha: 0.7 }); }
+    const hq = cam.pt([5.2, 0.6, 13.45]), e = cam.esc([5.2, 0.6, 13.45]); if (hq) { g.fillStyle = '#16120e'; g.beginPath(); g.ellipse(hq[0], hq[1], e * 0.12, e * 0.1, 0, 0, 6.3); g.fill(); g.strokeStyle = COR.osso; g.globalAlpha = 0.6; g.lineWidth = 1.2; g.stroke(); g.globalAlpha = 1; }
+  }
+  const face = cam.poli([[2.27, 0, zw], [3.23, 0, zw], [3.23, HP, zw], [2.27, HP, zw]]);
+  return { ca, cb, pl, face, zw, ps: cam.pt([INTER[0], 0.01, INTER[1]]), esS: cam.esc([INTER[0], 0, INTER[1]]) };
+}
+const centro = pl => [pl.reduce((s, q) => s + q[0], 0) / pl.length, pl.reduce((s, q) => s + q[1], 0) / pl.length];
+const medTxt = (c, q, s, { tam = 50, alpha = 1, cor = CLARO } = {}) => { if (!q) return; c.save(); c.globalAlpha = alpha; c.font = `${tam}px Maquina`; c.lineWidth = 8; c.strokeStyle = 'rgba(13,11,9,0.85)'; c.strokeText(s, q[0], q[1]); c.fillStyle = cor; c.fillText(s, q[0], q[1]); c.restore(); };
+const fmt = v => v.toFixed(2).replace('.', ',');
+
+// ---------- tomada 5a: o pedido do tapete ----------
+const PEDIDO = papelTex(720, 1560, 51);
+function tomada5a(t) {
+  const hh = mao(t, 5), k = easeInOut(prog(t, T5, T5b - T5)), z = lerp(1.35, 1.0, k), cy = lerp(560, 1020, k);
+  g.save(); g.translate(W / 2 + hh.x, H / 2 + hh.y); g.rotate(hh.r - 0.015); g.scale(z, z); g.translate(-W / 2, -cy);
+  fundo();
+  const X = 180, Y = 200;
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.7)'; g.shadowBlur = 40; g.shadowOffsetY = 16; g.drawImage(PEDIDO, X, Y); g.restore();
+  g.save(); g.translate(X, Y);
+  g.fillStyle = TINTA; g.font = '50px Serifa'; g.fillText('Tapeçaria Estrela', 50, 90);
+  g.font = '21px MaquinaR'; g.fillStyle = '#5c5242'; g.fillText('tapetes e passadeiras sob medida  ·  desde 1974', 50, 124); g.fillRect(50, 140, 620, 2);
+  g.fillStyle = TINTA; g.font = '30px Maquina'; g.fillText('PEDIDO Nº 0417', 50, 190); g.textAlign = 'right'; g.font = '24px MaquinaR'; g.fillText('06/09/2021', 670, 190); g.textAlign = 'left';
+  g.font = '24px MaquinaR'; [['cliente:', 'Lúcia M. Ferreira'], ['endereço:', 'Ed. Marajoara, ap. 503'], ['peça:', 'passadeira · lã · borda dupla'], ['entrega:', 'dom 12/09']].forEach(([a, b], i) => { g.fillStyle = '#6b604d'; g.fillText(a, 50, 240 + i * 38); g.fillStyle = TINTA; g.fillText(b, 200, 240 + i * 38); });
+  // o desenho da passadeira, comprida, com a cota de ponta a ponta
+  const px0 = 300, px1 = 450, py0 = 430, py1 = 1380, pr = easeInOut(prog(t, T5 + 0.3, 1.6));
+  riscos(g, [[[px0, py0], [px1, py0], [px1, py0 + (py1 - py0) * pr], [px0, py0 + (py1 - py0) * pr], [px0, py0]]], { w: 2.4, cor: TINTA, alpha: 0.9 });
+  if (pr > 0.1) { const yy = py0 + (py1 - py0) * pr, mot = [], fr = []; mot.push([[px0 + 12, py0 + 12], [px1 - 12, py0 + 12], [px1 - 12, yy - 12], [px0 + 12, yy - 12], [px0 + 12, py0 + 12]], [[px0 + 20, py0 + 20], [px1 - 20, py0 + 20], [px1 - 20, yy - 20], [px0 + 20, yy - 20], [px0 + 20, py0 + 20]]);
+    for (let y = py0 + 60; y < yy - 50; y += 70) mot.push([[375, y - 26], [405, y], [375, y + 26], [345, y], [375, y - 26]]);
+    for (let x = px0 + 4; x < px1; x += 8) { fr.push([[x, py0], [x, py0 - 14]]); if (pr >= 1) fr.push([[x, py1], [x, py1 + 14]]); }
+    riscos(g, mot, { w: 1.3, cor: '#7a3a2b', alpha: 0.85 }); riscos(g, fr, { w: 1, cor: TINTA, alpha: 0.7 }); }
+  const tp = P(6, 'ponta a ponta');
+  cota(g, [240, py0], [240, py1], easeInOut(prog(t, tp - 0.3, 0.9)), '9,00 m', { cor: COR.verm, w: 2.4, tam: 34, lado: 1 });
+  cota(g, [px0, py0 - 40], [px1, py0 - 40], prog(t, T5 + 1.6, 0.4), '0,90', { cor: TINTA, w: 1.6, tam: 22, lado: 1, alpha: 0.8 });
+  g.fillStyle = TINTA; g.font = '26px Maquina'; g.fillText('TOTAL', 480, 1440); g.font = '40px Serifa'; g.fillText('R$ 690,00', 480, 1490);
+  g.globalAlpha = clamp((t - P(6, 'sob medida')) / 0.3); g.fillStyle = '#2f3f66'; g.font = '40px Caneta'; g.save(); g.translate(60, 1470); g.rotate(-0.06); g.fillText('pago ✓', 0, 0); g.restore(); g.globalAlpha = 1;
+  g.restore(); g.restore();
+  if (t > S(6)) { sb.fillStyle = COR.verm; sb.fillRect(84, 224, 16, 16); datilo(sb, 'SET  ·  2021', 116, 242, (t - S(6)) / 0.5 * 12, { tam: 40, cor: COR.osso, esp: 4 }); }
+  const fy = (lerp(500, 1300, k) - cy) * z + H / 2;
+  return { focos: [{ x: 560 + 30 * ruido(t * 0.5, 7), y: fy, r: 900 }], amb: 0.2, mult: 1 };
+}
+
+// ---------- tomada 5b: o tapete chega e sobram 15 cm ----------
+const cam5 = trajeto([[T5b, 2.75, 7.5, 4.0, 2.75, 0, 11.5], [27.0, 2.75, 4.2, 9.4, 2.75, 0.3, 13.7], [T6, 2.75, 2.7, 11.3, 2.75, 0.2, 13.85]]);
+function tomada5b(t) {
+  const [px, py, pz, tx, ty, tz] = cam5(t), hh = mao(t, 0.06), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
+  const r = apto(cam, t, { zF: 13.85, tapete: { L: 9.0, p: easeInOut(prog(t, T5b + 0.2, 1.5)) } });
+  const tq = P(7, 'quinze');
+  if (t > tq - 0.2 && r.face) {
+    const zw = r.zw - 0.01, a = cam.pt([2.25, 0, zw]), b = cam.pt([2.25, 0.15, zw]);
+    if (a && b) { const d = Math.min(90, W - 250 - a[0]); cota(g, [a[0] + d, a[1]], [b[0] + d, b[1]], prog(t, tq - 0.2, 0.4), null, { cor: COR.verm, w: 2.6 }); tinta(g, [[a[0] + 6, (a[1] + b[1]) / 2], [a[0] + d - 12, (a[1] + b[1]) / 2]], prog(t, tq - 0.2, 0.3), { w: 1.6, cor: COR.verm, over: 0, dash: [5, 4] }); if (t > tq) medTxt(g, [a[0] + d + 24, (a[1] + b[1]) / 2 + 18], '15 cm', { tam: 56, cor: VERM_TXT }); }
+  }
+  if (t > S(7)) datilo(sb, 'DOM 12/09  ·  ENTREGA', 84, 242, (t - S(7)) / 0.6 * 21, { tam: 32, cor: COR.osso, esp: 2 });
+  const alvo = r.face ? centro(r.face) : [W / 2, H / 2];
+  return { focos: [{ x: alvo[0], y: alvo[1] + 120, r: 820 }], amb: 0.18, mult: 1 };
+}
+
+// ---------- tomada 6: a medida de todo domingo; a parede anda 15 cm por semana ----------
+const MEDIDAS = [[S(8), 13.85, '12/09'], [P(9, 'Oito e setenta'), 13.70, '19/09'], [P(9, 'Oito e cinquenta'), 13.55, '26/09']];
+const cam6 = trajeto([[T6, 2.75, 11.5, 4.5, 2.75, 0, 10.6], [S(9) - 0.2, 2.75, 8.2, 8.0, 2.75, 0, 12.6], [S(10), 2.85, 5.6, 10.0, 2.75, 0, 13.4], [E(10) + 0.3, 2.95, 4.2, 11.2, 2.75, 0, 13.75]]);
+function tomada6(t) {
+  const [px, py, pz, tx, ty, tz] = cam6(t), hh = mao(t, 0.06), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
+  let idx = 0; MEDIDAS.forEach((m, i) => { if (t >= m[0]) idx = i; });
+  // a parede anda num tranco curto, com um pequeno solavanco
+  const ant = idx ? MEDIDAS[idx - 1][1] : MEDIDAS[0][1], k = idx ? easeOut(prog(t, MEDIDAS[idx][0], 0.25)) : 1, zF = lerp(ant, MEDIDAS[idx][1], k) + (idx && k < 1 ? 0.01 * Math.sin(k * 20) : 0);
+  const rastro = [{ z: 14.0, d: '05/09', v: '9,00' }, ...MEDIDAS.slice(0, idx).map(m => ({ z: m[1], d: m[2], v: fmt(m[1] - 5) }))];
+  const r = apto(cam, t, { zF, tapete: { L: 9.0, p: 1 }, rastro, mede: easeInOut(prog(t, S(8) + 0.6, 1.0)) });
+  // rótulos do rastro numa coluna à direita, com linha de chamada até cada marca
+  { const qs = rastro.map(m => cam.pt([2.27, 0.02, m.z])).filter(Boolean); if (qs.length) { const X = Math.min(W - 330, Math.max(...qs.map(q => q[0])) + 130), topo = Math.min(...qs.map(q => q[1]));
+    rastro.forEach((m, i) => { const q = qs[i]; if (!q) return; const y = topo - 70 - (rastro.length - 1 - i) * 46; riscos(g, [[q, [X - 14, y - 10]]], { w: 1.2, cor: COR.verm, alpha: 0.7 }); medTxt(g, [X, y], `${m.d}  ${m.v}`, { tam: 34, cor: VERM_TXT }); }); } }
+  // 15 cm por semana (frase 10), do lado esquerdo
+  const tq = P(10, 'quinze');
+  if (t > tq - 0.2) { const q = cam.pt([3.3, 0.02, 13.75]); if (q) { const pul = 1 + 0.2 * Math.max(0, Math.sin(clamp((t - P(10, 'Sempre')) / 0.5) * Math.PI)); g.save(); g.globalAlpha = clamp((t - tq + 0.2) / 0.25); g.translate(Math.max(260, q[0] - 50), q[1] + 10); g.scale(pul, pul); g.textAlign = 'right'; medTxt(g, [0, 0], '−15 cm', { tam: 46, cor: VERM_TXT }); medTxt(g, [0, 42], 'por semana', { tam: 28, cor: VERM_TXT }); g.restore(); } }
+  // número da medida, grande
+  if (r.cb && t > S(8) + 1.3) { const val = fmt(zF - 5) + ' m', pul = idx && k < 1 ? 1.15 : 1; g.save(); g.translate(r.cb[0] + 40, r.cb[1] + 90); g.scale(pul, pul); medTxt(g, [0, 0], val, { tam: 58 }); g.restore(); }
+  const dia = idx >= 0 ? MEDIDAS[idx][2] : '12/09';
+  if (t > S(8)) datilo(sb, `TODO DOMINGO  ·  DOM ${dia}`, 84, 242, (t - S(8)) / 0.7 * 24, { tam: 32, cor: COR.osso, esp: 2 });
+  const alvo = r.face ? centro(r.face) : [W / 2, H / 2];
+  return { focos: [{ x: alvo[0], y: alvo[1] + 160, r: 900 }, ...(r.ca ? [{ x: r.ca[0], y: r.ca[1], r: 500, i: 0.35 }] : [])], amb: 0.18, mult: 1 };
+}
+
+// ---------- tomada 7: o pó branco no rodapé do fundo (vista de frente da parede) ----------
+const PO = (() => { const r = rng(91); return Array.from({ length: 1600 }, () => { const x = 150 + r() * 780, c = Math.exp(-Math.pow((x - 540) / 260, 2)); return { x, h: r() * (8 + 44 * c) * (r() < 0.8 ? 1 : 1.6), s: 0.9 + r() * 2.2, a: 0.45 + r() * 0.55, d: r() }; }); })();
+function tomada7(t) {
+  const hh = mao(t, 4), z = 1.1 + 0.45 * easeInOut(prog(t, T7, 3.6)), cy = lerp(1050, 1240, easeInOut(prog(t, T7, 3.6)));
+  g.save(); g.translate(W / 2 + hh.x, H / 2 + hh.y); g.rotate(hh.r); g.scale(z, z); g.translate(-W / 2, -cy);
+  fundo();
+  const X0 = 140, X1 = 940, YT = 360, YR = 1120, YF = 1180;
+  // parede: pintura nova (hachura vermelha fraca) e as emendas lixadas dos lados
+  g.fillStyle = '#231d17'; g.fillRect(X0, YT, X1 - X0, YF - YT);
+  const hc = []; for (let o = X0 - (YR - YT); o < X1; o += 22) hc.push([[Math.max(X0, o), YR - Math.max(0, X0 - o)], [Math.min(X1, o + (YR - YT)), YT + Math.max(0, o + (YR - YT) - X1)]]);
+  riscos(g, hc, { w: 1.2, cor: COR.verm, alpha: 0.28 });
+  const em = []; for (const x of [X0 + 14, X1 - 14]) for (let y = YT; y < YR; y += 9) em.push([[x + ruido(y * 0.1, x) * 3, y], [x + ruido(y * 0.1 + 1, x) * 3, y + 6]]);
+  riscos(g, em, { w: 2, cor: '#e9e2d4', alpha: 0.35 });
+  tinta(g, [[X0, YT], [X1, YT], [X1, YF], [X0, YF], [X0, YT]], 1, { w: 2.4, over: 12 });
+  // rodapé novo, sem pintura (mais claro), com os parafusos
+  g.fillStyle = '#cdbfa5'; g.fillRect(X0, YR, X1 - X0, YF - YR); tinta(g, [[X0, YR], [X1, YR]], 1, { w: 2, over: 10 });
+  riscos(g, [180, 400, 680, 900].map(x => Array.from({ length: 13 }, (_, k) => [x + Math.cos(k / 12 * 6.3) * 6, 1150 + Math.sin(k / 12 * 6.3) * 6])), { w: 1.4, cor: '#5c5242', alpha: 0.9 });
+  // piso em tábuas, em perspectiva
+  const pis = []; for (let i = -8; i <= 8; i++) pis.push([[540 + i * 60, YF], [540 + i * 190, 1900]]); for (const y of [1260, 1380, 1560, 1820]) pis.push([[0, y], [W, y]]);
+  riscos(g, pis, { w: 1.2, alpha: 0.35 });
+  // o pó: um monte fino ao longo do rodapé, e grãos ainda caindo da emenda
+  const tp = P(11, 'pó'), pp = clamp((t - T7 - 0.2) / 1.6);
+  g.fillStyle = '#f2ece0';
+  for (const p of PO) { if (p.d > pp) continue; g.globalAlpha = p.a * 0.9; g.beginPath(); g.arc(p.x, YF + 4 - p.h * 0.35 + (p.d * 7) % 5, p.s, 0, 6.3); g.fill(); }
+  for (let i = 0; i < 40; i++) { const x = 160 + ((i * 97) % 760), f = ((t * 0.35 + i * 0.137) % 1); g.globalAlpha = 0.7 * (1 - f); g.beginPath(); g.arc(x + Math.sin(f * 6 + i) * 4, YR + 4 + f * (YF - YR), 1.3, 0, 6.3); g.fill(); }
+  g.globalAlpha = 1;
+  if (t > tp - 0.1) { tinta(g, [[520, YF - 6], [420, YF - 150], [200, YF - 150]], prog(t, tp - 0.1, 0.4), { w: 2.2, cor: COR.verm, over: 0 }); datilo(g, 'PÓ BRANCO', 205, YF - 165, (t - tp) / 0.4 * 9, { fonte: 'Maquina', tam: 40, cor: VERM_TXT, esp: 2 }); datilo(g, 'fino como pó de lixa', 205, YF - 120, (t - tp - 0.45) / 0.7 * 20, { fonte: 'MaquinaR', tam: 24, cor: COR.cinza }); }
+  g.restore();
+  if (t > S(11) - 0.1) datilo(sb, 'SEGUNDA  ·  06:40', 84, 242, (t - S(11)) / 0.5 * 17, { tam: 32, cor: COR.osso, esp: 2 });
+  const fy = (YF - 30 - cy) * z + H / 2;
+  return { focos: [{ x: 540 + 80 * ruido(t * 0.4, 3), y: fy, r: 820 }], amb: 0.16, mult: 1 };
+}
+
+// ---------- tomada 8: de madrugada, a luz do corredor acende sozinha ----------
+const cam8 = trajeto([[T8, 3.9, 12.5, 5.0, 3.7, 0, 10.8], [P(12, 'E o único'), 3.7, 10.0, 7.2, 3.5, 0, 11.8], [T9, 3.5, 7.6, 9.2, 3.35, 0, 12.7]]);
+function tomada8(t) {
+  const [px, py, pz, tx, ty, tz] = cam8(t), hh = mao(t, 0.05), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
+  const ta = P(12, 'acendia'), luz = t < ta ? 0 : [0.6, 0, 0.8, 0.3, 1][Math.min(4, Math.floor((t - ta) / 0.06))];
+  const tu = P(12, 'único interruptor'); let lblS = null;
+  const r = apto(cam, t, { zF: 13.55, tapete: { L: 9.0, p: 1 }, luz, pessoa: true, fio: 0.9 * clamp((t - tu - 0.4) / 0.6) * luz });
+  if (r.ps) circulo(g, r.ps[0], r.ps[1], r.esS * 0.3 + 12, r.esS * 0.24 + 10, easeInOut(prog(t, tu, 0.55)), { seed: 9 });
+  if (r.ps && t > tu + 0.3) { const lx = clamp(r.ps[0] - 470, 90, W - 480), ly = r.ps[1] + 230; lblS = [lx + 180, ly]; tinta(g, [r.ps, [lx + 380, ly], [lx - 10, ly]], prog(t, tu + 0.3, 0.4), { w: 2, cor: COR.verm, over: 0 }); datilo(g, 'ÚNICO INTERRUPTOR', lx, ly - 16, (t - tu - 0.5) / 0.6 * 17, { fonte: 'Maquina', tam: 32, cor: VERM_TXT, esp: 1 }); datilo(g, 'do lado do quarto dela', lx, ly + 34, (t - tu - 1.1) / 0.8 * 22, { fonte: 'MaquinaR', tam: 24, cor: COR.cinza }); }
+  // relógio
+  if (t > S(12) - 0.1) { const min = 12 + Math.floor((t - S(12)) * 0.8); datilo(sb, `MADRUGADA  ·  03:${String(min).padStart(2, '0')}`, 84, 242, (t - S(12)) / 0.5 * 18, { tam: 32, cor: COR.osso, esp: 2 }); }
+  const focos = [{ x: r.pl ? r.pl[0] : W / 2, y: r.pl ? r.pl[1] : H / 2, r: 700, i: 0.25 }];
+  if (r.pl && luz > 0) focos.push({ x: r.pl[0], y: r.pl[1], r: 820, i: 0.95 * luz, cor: [255, 196, 120] });
+  if (r.ps && t > tu - 0.3) focos.push({ x: r.ps[0], y: r.ps[1], r: 560, i: 0.6 });
+  if (lblS) focos.push({ x: lblS[0], y: lblS[1], r: 480, i: 0.55 });
+  return { focos, amb: 0.1, mult: 1 };
+}
+
+// ---------- tomada 9: outubro, quatro dias fora ----------
+const CAL = papelTex(880, 960, 61);
+function tomada9(t) {
+  const hh = mao(t, 4), z = 1 + 0.08 * easeInOut(prog(t, T9, 3)), cy = H / 2 + 20;
+  g.save(); g.translate(W / 2 + hh.x, H / 2 + hh.y); g.rotate(hh.r + 0.02); g.scale(z, z); g.translate(-W / 2, -cy);
+  fundo();
+  const X = 100, Y = 520;
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.7)'; g.shadowBlur = 40; g.shadowOffsetY = 16; g.drawImage(CAL, X, Y); g.restore();
+  g.save(); g.translate(X, Y);
+  g.fillStyle = TINTA; g.font = '64px Serifa'; g.fillText('Outubro', 50, 100); g.font = '30px Maquina'; g.fillStyle = '#6b604d'; g.fillText('2021', 330, 100);
+  const cw = 112, ch = 118, gx = 48, gy = 170; g.font = '24px Maquina'; g.fillStyle = '#6b604d'; 'DSTQQSS'.split('').forEach((d, i) => g.fillText(d, gx + i * cw + 44, gy - 14));
+  const grade = []; for (let i = 0; i <= 7; i++) grade.push([[gx + i * cw, gy], [gx + i * cw, gy + 6 * ch]]); for (let j = 0; j <= 6; j++) grade.push([[gx, gy + j * ch], [gx + 7 * cw, gy + j * ch]]);
+  riscos(g, grade, { w: 1.2, cor: TINTA, alpha: 0.5 });
+  const pos = d => { const k = d + 4; return [gx + (k % 7) * cw, gy + Math.floor(k / 7) * ch]; };   // 1º de outubro de 2021 caiu numa sexta
+  g.font = '30px Maquina'; for (let d = 1; d <= 31; d++) { const [x, y] = pos(d); g.fillStyle = (d + 4) % 7 === 0 ? '#8f1d15' : TINTA; g.fillText(String(d), x + 10, y + 36); }
+  // anotações a lápis nos domingos anteriores
+  g.fillStyle = '#4a4234'; g.font = '26px Caneta'; [[3, '8,40'], [10, '8,25']].forEach(([d, v]) => { const [x, y] = pos(d); g.fillText(v, x + 30, y + 92); });
+  // os quatro dias da viagem, riscados um a um; volta na terça
+  const tv = P(13, 'viajou'); [15, 16, 17, 18].forEach((d, i) => { const [x, y] = pos(d), p1 = prog(t, tv + i * 0.32, 0.18), p2 = prog(t, tv + i * 0.32 + 0.18, 0.18); riscos(g, [[[x + 14, y + 14], [lerp(x + 14, x + cw - 14, p1), lerp(y + 14, y + ch - 14, p1)]], ...(p2 > 0 ? [[[x + cw - 14, y + 14], [lerp(x + cw - 14, x + 14, p2), lerp(y + 14, y + ch - 14, p2)]]] : [])], { w: 4, cor: COR.verm, alpha: 0.85 }); });
+  { const [x, y] = pos(19); circulo(g, x + cw / 2, y + ch / 2, 50, 44, easeInOut(prog(t, E(13) - 0.2, 0.5)), { seed: 11, cor: '#2f3f66', w: 3 }); if (t > E(13)) { g.fillStyle = '#2f3f66'; g.font = '28px Caneta'; g.fillText('volta', x + 20, y + ch + 34); } }
+  { const [x, y] = pos(15); if (t > tv) { g.fillStyle = '#2f3f66'; g.globalAlpha = clamp((t - tv) / 0.4); g.font = '30px Caneta'; g.fillText('casamento da Bia', x - 120, y - 16); g.globalAlpha = 1; } }
+  g.restore(); g.restore();
+  if (t > S(13)) { sb.fillStyle = COR.verm; sb.fillRect(84, 224, 16, 16); datilo(sb, 'OUT  ·  2021', 116, 242, (t - S(13)) / 0.5 * 12, { tam: 40, cor: COR.osso, esp: 4 }); }
+  return { focos: [{ x: 600, y: 1100, r: 950 }], amb: 0.2, mult: 1 };
+}
+
+// ---------- tomada 10: o caderno; a medida que ela não escreveu ----------
+const CAD = papelTex(900, 1500, 71, '#ece4cf');
+const ENTRADAS = [['dom 05/09', '9,00', 'medida p/ a passadeira'], ['dom 12/09', '8,85', 'a passadeira chegou e sobrou'], ['dom 19/09', '8,70', 'pó branco no rodapé'], ['dom 26/09', '8,55', 'luz acesa às 3h'], ['dom 03/10', '8,40', 'cheiro de cigarro'], ['dom 10/10', '8,25', '']];
+const cam10 = trajeto([[T10, 540, 960, 1.0], [S(14) + 1.6, 560, 1080, 1.15], [S(15) + 0.2, 640, 1250, 1.55], [S(16), 680, 1270, 1.5], [P(16, 'falta'), 700, 1250, 1.4], [T11, 720, 1250, 1.48]]);
+function escrita(c, s, x, y, p, skew, { tam = 42, cor = '#22314f' } = {}) {   // texto à mão que aparece da esquerda para a direita
+  if (p <= 0) return; c.save(); c.translate(x, y); c.transform(1, 0, skew, 1, 0, 0); c.font = `${tam}px Caneta`; const w = c.measureText(s).width; c.beginPath(); c.rect(-20, -tam, (w + 40) * p, tam * 1.6); c.clip(); c.fillStyle = cor; c.globalAlpha = 0.92; c.fillText(s, 0, 0); c.restore();
+}
+function tomada10(t) {
+  const [cx, cy, z] = cam10(t), hh = mao(t, 4);
+  g.save(); g.translate(W / 2 + hh.x, H / 2 + hh.y); g.rotate(hh.r - 0.01); g.scale(z, z); g.translate(-cx, -cy);
+  fundo();
+  const X = 110, Y = 230;
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.7)'; g.shadowBlur = 40; g.shadowOffsetY = 16; g.drawImage(CAD, X, Y); g.restore();
+  g.save(); g.translate(X, Y);
+  const linhas = []; for (let y = 200; y < 1480; y += 64) linhas.push([[0, y], [900, y]]); riscos(g, linhas, { w: 1.2, cor: '#7f9cc2', alpha: 0.6 }); riscos(g, [[[120, 0], [120, 1500]]], { w: 1.6, cor: '#c9524a', alpha: 0.7 });
+  for (let y = 60; y < 1480; y += 64) { g.fillStyle = '#0d0b09'; g.beginPath(); g.arc(46, y, 13, 0, 6.3); g.fill(); riscos(g, [arco3(46, 0, y, 18, Math.PI * 0.5, Math.PI * 1.5, 10).map(q => [q[0] - 22, q[2]])], { w: 3, cor: '#9a9890', alpha: 0.9 }); }
+  escrita(g, 'corredor', 150, 150, 1, -0.12, { tam: 56 });
+  ENTRADAS.forEach(([d, v, n], i) => { const y = 264 + i * 128; escrita(g, `${d}  —  ${v}`, 150, y, 1, -0.12); if (n) escrita(g, n, 190, y + 52, 1, -0.12, { tam: 32, cor: '#3b4a6b' }); });
+  // a linha que apareceu sozinha: mesma caneta, letra mais inclinada
+  const y6 = 264 + 6 * 128, tw = P(14, 'já estava');
+  escrita(g, 'dom 17/10  —  8,10', 150, y6, easeInOut(prog(t, tw - 0.2, 1.1)), -0.42);
+  // comparação da inclinação
+  const ti = P(15, 'mais inclinada');
+  if (t > S(15) - 0.2) {
+    const a = prog(t, S(15) - 0.2, 0.4), b = prog(t, ti - 0.1, 0.4), ya = 264 + 5 * 128;
+    tinta(g, [[250, ya + 10], [250 + 0.12 * 70, ya - 60]], a, { w: 2.4, cor: COR.verm, over: 6 }); tinta(g, [[250, ya + 10], [250, ya - 60]], a, { w: 1.2, cor: COR.verm, alpha: 0.6, over: 0, dash: [4, 4] });
+    if (a >= 1) datilo(g, '7°', 270, ya - 64, 3, { fonte: 'Maquina', tam: 26, cor: VERM_TXT });
+    tinta(g, [[250, y6 + 10], [250 + 0.42 * 70, y6 - 60]], b, { w: 2.4, cor: COR.verm, over: 6 }); tinta(g, [[250, y6 + 10], [250, y6 - 60]], b, { w: 1.2, cor: COR.verm, alpha: 0.6, over: 0, dash: [4, 4] });
+    if (b >= 1) datilo(g, '23°', 290, y6 - 64, 3, { fonte: 'Maquina', tam: 26, cor: VERM_TXT });
+  }
+  // falta pouco
+  const tf = P(16, 'falta');
+  escrita(g, 'falta pouco', 600, y6, easeInOut(prog(t, tf - 0.15, 0.9)), -0.42, { tam: 46 });
+  if (t > tf + 0.9) tinta(g, [[590, y6 + 18], [870, y6 + 12]], prog(t, tf + 0.9, 0.4), { w: 2, cor: '#22314f', alpha: 0.8, over: 0 });
+  g.restore(); g.restore();
+  const sx = (q, w) => (q - cx) * z + W / 2, sy = (q) => (q - cy) * z + H / 2;
+  const foco = t < S(15) ? [sx(X + 420), sy(Y + y6 - 200)] : t < S(16) ? [sx(X + 300), sy(Y + y6 - 60)] : [sx(X + 720), sy(Y + y6 - 20)];
+  const tremor = t > tf + 1.2 ? 0.75 + 0.25 * Math.max(0, ruido(t * 14, 3)) : 1;
+  return { focos: [{ x: foco[0], y: foco[1], r: 820 }], amb: 0.17, mult: tremor };
+}
+
+// ---------- tomada 11: a planta original ----------
+const PLANTA = papelTex(1000, 1700, 81, '#d8ceb6');
+const cam11 = trajeto([[T11, 540, 1350, 1.0], [P(17, 'detalhe'), 540, 820, 1.25], [E(17) + 0.2, 560, 560, 1.6], [T12, 560, 520, 1.7]]);
+function tomada11(t) {
+  const [cx, cy, z] = cam11(t), hh = mao(t, 4);
+  g.save(); g.translate(W / 2 + hh.x, H / 2 + hh.y); g.rotate(hh.r + 0.012); g.scale(z, z); g.translate(-cx, -cy);
+  fundo();
+  const X = 40, Y = 110, esc = 92, ox = X + 150, oy = Y + 1560, q = (x, zz) => [ox + x * esc, oy - zz * esc], ZR = 14.6;
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.7)'; g.shadowBlur = 40; g.drawImage(PLANTA, X, Y); g.restore();
+  // paredes originais: o corredor vai até a parede de verdade
+  const orig = PAREDES.map(([a, b, c, d]) => [a, b === ZF ? ZR : b, c, d === ZF ? ZR : d]).filter(([a, b, c, d]) => !(b === ZR && d === ZR && a === 2.2 && c === 3.3));
+  orig.push([2.2, ZR, 3.3, ZR]);
+  const pw = prog(t, T11 + 0.1, 1.2);
+  orig.forEach(([a, b, c, d], i) => tinta(g, [q(a, b), q(c, d)], prog(pw, i / orig.length * 0.5, 0.5), { w: 4, cor: '#2a241c', over: 10, seed: 400 + i, wob: 0.5 }));
+  riscos(g, JANELAS.map(([a, b, c, d]) => [q(a, b === ZF ? ZR : b), q(c, d === ZF ? ZR : d)]), { w: 7, cor: '#d8ceb6', alpha: pw }); riscos(g, JANELAS.map(([a, b, c, d]) => [q(a, b === ZF ? ZR : b), q(c, d === ZF ? ZR : d)]), { w: 1.2, cor: '#2a241c', alpha: pw });
+  riscos(g, PORTAS.map(([x, zz, r, a0, s]) => [...Array.from({ length: 13 }, (_, k) => { const a = a0 + s * k / 12 * Math.PI / 2; return q(x + Math.cos(a) * r, zz + Math.sin(a) * r); }), q(x, zz)]), { w: 1.1, cor: '#2a241c', alpha: 0.7 * pw, dash: [5, 5] });
+  g.save(); g.globalAlpha = pw; g.fillStyle = '#2a241c'; g.font = '22px Maquina'; g.textAlign = 'center'; COMODOS.forEach(([s, a, x, zz]) => { const p = q(x, zz); g.fillText(s, p[0], p[1]); }); const pc = q(2.75, 9.5); g.save(); g.translate(pc[0], pc[1]); g.rotate(-Math.PI / 2); g.fillText('CIRCULAÇÃO', 0, 8); g.restore(); g.restore();
+  // carimbo da prancha original
+  g.save(); g.globalAlpha = pw; g.strokeStyle = '#2a241c'; g.lineWidth = 1.6; g.strokeRect(X + 560, Y + 1560, 400, 110); g.fillStyle = '#2a241c'; g.font = '24px Maquina'; g.fillText('PLANTA BAIXA · APTO. FINAL 03', X + 576, Y + 1598); g.font = '20px MaquinaR'; g.fillText('Ed. Marajoara · 1987 · esc. 1:50', X + 576, Y + 1632); g.fillText('folha 05/22', X + 576, Y + 1658); g.restore();
+  // os dois interruptores originais (um deles do outro lado da parede de 2021)
+  const s1 = q(INTER[0], INTER[1]), s2 = q(3.1, 14.4);
+  g.save(); g.globalAlpha = pw; g.strokeStyle = '#2a241c'; g.lineWidth = 1.6; g.beginPath(); g.arc(s1[0], s1[1], 9, 0, 6.3); g.stroke(); g.font = '18px Maquina'; g.fillStyle = '#2a241c'; g.fillText('S', s1[0] + 14, s1[1] + 6); g.restore();
+  const tz = P(17, 'nunca viu'), ver = clamp((t - tz + 0.2) / 0.15);
+  if (ver > 0) { g.save(); g.globalAlpha = ver; g.strokeStyle = '#2a241c'; g.lineWidth = 1.6; g.beginPath(); g.arc(s2[0], s2[1], 9, 0, 6.3); g.stroke(); g.fillStyle = '#2a241c'; g.font = '18px Maquina'; g.fillText('S', s2[0] + 14, s2[1] + 6); g.restore(); circulo(g, s2[0] + 6, s2[1], 34, 30, easeInOut(prog(t, tz, 0.5)), { seed: 13 }); }
+  // por cima, em vermelho: onde ficava a parede que a Lúcia conheceu
+  const tl = P(17, 'detalhe'), a = q(2.2, ZF), b = q(3.3, ZF);
+  if (t > tl - 0.3) { tinta(g, [[a[0] - 30, a[1]], [b[0] + 30, b[1]]], prog(t, tl - 0.3, 0.5), { w: 3, cor: COR.verm, over: 0, dash: [10, 8] }); datilo(g, 'parede em 2021', b[0] + 44, b[1] + 8, (t - tl) / 0.5 * 14, { fonte: 'Maquina', tam: 24, cor: COR.verm }); }
+  g.restore();
+  // a lanterna falha logo depois do detalhe aparecer
+  const apaga = t > tz + 0.75 ? [0.6, 0.1, 0.4, 0, 0, 0.2, 0, 0, 0][Math.min(8, Math.floor((t - tz - 0.75) / 0.06))] : 1;
+  const sxy = p => [(p[0] - cx) * z + W / 2, (p[1] - cy) * z + H / 2], f = sxy(t > tl - 0.3 ? q(2.9, 14.1) : [X + 500, cy]);
+  if (t > S(17)) datilo(sb, 'PLANTA ORIGINAL  ·  1987', 84, 242, (t - S(17)) / 0.6 * 24, { tam: 32, cor: COR.osso, esp: 2 });
+  return { focos: [{ x: f[0], y: f[1], r: 900 }], amb: 0.2 * apaga, mult: apaga };
+}
+
+// ---------- tomada 12: cartão final ----------
+function tomada12(t) {
+  const hh = mao(t, 3);
+  g.save(); g.translate(W / 2 + hh.x, H / 2 + hh.y); g.rotate(hh.r); g.translate(-W / 2, -H / 2);
+  fundo();
+  prancha(g, t - T12 + 3.2);
+  const n = (t - S(18)) / 0.6;
+  g.save(); g.font = '30px Datilo'; g.fillStyle = COR.cinza; g.textAlign = 'center'; g.letterSpacing = '6px'; g.globalAlpha = clamp((t - T12) / 0.4); g.fillText('ARQUIVO MORTO', W / 2, 640); g.restore();
+  g.save(); g.font = '104px Serifa'; g.fillStyle = CLARO; g.textAlign = 'center'; g.globalAlpha = easeOut(clamp((t - S(18)) / 0.4)); g.fillText('CASO 2 DE 13', W / 2, 800); g.restore();
+  datilo(g, 'A solução está no arquivo.', W / 2, 920, (t - P(18, 'A solução')) / 0.9 * 26, { fonte: 'Maquina', tam: 44, cor: COR.osso, alinh: 'center' });
+  const tlk = P(18, 'Link');
+  if (t > tlk - 0.1) { const a = easeOut(clamp((t - tlk + 0.1) / 0.3)); g.save(); g.globalAlpha = a; g.strokeStyle = COR.verm; g.lineWidth = 3; g.strokeRect(W / 2 - 200, 1010, 400, 92); g.fillStyle = VERM_TXT; g.font = '46px Maquina'; g.textAlign = 'center'; g.letterSpacing = '6px'; g.fillText('LINK NA BIO', W / 2, 1073); g.restore(); }
+  // carimbo CASO ABERTO batendo
+  const ts = P(18, 'treze') + 0.15, k = clamp((t - ts) / 0.12);
+  if (k > 0) {
+    const s = lerp(1.7, 1, easeOut(k)); g.save(); g.translate(W / 2 + 150, 1290); g.rotate(-0.14); g.scale(s, s); g.globalAlpha = 0.88 * k;
+    g.strokeStyle = COR.verm; g.lineWidth = 6; g.strokeRect(-230, -62, 460, 124); g.lineWidth = 2; g.strokeRect(-218, -50, 436, 100);
+    g.fillStyle = COR.verm; g.font = '64px Maquina'; g.textAlign = 'center'; g.letterSpacing = '6px'; g.fillText('CASO ABERTO', 0, 22);
+    g.globalCompositeOperation = 'destination-out'; const r = rng(17); for (let i = 0; i < 160; i++) { g.globalAlpha = 0.5 * r(); g.beginPath(); g.arc((r() - 0.5) * 470, (r() - 0.5) * 130, 1 + r() * 4, 0, 6.3); g.fill(); }
+    g.restore();
+  }
+  g.restore();
+  return { focos: [{ x: 540, y: 900, r: 1050 }], amb: 0.22, mult: clamp((t - T12) / 0.25) };
+}
+
 // ---------- legendas ----------
-const LEG = { 2: ['Em agosto de 2021, a Lúcia alugou o apartamento 503 do Edifício Marajoara.', { '503': CLARO, 'Lúcia': CLARO }],
-  3: ['O aluguel era metade do preço dos vizinhos.', { 'metade do preço': VERM_TXT }],
-  4: ['Na vistoria de entrada, o corredor media 9 metros.', { '9 metros': CLARO }],
-  5: ['Parede do fundo com pintura nova.', { 'pintura nova': VERM_TXT }] };
+const LEG = [
+  [2, 'Em agosto de 2021, a Lúcia alugou o apartamento 503 do Edifício Marajoara.', { '503': CLARO, 'Lúcia': CLARO }],
+  [3, 'O aluguel era metade do preço dos vizinhos.', { 'metade do preço': VERM_TXT }],
+  [4, 'Na vistoria de entrada, o corredor media 9 metros.', { '9 metros': CLARO }],
+  [5, 'Parede do fundo com pintura nova.', { 'pintura nova': VERM_TXT }],
+  [6, 'Em setembro, ela encomendou um tapete sob medida, de ponta a ponta.', { 'sob medida': CLARO }],
+  [7, 'Quando o tapete chegou, sobraram 15 centímetros.', { '15 centímetros': VERM_TXT }],
+  [8, 'Ela começou a medir o corredor todo domingo.', { 'todo domingo': CLARO }],
+  [9, '8,85.  8,70.  8,55.', { '8,85.  8,70.  8,55.': CLARO }],
+  [10, 'O corredor diminuía 15 centímetros por semana. Sempre 15.', { '15 centímetros por semana': VERM_TXT, 'Sempre 15': VERM_TXT }],
+  [11, 'Toda segunda de manhã, um pó branco no rodapé do fundo.', { 'pó branco': VERM_TXT }],
+  [12, 'De madrugada, a luz do corredor acendia sozinha.', { 'acendia sozinha': VERM_TXT }, null, 'E o único'],
+  [12, 'E o único interruptor ficava do lado do quarto dela.', { 'único interruptor': CLARO }, 'E o único', null],
+  [13, 'Em outubro, ela viajou por 4 dias.', { '4 dias': CLARO }],
+  [14, 'Quando voltou, a medida do domingo já estava no caderno.', { 'já estava no caderno': VERM_TXT }],
+  [15, 'Com a letra dela. Só que mais inclinada.', { 'mais inclinada': VERM_TXT }],
+  [16, 'E, do lado, duas palavras: falta pouco.', { 'falta pouco': VERM_TXT }],
+  [17, 'A planta original do apartamento tem um detalhe que a Lúcia nunca viu.', { 'um detalhe': CLARO }],
+];
 function legendas(t) {
-  for (const [i, [s, d]] of Object.entries(LEG)) {
-    const a = S(+i), b = E(+i), prox = +i < TL.length ? S(+i + 1) : b + 1;
-    if (t < a - 0.05 || t > prox - 0.02) continue;
+  LEG.forEach(([i, s, d, de, ate], k) => {
+    const a = de ? P(i, de) : S(i), b = ate ? P(i, ate) : E(i), prox = ate ? b : (i < TL.length ? S(i + 1) : b + 1);
+    if (t < a - 0.05 || t > prox - 0.02) return;
     const n = (t - a + 0.12) / (b - a) * s.length * 1.05, al = 1 - smooth(prox - 0.2, prox - 0.02, t);
     legenda(s, n, { destaques: d, alpha: al });
-  }
+  });
 }
 
 window.TOTAL_FRAMES = Math.ceil(FIM * FPS);
+const TOMADAS = [[0, tomada1], [T2, tomada2], [T3, tomada3], [T4, tomada4], [T5, tomada5a], [T5b, tomada5b], [T6, tomada6], [T7, tomada7], [T8, tomada8], [T9, tomada9], [T10, tomada10], [T11, tomada11], [T12, tomada12]];
 window.renderAt = f => {
   const t = f / FPS; limpar();
-  const r = t < T2 ? tomada1(t) : t < T3 ? tomada2(t) : t < T4 ? tomada3(t) : tomada4(t);
+  let fn = tomada1; for (const [a, h] of TOMADAS) if (t >= a) fn = h;
+  const r = fn(t);
   poeira(g, t);
-  const mult = r.mult * pisca(t, T2) * pisca(t, T3) * pisca(t, T4);
+  const mult = r.mult * TROCAS.reduce((m, tc) => m * pisca(t, tc), 1);
   iluminar(r.focos, r.amb, t, mult);
   legendas(t);
-  compor(t, { fade: smooth(FIM - 0.6, FIM, t) });
+  compor(t, { fade: smooth(FIM - 0.9, FIM, t) });
   return 1;
 };
 window.READY = true;

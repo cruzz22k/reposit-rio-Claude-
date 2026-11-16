@@ -1,6 +1,6 @@
 {
- "title": "arquivo-morto-caso-002-planta-previa",
- "voiceover": "input/narracao-previa.wav",
+ "title": "arquivo-morto-caso-002-planta-v1",
+ "voiceover": "input/narracao-v1.wav",
  "loudness": -14,
  "music": {
   "enabled": true,

@@ -11,12 +11,71 @@ const D = __dirname, P = f => path.join(D, f);
 const ler = f => fs.readFileSync(P(f), 'utf8');
 
 const casos = fs.readdirSync(P('partes')).filter(f => /^\d{3}\.html$/.test(f)).sort();
-let corpo = '', solucoes = '';
+const FICHAS = JSON.parse(ler('fichas.json'));
+const bolas = n => `<span class="bolas">${'●'.repeat(n)}<span class="off">${'●'.repeat(5 - n)}</span></span>`;
+const ROT_DIF = ['', 'muito fácil', 'fácil', 'média', 'difícil', 'muito difícil'];
+const docsDe = h => [...h.matchAll(/<div class="rotulo"[^>]*>(Documento \d+[^<]*)<\/div>/g)].map(m => m[1].replace(/\s+/g, ' ').trim());
+let corpo = '', solucoes = '', placar = '';
 for (const f of casos) {
-  const [caso, sol] = ler('partes/' + f).split('<!-- SOLUCAO -->');
-  corpo += caso; solucoes += sol || '';
+  const num = f.slice(0, 3), [caso0, sol0] = ler('partes/' + f).split('<!-- SOLUCAO -->');
+  const ex = fs.existsSync(P('extras/' + f)) ? ler('extras/' + f) : '';
+  const exDocs = ex ? ex.split('<!-- SOL -->')[0].replace('<!-- DOCS -->', '') : '', exSol = ex ? (ex.split('<!-- SOL -->')[1] || '') : '';
+  const titulo = (caso0.match(/<h2>([^<]+)<\/h2>/) || [])[1] || '';
+  const fi = FICHAS[num] || {}, nDocs = docsDe(caso0).length + docsDe(exDocs).length;
+  const caso = caso0.replace(`id="c${num}"`, '');
+  const ficha = `<section class="pagina ficha" id="c${num}">
+  <div class="aba">ARQUIVO MORTO</div>
+  <div class="rotulo">Ficha do caso</div>
+  <div class="num">${num}</div>
+  <h2>${titulo}</h2>
+  <table class="ficha-tab">
+    <tr><th>Local</th><td>${fi.local || ''}</td></tr>
+    <tr><th>Imóvel</th><td>${fi.tipo || ''}</td></tr>
+    <tr><th>Período</th><td>${fi.periodo || ''}</td></tr>
+    <tr><th>Depoimento</th><td>${fi.depoimento || ''}</td></tr>
+    <tr><th>Envolvidos</th><td><ul>${(fi.envolvidos || []).map(e => `<li>${e}</li>`).join('')}</ul></td></tr>
+    <tr><th>Documentos</th><td>${nDocs} anexados ao envelope</td></tr>
+    <tr><th>Dificuldade</th><td>${bolas(fi.dificuldade || 3)} &nbsp;${ROT_DIF[fi.dificuldade || 3]}</td></tr>
+    <tr><th>Leitura</th><td>cerca de ${fi.tempo || '20 min'}</td></tr>
+  </table>
+  <div class="pergunta"><span>A pergunta do arquivo</span>${fi.pergunta || ''}</div>
+  <p class="instr">Leia o relato, examine os documentos e anote a sua hipótese antes de procurar a solução.</p>
+  <div class="carimbo">CASO ABERTO</div>
+  <div class="rodape"><span>CASO ${num} · FICHA</span><span class="pg"></span></div>
+</section>
+`;
+  const anot = `<section class="pagina anot">
+  <div class="rotulo">Caso ${num} · Suas anotações</div>
+  <h2>E então?</h2>
+  <div class="campo"><b>${fi.pergunta || 'A pergunta do arquivo'}</b></div>
+  <div class="campo"><b>Quem?</b><div class="linhas l2"></div></div>
+  <div class="campo"><b>Como?</b><div class="linhas l3"></div></div>
+  <div class="campo"><b>Por quê?</b><div class="linhas l2"></div></div>
+  <div class="campo"><b>A pista que decidiu</b><div class="linhas l2"></div></div>
+  <div class="campo"><b>Datas e medidas que importam</b><div class="linhas l3"></div></div>
+  <div class="caixas"><span>☐ resolvi sozinho</span><span>☐ precisei das pistas</span><span>☐ fui direto à solução</span></div>
+  <p class="dica">Quando tiver certeza, confira a solução na <span class="pgref" data-ref="s${num}"></span>.</p>
+  <div class="rodape"><span>CASO ${num} · ANOTAÇÕES</span><span class="pg"></span></div>
+</section>
+`;
+  corpo += ficha + caso + exDocs + anot; solucoes += (sol0 || '') + exSol;
+  placar += `<tr><td>${num}</td><td>${titulo}</td><td>${bolas(fi.dificuldade || 3)}</td><td><span class="cx"></span></td><td><span class="cx"></span></td><td><span class="cx"></span></td></tr>`;
 }
-let html = ler('partes/00-abertura.html') + corpo + ler('partes/90-solucoes.html') + solucoes + ler('partes/99-fim.html');
+// placar do investigador e índice de documentos (no fim do volume)
+const placarPg = `<section class="pagina" id="placar">
+  <div class="rotulo">Placar do investigador</div>
+  <h2>Quantos você resolveu?</h2>
+  <table class="placar"><tr><th>Caso</th><th style="text-align:left">Título</th><th>Grau</th><th>Sozinho</th><th>Com pistas</th><th>Li a solução</th></tr>${placar}</table>
+  <p style="margin-top:5mm; font-size:9pt">Conte 3 pontos para cada caso resolvido sozinho, 1 para cada caso resolvido com as pistas. <b>30 ou mais</b>: o Arquivo tem uma vaga para você. <b>Menos de 10</b>: talvez seja melhor não medir a sua casa.</p>
+  <div class="rodape"><span>ARQUIVO MORTO · VOL. 1</span><span class="pg"></span></div>
+</section>
+`;
+let itens = []; for (const f of casos) { const num = f.slice(0, 3), [c0] = ler('partes/' + f).split('<!-- SOLUCAO -->'), ex = fs.existsSync(P('extras/' + f)) ? ler('extras/' + f).split('<!-- SOL -->')[0] : ''; itens.push(`<div class="caso">CASO ${num}</div>`); [...docsDe(c0), ...docsDe(ex)].forEach((d, i) => itens.push(`<div class="item"><span>${d.replace(/^Documento \d+ · /, (i + 1) + '. ')}</span><span class="pgdoc" data-k="${num}|${d.split(' · ')[0]}"></span></div>`)); }
+const meio = Math.ceil(itens.length / 2);
+const indicePg = `<section class="pagina" id="indice"><div class="rotulo">Índice de documentos</div><h2>Tudo o que veio nos envelopes</h2><div class="indice-docs">${itens.slice(0, meio).join('')}</div><div class="rodape"><span>ARQUIVO MORTO · VOL. 1</span><span class="pg"></span></div></section>
+<section class="pagina"><div class="rotulo">Índice de documentos</div><div class="indice-docs" style="margin-top:4mm">${itens.slice(meio).join('')}</div><div class="rodape"><span>ARQUIVO MORTO · VOL. 1</span><span class="pg"></span></div></section>
+`;
+let html = ler('partes/00-abertura.html') + ler('partes/01-guia.html') + corpo + ler('partes/90-solucoes.html') + solucoes + placarPg + indicePg + ler('partes/99-fim.html');
 
 // numera as páginas e guarda em que página começa cada caso e cada solução
 let n = 0; const ref = {};
@@ -24,6 +83,8 @@ html = html.replace(/<section class="pagina([^"]*)"([^>]*)>/g, (m, cls, attrs) =
   n++; const id = (attrs.match(/id="([^"]+)"/) || [])[1]; if (id) ref[id] = n; return m;
 });
 let k = 0; html = html.replace(/<section class="pagina[\s\S]*?<\/section>/g, sec => { k++; return sec.replace('<span class="pg"></span>', `<span class="pg">${String(k).padStart(2, '0')}</span>`); });
+const pgDoc = {}; { let kk = 0; for (const sec of html.match(/<section class="pagina[\s\S]*?<\/section>/g)) { kk++; const cs = (sec.match(/<span>CASO (\d{3})/) || [])[1]; if (!cs) continue; for (const m of sec.matchAll(/<div class="rotulo"[^>]*>(Documento \d+)/g)) if (!pgDoc[cs + '|' + m[1]]) pgDoc[cs + '|' + m[1]] = kk; } }
+html = html.replace(/<span class="pgdoc" data-k="([^"]+)"><\/span>/g, (m, k) => `<span class="pg">${pgDoc[k] ? 'p. ' + pgDoc[k] : '??'}</span>`);
 html = html.replace(/<span class="pgref" data-ref="([^"]+)"><\/span>/g, (m, id) => `<span class="pg">${ref[id] ? 'p. ' + ref[id] : '??'}</span>`);
 
 const doc = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Arquivo Morto — Vol. 1</title><link rel="stylesheet" href="estilo.css"></head><body>\n${html}\n</body></html>`;

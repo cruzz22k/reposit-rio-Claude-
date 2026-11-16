@@ -92,12 +92,76 @@ cues = [
   {'t': 20.3, 'name': 'impact', 'dur': 3.0, 'gain': -14, 'pitch': 0.5, 'seed': 4, 'what': 'o espaço atrás da parede'},
   {'t': 20.3, 'name': 'glitch', 'dur': 0.5, 'gain': -24, 'seed': 33, 'what': 'tracejado piscando'},
 ]
+
+# ---------- segunda parte (frases 6 a 18) ----------
+T5, T5b, T6, T7, T8, T9, T10, T11, T12 = 20.95, 25.3, 29.1, 41.85, 45.62, 52.5, 55.62, 65.45, 70.4
+def baque(seed=1):                      # a parede andando: um tranco seco e grave
+    n = secs(0.5); x = lp(noise(n, seed), 260) * expdec(n, 0.07) * 3 + bp(noise(n, seed + 1), 900, 3000) * expdec(n, 0.015)
+    return normalize(fade(stereo(x, 0.0, 0.1), 0.002, 0.1), -3)
+def pozinho(dur=3.0, seed=2):           # grãos caindo
+    n = secs(dur); r = rng(seed); y = np.zeros(n, np.float32)
+    for _ in range(int(dur * 60)):
+        a = int(r.random() * (n - 400)); m = 200; y[a:a + m] += (bp(noise(m, int(r.integers(1e6))), 4000, 11000) * expdec(m, 0.0015) * r.random())
+    return normalize(fade(stereo(y, 0.3, 0.6), 0.2, 0.4), -8)
+def relogio(dur=6.0, seed=3):
+    n = secs(dur); y = np.zeros(n, np.float32)
+    for k in range(int(dur)):
+        a = secs(k); m = secs(0.03); y[a:a + m] += bp(noise(m, seed + k), 2500 if k % 2 else 3200, 6000) * expdec(m, 0.004)
+    return normalize(fade(stereo(y, 0.0, 0.1), 0.005, 0.05), -6)
+save('baque', baque()); save('pozinho', pozinho()); save('relogio', relogio(E(12) - S(12) + 1)); save('trena2', trena(1.0, 5)); save('trena3', trena(0.8, 7))
+save('caneta_longa', caneta(1.2, 10)); save('caneta_x', caneta(0.18, 12)); save('caneta_falta', caneta(0.9, 14)); save('maq_final', maquina(0.9, 9)); save('papel2', papel(0.7, 3)); save('papel3', papel(0.9, 5))
+for k, tc in enumerate([T5, T5b, T6, T7, T8, T9, T10, T11, T12]): cues.append({'t': tc - 0.3, 'name': FX['chiado'], 'gain': -18, 'what': f'luz pisca {k}'})
+cues += [
+  {'t': T5 + 0.05, 'name': FX['papel2'], 'gain': -18, 'what': 'pedido do tapete'},
+  {'t': S(6), 'name': FX['maq_ago'], 'gain': -19, 'what': 'SET 2021'},
+  {'t': T5 + 0.3, 'name': FX['caneta_longa'], 'gain': -22, 'what': 'desenho da passadeira'},
+  {'t': Pw(6, 'ponta a ponta') - 0.3, 'name': FX['caneta_barra'], 'gain': -18, 'what': 'cota 9,00'},
+  {'t': Pw(6, 'sob medida'), 'name': FX['caneta_x'], 'gain': -18, 'what': 'pago'},
+  {'t': T5b + 0.2, 'name': 'whoosh', 'dur': 1.5, 'gain': -22, 'pitch': 0.4, 'seed': 11, 'what': 'tapete desenrolando'},
+  {'t': Pw(7, 'quinze') - 0.1, 'name': 'hit', 'gain': -18, 'pitch': 0.6, 'seed': 4, 'what': 'sobraram 15 cm'},
+  {'t': S(8) + 0.6, 'name': FX['trena'], 'gain': -16, 'what': 'trena de domingo'},
+  {'t': S(8), 'name': FX['maq_vist'], 'gain': -20, 'what': 'TODO DOMINGO'},
+  {'t': Pw(9, 'Oito e setenta'), 'name': FX['baque'], 'gain': -12, 'what': 'parede anda (19/09)'},
+  {'t': Pw(9, 'Oito e setenta') + 0.05, 'name': FX['trena2'], 'gain': -20, 'what': 'trena'},
+  {'t': Pw(9, 'Oito e cinquenta'), 'name': FX['baque'], 'gain': -11, 'what': 'parede anda (26/09)'},
+  {'t': Pw(9, 'Oito e cinquenta') + 0.05, 'name': FX['trena3'], 'gain': -20, 'what': 'trena'},
+  {'t': Pw(10, 'Sempre'), 'name': 'tick', 'gain': -16, 'pitch': 0.5, 'seed': 30, 'what': 'sempre quinze'},
+  {'t': T7 + 0.2, 'name': FX['pozinho'], 'gain': -14, 'what': 'pó caindo'},
+  {'t': S(11), 'name': FX['maq_comodos'], 'gain': -21, 'what': 'SEGUNDA 06:40'},
+  {'t': Pw(11, 'pó'), 'name': FX['caneta_barra'], 'gain': -20, 'what': 'etiqueta pó branco'},
+  {'t': S(12), 'name': FX['relogio'], 'gain': -18, 'what': 'relógio de madrugada'},
+  {'t': Pw(12, 'acendia') - 0.05, 'name': FX['clique'], 'gain': -10, 'what': 'a luz acende sozinha'},
+  {'t': Pw(12, 'acendia'), 'name': 'hum', 'dur': 6.0, 'gain': -26, 'seed': 32, 'what': 'lâmpada zumbindo'},
+  {'t': Pw(12, 'único interruptor'), 'name': FX['caneta_circ'], 'gain': -15, 'what': 'círculo no interruptor'},
+  {'t': S(13), 'name': FX['papel3'], 'gain': -19, 'what': 'calendário'},
+  {'t': S(13), 'name': FX['maq_ago'], 'gain': -20, 'what': 'OUT 2021'},
+] + [{'t': Pw(13, 'viajou') + i * 0.32 + j * 0.18, 'name': FX['caneta_x'], 'gain': -17, 'what': f'X dia {15 + i}'} for i in range(4) for j in range(2)] + [
+  {'t': E(13) - 0.2, 'name': FX['caneta_circ'], 'gain': -19, 'what': 'volta na terça'},
+  {'t': T10 + 0.05, 'name': FX['papel2'], 'gain': -19, 'what': 'caderno'},
+  {'t': Pw(14, 'já estava') - 0.2, 'name': FX['caneta_longa'], 'gain': -15, 'what': 'a linha que ela não escreveu'},
+  {'t': Pw(14, 'já estava'), 'name': 'riser', 'dur': 2.5, 'gain': -26, 'pitch': 0.6, 'seed': 5, 'what': 'tensão'},
+  {'t': S(15) - 0.2, 'name': FX['caneta_barra'], 'gain': -21, 'what': 'linha de inclinação 1'},
+  {'t': Pw(15, 'mais inclinada') - 0.1, 'name': FX['caneta_barra'], 'gain': -19, 'what': 'linha de inclinação 2'},
+  {'t': Pw(16, 'falta') - 0.15, 'name': FX['caneta_falta'], 'gain': -14, 'what': 'falta pouco'},
+  {'t': Pw(16, 'falta') + 0.9, 'name': 'impact', 'dur': 3.0, 'gain': -13, 'pitch': 0.45, 'seed': 6, 'what': 'grave'},
+  {'t': T11 + 0.05, 'name': FX['papel3'], 'gain': -16, 'what': 'planta original'},
+  {'t': T11 + 0.1, 'name': FX['nanquim_planta'], 'gain': -22, 'what': 'planta se desenhando'},
+  {'t': S(17), 'name': FX['maq_vist'], 'gain': -20, 'what': 'PLANTA ORIGINAL 1987'},
+  {'t': Pw(17, 'detalhe') - 0.3, 'name': FX['caneta_barra'], 'gain': -19, 'what': 'parede em 2021'},
+  {'t': Pw(17, 'nunca viu'), 'name': FX['caneta_circ'], 'gain': -14, 'what': 'o segundo interruptor'},
+  {'t': Pw(17, 'nunca viu') + 0.75, 'name': 'glitch', 'dur': 0.6, 'gain': -16, 'seed': 34, 'what': 'lanterna falha'},
+  {'t': Pw(17, 'nunca viu') + 0.8, 'name': 'impact', 'dur': 3.5, 'gain': -11, 'pitch': 0.4, 'seed': 7, 'what': 'blecaute'},
+  {'t': T12 + 0.05, 'name': FX['clique'], 'gain': -14, 'what': 'luz volta: cartão final'},
+  {'t': Pw(18, 'A solução'), 'name': FX['maq_final'], 'gain': -17, 'what': 'a solução está no arquivo'},
+  {'t': Pw(18, 'treze') + 0.15, 'name': 'hit', 'gain': -11, 'pitch': 0.7, 'seed': 8, 'what': 'carimbo CASO ABERTO'},
+]
 src = os.path.join(P, '..', 'arquivo-morto-caso-002', 'input', 'narracao-v1.wav'); vo = f'input/narracao-{V}.wav'
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', src, '-t', str(DUR), '-af', f'afade=t=out:st={DUR - 0.6}:d=0.6', os.path.join(P, vo)], check=True)
 cfg = {'title': f'arquivo-morto-caso-002-planta-{V}', 'voiceover': vo, 'loudness': -14,
        'music': {'enabled': True, 'gainDb': -20, 'seed': 6}, 'sfx': {'enabled': True, 'gainDb': -4}}
 story = {'duration': DUR, 'shots': [{'id': 'tudo', 'start': 0, 'end': DUR}],
-         'music': [{'start': 0, 'end': DUR, 'mood': 'mystery', 'intensity': 0.35}],
+         'music': [m for m in [{'start': 0, 'end': min(DUR, 20.7), 'mood': 'mystery', 'intensity': 0.35}, {'start': 20.7, 'end': 45.6, 'mood': 'mystery', 'intensity': 0.45},
+                   {'start': 45.6, 'end': 65.4, 'mood': 'dark', 'intensity': 0.5}, {'start': 65.4, 'end': 70.4, 'mood': 'tension', 'intensity': 0.45}, {'start': 70.4, 'end': DUR, 'mood': 'dark', 'intensity': 0.3}] if m['start'] < DUR],
          'sfx': [{k: v for k, v in c.items() if k != 'what'} for c in cues if c['t'] < DUR]}
 json.dump(cfg, open(os.path.join(P, 'config.json'), 'w'), ensure_ascii=False, indent=1)
 os.makedirs(os.path.join(P, 'story'), exist_ok=True); json.dump(story, open(os.path.join(P, 'story', 'shots.json'), 'w'), ensure_ascii=False, indent=1)

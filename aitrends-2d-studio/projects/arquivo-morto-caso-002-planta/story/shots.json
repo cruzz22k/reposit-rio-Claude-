@@ -1,18 +1,42 @@
 {
- "duration": 21.3,
+ "duration": 76.0,
  "shots": [
   {
    "id": "tudo",
    "start": 0,
-   "end": 21.3
+   "end": 76.0
   }
  ],
  "music": [
   {
    "start": 0,
-   "end": 21.3,
+   "end": 20.7,
    "mood": "mystery",
    "intensity": 0.35
+  },
+  {
+   "start": 20.7,
+   "end": 45.6,
+   "mood": "mystery",
+   "intensity": 0.45
+  },
+  {
+   "start": 45.6,
+   "end": 65.4,
+   "mood": "dark",
+   "intensity": 0.5
+  },
+  {
+   "start": 65.4,
+   "end": 70.4,
+   "mood": "tension",
+   "intensity": 0.45
+  },
+  {
+   "start": 70.4,
+   "end": 76.0,
+   "mood": "dark",
+   "intensity": 0.3
   }
  ],
  "sfx": [
@@ -204,6 +228,318 @@
    "dur": 0.5,
    "gain": -24,
    "seed": 33
+  },
+  {
+   "t": 20.65,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 25.0,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 28.8,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 41.550000000000004,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 45.32,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 52.2,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 55.32,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 65.15,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 70.10000000000001,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 21.0,
+   "name": "build/sfx/papel2.wav",
+   "gain": -18
+  },
+  {
+   "t": 20.731,
+   "name": "build/sfx/maq_ago.wav",
+   "gain": -19
+  },
+  {
+   "t": 21.25,
+   "name": "build/sfx/caneta_longa.wav",
+   "gain": -22
+  },
+  {
+   "t": 23.93058208955224,
+   "name": "build/sfx/caneta_barra.wav",
+   "gain": -18
+  },
+  {
+   "t": 23.24013432835821,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -18
+  },
+  {
+   "t": 25.5,
+   "name": "whoosh",
+   "dur": 1.5,
+   "gain": -22,
+   "pitch": 0.4,
+   "seed": 11
+  },
+  {
+   "t": 27.39528846153846,
+   "name": "hit",
+   "gain": -18,
+   "pitch": 0.6,
+   "seed": 4
+  },
+  {
+   "t": 29.970000000000002,
+   "name": "build/sfx/trena.wav",
+   "gain": -16
+  },
+  {
+   "t": 29.37,
+   "name": "build/sfx/maq_vist.wav",
+   "gain": -20
+  },
+  {
+   "t": 34.09236923076923,
+   "name": "build/sfx/baque.wav",
+   "gain": -12
+  },
+  {
+   "t": 34.142369230769226,
+   "name": "build/sfx/trena2.wav",
+   "gain": -20
+  },
+  {
+   "t": 35.08461538461538,
+   "name": "build/sfx/baque.wav",
+   "gain": -11
+  },
+  {
+   "t": 35.13461538461538,
+   "name": "build/sfx/trena3.wav",
+   "gain": -20
+  },
+  {
+   "t": 40.50884615384616,
+   "name": "tick",
+   "gain": -16,
+   "pitch": 0.5,
+   "seed": 30
+  },
+  {
+   "t": 42.050000000000004,
+   "name": "build/sfx/pozinho.wav",
+   "gain": -14
+  },
+  {
+   "t": 42.135,
+   "name": "build/sfx/maq_comodos.wav",
+   "gain": -21
+  },
+  {
+   "t": 43.69169090909091,
+   "name": "build/sfx/caneta_barra.wav",
+   "gain": -20
+  },
+  {
+   "t": 45.778,
+   "name": "build/sfx/relogio.wav",
+   "gain": -18
+  },
+  {
+   "t": 47.75477227722772,
+   "name": "build/sfx/clique.wav",
+   "gain": -10
+  },
+  {
+   "t": 47.80477227722772,
+   "name": "hum",
+   "dur": 6.0,
+   "gain": -26,
+   "seed": 32
+  },
+  {
+   "t": 49.134841584158416,
+   "name": "build/sfx/caneta_circ.wav",
+   "gain": -15
+  },
+  {
+   "t": 52.775,
+   "name": "build/sfx/papel3.wav",
+   "gain": -19
+  },
+  {
+   "t": 52.775,
+   "name": "build/sfx/maq_ago.wav",
+   "gain": -20
+  },
+  {
+   "t": 53.91223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 54.09223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 54.23223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 54.41223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 54.55223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 54.73223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 54.87223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 55.05223076923077,
+   "name": "build/sfx/caneta_x.wav",
+   "gain": -17
+  },
+  {
+   "t": 55.346999999999994,
+   "name": "build/sfx/caneta_circ.wav",
+   "gain": -19
+  },
+  {
+   "t": 55.669999999999995,
+   "name": "build/sfx/papel2.wav",
+   "gain": -19
+  },
+  {
+   "t": 57.66075,
+   "name": "build/sfx/caneta_longa.wav",
+   "gain": -15
+  },
+  {
+   "t": 57.86075,
+   "name": "riser",
+   "dur": 2.5,
+   "gain": -26,
+   "pitch": 0.6,
+   "seed": 5
+  },
+  {
+   "t": 59.169,
+   "name": "build/sfx/caneta_barra.wav",
+   "gain": -21
+  },
+  {
+   "t": 60.832125,
+   "name": "build/sfx/caneta_barra.wav",
+   "gain": -19
+  },
+  {
+   "t": 63.984692307692306,
+   "name": "build/sfx/caneta_falta.wav",
+   "gain": -14
+  },
+  {
+   "t": 65.03469230769231,
+   "name": "impact",
+   "dur": 3.0,
+   "gain": -13,
+   "pitch": 0.45,
+   "seed": 6
+  },
+  {
+   "t": 65.5,
+   "name": "build/sfx/papel3.wav",
+   "gain": -16
+  },
+  {
+   "t": 65.55,
+   "name": "build/sfx/nanquim_planta.wav",
+   "gain": -22
+  },
+  {
+   "t": 65.819,
+   "name": "build/sfx/maq_vist.wav",
+   "gain": -20
+  },
+  {
+   "t": 67.93671428571429,
+   "name": "build/sfx/caneta_barra.wav",
+   "gain": -19
+  },
+  {
+   "t": 69.44557142857143,
+   "name": "build/sfx/caneta_circ.wav",
+   "gain": -14
+  },
+  {
+   "t": 70.19557142857143,
+   "name": "glitch",
+   "dur": 0.6,
+   "gain": -16,
+   "seed": 34
+  },
+  {
+   "t": 70.24557142857142,
+   "name": "impact",
+   "dur": 3.5,
+   "gain": -11,
+   "pitch": 0.4,
+   "seed": 7
+  },
+  {
+   "t": 70.45,
+   "name": "build/sfx/clique.wav",
+   "gain": -14
+  },
+  {
+   "t": 71.88084745762713,
+   "name": "build/sfx/maq_final.wav",
+   "gain": -17
+  },
+  {
+   "t": 71.60005084745764,
+   "name": "hit",
+   "gain": -11,
+   "pitch": 0.7,
+   "seed": 8
   }
  ]
 }
