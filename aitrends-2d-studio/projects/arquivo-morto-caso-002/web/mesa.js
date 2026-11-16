@@ -106,7 +106,7 @@ export const scene = new THREE.Scene(); scene.background = new THREE.Color('#000
 export const camera = new THREE.PerspectiveCamera(32, W / H, 0.5, 5000);
 { const pm = new THREE.PMREMGenerator(R); scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = 0.05; }
 export const key = new THREE.SpotLight('#ffd6a0', 1.05e5, 0, 0.42, 0.85, 2);   // luminária de mesa, quente, de cima
-key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -0.00012; key.shadow.normalBias = 0.02; key.shadow.radius = 2;
+key.castShadow = true; key.shadow.mapSize.set(1024, 1024); key.shadow.bias = -0.00012; key.shadow.normalBias = 0.02; key.shadow.radius = 2;
 key.shadow.camera.near = 50; key.shadow.camera.far = 800;
 scene.add(key, key.target);
 export const fill = new THREE.HemisphereLight('#3d6b6a', '#0a1212', 0.12); scene.add(fill);

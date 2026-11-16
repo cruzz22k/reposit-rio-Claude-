@@ -2,7 +2,7 @@
 // A planta do ap. 503 está marcada com fita na ardósia, na escala 1:8 (1 m da casa = 12,5 cm da mesa),
 // e os documentos ficam dentro dos cômodos, como na abertura de referência.
 // Cada frase tem um herói (objeto ou papel) e um gesto (círculo vermelho, giz que se escreve, etiqueta).
-import { W, H, FPS, SPP, clamp, smooth, pchip, rng, loadFonts, renderFrame, handheld, light, hud } from './mesa.js';
+import { R, W, H, FPS, SPP, clamp, smooth, pchip, rng, loadFonts, renderFrame, handheld, light, hud } from './mesa.js';
 import * as O from './objetos.js';
 
 const Qs = new URLSearchParams(location.search);
@@ -137,5 +137,5 @@ function sppAt(t) {
   return Math.round(clamp(12 + v * 0.5, 12, 22));
 }
 window.TOTAL_FRAMES = Math.ceil(FIM * FPS);
-window.renderAt = f => { const t = f / FPS, spp = sppAt(t); hud.clearRect(0, 0, W, H); renderFrame(t, spp, world, { fade: 1 - smooth(0, 0.6, t) }); return spp; };
+window.renderAt = f => { const t = f / FPS, spp = sppAt(t); hud.clearRect(0, 0, W, H); renderFrame(t, spp, world, { fade: 1 - smooth(0, 0.6, t) }); R.getContext().finish(); return spp; };
 window.READY = true;

@@ -16,6 +16,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': TYPES[path.extname(p)] || 'application/octet-stream', 'Cache-Control': 'no-store' }); fs.createReadStream(p).pipe(res);
 }).listen(0);
 const PORT = server.address().port, SCALE = +(args.scale || 1), W = Math.round(1080 * SCALE), H = Math.round(1920 * SCALE);
+const ABERTOS = [];
 const LAUNCH = { args: ['--ignore-gpu-blocklist', '--enable-unsafe-swiftshader', '--use-angle=swiftshader', '--disable-dev-shm-usage'] };
 async function open(browser) {
   const page = await browser.newPage({ viewport: { width: W, height: H } });
@@ -25,7 +26,7 @@ async function open(browser) {
   const err = await page.evaluate('window.BOOT_ERROR'); if (err) throw new Error(err);
   return page;
 }
-const grab = async (page, f) => { const spp = await page.evaluate(i => window.renderAt(i), f); const img = await page.screenshot({ type: 'jpeg', quality: 95 }); return { img, spp }; };
+const grab = async (page, f) => { const spp = await page.evaluate(i => window.renderAt(i), f); const img = await page.screenshot({ type: 'jpeg', quality: 95, timeout: 0 }); return { img, spp }; };
 const fmt = s => `${Math.floor(s / 60)}m${String(Math.round(s % 60)).padStart(2, '0')}s`;
 try {
   const b0 = await chromium.launch(LAUNCH); const p0 = await open(b0); const TOTAL = await p0.evaluate('window.TOTAL_FRAMES');
@@ -45,7 +46,7 @@ try {
     let done = 0; const t0 = Date.now();
     const work = async k => {
       const a = f0 + k * chunk, b = Math.min(f1, a + chunk); if (a >= b) return null;
-      const browser = await chromium.launch(LAUNCH), page = await open(browser), file = path.join(parts, `p${k}.mp4`);
+      const browser = await chromium.launch(LAUNCH); ABERTOS.push(browser); const page = await open(browser), file = path.join(parts, `p${k}.mp4`);
       const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', '30', '-i', '-', '-c:v', 'libx264', '-preset', 'slow', '-crf', '16', '-pix_fmt', 'yuv420p', '-r', '30', file], { stdio: ['pipe', 'inherit', 'inherit'] });
       for (let f = a; f < b; f++) { const { img } = await grab(page, f); if (!ff.stdin.write(img)) await new Promise(r => ff.stdin.once('drain', r)); if (++done % 30 === 0) { const el = (Date.now() - t0) / 1000; console.log(`  ${done}/${f1 - f0} quadros  ${fmt(el)}  faltam ~${fmt(el / done * (f1 - f0 - done))}`); } }
       ff.stdin.end(); await new Promise(r => ff.on('close', r)); await browser.close(); return file;
@@ -55,4 +56,4 @@ try {
     await new Promise((res, rej) => spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', list, '-c', 'copy', out], { stdio: 'inherit' }).on('close', c => c ? rej(new Error('concat falhou')) : res()));
     console.log(`Pronto: ${out}  (${fmt((Date.now() - t0) / 1000)})`);
   }
-} catch (e) { console.error('FALHOU:', e.message); process.exitCode = 1; } finally { server.close(); }
+} catch (e) { console.error('FALHOU:', e.message); for (const b of ABERTOS) await b.close().catch(() => {}); server.close(); process.exit(1); } finally { server.close(); }
