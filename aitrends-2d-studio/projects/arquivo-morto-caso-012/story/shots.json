@@ -1,0 +1,241 @@
+{
+ "duration": 71.47,
+ "shots": [
+  {
+   "id": "tudo",
+   "start": 0,
+   "end": 71.47
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 18.302,
+   "mood": "mystery",
+   "intensity": 0.36
+  },
+  {
+   "start": 18.302,
+   "end": 36.212,
+   "mood": "dark",
+   "intensity": 0.47
+  },
+  {
+   "start": 36.212,
+   "end": 66.005,
+   "mood": "tension",
+   "intensity": 0.44
+  },
+  {
+   "start": 66.005,
+   "end": 71.47,
+   "mood": "dark",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": [
+  {
+   "t": 2.705,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 7.909,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 18.002,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 23.89,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 35.912000000000006,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 42.416000000000004,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 54.122,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 65.705,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 0.28,
+   "name": "build/sfx/clique.wav",
+   "gain": -12
+  },
+  {
+   "t": 0.45,
+   "name": "build/sfx/maq_tag.wav",
+   "gain": -17
+  },
+  {
+   "t": 1.1,
+   "name": "swish",
+   "gain": -26,
+   "dur": 0.6,
+   "pitch": 0.5,
+   "seed": 2
+  },
+  {
+   "t": 3.0549999999999997,
+   "name": "build/sfx/nanquim0.wav",
+   "gain": -23
+  },
+  {
+   "t": 3.255,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 8.259,
+   "name": "build/sfx/nanquim1.wav",
+   "gain": -23
+  },
+  {
+   "t": 8.459,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 18.352,
+   "name": "build/sfx/nanquim2.wav",
+   "gain": -23
+  },
+  {
+   "t": 18.552,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 24.240000000000002,
+   "name": "build/sfx/nanquim0.wav",
+   "gain": -23
+  },
+  {
+   "t": 24.44,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 36.262,
+   "name": "build/sfx/nanquim1.wav",
+   "gain": -23
+  },
+  {
+   "t": 36.462,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 42.766,
+   "name": "build/sfx/papel1.wav",
+   "gain": -19
+  },
+  {
+   "t": 42.966,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 54.471999999999994,
+   "name": "build/sfx/nanquim0.wav",
+   "gain": -23
+  },
+  {
+   "t": 54.672,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 53.172296875,
+   "name": "build/sfx/caneta0.wav",
+   "gain": -16
+  },
+  {
+   "t": 59.11257446808511,
+   "name": "build/sfx/caneta1.wav",
+   "gain": -16
+  },
+  {
+   "t": 32.44771428571429,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.42,
+   "seed": 3
+  },
+  {
+   "t": 53.172296875,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.39999999999999997,
+   "seed": 4
+  },
+  {
+   "t": 64.98071428571428,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.38,
+   "seed": 5
+  },
+  {
+   "t": 15.22,
+   "name": "hum",
+   "gain": -32,
+   "dur": 51.035,
+   "seed": 31
+  },
+  {
+   "t": 19.710709677419356,
+   "name": "hit",
+   "gain": -14,
+   "pitch": 0.6,
+   "seed": 8
+  },
+  {
+   "t": 36.462,
+   "name": "build/sfx/lavanda.wav",
+   "gain": -18
+  },
+  {
+   "t": 64.98071428571428,
+   "name": "build/sfx/rangido.wav",
+   "gain": -14
+  },
+  {
+   "t": 66.05499999999999,
+   "name": "build/sfx/clique.wav",
+   "gain": -14
+  },
+  {
+   "t": 67.5143220338983,
+   "name": "build/sfx/maq_final.wav",
+   "gain": -17
+  },
+  {
+   "t": 67.2235593220339,
+   "name": "hit",
+   "gain": -11,
+   "pitch": 0.7,
+   "seed": 8
+  }
+ ]
+}
