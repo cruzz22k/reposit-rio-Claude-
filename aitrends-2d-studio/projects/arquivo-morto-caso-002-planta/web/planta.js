@@ -227,3 +227,21 @@ export function legenda(s, n, { y = 1430, tam = 46, larg = 900, destaques = {}, 
   });
   sb.restore();
 }
+
+// muitos traços finos de uma vez (grades, balaústres, hachuras): uma passada só, sem tremor, para ser rápido
+export function riscos(c, segs, { w = 1.2, cor = COR.osso, alpha = 1, dash = null } = {}) {
+  if (!segs.length || alpha <= 0) return; c.save(); c.strokeStyle = cor; c.globalAlpha = alpha; c.lineWidth = w; c.lineCap = 'round'; c.lineJoin = 'round'; if (dash) c.setLineDash(dash);
+  c.beginPath(); for (const s of segs) { if (s.length < 2) continue; c.moveTo(s[0][0], s[0][1]); for (let i = 1; i < s.length; i++) c.lineTo(s[i][0], s[i][1]); } c.stroke(); c.restore();
+}
+// poeira no ar: só aparece onde a lanterna bate, porque a cena inteira é multiplicada pela luz
+const POE = (() => { const r = rng(77); return Array.from({ length: 240 }, (_, i) => ({ x: r() * W, y: r() * H, z: 0.3 + r() * 1.2, f: r() * 10, s: r(), grande: i < 16 })); })();
+export function poeira(c, t, { alpha = 1 } = {}) {
+  c.save(); c.setTransform(1, 0, 0, 1, 0, 0);
+  for (const p of POE) {
+    const x = ((p.x + t * 8 * p.z + ruido(t * 0.3 + p.f, 9) * 40) % W + W) % W, y = ((p.y - t * 5 * p.z + ruido(t * 0.25 + p.f, 11) * 50) % H + H) % H;
+    const brilho = 0.5 + 0.5 * Math.sin(t * (1.2 + p.s * 2.5) + p.f * 6);
+    if (p.grande) { const r = 10 + p.s * 22, gr = c.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(240,225,195,${0.12 * alpha * (0.5 + brilho * 0.5)})`); gr.addColorStop(0.7, `rgba(240,225,195,${0.06 * alpha})`); gr.addColorStop(1, 'rgba(240,225,195,0)'); c.fillStyle = gr; c.fillRect(x - r, y - r, r * 2, r * 2); continue; }
+    c.globalAlpha = alpha * (0.15 + 0.5 * brilho); c.fillStyle = COR.osso; c.beginPath(); c.arc(x, y, 0.5 + p.z * 1.0, 0, 6.283); c.fill();
+  }
+  c.restore();
+}
