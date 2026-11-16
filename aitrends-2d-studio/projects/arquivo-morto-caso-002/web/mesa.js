@@ -104,7 +104,12 @@ function pass(mat, target) { quad.material = mat; R.setRenderTarget(target); R.r
 // ---------- cena, luz e ambiente ----------
 export const scene = new THREE.Scene(); scene.background = new THREE.Color('#000000');
 export const camera = new THREE.PerspectiveCamera(32, W / H, 0.5, 5000);
-{ const pm = new THREE.PMREMGenerator(R); scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = 0.05; }
+// reflexo de ambiente só nos metais (chaves, trena, argolas): na cena inteira ele custava metade do tempo de cada amostra
+// e quase não aparecia nos papéis e na lousa
+const EXPO = +(Q.get('expo') || 1.08);   // compensa o reflexo de ambiente que saiu da cena
+export const ambiente = new THREE.AmbientLight('#e8e4dc', +(Q.get('amb') || 0.08)); scene.add(ambiente);   // repõe a luz difusa que o reflexo dava
+const envTex = new THREE.PMREMGenerator(R).fromScene(new RoomEnvironment(), 0.04).texture;
+function envNosMetais() { scene.traverse(o => { if (o.material) for (const m of [].concat(o.material)) if (m.metalness > 0 && m.envMap !== envTex) { m.envMap = envTex; m.envMapIntensity = 0.05; m.needsUpdate = true; } }); }
 export const key = new THREE.SpotLight('#ffd6a0', 1.05e5, 0, 0.42, 0.85, 2);   // luminária de mesa, quente, de cima
 key.castShadow = true; key.shadow.mapSize.set(1024, 1024); key.shadow.bias = -0.00012; key.shadow.normalBias = 0.02; key.shadow.radius = 2;
 key.shadow.camera.near = 50; key.shadow.camera.far = 800;
@@ -130,6 +135,7 @@ function diskPt(i, n, r0) { const r = Math.sqrt((i + 0.5) / n), a = i * GOLD + r
 
 // ---------- um quadro = soma de amostras ----------
 export function renderFrame(t, spp, world, post = {}) {
+  envNosMetais();
   R.setRenderTarget(accRT); R.setClearColor(0x000000, 1); R.clear(true, true, true);
   const jit = rng(Math.floor(t * FPS) * 7919 + 13);
   for (let j = 0; j < spp; j++) {
@@ -154,7 +160,7 @@ export function renderFrame(t, spp, world, post = {}) {
   blurMat.uniforms.t.value = b1a.texture; blurMat.uniforms.dir.value.set(2 / bW, 0); pass(blurMat, b2b);
   blurMat.uniforms.t.value = b2b.texture; blurMat.uniforms.dir.value.set(0, 2 / bH); pass(blurMat, b2a);
   hudTex.needsUpdate = true;
-  const F = finalMat.uniforms; F.time.value = t; F.flash.value = post.flash || 0; F.expo.value = post.expo ?? 1; F.bloom.value = post.bloom ?? 0.25; F.fade.value = post.fade || 0;
+  const F = finalMat.uniforms; F.time.value = t; F.flash.value = post.flash || 0; F.expo.value = (post.expo ?? 1) * EXPO; F.bloom.value = post.bloom ?? 0.25; F.fade.value = post.fade || 0;
   pass(finalMat, null);
 }
 

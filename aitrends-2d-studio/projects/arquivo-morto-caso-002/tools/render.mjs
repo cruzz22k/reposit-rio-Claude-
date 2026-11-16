@@ -21,7 +21,7 @@ const LAUNCH = { args: ['--ignore-gpu-blocklist', '--enable-unsafe-swiftshader',
 async function open(browser) {
   const page = await browser.newPage({ viewport: { width: W, height: H } });
   page.on('pageerror', e => console.log('[erro na página]', e.message)); page.on('console', m => { if (m.type() === 'error') console.log('[console]', m.text()); });
-  await page.goto(`http://localhost:${PORT}/project/web/index.html?scale=${SCALE}${args.spp ? '&spp=' + args.spp : ''}${args.fim ? '&fim=' + args.fim : ''}${args.geral ? '&geral=1' : ''}`);
+  await page.goto(`http://localhost:${PORT}/project/web/index.html?scale=${SCALE}${args.spp ? '&spp=' + args.spp : ''}${args.fim ? '&fim=' + args.fim : ''}${args.geral ? '&geral=1' : ''}${args.amb ? '&amb=' + args.amb : ''}${args.expo ? '&expo=' + args.expo : ''}`);
   await page.waitForFunction('window.READY === true || !!window.BOOT_ERROR', null, { timeout: 180000 });
   const err = await page.evaluate('window.BOOT_ERROR'); if (err) throw new Error(err);
   return page;

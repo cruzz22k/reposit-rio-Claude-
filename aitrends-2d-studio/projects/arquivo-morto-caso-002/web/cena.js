@@ -134,7 +134,7 @@ function world(t) {
 function sppAt(t) {
   if (SPP) return SPP;
   const a = world(t - 0.02), b = world(t + 0.02), v = Math.hypot(a.x - b.x, a.z - b.z, a.D - b.D) / 0.04;
-  return Math.round(clamp(12 + v * 0.5, 12, 22));
+  return Math.round(clamp(8 + v * 0.6, 8, 22));   // parada: 8 bastam para o foco raso; correndo: até 22 para o borrão não serrilhar
 }
 window.TOTAL_FRAMES = Math.ceil(FIM * FPS);
 window.renderAt = f => { const t = f / FPS, spp = sppAt(t); hud.clearRect(0, 0, W, H); renderFrame(t, spp, world, { fade: 1 - smooth(0, 0.6, t) }); R.getContext().finish(); return spp; };
