@@ -1,0 +1,257 @@
+{
+ "duration": 79.47,
+ "shots": [
+  {
+   "id": "tudo",
+   "start": 0,
+   "end": 79.47
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 35.91,
+   "mood": "mystery",
+   "intensity": 0.36
+  },
+  {
+   "start": 35.91,
+   "end": 62.034,
+   "mood": "dark",
+   "intensity": 0.47
+  },
+  {
+   "start": 62.034,
+   "end": 73.968,
+   "mood": "tension",
+   "intensity": 0.44
+  },
+  {
+   "start": 73.968,
+   "end": 79.47,
+   "mood": "dark",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": [
+  {
+   "t": 3.2750000000000004,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 20.515,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 35.61,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 51.188,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 61.734,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 67.07300000000001,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 73.668,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 0.28,
+   "name": "build/sfx/clique.wav",
+   "gain": -12
+  },
+  {
+   "t": 0.45,
+   "name": "build/sfx/maq_tag.wav",
+   "gain": -17
+  },
+  {
+   "t": 1.1,
+   "name": "swish",
+   "gain": -26,
+   "dur": 0.6,
+   "pitch": 0.5,
+   "seed": 2
+  },
+  {
+   "t": 3.625,
+   "name": "build/sfx/nanquim0.wav",
+   "gain": -23
+  },
+  {
+   "t": 3.825,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 20.865000000000002,
+   "name": "build/sfx/nanquim1.wav",
+   "gain": -23
+  },
+  {
+   "t": 21.065,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 35.959999999999994,
+   "name": "build/sfx/nanquim2.wav",
+   "gain": -23
+  },
+  {
+   "t": 36.16,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 51.538,
+   "name": "build/sfx/papel3.wav",
+   "gain": -19
+  },
+  {
+   "t": 51.738,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 62.083999999999996,
+   "name": "build/sfx/papel0.wav",
+   "gain": -19
+  },
+  {
+   "t": 62.284,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 67.423,
+   "name": "build/sfx/papel1.wav",
+   "gain": -19
+  },
+  {
+   "t": 67.623,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 54.0123,
+   "name": "build/sfx/caneta0.wav",
+   "gain": -16
+  },
+  {
+   "t": 58.109358974358976,
+   "name": "build/sfx/caneta1.wav",
+   "gain": -16
+  },
+  {
+   "t": 66.44102597402598,
+   "name": "build/sfx/caneta2.wav",
+   "gain": -16
+  },
+  {
+   "t": 70.22075862068967,
+   "name": "build/sfx/caneta3.wav",
+   "gain": -16
+  },
+  {
+   "t": 73.01834482758622,
+   "name": "build/sfx/caneta4.wav",
+   "gain": -16
+  },
+  {
+   "t": 17.37322857142857,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.42,
+   "seed": 3
+  },
+  {
+   "t": 50.0654705882353,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.39999999999999997,
+   "seed": 4
+  },
+  {
+   "t": 66.44102597402598,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.38,
+   "seed": 5
+  },
+  {
+   "t": 73.01834482758622,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.42,
+   "seed": 6
+  },
+  {
+   "t": 14.222,
+   "name": "hum",
+   "gain": -32,
+   "dur": 59.996,
+   "seed": 31
+  },
+  {
+   "t": 27.59889010989011,
+   "name": "build/sfx/botoes.wav",
+   "gain": -16
+  },
+  {
+   "t": 38.22501265822785,
+   "name": "build/sfx/gas.wav",
+   "gain": -14
+  },
+  {
+   "t": 48.75667647058824,
+   "name": "build/sfx/fosforo0.wav",
+   "gain": -12
+  },
+  {
+   "t": 50.056676470588236,
+   "name": "build/sfx/fosforo1.wav",
+   "gain": -12
+  },
+  {
+   "t": 51.15667647058824,
+   "name": "build/sfx/fosforo2.wav",
+   "gain": -12
+  },
+  {
+   "t": 74.018,
+   "name": "build/sfx/clique.wav",
+   "gain": -14
+  },
+  {
+   "t": 75.48884745762712,
+   "name": "build/sfx/maq_final.wav",
+   "gain": -17
+  },
+  {
+   "t": 75.19405084745763,
+   "name": "hit",
+   "gain": -11,
+   "pitch": 0.7,
+   "seed": 8
+  }
+ ]
+}

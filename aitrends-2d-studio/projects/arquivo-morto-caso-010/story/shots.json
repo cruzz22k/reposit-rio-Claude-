@@ -1,0 +1,297 @@
+{
+ "duration": 83.95,
+ "shots": [
+  {
+   "id": "tudo",
+   "start": 0,
+   "end": 83.95
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 25.119,
+   "mood": "mystery",
+   "intensity": 0.36
+  },
+  {
+   "start": 25.119,
+   "end": 53.996,
+   "mood": "dark",
+   "intensity": 0.47
+  },
+  {
+   "start": 53.996,
+   "end": 78.564,
+   "mood": "tension",
+   "intensity": 0.44
+  },
+  {
+   "start": 78.564,
+   "end": 83.95,
+   "mood": "dark",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": [
+  {
+   "t": 2.6510000000000002,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 8.011999999999999,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 14.658,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 24.819,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 32.27,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 40.902,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 53.696000000000005,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 66.667,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 71.15,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 78.264,
+   "name": "build/sfx/chiado.wav",
+   "gain": -18
+  },
+  {
+   "t": 0.28,
+   "name": "build/sfx/clique.wav",
+   "gain": -12
+  },
+  {
+   "t": 0.45,
+   "name": "build/sfx/maq_tag.wav",
+   "gain": -17
+  },
+  {
+   "t": 1.1,
+   "name": "swish",
+   "gain": -26,
+   "dur": 0.6,
+   "pitch": 0.5,
+   "seed": 2
+  },
+  {
+   "t": 3.001,
+   "name": "build/sfx/nanquim0.wav",
+   "gain": -23
+  },
+  {
+   "t": 3.201,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 8.362,
+   "name": "build/sfx/nanquim1.wav",
+   "gain": -23
+  },
+  {
+   "t": 8.562,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 15.008000000000001,
+   "name": "build/sfx/nanquim2.wav",
+   "gain": -23
+  },
+  {
+   "t": 15.208,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 25.169,
+   "name": "build/sfx/papel3.wav",
+   "gain": -19
+  },
+  {
+   "t": 25.369,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 32.62,
+   "name": "build/sfx/papel0.wav",
+   "gain": -19
+  },
+  {
+   "t": 32.82,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 41.251999999999995,
+   "name": "build/sfx/papel1.wav",
+   "gain": -19
+  },
+  {
+   "t": 41.452,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 54.046,
+   "name": "build/sfx/nanquim0.wav",
+   "gain": -23
+  },
+  {
+   "t": 54.246,
+   "name": "build/sfx/maq0.wav",
+   "gain": -21
+  },
+  {
+   "t": 67.017,
+   "name": "build/sfx/nanquim1.wav",
+   "gain": -23
+  },
+  {
+   "t": 67.217,
+   "name": "build/sfx/maq1.wav",
+   "gain": -21
+  },
+  {
+   "t": 71.5,
+   "name": "build/sfx/papel0.wav",
+   "gain": -19
+  },
+  {
+   "t": 71.7,
+   "name": "build/sfx/maq2.wav",
+   "gain": -21
+  },
+  {
+   "t": 6.400645569620252,
+   "name": "build/sfx/caneta0.wav",
+   "gain": -16
+  },
+  {
+   "t": 31.318054054054052,
+   "name": "build/sfx/caneta1.wav",
+   "gain": -16
+  },
+  {
+   "t": 46.632709677419356,
+   "name": "build/sfx/caneta2.wav",
+   "gain": -16
+  },
+  {
+   "t": 51.5400198019802,
+   "name": "build/sfx/caneta3.wav",
+   "gain": -16
+  },
+  {
+   "t": 77.53747169811321,
+   "name": "build/sfx/caneta4.wav",
+   "gain": -16
+  },
+  {
+   "t": 24.155072463768114,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.42,
+   "seed": 3
+  },
+  {
+   "t": 39.77312,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.39999999999999997,
+   "seed": 4
+  },
+  {
+   "t": 70.33516666666667,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.38,
+   "seed": 5
+  },
+  {
+   "t": 77.53747169811321,
+   "name": "impact",
+   "gain": -13,
+   "dur": 3.0,
+   "pitch": 0.42,
+   "seed": 6
+  },
+  {
+   "t": 15.208,
+   "name": "hum",
+   "gain": -32,
+   "dur": 63.605999999999995,
+   "seed": 31
+  },
+  {
+   "t": 15.208,
+   "name": "rain",
+   "gain": -26,
+   "dur": 6.0,
+   "seed": 26
+  },
+  {
+   "t": 67.57,
+   "name": "build/sfx/clique.wav",
+   "gain": -12
+  },
+  {
+   "t": 68.4525,
+   "name": "whoosh",
+   "gain": -18,
+   "dur": 1.4,
+   "pitch": 0.6,
+   "seed": 7
+  },
+  {
+   "t": 78.61399999999999,
+   "name": "build/sfx/clique.wav",
+   "gain": -14
+  },
+  {
+   "t": 80.00543103448275,
+   "name": "build/sfx/maq_final.wav",
+   "gain": -17
+  },
+  {
+   "t": 79.71648275862069,
+   "name": "hit",
+   "gain": -11,
+   "pitch": 0.7,
+   "seed": 8
+  }
+ ]
+}

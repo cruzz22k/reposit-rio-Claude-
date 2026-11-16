@@ -1,0 +1,14 @@
+{
+ "title": "arquivo-morto-caso-010-v1",
+ "voiceover": "input/narracao-v1-trilha.wav",
+ "loudness": -14,
+ "music": {
+  "enabled": true,
+  "gainDb": -20,
+  "seed": 6
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -4
+ }
+}
