@@ -3,6 +3,8 @@
   @font-face { font-family: 'Playfair'; src: url('../../node_modules/@fontsource/playfair-display/files/playfair-display-latin-400-italic.woff2'); font-style: italic; }
   @font-face { font-family: 'Texto'; src: url('../../node_modules/@fontsource/nunito/files/nunito-latin-400-normal.woff2'); font-weight: 400; }
   @font-face { font-family: 'Texto'; src: url('../../node_modules/@fontsource/nunito/files/nunito-latin-700-normal.woff2'); font-weight: 700; }
+  @font-face { font-family: 'Playfair'; src: url('../../node_modules/@fontsource/playfair-display/files/playfair-display-latin-400-normal.woff2'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Playfair'; src: url('../../node_modules/@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2'); font-weight: 700; font-style: normal; }
   @page { size: A5; margin: 0; }
   :root { --papel: #efe6d4; --tinta: #1e1a16; --vermelho: #a8221a; --escuro: #0d0b09; }
   * { box-sizing: border-box; }
@@ -61,3 +63,6 @@
   .pistas li { margin-bottom: 1mm; line-height: 1.5; }
   .doc.caderno { font-size: 9.3pt; }
   .doc svg { max-width: 100%; }
+  .doc.recorte, .doc.recorte p { font-weight: 400; }
+  .doc.recorte b { font-weight: 700; }
+  .doc.recorte h4 { font-weight: 900; }
