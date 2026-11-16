@@ -86,7 +86,7 @@ function tomada2(t) {
 
 // ---------- tomada 3: Júlia aprende a contar ----------
 function tomada3(t) {
-  camera2D(t, 600, 960, 1.0 + 0.04 * easeInOut(prog(t, T(4), 4)), { amp: 4 });
+  camera2D(t, 580, 930, 1.12 + 0.05 * easeInOut(prog(t, T(4), 4)), { amp: 4 });
   corte(t, { contaAte: (t - P(4, 'contar')) * 4.2 });
   g.restore();
   if (t > S(4)) datilo(sb, 'O HALL  ·  CORTE DA ESCADA', 84, 242, (t - S(4)) / 0.6 * 26, { tam: 32, cor: COR.osso, esp: 2 });
@@ -148,10 +148,10 @@ function tomada6(t) {
 
 // ---------- tomada 7: o piso novo; deu treze ----------
 function tomada7(t) {
-  camera2D(t, 600, 980, 1.0 + 0.05 * easeInOut(prog(t, T(8), 4)), { amp: 4 });
+  camera2D(t, 580, 960, 1.12 + 0.05 * easeInOut(prog(t, T(8), 4)), { amp: 4 });
   const tc = P(9, 'subiu'), deg = corte(t, { treze: true, chaoNovo: true, contaAte: (t - tc) * 5.5 });
-  const tn = P(8, 'novo'); if (t > tn) { medTxt(g, [600, Y0 + ES + 70], 'PISO NOVO  ·  cerâmica bege', { tam: 30, alinh: 'center', cor: '#e6d6ae', alpha: clamp((t - tn) / 0.4) }); }
-  const tu = P(8, 'umidade'); if (t > tu) medTxt(g, [600, Y0 + ES + 116], '"por causa da umidade"', { tam: 26, alinh: 'center', cor: COR.cinza, alpha: clamp((t - tu) / 0.4) });
+  const tn = P(8, 'novo'); if (t > tn) { medTxt(g, [330, 720], 'PISO NOVO  ·  cerâmica bege', { tam: 30, alinh: 'center', cor: '#e6d6ae', alpha: clamp((t - tn) / 0.4) }); }
+  const tu = P(8, 'umidade'); if (t > tu) medTxt(g, [330, 766], '"por causa da umidade"', { tam: 26, alinh: 'center', cor: COR.cinza, alpha: clamp((t - tu) / 0.4) });
   const t13 = P(9, 'treze'); if (t > t13) { const d = deg[0]; tinta(g, [[d.x + PI / 2, d.y - 50], [d.x + PI / 2 - 60, d.y - 200], [d.x + PI / 2 + 140, d.y - 200]], prog(t, t13, 0.4), { cor: COR.verm, w: 2, over: 0 }); medTxt(g, [d.x + PI / 2 - 50, d.y - 214], 'degrau mais claro', { tam: 28, cor: VERM_TXT }); }
   g.restore();
   if (t > S(8)) datilo(sb, 'DE VOLTA  ·  FIM DE 1996', 84, 242, (t - S(8)) / 0.5 * 24, { tam: 32, cor: COR.osso, esp: 2 });
@@ -160,12 +160,12 @@ function tomada7(t) {
 
 // ---------- tomada 8: a voz que desce contando ----------
 function tomada8(t) {
-  camera2D(t, 600, 1000, 1.02 + 0.06 * easeInOut(prog(t, T(10), T(12) - T(10))), { amp: 3 });
+  camera2D(t, 580, 990, 1.14 + 0.06 * easeInOut(prog(t, T(10), T(12) - T(10))), { amp: 3 });
   const td = P(10, 'Doze'), k = t < td ? 0 : Math.min(12, Math.floor((t - td) * 2.4) + 1), t13 = P(11, 'treze');
   corte(t, { treze: true, chaoNovo: true, contaDesce: { k: t < P(11, 'Até o um') ? Math.min(k, 3 + Math.floor(Math.max(0, t - P(10, 'Dez')) * 6)) : 12 }, noite: 1, cor13: clamp((t - t13) / 0.5) });
   g.restore();
   if (t > S(10)) datilo(sb, 'DE MADRUGADA', 84, 242, (t - S(10)) / 0.5 * 12, { tam: 32, cor: COR.osso, esp: 2 });
-  return { focos: [{ x: 640, y: 900, r: 820, i: 0.6, cor: [190, 205, 230] }, ...(t > t13 ? [{ x: X0 + PI * 0.5 - 30, y: 1230, r: 420, i: 0.8, cor: [255, 70, 50] }] : [])], amb: 0.1, mult: 1 };
+  return { focos: [{ x: 620, y: 900, r: 900, i: 0.95, cor: [190, 205, 230] }, ...(t > t13 ? [{ x: X0 + PI * 0.5 - 30, y: 1230, r: 420, i: 0.8, cor: [255, 70, 50] }] : [])], amb: 0.15, mult: 1 };
 }
 
 // ---------- tomada 9: o cartão-postal ----------
@@ -190,7 +190,7 @@ function tomada9(t) {
 
 // ---------- tomada 10: as medidas da Júlia (2022) ----------
 function tomada10(t) {
-  camera2D(t, 600, 960, 1.0, { amp: 3 });
+  camera2D(t, 590, 940, 1.1, { amp: 3 });
   const t15 = S(15), t16 = S(16);
   corte(t, { treze: true, chaoNovo: true, cotas: t > P(14, 'dezoito') - 0.2, comparar: clamp((t - P(15, 'doze')) / 0.6), laje: clamp((t - t16) / 0.5) });
   if (t > P(15, 'Dois metros')) { cota(g, [1020, Y0], [1020, YL], prog(t, P(15, 'Dois metros'), 0.5), '2,16 m', { cor: COR.verm, w: 2, tam: 30, lado: 1 }); }

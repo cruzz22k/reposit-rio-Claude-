@@ -55,7 +55,7 @@ const QUARTO = [...PAR.map((s, i) => parede(s, HP, { i })),
   { x0: 1.6, x1: 2.4, z0: 0.2, z1: 1.8, h: 0.42, tipo: 'movel', linhas: h => [[[1.65, h, 0.35], [2.35, h, 0.35], [2.35, h, 0.6], [1.65, h, 0.6], [1.65, h, 0.35]]] },
   { x0: 2.9, x1: 3.9, z0: 0.1, z1: 0.45, h: 1.2, tipo: 'movel', linhas: h => [[[2.9, h, 0.27], [3.9, h, 0.27]]] },
   { x0: 0.1, x1: 2.2, z0: 2.75, z1: 3.33, h: 1.75, tipo: 'movel', linhas: h => [[[1.15, h, 2.75], [1.15, h, 3.33]]] }];
-const cam4 = trajeto([[T(4), -3.5, 6.5, -3.5, 2.0, 0, 1.7], [S(5), -1.0, 5.4, -2.0, 2.0, 0, 1.6], [T(6), 0.0, 5.0, -1.4, 2.0, 0, 1.6]]);
+const cam4 = trajeto([[T(4), -6.5, 10.5, -6.0, 2.0, 0, 1.7], [S(5), -4.5, 9.0, -4.6, 2.0, 0, 1.7], [T(6), -3.8, 8.4, -4.0, 2.0, 0, 1.7]]);
 function tomada4(t) {
   const [px, py, pz, tx, ty, tz] = cam4(t), hh = mao(t, 0.04), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
   fundo();
@@ -137,7 +137,7 @@ function batente(t, { lixa = 0, foco = null, camadas = 0 } = {}) {
   // madeira lixada (embaixo) e esmalte creme (em cima)
   g.fillStyle = '#b58a5a'; g.fillRect(BX0, 0, BX1 - BX0, H); riscos(g, Array.from({ length: 9 }, (_, i) => Array.from({ length: 30 }, (_, k) => [BX0 + 10 + i * 15 + Math.sin(k * 0.5 + i) * 3, k * 70])), { w: 1, cor: '#8a6038', alpha: 0.6 });
   const yl = H - lixa * H;   // até onde já foi lixado (de baixo para cima)
-  MARCAS.forEach(([n, ano, h, extra]) => { const y = YH(h); if (y < yl) return; const lia = n === 'LIA'; riscos(g, [[[BX0 + 8, y], [BX1 - 8, y]]], { w: 2.2, cor: '#3a3a3a', alpha: 0.9 }); g.save(); g.font = '30px Caneta'; g.fillStyle = '#2b2b2b'; g.textAlign = lia ? 'left' : 'right'; g.fillText(`${n} ${ano}`, lia ? BX1 + 16 : BX0 - 16, y + 8); g.font = '22px Caneta'; g.fillText(String(h.toFixed(2)).replace('.', ','), lia ? BX1 + 16 : BX0 - 16, y + 34); if (extra) { g.fillStyle = VERM_TXT; g.font = '34px Caneta'; g.fillText(extra, BX0 - 16, y - 18); } g.restore(); });
+  MARCAS.forEach(([n, ano, h, extra]) => { const y = YH(h); if (y < yl) return; const lia = n === 'LIA'; riscos(g, [[[BX0 + 4, y], [BX1 - 4, y]]], { w: 3.2, cor: '#2a2a2a', alpha: 0.95 }); g.save(); g.font = '38px Caneta'; g.fillStyle = '#d9d2c2'; g.textAlign = lia ? 'left' : 'right'; g.fillText(`${n} ${ano}`, lia ? BX1 + 16 : BX0 - 16, y + 8); g.font = '28px Caneta'; g.fillText(String(h.toFixed(2)).replace('.', ','), lia ? BX1 + 16 : BX0 - 16, y + 34); if (extra) { g.fillStyle = VERM_TXT; g.font = '34px Caneta'; g.fillText(extra, BX0 - 16, y - 18); } g.restore(); });
   g.fillStyle = '#e9dcc0'; g.fillRect(BX0, 0, BX1 - BX0, yl); g.fillStyle = 'rgba(0,0,0,0.12)'; g.fillRect(BX0, yl - 6, BX1 - BX0, 6);
   tinta(g, [[BX0, 0], [BX0, H]], 1, { w: 2.4, over: 0 }); tinta(g, [[BX1, 0], [BX1, H]], 1, { w: 2.4, over: 0 });
   // os textos das marcas ficam na parede, ao lado do batente: só aparecem onde já foi lixado

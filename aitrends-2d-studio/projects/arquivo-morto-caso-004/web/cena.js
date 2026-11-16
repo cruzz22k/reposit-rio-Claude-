@@ -47,14 +47,14 @@ function casa(cam, t, o = {}) {
   const vl = []; for (let x = 9.2; x <= 10.31; x += 0.275) vl.push([[x, 0.012, 0.35], [x, 0.012, 1.15]]); for (let z = 0.35; z <= 1.16; z += 0.2) vl.push([[9.2, 0.012, z], [10.3, 0.012, z]]); Rz(vl, { w: 1.1, cor: '#d9a07a', alpha: 0.7 });
   COMODOS.forEach(([s, x, z]) => rot3(cam, s, [x, 0, z], 0.26, { max: 46, esp: 2 }));
   GRELHAS.forEach((gr, i) => grelha(cam, gr, 1, o.grelhas ? (o.grelhas[i] ? COR.verm : COR.osso) : COR.osso));
-  // o que existe embaixo (só quando a cena pede): porão e dutos, em tracejado
+  blocos(cam, BLOCOS, o.tSobe ?? 99);
+  // o que existe embaixo (só quando a cena pede), por cima de tudo, como raio X: porão e dutos, em tracejado
   if (o.raiox > 0) {
     const { x0, x1, z0, z1 } = PORAO, y0 = -2.5, A = [[x0, y0, z0], [x1, y0, z0], [x1, y0, z1], [x0, y0, z1]], B = A.map(q => [q[0], -0.05, q[2]]);
     Rz([[...A, A[0]], [...B, B[0]], [A[0], B[0]], [A[1], B[1]], [A[2], B[2]], [A[3], B[3]]], { w: 2.4, cor: COR.verm, alpha: o.raiox, dash: [10, 8] });
     Rz(DUTOS, { w: 2, cor: COR.verm, alpha: 0.8 * o.raiox, dash: [6, 6] });
     Rz([[[12.45, -0.05, -1.15], [12.45, -2.4, -1.15], [11.6, -2.4, 0.4], [11.6, -2.4, 1.0]]], { w: 2, cor: COR.verm, alpha: 0.8 * o.raiox, dash: [6, 6] });
   }
-  blocos(cam, BLOCOS, o.tSobe ?? 99);
   // calçada e o vizinho 642
   if (o.rua) {
     Rz([[[-3, 0, -0.1], [26, 0, -0.1]], [[-3, 0, -2.0], [26, 0, -2.0]], [[-3, 0.15, -2.05], [26, 0.15, -2.05]], ...Array.from({ length: 15 }, (_, i) => [[-2 + i * 2, 0, -2], [-2 + i * 2, 0, -0.1]])], { w: 1.1, alpha: 0.4 });
@@ -93,7 +93,7 @@ function exterior(cam, t, t0) {
   const pg = prog(t, t0 + 1.6, 0.8), copa = [], r = rng(8); for (let i = 0; i < 7; i++) { const cx = 3 + (r() - 0.5) * 2.6, cy = 4.4 + (r() - 0.3) * 1.6, rr = 0.8 + r() * 0.6; copa.push(Array.from({ length: 20 }, (_, k) => { const a = k / 19 * 6.283; return [cx + Math.cos(a) * rr, cy + Math.sin(a) * rr * 0.8, LZ + 2]; })); }
   Rz([[[3, 0, LZ + 2], [3.1, 3.6, LZ + 2]], ...copa], { w: 1.1, alpha: 0.5 * pg });
 }
-const cam2 = trajeto([[T(2), 11.5, 9, -24, 11.5, 2.5, 3], [E(2), 8.5, 7.5, -15, 7.5, 1.8, 3]]);
+const cam2 = trajeto([[T(2), 11.5, 11, -32, 11.5, 2.0, 3], [E(2), 9.0, 8.5, -21, 8.0, 1.6, 3]]);
 function tomada2(t) {
   const [px, py, pz, tx, ty, tz] = cam2(t), hh = mao(t, 0.1), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
   exterior(cam, t, T(2));
@@ -129,11 +129,11 @@ function tomada4(t) {
   // prato e bolo (de cima): anel com furo, uma fatia faltando
   const cx = 470, cy = 1080;
   g.save(); g.shadowColor = 'rgba(0,0,0,0.6)'; g.shadowBlur = 30; g.fillStyle = '#e8e1d2'; g.beginPath(); g.ellipse(cx, cy, 330, 300, 0, 0, 6.3); g.fill(); g.restore();
-  g.save(); g.fillStyle = '#d9a648'; g.beginPath(); g.ellipse(cx, cy, 250, 228, 0, 0.35, 6.283 - 0.1); g.lineTo(cx, cy); g.closePath(); g.fill();
+  g.save(); g.fillStyle = '#d9a648'; g.beginPath(); g.ellipse(cx, cy, 250, 228, 0, 0.2, 6.283 - 0.05); g.lineTo(cx, cy); g.closePath(); g.fill();
   g.globalCompositeOperation = 'destination-out'; g.beginPath(); g.ellipse(cx, cy, 70, 62, 0, 0, 6.3); g.fill(); g.restore();
   g.fillStyle = '#e8e1d2'; g.beginPath(); g.ellipse(cx, cy, 70, 62, 0, 0, 6.3); g.fill();
   const r = rng(3); g.fillStyle = '#b5832e'; for (let i = 0; i < 90; i++) { const a = r() * 6, rr = 90 + r() * 150; if (a < 0.4) continue; g.globalAlpha = 0.5; g.beginPath(); g.arc(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr * 0.91, 2 + r() * 3, 0, 6.3); g.fill(); } g.globalAlpha = 1;
-  riscos(g, [[[cx, cy], [cx + 250 * Math.cos(0.35), cy + 228 * Math.sin(0.35)]], [[cx, cy], [cx + 250 * Math.cos(-0.1), cy + 228 * Math.sin(-0.1)]]], { w: 2, cor: '#7a5420' });
+  riscos(g, [[[cx, cy], [cx + 250 * Math.cos(0.2), cy + 228 * Math.sin(0.2)]], [[cx, cy], [cx + 250 * Math.cos(-0.05), cy + 228 * Math.sin(-0.05)]]], { w: 2, cor: '#7a5420' });
   // o bilhete
   papel(g, BIL, 470, 450, { rot: 0.05 });
   g.save(); g.translate(470 + 280, 450 + 190); g.rotate(0.05); g.fillStyle = TINTA; g.font = '34px SerifaI'; g.textAlign = 'center';
@@ -141,16 +141,16 @@ function tomada4(t) {
   const ta = P(4, 'vizinho'); circulo(g, 470 + 280 + 70, 450 + 190 + 92, 160, 32, easeInOut(prog(t, ta, 0.5)), { seed: 5, cor: COR.verm });
   // "já descobriram onde fica tudo?"
   const tq = P(5, 'onde fica tudo');
-  if (t > P(5, 'Perguntou') - 0.1) { const s = '"Já descobriram onde fica tudo?"'; datilo(g, s, 540, 1520, (t - P(5, 'Perguntou')) / 1.2 * s.length, { fonte: 'Maquina', tam: 40, cor: CLARO, alinh: 'center' }); }
-  if (t > tq) { tinta(g, [[540 - 240, 1540], [540 + 260, 1540]], prog(t, tq, 0.5), { cor: COR.verm, w: 3, over: 0 }); }
-  const tv = P(5, 'noventa'); if (t > tv) medTxt(g, [800, 1270], 'Seu Aurélio, 90 e poucos', { tam: 30, alinh: 'center', cor: COR.osso, alpha: clamp((t - tv) / 0.4) });
+  if (t > P(5, 'Perguntou') - 0.1) { const s = '"Já descobriram onde fica tudo?"'; datilo(g, s, 540, 345, (t - P(5, 'Perguntou')) / 1.2 * s.length, { fonte: 'Maquina', tam: 40, cor: CLARO, alinh: 'center' }); }
+  if (t > tq) { tinta(g, [[540 - 240, 365], [540 + 260, 365]], prog(t, tq, 0.5), { cor: COR.verm, w: 3, over: 0 }); }
+  const tv = P(5, 'noventa'); if (t > tv) medTxt(g, [760, 900], 'Seu Aurélio, 90 e poucos', { tam: 30, alinh: 'center', cor: COR.osso, alpha: clamp((t - tv) / 0.4) });
   g.restore();
   if (t > S(4)) datilo(sb, 'PRIMEIRO DIA  ·  O VIZINHO DO 642', 84, 242, (t - S(4)) / 0.7 * 33, { tam: 32, cor: COR.osso, esp: 2 });
   return { focos: [{ x: 600, y: t < S(5) ? 760 : 1200, r: 950 }], amb: 0.2, mult: 1 };
 }
 
 // ---------- tomada 5: as grelhas; a voz ----------
-const cam5 = trajeto([[T(6), -6, 15, 3.5, 6, 0, 3.5], [P(6, 'grelha'), -3, 12, 3.2, 4.0, 0, 3.0], [S(7) + 0.6, -1.2, 6.8, 1.4, 1.9, 0, 1.4], [S(9), -0.8, 6.2, 1.5, 1.8, 0, 1.6], [T(10), -0.6, 6.6, 1.7, 1.6, 0, 1.7]]);
+const cam5 = trajeto([[T(6), -6, 15, 3.5, 6, 0, 3.5], [P(6, 'grelha'), -3, 12, 3.2, 4.0, 0, 3.0], [S(7) + 0.6, 5.2, 6.4, 1.6, 1.0, 0, 1.5], [S(9), 5.0, 6.0, 1.7, 1.0, 0, 1.6], [T(10), 5.3, 6.5, 1.8, 1.0, 0, 1.7]]);
 function tomada5(t) {
   const [px, py, pz, tx, ty, tz] = cam5(t), hh = mao(t, 0.05), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
   const tg = P(6, 'grelha');
@@ -163,7 +163,7 @@ function tomada5(t) {
   const tn = P(7, 'próprio nome'); if (t > tn - 0.2 && t < S(9)) { ondas(g, qg, t, { alpha: clamp((t - tn + 0.2) / 0.3), larg: 200 }); if (qg) escrita(g, 'Renata...', qg[0] + 40, qg[1] - 120, (t - tn) / 0.8, -0.15, { tam: 54, cor: VERM_TXT }); }
   const tm = P(8, 'marido'); if (t > tm && t < S(9)) { const q = cam.pt([2.45, 0.6, 0.55]); if (q) { tinta(g, [q, [q[0] + 140, q[1] + 220], [q[0] + 380, q[1] + 220]], prog(t, tm, 0.4), { cor: COR.osso, w: 2, over: 0 }); datilo(g, 'DIEGO · DORMINDO', q[0] + 152, q[1] + 204, (t - tm - 0.2) / 0.5 * 16, { fonte: 'Maquina', tam: 30, cor: CLARO }); } }
   // a briga do jantar, palavra por palavra
-  const tb = P(9, 'briga'); if (t > tb - 0.2 && qg) { ondas(g, qg, t, { alpha: 0.8, larg: 240 }); ['— você nunca escuta o que eu falo', '— eu escuto. eu escuto tudo.'].forEach((s, i) => datilo(g, s, 90, qg[1] - 260 + i * 56, (t - tb - i * 1.0) / 1.0 * s.length, { fonte: 'Maquina', tam: 32, cor: i ? VERM_TXT : CLARO })); }
+  const tb = P(9, 'briga'); if (t > tb - 0.2 && qg) { ondas(g, qg, t, { alpha: 0.8, larg: 240 }); ['— você nunca escuta o que eu falo', '— eu escuto. eu escuto tudo.'].forEach((s, i) => datilo(g, s, 90, qg[1] + 150 + i * 56, (t - tb - i * 1.0) / 1.0 * s.length, { fonte: 'Maquina', tam: 32, cor: i ? VERM_TXT : CLARO })); }
   if (t > S(6)) datilo(sb, t < S(7) ? 'UMA GRELHA EM CADA QUARTO' : 'TERCEIRA SEMANA  ·  MADRUGADA', 84, 242, (t - (t < S(7) ? S(6) : S(7))) / 0.6 * 28, { tam: 32, cor: COR.osso, esp: 2 });
   const foco = qg && t > S(7) ? qg : (cam.pt([tx, 0, tz]) || [W / 2, H / 2]);
   return { focos: [{ x: foco[0], y: foco[1], r: 900 }, ...(t > tg && t < S(7) ? GRELHAS.map(gr => { const q = cam.pt(gr.slice(0, 3)); return q ? { x: q[0], y: q[1], r: 260, i: 0.6 } : null; }).filter(Boolean) : [])], amb: 0.15, mult: 1 };
@@ -212,7 +212,7 @@ function tomada7(t) {
   const ta = P(13, 'dois dedos'); if (t > ta) { const a = cam.pt([x1 + 0.1, 0.02, z1]), b = cam.pt([x1 + 0.1, 0.02 + ab * 0.6, z1]); if (a && b) { cota(g, [a[0] + 30, a[1]], [b[0] + 30, b[1] - 6], prog(t, ta, 0.4), null, { cor: COR.verm, w: 2.4 }); medTxt(g, [a[0] + 60, a[1] - 10], '≈ 3 cm', { tam: 44, cor: VERM_TXT }); } }
   if (t > S(12)) datilo(sb, 'CALÇADA  ·  TAMPA DE FERRO', 84, 242, (t - S(12)) / 0.6 * 26, { tam: 32, cor: COR.osso, esp: 2 });
   const q = cam.pt([12.45, 0, -1.15]) || [W / 2, H / 2];
-  return { focos: [{ x: q[0], y: q[1], r: 760 }, { x: q[0] - 300, y: q[1] - 500, r: 500, i: 0.3, cor: AMBAR }], amb: 0.12, mult: 1 };
+  return { focos: [{ x: q[0], y: q[1], r: 820 }, { x: q[0] - 300, y: q[1] - 500, r: 600, i: 0.35, cor: AMBAR }], amb: 0.17, mult: 1 };
 }
 
 // ---------- tomada 8: a declaração de 1974 ----------
@@ -235,10 +235,11 @@ function tomada8(t) {
 }
 
 // ---------- tomada 9: "amanhã, então." ----------
-const cam9 = trajeto([[T(16), 6.2, 8.5, -2.5, 6.0, 0, 2.2], [S(17), 2.0, 9.0, -1.0, 3.0, 0, 2.0], [P(17, 'amanhã') + 0.4, 4.0, 13.5, -4.5, 6.5, -0.8, 2.5], [T(18), 4.5, 15, -6.0, 7.0, -1.0, 2.6]]);
+const cam9 = trajeto([[T(16), 6.2, 8.5, -2.5, 6.0, 0, 2.2], [S(17), 5.0, 7.5, 1.8, 1.0, 0, 1.6], [P(17, 'amanhã') + 0.4, 15, 13, 2.2, 6.5, -1.0, 2.3], [T(18), 17, 15, 2.4, 6.5, -1.2, 2.3]]);
 function tomada9(t) {
   const [px, py, pz, tx, ty, tz] = cam9(t), hh = mao(t, 0.05), cam = camera([px + hh.x, py + hh.y, pz], [tx, ty, tz], 40, hh.r);
   const ta = P(17, 'amanhã'), rx = t > ta + 0.3 ? [0, 1, 0, 0, 1, 1, 0, 1, 1, 1][Math.min(9, Math.floor((t - ta - 0.3) * 12))] : 0;
+  const focoRx = rx ? cam.pt([9.6, -1.2, 2.1]) : null;
   casa(cam, t, { raiox: rx, rua: true });
   // na cozinha, os dois combinando baixinho
   if (t < S(17)) [[5.4, 2.8], [6.0, 2.9]].forEach(([x, z]) => { const q = cam.pt([x, 1.0, z]), e = cam.esc([x, 1, z]); if (q) { g.fillStyle = '#16120e'; g.beginPath(); g.arc(q[0], q[1], e * 0.16, 0, 6.3); g.fill(); g.strokeStyle = COR.osso; g.lineWidth = 1.2; g.globalAlpha = 0.7; g.stroke(); g.globalAlpha = 1; } });
@@ -249,7 +250,7 @@ function tomada9(t) {
   if (t > S(17)) datilo(sb, '03:00', 84, 242, (t - S(17)) / 0.3 * 5, { tam: 40, cor: COR.osso, esp: 4 });
   else if (t > S(16)) datilo(sb, 'NA COZINHA  ·  BAIXINHO', 84, 242, (t - S(16)) / 0.6 * 23, { tam: 32, cor: COR.osso, esp: 2 });
   const f = t > S(17) ? (qg || [W / 2, H / 2]) : (cam.pt([5.7, 1, 2.85]) || [W / 2, H / 2]);
-  return { focos: [{ x: f[0], y: f[1], r: 820 }, ...(rx ? [{ x: W / 2, y: H / 2, r: 900, i: 0.35, cor: [255, 60, 40] }] : [])], amb: 0.12, mult: 1 };
+  return { focos: [{ x: f[0], y: f[1], r: 820 }, ...(focoRx ? [{ x: focoRx[0], y: focoRx[1], r: 900, i: 0.5, cor: [255, 80, 60] }] : [])], amb: 0.15, mult: 1 };
 }
 
 const tomada10 = t => cartaoFinal(t, T(18), N, 4, { linhas: LINHAS });
