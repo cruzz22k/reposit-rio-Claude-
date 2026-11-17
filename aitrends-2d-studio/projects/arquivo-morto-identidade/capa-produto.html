@@ -58,6 +58,17 @@
   .selo .c { font-family: 'Mono'; font-weight: 700; font-size: 20px; letter-spacing: 1px; }
   .topo { position: absolute; left: 60px; top: 50px; font-family: 'Mono'; font-weight: 700; font-size: 24px; color: #b9ab92; letter-spacing: 5px; }
   .topo b { color: #e0402f; }
+  /* versão com preço (capa-produto.html?preco=19,90&de=47) */
+  .preco { display: none; position: absolute; right: 30px; bottom: 150px; width: 250px; height: 250px; border-radius: 50%; z-index: 5;
+    background: #b3261c; color: #f6ecd8; flex-direction: column; align-items: center; justify-content: center;
+    transform: rotate(8deg); box-shadow: 0 12px 34px rgba(0,0,0,.7); border: 4px dashed rgba(246,236,216,.55); outline: 7px solid #b3261c; }
+  .preco .de { font-family: 'Mono'; font-weight: 700; font-size: 24px; letter-spacing: 1px; opacity: .85; }
+  .preco .de s { text-decoration-thickness: 3px; }
+  .preco .por { font-family: 'Mono'; font-weight: 700; font-size: 22px; letter-spacing: 3px; margin-top: 4px; }
+  .preco .valor { font-family: 'Playfair'; font-weight: 900; font-size: 68px; line-height: 1; white-space: nowrap; text-shadow: 0 2px 0 rgba(0,0,0,.25); }
+  .preco .valor small { font-size: 30px; vertical-align: 26px; margin-right: 4px; }
+  .com-preco .preco { display: flex; }
+  .com-preco .selo { display: none; }
 </style></head>
 <body>
 <div id="capa">
@@ -99,12 +110,21 @@
     <div class="t1"><b>13</b> CASOS · <b>87</b> DOCUMENTOS · <b>128</b> PÁGINAS</div>
     <div class="t2">Plantas, bilhetes, laudos e fotos. Resolva cada caso.</div>
   </div>
+  <div class="preco"><span class="de">DE <s>R$ 47</s></span><span class="por">POR</span><span class="valor"><small>R$</small>19,90</span></div>
   <div class="selo"><span class="a">COM AS</span><span class="b">13</span><span class="c">SOLUÇÕES</span></div>
 
   <canvas class="grao" width="600" height="600"></canvas>
   <div class="vinheta"></div>
 </div>
 <script>
+  const q = new URLSearchParams(location.search);
+  if (q.get('preco')) {
+    document.getElementById('capa').classList.add('com-preco');
+    const [r, c] = q.get('preco').split(',');
+    document.querySelector('.preco .valor').innerHTML = '<small>R$</small>' + r + (c ? ',' + c : '');
+    if (q.get('de')) document.querySelector('.preco .de s').textContent = 'R$ ' + q.get('de'); else document.querySelector('.preco .de').style.display = 'none';
+    document.querySelector('.faixa .t2').textContent = 'Plantas, bilhetes, laudos e fotos. Com as 13 soluções.';
+  }
   const c = document.querySelector('.grao'), x = c.getContext('2d'), d = x.createImageData(600, 600);
   let s = 7; const r = () => (s = (s * 16807) % 2147483647) / 2147483647;
   for (let i = 0; i < d.data.length; i += 4) { const v = r() * 255; d.data[i] = d.data[i+1] = d.data[i+2] = v; d.data[i+3] = 255; }
