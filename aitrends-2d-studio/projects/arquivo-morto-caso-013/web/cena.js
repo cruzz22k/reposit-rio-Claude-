@@ -52,7 +52,7 @@ function tomada3(t) {
   return { focos: [{ x: 540, y: 1100, r: 950 }], amb: 0.2, mult: 1 };
 }
 function tomada4(t) {
-  camera2D(t, W / 2, 1000, 1.05, { amp: 3 }); fundo(); g.save(); g.globalAlpha = 0.92; papel(g, VEG, 90, 420); g.restore();
+  camera2D(t, W / 2, lerp(1000, 820, easeInOut(prog(t, S(6) - 0.5, 0.8))), 1.05, { amp: 3 }); fundo(); g.save(); g.globalAlpha = 0.92; papel(g, VEG, 90, 420); g.restore();
   casa(g, t, -99, { cor: LAPIS, x: easeInOut(prog(t, P(5, 'X'), 0.4)) });
   const L4 = ['Ele mudou de casa.', 'Agora é a sua.', 'Ele bate porque sabe que você está acordado.', 'Não responda.     — A.'], ts = [P(6, 'Ele mudou'), P(6, 'Agora'), P(6, 'Ele bate'), P(6, 'Não responda')];
   g.save(); g.fillStyle = 'rgba(223,224,214,0.9)'; g.fillRect(100, 300, 880, 250); g.restore();
