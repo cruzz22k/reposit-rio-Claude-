@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<style>
+  @font-face { font-family: 'Playfair'; src: url('../../node_modules/@fontsource/playfair-display/files/playfair-display-latin-900-normal.woff2'); font-weight: 900; }
+  @font-face { font-family: 'Maquina'; src: url('../../node_modules/@fontsource/special-elite/files/special-elite-latin-400-normal.woff2'); }
+  @font-face { font-family: 'Mono'; src: url('../../node_modules/@fontsource/courier-prime/files/courier-prime-latin-700-normal.woff2'); font-weight: 700; }
+  @font-face { font-family: 'Caneta'; src: url('../../node_modules/@fontsource/kalam/files/kalam-latin-400-normal.woff2'); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  #cal { width: 1080px; height: 1920px; padding: 70px 64px; position: relative; overflow: hidden; color: #e8dcc4;
+    background: radial-gradient(ellipse 80% 50% at 50% 30%, #2e2219 0%, #15100c 60%, #0d0b09 100%); }
+  .rot { font-family: 'Mono'; font-weight: 700; font-size: 26px; letter-spacing: 6px; color: #b9ab92; }
+  .rot b { color: #e0402f; }
+  h1 { font-family: 'Playfair'; font-weight: 900; font-size: 92px; line-height: 1; margin-top: 18px; }
+  h1 span { color: #e0402f; }
+  .sub { font-family: 'Maquina'; font-size: 30px; color: #c8bca4; margin-top: 18px; }
+  .sub b { color: #f6ecd8; }
+  .lista { margin-top: 44px; border-top: 2px solid #4a4036; }
+  .l { display: grid; grid-template-columns: 150px 120px 1fr 110px; align-items: center; height: 96px; border-bottom: 2px solid #2f2820; }
+  .dia { font-family: 'Mono'; font-weight: 700; font-size: 36px; color: #f6ecd8; }
+  .dia small { display: block; font-size: 22px; color: #8a8070; letter-spacing: 3px; }
+  .num { font-family: 'Playfair'; font-weight: 900; font-size: 52px; color: #e0402f; }
+  .tit { font-family: 'Maquina'; font-size: 31px; line-height: 1.15; color: #e8dcc4; padding-right: 12px; }
+  .hora { font-family: 'Mono'; font-weight: 700; font-size: 34px; color: #f2b45c; text-align: right; }
+  .l.fim { background: rgba(179,38,28,.16); }
+  .l.fim .tit { color: #f6ecd8; }
+  .l.fim .tit i { display: block; font-style: normal; font-family: 'Mono'; font-size: 20px; letter-spacing: 2px; color: #e0402f; margin-top: 4px; }
+  .regras { margin-top: 40px; font-family: 'Caneta'; font-size: 31px; line-height: 1.35; color: #d8ccb4; }
+  .regras li { list-style: none; padding-left: 38px; position: relative; margin-bottom: 6px; }
+  .regras li::before { content: '✓'; position: absolute; left: 0; color: #e0402f; font-family: 'Mono'; font-weight: 700; }
+  .carimbo { position: absolute; right: 60px; top: 96px; transform: rotate(-9deg); border: 6px solid #b3261c; color: #b3261c;
+    font-family: 'Mono'; font-weight: 700; font-size: 30px; letter-spacing: 4px; padding: 8px 18px; opacity: .9; }
+</style></head>
+<body>
+<div id="cal">
+  <div class="carimbo">13 DIAS</div>
+  <div class="rot">ARQUIVO MORTO · <b>CALENDÁRIO</b></div>
+  <h1>Um caso<br>por <span>noite</span>.</h1>
+  <div class="sub">TikTok, Reels e Shorts no mesmo horário. <b>Às 20h.</b></div>
+  <div class="lista" id="lista"></div>
+  <ul class="regras">
+    <li>Use a capa do mesmo número (capa-caso-01 com o caso 01).</li>
+    <li>Cole a legenda e fixe o comentário logo depois de postar.</li>
+    <li>Responda aos comentários na primeira hora.</li>
+    <li>Link da página de vendas na bio do Instagram.</li>
+  </ul>
+</div>
+<script>
+  const C = [
+    ['17/11','TER','A casa que sobra'], ['18/11','QUA','O corredor que encolhe'], ['19/11','QUI','A janela que dá para dentro'],
+    ['20/11','SEX','O porão que não estava na escritura'], ['21/11','SÁB','A escada de treze degraus'], ['22/11','DOM','O quarto das crianças sem crianças'],
+    ['23/11','SEG','A casa com duas cozinhas'], ['24/11','TER','O apartamento 7B, que não existe'], ['25/11','QUA','O sítio onde os relógios atrasam'],
+    ['26/11','QUI','A casa espelhada'], ['27/11','SEX','O sótão que respira'], ['28/11','SÁB','A porta pintada'],
+    ['29/11','DOM','A planta desenhada por quem morreu'] ];
+  document.getElementById('lista').innerHTML = C.map((c, i) => `<div class="l${i === 12 ? ' fim' : ''}">
+    <div class="dia">${c[0]}<small>${c[1]}</small></div><div class="num">${String(i + 1).padStart(2, '0')}</div>
+    <div class="tit">${c[2]}${i === 12 ? '<i>O ÚLTIMO CASO · MANDA PARA O LIVRO</i>' : ''}</div><div class="hora">20h</div></div>`).join('');
+</script>
+</body></html>
