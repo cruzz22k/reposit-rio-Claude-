@@ -21,6 +21,9 @@
   .capa h1 span { display: block; color: var(--vermelho); letter-spacing: 10px; }
   .capa .sub { font-family: 'DejaVu Sans Mono', monospace; font-size: 10pt; letter-spacing: 2px; color: #c8bca4; }
   .capa .aviso { font-size: 7.5pt; color: #8a8070; font-style: italic; }
+  .capa .autor { text-align: center; font-family: 'Playfair', serif; font-style: italic; font-size: 13pt; color: #e8dcc4; margin-top: 7mm; }
+  .capa .autor b { font-style: normal; font-weight: 900; letter-spacing: 1px; }
+  .capa .creditos { font-size: 6.4pt; line-height: 1.45; color: #8a8070; margin-top: 3mm; }
   .doc { background: #ddd2bc; border: 1px solid #b8aa90; padding: 4mm 5mm; margin: 4mm 0; font-family: 'DejaVu Sans Mono', monospace; font-size: 8.5pt; line-height: 1.5; box-shadow: 0 2px 6px rgba(0,0,0,.25); }
   .doc.bilhete { background: #f4eedf; transform: rotate(-1.2deg); font-family: 'Playfair', serif; font-style: italic; font-size: 13pt; text-align: center; padding: 6mm; }
   .pistas { border-left: 3px solid var(--vermelho); padding: 2mm 0 2mm 5mm; margin: 4mm 0; }
