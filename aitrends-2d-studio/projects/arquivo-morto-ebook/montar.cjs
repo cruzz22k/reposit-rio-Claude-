@@ -48,11 +48,11 @@ for (const f of casos) {
   <div class="rotulo">Caso ${num} · Suas anotações</div>
   <h2>E então?</h2>
   <div class="campo"><b>${fi.pergunta || 'A pergunta do arquivo'}</b></div>
-  <div class="campo"><b>Quem?</b><div class="linhas l2"></div></div>
-  <div class="campo"><b>Como?</b><div class="linhas l3"></div></div>
-  <div class="campo"><b>Por quê?</b><div class="linhas l2"></div></div>
-  <div class="campo"><b>A pista que decidiu</b><div class="linhas l2"></div></div>
-  <div class="campo"><b>Datas e medidas que importam</b><div class="linhas l3"></div></div>
+  <div class="campo"><b>Quem?</b><div class="linhas"><i></i><i></i></div></div>
+  <div class="campo"><b>Como?</b><div class="linhas"><i></i><i></i><i></i></div></div>
+  <div class="campo"><b>Por quê?</b><div class="linhas"><i></i><i></i></div></div>
+  <div class="campo"><b>A pista que decidiu</b><div class="linhas"><i></i><i></i></div></div>
+  <div class="campo"><b>Datas e medidas que importam</b><div class="linhas"><i></i><i></i><i></i></div></div>
   <div class="caixas"><span>☐ resolvi sozinho</span><span>☐ precisei das pistas</span><span>☐ fui direto à solução</span></div>
   <p class="dica">Quando tiver certeza, confira a solução na <span class="pgref" data-ref="s${num}"></span>.</p>
   <div class="rodape"><span>CASO ${num} · ANOTAÇÕES</span><span class="pg"></span></div>
@@ -94,6 +94,21 @@ fs.writeFileSync(P('ebook-completo.html'), doc);
   const final = process.argv.includes('--final');
   const b = await chromium.launch(); const p = await b.newPage();
   await p.goto('file://' + P('ebook-completo.html')); await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(500);
+  // pautas como linhas de verdade (degradês repetidos saem errados em leitores de PDF de celular)
+  await p.evaluate(() => {
+    const mm = 96 / 25.4;
+    const pauta = (el, passo, esp, cor, vertical, ini = passo - esp) => {
+      const cam = document.createElement('div'); cam.className = 'pauta';
+      const tam = vertical ? el.clientWidth : el.clientHeight;
+      for (let x = ini; x < tam; x += passo) {
+        const l = document.createElement('div'); l.style.cssText = `position:absolute;background:${cor};` + (vertical ? `left:${x}px;top:0;bottom:0;width:${esp}px` : `top:${x}px;left:0;right:0;height:${esp}px`);
+        cam.appendChild(l);
+      }
+      el.prepend(cam);
+    };
+    document.querySelectorAll('.doc.caderno').forEach(e => pauta(e, 5.45 * mm, 0.25 * mm, '#b9c6d4', false, (3 + 4.75) * mm)); // logo abaixo de cada linha escrita (3 mm de margem + base do texto)
+    document.querySelectorAll('section.ficha').forEach(e => pauta(e, 6 * mm, 1, '#ddceb0', true));
+  });
   // confere páginas: nada pode passar do limite (área acima do rodapé)
   const prob = await p.evaluate(() => {
     const mm = 96 / 25.4, out = [];

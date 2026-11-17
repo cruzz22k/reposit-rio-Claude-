@@ -44,7 +44,7 @@
   .espelho { display: inline-block; transform: scaleX(-1); }
   .doc.foto { background: #1b1814; border-color: #3a332a; padding: 3mm; }
   .doc .linha { display: flex; justify-content: space-between; gap: 3mm; }
-  .doc.caderno { background: #f1ecdc; background-image: repeating-linear-gradient(#f1ecdc 0 5.2mm, #b9c6d4 5.2mm 5.45mm); font-family: 'Playfair', serif; font-style: italic; font-size: 10pt; line-height: 5.45mm; padding: 3mm 5mm; }
+  .doc.caderno { background: #f1ecdc; position: relative; z-index: 0; font-family: 'Playfair', serif; font-style: italic; font-size: 10pt; line-height: 5.45mm; padding: 3mm 5mm; }
   .doc.caderno .outra { display: inline-block; transform: skewX(-14deg); color: #3b2f6e; }
   .doc.recorte { background: #e4dccb; font-family: 'Playfair', serif; font-size: 9pt; line-height: 1.45; columns: 2; column-gap: 4mm; }
   .doc.recorte h4 { column-span: all; font-family: 'Playfair', serif; font-weight: 900; font-size: 12.5pt; margin: 0 0 2mm; line-height: 1.15; }
@@ -69,7 +69,8 @@
   /* ===== volume completo, edição detalhada ===== */
   table.esq td, table.esq th { text-align: left; vertical-align: top; }
   /* ficha do caso */
-  .ficha { background: #e6d8bb; background-image: linear-gradient(90deg, rgba(120,90,50,.08) 0 1px, transparent 1px 100%); background-size: 6mm 6mm; }
+  .ficha { background: #e6d8bb; z-index: 0; }
+  .pauta { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
   .ficha .aba { position: absolute; top: 0; right: 22mm; width: 38mm; height: 10mm; background: #d4c29c; border: 1px solid #b29a6c; border-top: 0; font-family: 'DejaVu Sans Mono', monospace; font-size: 7pt; letter-spacing: 2px; text-align: center; line-height: 10mm; color: #5a4a30; }
   .ficha .num { font-family: 'DejaVu Sans Mono', monospace; font-weight: 700; font-size: 30pt; letter-spacing: 4px; color: var(--vermelho); margin-top: 6mm; line-height: 1; }
   .ficha h2 { margin: 2mm 0 5mm; }
@@ -86,8 +87,7 @@
   /* anotações do leitor */
   .anot .campo { margin-bottom: 3.2mm; }
   .anot .campo b { font-family: 'DejaVu Sans Mono', monospace; font-size: 7.6pt; letter-spacing: 1.5px; text-transform: uppercase; color: var(--vermelho); }
-  .anot .linhas { background-image: repeating-linear-gradient(transparent 0 7.2mm, #b8aa90 7.2mm 7.45mm); }
-  .anot .l2 { height: 15mm; } .anot .l3 { height: 22.5mm; } .anot .l4 { height: 30mm; }
+  .anot .linhas i { display: block; height: 7.45mm; border-bottom: 0.25mm solid #b8aa90; }
   .anot .caixas { font-family: 'DejaVu Sans Mono', monospace; font-size: 8pt; margin-top: 2mm; }
   .anot .caixas span { margin-right: 5mm; }
   .anot .dica { font-size: 8.2pt; color: #6a5a40; margin-top: 3mm; }
@@ -111,7 +111,7 @@
   .indice-docs .caso { font-family: 'DejaVu Sans Mono', monospace; color: var(--vermelho); font-size: 7pt; letter-spacing: 1.5px; margin-top: 1.8mm; break-after: avoid; }
   .indice-docs .item { display: flex; gap: 2mm; break-inside: avoid; } .indice-docs .item span:first-child { flex: 1; } .indice-docs .item .pg { color: #6a5a40; }
   .anot h2 { margin-bottom: 2mm; } .anot .campo { margin-bottom: 2.4mm; }
-  .anot .l2 { height: 13mm; } .anot .l3 { height: 19.5mm; }
+  .anot .linhas i { height: 6.5mm; }
   .placar td, .placar th { padding: 0.9mm 1mm; font-size: 7.6pt; line-height: 1.3; }
   .denso .doc { margin: 2.5mm 0; padding: 3mm 4mm; }
   .denso .doc.bilhete { font-size: 11pt; padding: 3.5mm; }
