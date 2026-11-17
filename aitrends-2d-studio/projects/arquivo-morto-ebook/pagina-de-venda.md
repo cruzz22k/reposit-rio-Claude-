@@ -16,13 +16,16 @@ O *Arquivo Morto* é um e-book de terror e mistério diferente de tudo o que voc
 
 ## O que tem dentro
 - **13 casos completos**, cada um com uma casa diferente e um segredo diferente
-- **Documentos para analisar:** plantas baixas, fotos, contas antigas, bilhetes e recortes
-- **Pistas no fim de cada caso**, para você tentar resolver sozinho
-- **Soluções separadas**, para você não ler a resposta sem querer
-- Leitura no celular, no tablet ou no computador (PDF)
+- **87 documentos para analisar:** plantas baixas, notas fiscais, cadernos, recortes de jornal, certidões, mensagens e bilhetes escondidos
+- **Ficha de cada caso** com local, envolvidos, grau de dificuldade e a pergunta que você precisa responder
+- **Guia do investigador:** como ler uma planta, o que significa cada símbolo e como montar a linha do tempo
+- **Página de anotações** depois de cada caso, para escrever a sua teoria antes de ver a resposta
+- **Soluções completas no fim do livro**, com a linha do tempo reconstruída e o papel de cada pista
+- **Placar do investigador** para contar quantos casos você resolveu sozinho
+- **128 páginas** em PDF: leia no celular, no tablet ou imprima
 
 ## Para quem é
-- Para quem viu o caso 1 no vídeo e ficou com a pulga atrás da orelha
+- Para quem viu os vídeos do canal e ficou com a pulga atrás da orelha
 - Para quem gosta de terror que faz pensar, não só de susto
 - Para quem gosta de enigmas, mistérios e histórias em que o detalhe muda tudo
 
@@ -49,6 +52,9 @@ O *Arquivo Morto* é um e-book de terror e mistério diferente de tudo o que voc
 **7 dias de garantia incondicional.** Se não gostar, peça o reembolso pela própria plataforma, sem precisar explicar o motivo.
 
 ## Perguntas frequentes
+**Quanto tempo leva para ler?**
+Cada caso leva de 15 a 25 minutos, com calma. O último caso só faz sentido depois dos outros.
+
 **Como recebo o e-book?**
 Por e-mail, logo depois que o pagamento for aprovado. O PDF abre em qualquer celular.
 
@@ -56,7 +62,7 @@ Por e-mail, logo depois que o pagamento for aprovado. O PDF abre em qualquer cel
 Não. O *Arquivo Morto* é uma obra de ficção. Os endereços, os nomes e os documentos foram criados para o livro.
 
 **Tem cenas pesadas?**
-É terror psicológico. O medo vem do que você descobre, não de violência explícita. Indicado para maiores de 14 anos.
+É terror psicológico. O medo vem do que você descobre, não de violência explícita. Indicado para maiores de 16 anos.
 
 **Posso pagar com Pix?**
 Sim. Também aceitamos cartão (em até 12 vezes) e boleto.
