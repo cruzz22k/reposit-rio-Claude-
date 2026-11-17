@@ -12,6 +12,7 @@ const ler = f => fs.readFileSync(P(f), 'utf8');
 
 const casos = fs.readdirSync(P('partes')).filter(f => /^\d{3}\.html$/.test(f)).sort();
 const FICHAS = JSON.parse(ler('fichas.json'));
+const ANOT = JSON.parse(ler('anotacoes.json')); // perguntas-guia de cada caso, na página de anotações
 const bolas = n => `<span class="bolas">${'●'.repeat(n)}<span class="off">${'●'.repeat(5 - n)}</span></span>`;
 const ROT_DIF = ['', 'muito fácil', 'fácil', 'média', 'difícil', 'muito difícil'];
 const docsDe = h => [...h.matchAll(/<div class="rotulo"[^>]*>(Documento \d+[^<]*)<\/div>/g)].map(m => m[1].replace(/\s+/g, ' ').trim());
@@ -44,15 +45,18 @@ for (const f of casos) {
   <div class="rodape"><span>CASO ${num} · FICHA</span><span class="pg"></span></div>
 </section>
 `;
+  const an = ANOT[num] || {};
+  const campo = (rot, guia, n) => `<div class="campo"><b>${rot}</b>${guia ? `<span class="guia">${guia}</span>` : ''}<div class="linhas">${'<i></i>'.repeat(n)}</div></div>`;
   const anot = `<section class="pagina anot">
   <div class="rotulo">Caso ${num} · Suas anotações</div>
   <h2>E então?</h2>
   <div class="campo"><b>${fi.pergunta || 'A pergunta do arquivo'}</b></div>
-  <div class="campo"><b>Quem?</b><div class="linhas"><i></i><i></i></div></div>
-  <div class="campo"><b>Como?</b><div class="linhas"><i></i><i></i><i></i></div></div>
-  <div class="campo"><b>Por quê?</b><div class="linhas"><i></i><i></i></div></div>
-  <div class="campo"><b>A pista que decidiu</b><div class="linhas"><i></i><i></i></div></div>
-  <div class="campo"><b>Datas e medidas que importam</b><div class="linhas"><i></i><i></i><i></i></div></div>
+  <p class="intro">Escreva a sua teoria antes de ver a solução. As perguntas em cinza ajudam a pensar.</p>
+  ${campo('Quem?', an.quem, 2)}
+  ${campo('Como?', an.como, 2)}
+  ${campo('Por quê?', an.porque, 2)}
+  ${campo('A pista que decidiu', 'Qual documento entrega a resposta? Anote o número dele.', 1)}
+  ${campo('Datas e medidas que importam', an.medidas, 2)}
   <div class="caixas"><span>☐ resolvi sozinho</span><span>☐ precisei das pistas</span><span>☐ fui direto à solução</span></div>
   <p class="dica">Quando tiver certeza, confira a solução na <span class="pgref" data-ref="s${num}"></span>.</p>
   <div class="rodape"><span>CASO ${num} · ANOTAÇÕES</span><span class="pg"></span></div>

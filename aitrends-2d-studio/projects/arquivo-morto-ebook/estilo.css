@@ -91,6 +91,8 @@
   .anot .caixas { font-family: 'DejaVu Sans Mono', monospace; font-size: 8pt; margin-top: 2mm; }
   .anot .caixas span { margin-right: 5mm; }
   .anot .dica { font-size: 8.2pt; color: #6a5a40; margin-top: 3mm; }
+  .anot .intro { font-size: 8.4pt; line-height: 1.4; color: #3a3026; margin: 0 0 3mm; }
+  .anot .guia { display: block; font-family: 'Playfair', serif; font-style: italic; font-size: 8.6pt; line-height: 1.3; color: #6a5a40; margin-top: 0.6mm; }
   /* solução detalhada */
   .sol-h { font-family: 'DejaVu Sans Mono', monospace; font-size: 8pt; letter-spacing: 2.5px; text-transform: uppercase; color: #d9584a; margin: 4mm 0 2mm; font-weight: 400; }
   .solucao table.linha-tempo { font-size: 7.8pt; }
@@ -111,7 +113,7 @@
   .indice-docs .caso { font-family: 'DejaVu Sans Mono', monospace; color: var(--vermelho); font-size: 7pt; letter-spacing: 1.5px; margin-top: 1.8mm; break-after: avoid; }
   .indice-docs .item { display: flex; gap: 2mm; break-inside: avoid; } .indice-docs .item span:first-child { flex: 1; } .indice-docs .item .pg { color: #6a5a40; }
   .anot h2 { margin-bottom: 2mm; } .anot .campo { margin-bottom: 2.4mm; }
-  .anot .linhas i { height: 6.5mm; }
+  .anot .linhas i { height: 6.2mm; } .anot .intro { margin-bottom: 2.2mm; }
   .placar td, .placar th { padding: 0.9mm 1mm; font-size: 7.6pt; line-height: 1.3; }
   .denso .doc { margin: 2.5mm 0; padding: 3mm 4mm; }
   .denso .doc.bilhete { font-size: 11pt; padding: 3.5mm; }
