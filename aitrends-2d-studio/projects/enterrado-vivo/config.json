@@ -1,0 +1,30 @@
+{
+ "title": "O que aconteceria se você fosse enterrado vivo no século 19?",
+ "aspect": "9:16",
+ "resolution": "1080p",
+ "fps": 24,
+ "style": "midnight",
+ "voiceover": "input/voiceover.mp3",
+ "script": null,
+ "duration": 180.61,
+ "captions": true,
+ "bars": null,
+ "fadeIn": 0.0,
+ "fadeOut": 0.8,
+ "music": {
+  "enabled": true,
+  "gainDb": -17
+ },
+ "sfx": {
+  "enabled": true,
+  "gainDb": -6
+ },
+ "loudness": -14,
+ "captionStyle": {
+  "y": 1395,
+  "size": 68,
+  "max": 3,
+  "maxW": 850,
+  "cx": 505
+ }
+}

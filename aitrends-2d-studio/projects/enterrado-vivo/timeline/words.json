@@ -1,0 +1,2495 @@
+{
+ "source": "kokoro por frase; palavras proporcionais",
+ "words": [
+  {
+   "word": "O",
+   "start": 0.3,
+   "end": 0.432
+  },
+  {
+   "word": "que",
+   "start": 0.432,
+   "end": 0.697
+  },
+  {
+   "word": "aconteceria",
+   "start": 0.697,
+   "end": 1.492
+  },
+  {
+   "word": "se",
+   "start": 1.492,
+   "end": 1.691
+  },
+  {
+   "word": "você",
+   "start": 1.691,
+   "end": 2.022
+  },
+  {
+   "word": "fosse",
+   "start": 2.022,
+   "end": 2.42
+  },
+  {
+   "word": "enterrado",
+   "start": 2.42,
+   "end": 3.082
+  },
+  {
+   "word": "vivo",
+   "start": 3.082,
+   "end": 3.414
+  },
+  {
+   "word": "no",
+   "start": 3.414,
+   "end": 3.612
+  },
+  {
+   "word": "século",
+   "start": 3.612,
+   "end": 4.076
+  },
+  {
+   "word": "19?",
+   "start": 4.076,
+   "end": 4.341
+  },
+  {
+   "word": "Europa,",
+   "start": 5.241,
+   "end": 5.831
+  },
+  {
+   "word": "1830.",
+   "start": 5.831,
+   "end": 6.273
+  },
+  {
+   "word": "Uma",
+   "start": 6.273,
+   "end": 6.568
+  },
+  {
+   "word": "epidemia",
+   "start": 6.568,
+   "end": 7.231
+  },
+  {
+   "word": "de",
+   "start": 7.231,
+   "end": 7.453
+  },
+  {
+   "word": "cólera",
+   "start": 7.453,
+   "end": 7.969
+  },
+  {
+   "word": "está",
+   "start": 7.969,
+   "end": 8.337
+  },
+  {
+   "word": "matando",
+   "start": 8.337,
+   "end": 8.927
+  },
+  {
+   "word": "gente",
+   "start": 8.927,
+   "end": 9.369
+  },
+  {
+   "word": "em",
+   "start": 9.369,
+   "end": 9.59
+  },
+  {
+   "word": "todo",
+   "start": 9.59,
+   "end": 9.959
+  },
+  {
+   "word": "lugar.",
+   "start": 9.959,
+   "end": 10.475
+  },
+  {
+   "word": "Você",
+   "start": 10.925,
+   "end": 11.235
+  },
+  {
+   "word": "pega",
+   "start": 11.235,
+   "end": 11.545
+  },
+  {
+   "word": "uma",
+   "start": 11.545,
+   "end": 11.793
+  },
+  {
+   "word": "febre",
+   "start": 11.793,
+   "end": 12.166
+  },
+  {
+   "word": "forte…",
+   "start": 12.166,
+   "end": 12.6
+  },
+  {
+   "word": "e",
+   "start": 12.6,
+   "end": 12.724
+  },
+  {
+   "word": "apaga.",
+   "start": 12.724,
+   "end": 13.158
+  },
+  {
+   "word": "Seu",
+   "start": 13.608,
+   "end": 13.852
+  },
+  {
+   "word": "coração",
+   "start": 13.852,
+   "end": 14.341
+  },
+  {
+   "word": "bate",
+   "start": 14.341,
+   "end": 14.647
+  },
+  {
+   "word": "tão",
+   "start": 14.647,
+   "end": 14.891
+  },
+  {
+   "word": "fraco",
+   "start": 14.891,
+   "end": 15.258
+  },
+  {
+   "word": "que",
+   "start": 15.258,
+   "end": 15.502
+  },
+  {
+   "word": "ninguém",
+   "start": 15.502,
+   "end": 15.991
+  },
+  {
+   "word": "sente.",
+   "start": 15.991,
+   "end": 16.419
+  },
+  {
+   "word": "O",
+   "start": 16.869,
+   "end": 16.984
+  },
+  {
+   "word": "médico",
+   "start": 16.984,
+   "end": 17.385
+  },
+  {
+   "word": "coloca",
+   "start": 17.385,
+   "end": 17.787
+  },
+  {
+   "word": "um",
+   "start": 17.787,
+   "end": 17.959
+  },
+  {
+   "word": "espelho",
+   "start": 17.959,
+   "end": 18.418
+  },
+  {
+   "word": "na",
+   "start": 18.418,
+   "end": 18.59
+  },
+  {
+   "word": "frente",
+   "start": 18.59,
+   "end": 18.992
+  },
+  {
+   "word": "do",
+   "start": 18.992,
+   "end": 19.164
+  },
+  {
+   "word": "seu",
+   "start": 19.164,
+   "end": 19.393
+  },
+  {
+   "word": "nariz.",
+   "start": 19.393,
+   "end": 19.795
+  },
+  {
+   "word": "O",
+   "start": 19.795,
+   "end": 19.91
+  },
+  {
+   "word": "espelho",
+   "start": 19.91,
+   "end": 20.369
+  },
+  {
+   "word": "não",
+   "start": 20.369,
+   "end": 20.598
+  },
+  {
+   "word": "embaça.",
+   "start": 20.598,
+   "end": 21.057
+  },
+  {
+   "word": "Você",
+   "start": 21.507,
+   "end": 21.845
+  },
+  {
+   "word": "é",
+   "start": 21.845,
+   "end": 21.98
+  },
+  {
+   "word": "declarado",
+   "start": 21.98,
+   "end": 22.654
+  },
+  {
+   "word": "morto.",
+   "start": 22.654,
+   "end": 23.127
+  },
+  {
+   "word": "Com",
+   "start": 23.577,
+   "end": 23.807
+  },
+  {
+   "word": "medo",
+   "start": 23.807,
+   "end": 24.095
+  },
+  {
+   "word": "do",
+   "start": 24.095,
+   "end": 24.267
+  },
+  {
+   "word": "contágio,",
+   "start": 24.267,
+   "end": 24.842
+  },
+  {
+   "word": "as",
+   "start": 24.842,
+   "end": 25.015
+  },
+  {
+   "word": "vítimas",
+   "start": 25.015,
+   "end": 25.475
+  },
+  {
+   "word": "da",
+   "start": 25.475,
+   "end": 25.647
+  },
+  {
+   "word": "cólera",
+   "start": 25.647,
+   "end": 26.05
+  },
+  {
+   "word": "eram",
+   "start": 26.05,
+   "end": 26.337
+  },
+  {
+   "word": "enterradas",
+   "start": 26.337,
+   "end": 26.97
+  },
+  {
+   "word": "rápido,",
+   "start": 26.97,
+   "end": 27.43
+  },
+  {
+   "word": "às",
+   "start": 27.43,
+   "end": 27.602
+  },
+  {
+   "word": "vezes",
+   "start": 27.602,
+   "end": 27.947
+  },
+  {
+   "word": "sem",
+   "start": 27.947,
+   "end": 28.177
+  },
+  {
+   "word": "ninguém",
+   "start": 28.177,
+   "end": 28.637
+  },
+  {
+   "word": "conferir",
+   "start": 28.637,
+   "end": 29.155
+  },
+  {
+   "word": "direito",
+   "start": 29.155,
+   "end": 29.615
+  },
+  {
+   "word": "quem",
+   "start": 29.615,
+   "end": 29.902
+  },
+  {
+   "word": "estava",
+   "start": 29.902,
+   "end": 30.305
+  },
+  {
+   "word": "morto",
+   "start": 30.305,
+   "end": 30.65
+  },
+  {
+   "word": "e",
+   "start": 30.65,
+   "end": 30.765
+  },
+  {
+   "word": "quem",
+   "start": 30.765,
+   "end": 31.052
+  },
+  {
+   "word": "ainda",
+   "start": 31.052,
+   "end": 31.397
+  },
+  {
+   "word": "estava",
+   "start": 31.397,
+   "end": 31.8
+  },
+  {
+   "word": "morrendo.",
+   "start": 31.8,
+   "end": 32.375
+  },
+  {
+   "word": "Horas",
+   "start": 32.825,
+   "end": 33.22
+  },
+  {
+   "word": "depois,",
+   "start": 33.22,
+   "end": 33.746
+  },
+  {
+   "word": "você",
+   "start": 33.746,
+   "end": 34.075
+  },
+  {
+   "word": "acorda.",
+   "start": 34.075,
+   "end": 34.602
+  },
+  {
+   "word": "Está",
+   "start": 35.052,
+   "end": 35.327
+  },
+  {
+   "word": "tudo",
+   "start": 35.327,
+   "end": 35.603
+  },
+  {
+   "word": "escuro.",
+   "start": 35.603,
+   "end": 36.043
+  },
+  {
+   "word": "Você",
+   "start": 36.043,
+   "end": 36.319
+  },
+  {
+   "word": "levanta",
+   "start": 36.319,
+   "end": 36.759
+  },
+  {
+   "word": "a",
+   "start": 36.759,
+   "end": 36.869
+  },
+  {
+   "word": "mão…",
+   "start": 36.869,
+   "end": 37.145
+  },
+  {
+   "word": "e",
+   "start": 37.145,
+   "end": 37.255
+  },
+  {
+   "word": "bate",
+   "start": 37.255,
+   "end": 37.53
+  },
+  {
+   "word": "na",
+   "start": 37.53,
+   "end": 37.695
+  },
+  {
+   "word": "madeira.",
+   "start": 37.695,
+   "end": 38.191
+  },
+  {
+   "word": "Você",
+   "start": 38.641,
+   "end": 38.918
+  },
+  {
+   "word": "está",
+   "start": 38.918,
+   "end": 39.195
+  },
+  {
+   "word": "dentro",
+   "start": 39.195,
+   "end": 39.583
+  },
+  {
+   "word": "de",
+   "start": 39.583,
+   "end": 39.749
+  },
+  {
+   "word": "um",
+   "start": 39.749,
+   "end": 39.915
+  },
+  {
+   "word": "caixão,",
+   "start": 39.915,
+   "end": 40.358
+  },
+  {
+   "word": "debaixo",
+   "start": 40.358,
+   "end": 40.801
+  },
+  {
+   "word": "da",
+   "start": 40.801,
+   "end": 40.967
+  },
+  {
+   "word": "terra.",
+   "start": 40.967,
+   "end": 41.355
+  },
+  {
+   "word": "Um",
+   "start": 41.805,
+   "end": 42.041
+  },
+  {
+   "word": "caixão",
+   "start": 42.041,
+   "end": 42.59
+  },
+  {
+   "word": "comum",
+   "start": 42.59,
+   "end": 43.062
+  },
+  {
+   "word": "tem",
+   "start": 43.062,
+   "end": 43.376
+  },
+  {
+   "word": "uns",
+   "start": 43.376,
+   "end": 43.69
+  },
+  {
+   "word": "880",
+   "start": 43.69,
+   "end": 44.004
+  },
+  {
+   "word": "litros",
+   "start": 44.004,
+   "end": 44.554
+  },
+  {
+   "word": "de",
+   "start": 44.554,
+   "end": 44.79
+  },
+  {
+   "word": "espaço.",
+   "start": 44.79,
+   "end": 45.418
+  },
+  {
+   "word": "Tirando",
+   "start": 45.418,
+   "end": 46.046
+  },
+  {
+   "word": "o",
+   "start": 46.046,
+   "end": 46.203
+  },
+  {
+   "word": "seu",
+   "start": 46.203,
+   "end": 46.518
+  },
+  {
+   "word": "corpo,",
+   "start": 46.518,
+   "end": 47.067
+  },
+  {
+   "word": "sobram",
+   "start": 47.067,
+   "end": 47.617
+  },
+  {
+   "word": "cerca",
+   "start": 47.617,
+   "end": 48.089
+  },
+  {
+   "word": "de",
+   "start": 48.089,
+   "end": 48.324
+  },
+  {
+   "word": "820",
+   "start": 48.324,
+   "end": 48.638
+  },
+  {
+   "word": "litros",
+   "start": 48.638,
+   "end": 49.188
+  },
+  {
+   "word": "de",
+   "start": 49.188,
+   "end": 49.424
+  },
+  {
+   "word": "ar.",
+   "start": 49.424,
+   "end": 49.738
+  },
+  {
+   "word": "Parece",
+   "start": 50.188,
+   "end": 50.59
+  },
+  {
+   "word": "muito.",
+   "start": 50.59,
+   "end": 50.992
+  },
+  {
+   "word": "Mas",
+   "start": 50.992,
+   "end": 51.221
+  },
+  {
+   "word": "o",
+   "start": 51.221,
+   "end": 51.336
+  },
+  {
+   "word": "que",
+   "start": 51.336,
+   "end": 51.566
+  },
+  {
+   "word": "te",
+   "start": 51.566,
+   "end": 51.738
+  },
+  {
+   "word": "mata",
+   "start": 51.738,
+   "end": 52.025
+  },
+  {
+   "word": "não",
+   "start": 52.025,
+   "end": 52.254
+  },
+  {
+   "word": "é",
+   "start": 52.254,
+   "end": 52.369
+  },
+  {
+   "word": "só",
+   "start": 52.369,
+   "end": 52.541
+  },
+  {
+   "word": "o",
+   "start": 52.541,
+   "end": 52.656
+  },
+  {
+   "word": "oxigênio",
+   "start": 52.656,
+   "end": 53.173
+  },
+  {
+   "word": "acabando.",
+   "start": 53.173,
+   "end": 53.747
+  },
+  {
+   "word": "É",
+   "start": 53.747,
+   "end": 53.862
+  },
+  {
+   "word": "o",
+   "start": 53.862,
+   "end": 53.977
+  },
+  {
+   "word": "gás",
+   "start": 53.977,
+   "end": 54.206
+  },
+  {
+   "word": "carbônico",
+   "start": 54.206,
+   "end": 54.78
+  },
+  {
+   "word": "que",
+   "start": 54.78,
+   "end": 55.01
+  },
+  {
+   "word": "você",
+   "start": 55.01,
+   "end": 55.297
+  },
+  {
+   "word": "mesmo",
+   "start": 55.297,
+   "end": 55.641
+  },
+  {
+   "word": "solta.",
+   "start": 55.641,
+   "end": 56.043
+  },
+  {
+   "word": "Em",
+   "start": 56.493,
+   "end": 56.661
+  },
+  {
+   "word": "umas",
+   "start": 56.661,
+   "end": 56.94
+  },
+  {
+   "word": "duas",
+   "start": 56.94,
+   "end": 57.219
+  },
+  {
+   "word": "horas,",
+   "start": 57.219,
+   "end": 57.611
+  },
+  {
+   "word": "o",
+   "start": 57.611,
+   "end": 57.722
+  },
+  {
+   "word": "ar",
+   "start": 57.722,
+   "end": 57.89
+  },
+  {
+   "word": "fica",
+   "start": 57.89,
+   "end": 58.169
+  },
+  {
+   "word": "tão",
+   "start": 58.169,
+   "end": 58.393
+  },
+  {
+   "word": "ruim",
+   "start": 58.393,
+   "end": 58.672
+  },
+  {
+   "word": "que",
+   "start": 58.672,
+   "end": 58.896
+  },
+  {
+   "word": "você",
+   "start": 58.896,
+   "end": 59.175
+  },
+  {
+   "word": "começa",
+   "start": 59.175,
+   "end": 59.566
+  },
+  {
+   "word": "a",
+   "start": 59.566,
+   "end": 59.678
+  },
+  {
+   "word": "ficar",
+   "start": 59.678,
+   "end": 60.013
+  },
+  {
+   "word": "confuso.",
+   "start": 60.013,
+   "end": 60.516
+  },
+  {
+   "word": "E",
+   "start": 60.966,
+   "end": 61.079
+  },
+  {
+   "word": "se",
+   "start": 61.079,
+   "end": 61.249
+  },
+  {
+   "word": "você",
+   "start": 61.249,
+   "end": 61.532
+  },
+  {
+   "word": "entrar",
+   "start": 61.532,
+   "end": 61.929
+  },
+  {
+   "word": "em",
+   "start": 61.929,
+   "end": 62.099
+  },
+  {
+   "word": "pânico",
+   "start": 62.099,
+   "end": 62.495
+  },
+  {
+   "word": "e",
+   "start": 62.495,
+   "end": 62.608
+  },
+  {
+   "word": "respirar",
+   "start": 62.608,
+   "end": 63.118
+  },
+  {
+   "word": "rápido,",
+   "start": 63.118,
+   "end": 63.571
+  },
+  {
+   "word": "isso",
+   "start": 63.571,
+   "end": 63.854
+  },
+  {
+   "word": "chega",
+   "start": 63.854,
+   "end": 64.194
+  },
+  {
+   "word": "ainda",
+   "start": 64.194,
+   "end": 64.534
+  },
+  {
+   "word": "mais",
+   "start": 64.534,
+   "end": 64.817
+  },
+  {
+   "word": "cedo.",
+   "start": 64.817,
+   "end": 65.157
+  },
+  {
+   "word": "Só",
+   "start": 65.607,
+   "end": 65.784
+  },
+  {
+   "word": "que",
+   "start": 65.784,
+   "end": 66.02
+  },
+  {
+   "word": "a",
+   "start": 66.02,
+   "end": 66.138
+  },
+  {
+   "word": "sua",
+   "start": 66.138,
+   "end": 66.374
+  },
+  {
+   "word": "família",
+   "start": 66.374,
+   "end": 66.846
+  },
+  {
+   "word": "tinha",
+   "start": 66.846,
+   "end": 67.199
+  },
+  {
+   "word": "medo",
+   "start": 67.199,
+   "end": 67.494
+  },
+  {
+   "word": "exatamente",
+   "start": 67.494,
+   "end": 68.143
+  },
+  {
+   "word": "disso.",
+   "start": 68.143,
+   "end": 68.556
+  },
+  {
+   "word": "Eles",
+   "start": 69.006,
+   "end": 69.292
+  },
+  {
+   "word": "pagaram",
+   "start": 69.292,
+   "end": 69.751
+  },
+  {
+   "word": "por",
+   "start": 69.751,
+   "end": 69.98
+  },
+  {
+   "word": "um",
+   "start": 69.98,
+   "end": 70.152
+  },
+  {
+   "word": "caixão",
+   "start": 70.152,
+   "end": 70.553
+  },
+  {
+   "word": "de",
+   "start": 70.553,
+   "end": 70.725
+  },
+  {
+   "word": "segurança.",
+   "start": 70.725,
+   "end": 71.355
+  },
+  {
+   "word": "Tem",
+   "start": 71.805,
+   "end": 72.038
+  },
+  {
+   "word": "cordinhas",
+   "start": 72.038,
+   "end": 72.62
+  },
+  {
+   "word": "amarradas",
+   "start": 72.62,
+   "end": 73.202
+  },
+  {
+   "word": "nas",
+   "start": 73.202,
+   "end": 73.435
+  },
+  {
+   "word": "suas",
+   "start": 73.435,
+   "end": 73.726
+  },
+  {
+   "word": "mãos,",
+   "start": 73.726,
+   "end": 74.075
+  },
+  {
+   "word": "nos",
+   "start": 74.075,
+   "end": 74.308
+  },
+  {
+   "word": "seus",
+   "start": 74.308,
+   "end": 74.599
+  },
+  {
+   "word": "pés",
+   "start": 74.599,
+   "end": 74.832
+  },
+  {
+   "word": "e",
+   "start": 74.832,
+   "end": 74.948
+  },
+  {
+   "word": "na",
+   "start": 74.948,
+   "end": 75.123
+  },
+  {
+   "word": "sua",
+   "start": 75.123,
+   "end": 75.355
+  },
+  {
+   "word": "cabeça.",
+   "start": 75.355,
+   "end": 75.821
+  },
+  {
+   "word": "Elas",
+   "start": 76.271,
+   "end": 76.552
+  },
+  {
+   "word": "sobem",
+   "start": 76.552,
+   "end": 76.89
+  },
+  {
+   "word": "por",
+   "start": 76.89,
+   "end": 77.115
+  },
+  {
+   "word": "um",
+   "start": 77.115,
+   "end": 77.284
+  },
+  {
+   "word": "tubo…",
+   "start": 77.284,
+   "end": 77.622
+  },
+  {
+   "word": "até",
+   "start": 77.622,
+   "end": 77.847
+  },
+  {
+   "word": "um",
+   "start": 77.847,
+   "end": 78.015
+  },
+  {
+   "word": "sino",
+   "start": 78.015,
+   "end": 78.297
+  },
+  {
+   "word": "em",
+   "start": 78.297,
+   "end": 78.466
+  },
+  {
+   "word": "cima",
+   "start": 78.466,
+   "end": 78.747
+  },
+  {
+   "word": "do",
+   "start": 78.747,
+   "end": 78.916
+  },
+  {
+   "word": "seu",
+   "start": 78.916,
+   "end": 79.141
+  },
+  {
+   "word": "túmulo.",
+   "start": 79.141,
+   "end": 79.591
+  },
+  {
+   "word": "Você",
+   "start": 80.041,
+   "end": 80.345
+  },
+  {
+   "word": "puxa.",
+   "start": 80.345,
+   "end": 80.71
+  },
+  {
+   "word": "Lá",
+   "start": 80.71,
+   "end": 80.892
+  },
+  {
+   "word": "em",
+   "start": 80.892,
+   "end": 81.075
+  },
+  {
+   "word": "cima,",
+   "start": 81.075,
+   "end": 81.44
+  },
+  {
+   "word": "o",
+   "start": 81.44,
+   "end": 81.561
+  },
+  {
+   "word": "sino",
+   "start": 81.561,
+   "end": 81.865
+  },
+  {
+   "word": "toca.",
+   "start": 81.865,
+   "end": 82.23
+  },
+  {
+   "word": "O",
+   "start": 82.68,
+   "end": 82.811
+  },
+  {
+   "word": "vigia",
+   "start": 82.811,
+   "end": 83.206
+  },
+  {
+   "word": "noturno",
+   "start": 83.206,
+   "end": 83.731
+  },
+  {
+   "word": "do",
+   "start": 83.731,
+   "end": 83.929
+  },
+  {
+   "word": "cemitério",
+   "start": 83.929,
+   "end": 84.586
+  },
+  {
+   "word": "ouve.",
+   "start": 84.586,
+   "end": 84.98
+  },
+  {
+   "word": "Ele",
+   "start": 85.43,
+   "end": 85.652
+  },
+  {
+   "word": "enfia",
+   "start": 85.652,
+   "end": 85.984
+  },
+  {
+   "word": "um",
+   "start": 85.984,
+   "end": 86.15
+  },
+  {
+   "word": "segundo",
+   "start": 86.15,
+   "end": 86.593
+  },
+  {
+   "word": "tubo",
+   "start": 86.593,
+   "end": 86.87
+  },
+  {
+   "word": "no",
+   "start": 86.87,
+   "end": 87.037
+  },
+  {
+   "word": "caixão",
+   "start": 87.037,
+   "end": 87.424
+  },
+  {
+   "word": "e",
+   "start": 87.424,
+   "end": 87.535
+  },
+  {
+   "word": "bombeia",
+   "start": 87.535,
+   "end": 87.978
+  },
+  {
+   "word": "ar",
+   "start": 87.978,
+   "end": 88.145
+  },
+  {
+   "word": "pra",
+   "start": 88.145,
+   "end": 88.366
+  },
+  {
+   "word": "dentro",
+   "start": 88.366,
+   "end": 88.754
+  },
+  {
+   "word": "com",
+   "start": 88.754,
+   "end": 88.976
+  },
+  {
+   "word": "um",
+   "start": 88.976,
+   "end": 89.142
+  },
+  {
+   "word": "fole,",
+   "start": 89.142,
+   "end": 89.474
+  },
+  {
+   "word": "enquanto",
+   "start": 89.474,
+   "end": 89.973
+  },
+  {
+   "word": "cavam",
+   "start": 89.973,
+   "end": 90.305
+  },
+  {
+   "word": "pra",
+   "start": 90.305,
+   "end": 90.527
+  },
+  {
+   "word": "te",
+   "start": 90.527,
+   "end": 90.693
+  },
+  {
+   "word": "tirar",
+   "start": 90.693,
+   "end": 91.026
+  },
+  {
+   "word": "dali.",
+   "start": 91.026,
+   "end": 91.358
+  },
+  {
+   "word": "Parece",
+   "start": 91.808,
+   "end": 92.278
+  },
+  {
+   "word": "invenção,",
+   "start": 92.278,
+   "end": 92.948
+  },
+  {
+   "word": "mas",
+   "start": 92.948,
+   "end": 93.217
+  },
+  {
+   "word": "era",
+   "start": 93.217,
+   "end": 93.485
+  },
+  {
+   "word": "real.",
+   "start": 93.485,
+   "end": 93.887
+  },
+  {
+   "word": "Só",
+   "start": 93.887,
+   "end": 94.089
+  },
+  {
+   "word": "na",
+   "start": 94.089,
+   "end": 94.29
+  },
+  {
+   "word": "Alemanha,",
+   "start": 94.29,
+   "end": 94.961
+  },
+  {
+   "word": "mais",
+   "start": 94.961,
+   "end": 95.296
+  },
+  {
+   "word": "de",
+   "start": 95.296,
+   "end": 95.497
+  },
+  {
+   "word": "30",
+   "start": 95.497,
+   "end": 95.698
+  },
+  {
+   "word": "modelos",
+   "start": 95.698,
+   "end": 96.235
+  },
+  {
+   "word": "de",
+   "start": 96.235,
+   "end": 96.436
+  },
+  {
+   "word": "caixão",
+   "start": 96.436,
+   "end": 96.906
+  },
+  {
+   "word": "de",
+   "start": 96.906,
+   "end": 97.107
+  },
+  {
+   "word": "segurança",
+   "start": 97.107,
+   "end": 97.778
+  },
+  {
+   "word": "foram",
+   "start": 97.778,
+   "end": 98.18
+  },
+  {
+   "word": "patenteados",
+   "start": 98.18,
+   "end": 98.985
+  },
+  {
+   "word": "no",
+   "start": 98.985,
+   "end": 99.187
+  },
+  {
+   "word": "fim",
+   "start": 99.187,
+   "end": 99.455
+  },
+  {
+   "word": "dos",
+   "start": 99.455,
+   "end": 99.723
+  },
+  {
+   "word": "anos",
+   "start": 99.723,
+   "end": 100.059
+  },
+  {
+   "word": "1800.",
+   "start": 100.059,
+   "end": 100.461
+  },
+  {
+   "word": "Um",
+   "start": 100.911,
+   "end": 101.085
+  },
+  {
+   "word": "médico",
+   "start": 101.085,
+   "end": 101.49
+  },
+  {
+   "word": "alemão",
+   "start": 101.49,
+   "end": 101.895
+  },
+  {
+   "word": "se",
+   "start": 101.895,
+   "end": 102.069
+  },
+  {
+   "word": "enterrou",
+   "start": 102.069,
+   "end": 102.59
+  },
+  {
+   "word": "vivo",
+   "start": 102.59,
+   "end": 102.88
+  },
+  {
+   "word": "pra",
+   "start": 102.88,
+   "end": 103.111
+  },
+  {
+   "word": "testar",
+   "start": 103.111,
+   "end": 103.517
+  },
+  {
+   "word": "o",
+   "start": 103.517,
+   "end": 103.632
+  },
+  {
+   "word": "dele.",
+   "start": 103.632,
+   "end": 103.98
+  },
+  {
+   "word": "Ficou",
+   "start": 103.98,
+   "end": 104.327
+  },
+  {
+   "word": "horas",
+   "start": 104.327,
+   "end": 104.675
+  },
+  {
+   "word": "lá",
+   "start": 104.675,
+   "end": 104.848
+  },
+  {
+   "word": "embaixo…",
+   "start": 104.848,
+   "end": 105.369
+  },
+  {
+   "word": "e",
+   "start": 105.369,
+   "end": 105.485
+  },
+  {
+   "word": "comeu",
+   "start": 105.485,
+   "end": 105.833
+  },
+  {
+   "word": "sopa,",
+   "start": 105.833,
+   "end": 106.18
+  },
+  {
+   "word": "cerveja",
+   "start": 106.18,
+   "end": 106.643
+  },
+  {
+   "word": "e",
+   "start": 106.643,
+   "end": 106.759
+  },
+  {
+   "word": "linguiça",
+   "start": 106.759,
+   "end": 107.28
+  },
+  {
+   "word": "por",
+   "start": 107.28,
+   "end": 107.512
+  },
+  {
+   "word": "um",
+   "start": 107.512,
+   "end": 107.686
+  },
+  {
+   "word": "tubo.",
+   "start": 107.686,
+   "end": 108.033
+  },
+  {
+   "word": "Mas",
+   "start": 108.483,
+   "end": 108.753
+  },
+  {
+   "word": "tem",
+   "start": 108.753,
+   "end": 109.022
+  },
+  {
+   "word": "um",
+   "start": 109.022,
+   "end": 109.224
+  },
+  {
+   "word": "problema.",
+   "start": 109.224,
+   "end": 109.898
+  },
+  {
+   "word": "Quando",
+   "start": 110.348,
+   "end": 110.736
+  },
+  {
+   "word": "um",
+   "start": 110.736,
+   "end": 110.902
+  },
+  {
+   "word": "corpo",
+   "start": 110.902,
+   "end": 111.234
+  },
+  {
+   "word": "de",
+   "start": 111.234,
+   "end": 111.4
+  },
+  {
+   "word": "verdade",
+   "start": 111.4,
+   "end": 111.843
+  },
+  {
+   "word": "começa",
+   "start": 111.843,
+   "end": 112.23
+  },
+  {
+   "word": "a",
+   "start": 112.23,
+   "end": 112.341
+  },
+  {
+   "word": "se",
+   "start": 112.341,
+   "end": 112.507
+  },
+  {
+   "word": "decompor,",
+   "start": 112.507,
+   "end": 113.061
+  },
+  {
+   "word": "ele",
+   "start": 113.061,
+   "end": 113.282
+  },
+  {
+   "word": "incha",
+   "start": 113.282,
+   "end": 113.614
+  },
+  {
+   "word": "e",
+   "start": 113.614,
+   "end": 113.725
+  },
+  {
+   "word": "se",
+   "start": 113.725,
+   "end": 113.891
+  },
+  {
+   "word": "mexe",
+   "start": 113.891,
+   "end": 114.168
+  },
+  {
+   "word": "sozinho.",
+   "start": 114.168,
+   "end": 114.666
+  },
+  {
+   "word": "E",
+   "start": 115.116,
+   "end": 115.242
+  },
+  {
+   "word": "isso",
+   "start": 115.242,
+   "end": 115.558
+  },
+  {
+   "word": "puxava",
+   "start": 115.558,
+   "end": 116.001
+  },
+  {
+   "word": "as",
+   "start": 116.001,
+   "end": 116.19
+  },
+  {
+   "word": "cordas.",
+   "start": 116.19,
+   "end": 116.696
+  },
+  {
+   "word": "Imagina",
+   "start": 117.146,
+   "end": 117.588
+  },
+  {
+   "word": "o",
+   "start": 117.588,
+   "end": 117.699
+  },
+  {
+   "word": "vigia",
+   "start": 117.699,
+   "end": 118.03
+  },
+  {
+   "word": "ouvindo",
+   "start": 118.03,
+   "end": 118.472
+  },
+  {
+   "word": "um",
+   "start": 118.472,
+   "end": 118.638
+  },
+  {
+   "word": "sino",
+   "start": 118.638,
+   "end": 118.914
+  },
+  {
+   "word": "de",
+   "start": 118.914,
+   "end": 119.08
+  },
+  {
+   "word": "madrugada…",
+   "start": 119.08,
+   "end": 119.688
+  },
+  {
+   "word": "sem",
+   "start": 119.688,
+   "end": 119.909
+  },
+  {
+   "word": "saber",
+   "start": 119.909,
+   "end": 120.24
+  },
+  {
+   "word": "se",
+   "start": 120.24,
+   "end": 120.406
+  },
+  {
+   "word": "é",
+   "start": 120.406,
+   "end": 120.516
+  },
+  {
+   "word": "você",
+   "start": 120.516,
+   "end": 120.793
+  },
+  {
+   "word": "ou",
+   "start": 120.793,
+   "end": 120.958
+  },
+  {
+   "word": "só",
+   "start": 120.958,
+   "end": 121.124
+  },
+  {
+   "word": "um",
+   "start": 121.124,
+   "end": 121.29
+  },
+  {
+   "word": "morto",
+   "start": 121.29,
+   "end": 121.621
+  },
+  {
+   "word": "inchando.",
+   "start": 121.621,
+   "end": 122.174
+  },
+  {
+   "word": "Na",
+   "start": 122.624,
+   "end": 122.8
+  },
+  {
+   "word": "Alemanha",
+   "start": 122.8,
+   "end": 123.328
+  },
+  {
+   "word": "criaram",
+   "start": 123.328,
+   "end": 123.798
+  },
+  {
+   "word": "até",
+   "start": 123.798,
+   "end": 124.032
+  },
+  {
+   "word": "\"casas",
+   "start": 124.032,
+   "end": 124.443
+  },
+  {
+   "word": "de",
+   "start": 124.443,
+   "end": 124.619
+  },
+  {
+   "word": "espera\"",
+   "start": 124.619,
+   "end": 125.088
+  },
+  {
+   "word": "para",
+   "start": 125.088,
+   "end": 125.382
+  },
+  {
+   "word": "os",
+   "start": 125.382,
+   "end": 125.558
+  },
+  {
+   "word": "mortos.",
+   "start": 125.558,
+   "end": 126.027
+  },
+  {
+   "word": "A",
+   "start": 126.027,
+   "end": 126.145
+  },
+  {
+   "word": "maior,",
+   "start": 126.145,
+   "end": 126.555
+  },
+  {
+   "word": "em",
+   "start": 126.555,
+   "end": 126.731
+  },
+  {
+   "word": "Munique,",
+   "start": 126.731,
+   "end": 127.26
+  },
+  {
+   "word": "tinha",
+   "start": 127.26,
+   "end": 127.612
+  },
+  {
+   "word": "lugar",
+   "start": 127.612,
+   "end": 127.964
+  },
+  {
+   "word": "para",
+   "start": 127.964,
+   "end": 128.257
+  },
+  {
+   "word": "120",
+   "start": 128.257,
+   "end": 128.492
+  },
+  {
+   "word": "corpos,",
+   "start": 128.492,
+   "end": 128.961
+  },
+  {
+   "word": "com",
+   "start": 128.961,
+   "end": 129.196
+  },
+  {
+   "word": "os",
+   "start": 129.196,
+   "end": 129.372
+  },
+  {
+   "word": "dedos",
+   "start": 129.372,
+   "end": 129.724
+  },
+  {
+   "word": "amarrados",
+   "start": 129.724,
+   "end": 130.311
+  },
+  {
+   "word": "a",
+   "start": 130.311,
+   "end": 130.428
+  },
+  {
+   "word": "um",
+   "start": 130.428,
+   "end": 130.604
+  },
+  {
+   "word": "sino",
+   "start": 130.604,
+   "end": 130.898
+  },
+  {
+   "word": "bem",
+   "start": 130.898,
+   "end": 131.132
+  },
+  {
+   "word": "forte.",
+   "start": 131.132,
+   "end": 131.543
+  },
+  {
+   "word": "Os",
+   "start": 131.993,
+   "end": 132.17
+  },
+  {
+   "word": "corpos",
+   "start": 132.17,
+   "end": 132.584
+  },
+  {
+   "word": "ficavam",
+   "start": 132.584,
+   "end": 133.056
+  },
+  {
+   "word": "ali",
+   "start": 133.056,
+   "end": 133.293
+  },
+  {
+   "word": "até",
+   "start": 133.293,
+   "end": 133.529
+  },
+  {
+   "word": "começarem",
+   "start": 133.529,
+   "end": 134.12
+  },
+  {
+   "word": "a",
+   "start": 134.12,
+   "end": 134.238
+  },
+  {
+   "word": "apodrecer,",
+   "start": 134.238,
+   "end": 134.888
+  },
+  {
+   "word": "porque",
+   "start": 134.888,
+   "end": 135.301
+  },
+  {
+   "word": "para",
+   "start": 135.301,
+   "end": 135.596
+  },
+  {
+   "word": "os",
+   "start": 135.596,
+   "end": 135.774
+  },
+  {
+   "word": "médicos",
+   "start": 135.774,
+   "end": 136.246
+  },
+  {
+   "word": "da",
+   "start": 136.246,
+   "end": 136.423
+  },
+  {
+   "word": "época",
+   "start": 136.423,
+   "end": 136.778
+  },
+  {
+   "word": "esse",
+   "start": 136.778,
+   "end": 137.073
+  },
+  {
+   "word": "era",
+   "start": 137.073,
+   "end": 137.31
+  },
+  {
+   "word": "o",
+   "start": 137.31,
+   "end": 137.428
+  },
+  {
+   "word": "único",
+   "start": 137.428,
+   "end": 137.782
+  },
+  {
+   "word": "sinal",
+   "start": 137.782,
+   "end": 138.137
+  },
+  {
+   "word": "de",
+   "start": 138.137,
+   "end": 138.314
+  },
+  {
+   "word": "morte",
+   "start": 138.314,
+   "end": 138.668
+  },
+  {
+   "word": "garantido.",
+   "start": 138.668,
+   "end": 139.318
+  },
+  {
+   "word": "E",
+   "start": 139.768,
+   "end": 139.886
+  },
+  {
+   "word": "sabe",
+   "start": 139.886,
+   "end": 140.181
+  },
+  {
+   "word": "quantas",
+   "start": 140.181,
+   "end": 140.652
+  },
+  {
+   "word": "pessoas",
+   "start": 140.652,
+   "end": 141.123
+  },
+  {
+   "word": "essas",
+   "start": 141.123,
+   "end": 141.477
+  },
+  {
+   "word": "casas",
+   "start": 141.477,
+   "end": 141.831
+  },
+  {
+   "word": "salvaram?",
+   "start": 141.831,
+   "end": 142.42
+  },
+  {
+   "word": "Um",
+   "start": 142.87,
+   "end": 143.04
+  },
+  {
+   "word": "historiador",
+   "start": 143.04,
+   "end": 143.72
+  },
+  {
+   "word": "foi",
+   "start": 143.72,
+   "end": 143.946
+  },
+  {
+   "word": "atrás",
+   "start": 143.946,
+   "end": 144.286
+  },
+  {
+   "word": "de",
+   "start": 144.286,
+   "end": 144.456
+  },
+  {
+   "word": "cada",
+   "start": 144.456,
+   "end": 144.739
+  },
+  {
+   "word": "história",
+   "start": 144.739,
+   "end": 145.249
+  },
+  {
+   "word": "de",
+   "start": 145.249,
+   "end": 145.419
+  },
+  {
+   "word": "sino",
+   "start": 145.419,
+   "end": 145.703
+  },
+  {
+   "word": "tocando",
+   "start": 145.703,
+   "end": 146.156
+  },
+  {
+   "word": "e",
+   "start": 146.156,
+   "end": 146.269
+  },
+  {
+   "word": "de",
+   "start": 146.269,
+   "end": 146.439
+  },
+  {
+   "word": "morto",
+   "start": 146.439,
+   "end": 146.779
+  },
+  {
+   "word": "acordando.",
+   "start": 146.779,
+   "end": 147.402
+  },
+  {
+   "word": "Resultado:",
+   "start": 147.852,
+   "end": 148.621
+  },
+  {
+   "word": "nenhuma.",
+   "start": 148.621,
+   "end": 149.251
+  },
+  {
+   "word": "E",
+   "start": 149.701,
+   "end": 149.822
+  },
+  {
+   "word": "até",
+   "start": 149.822,
+   "end": 150.063
+  },
+  {
+   "word": "hoje",
+   "start": 150.063,
+   "end": 150.364
+  },
+  {
+   "word": "não",
+   "start": 150.364,
+   "end": 150.605
+  },
+  {
+   "word": "existe",
+   "start": 150.605,
+   "end": 151.027
+  },
+  {
+   "word": "nenhum",
+   "start": 151.027,
+   "end": 151.449
+  },
+  {
+   "word": "caso",
+   "start": 151.449,
+   "end": 151.751
+  },
+  {
+   "word": "registrado",
+   "start": 151.751,
+   "end": 152.414
+  },
+  {
+   "word": "de",
+   "start": 152.414,
+   "end": 152.595
+  },
+  {
+   "word": "alguém",
+   "start": 152.595,
+   "end": 153.017
+  },
+  {
+   "word": "salvo",
+   "start": 153.017,
+   "end": 153.379
+  },
+  {
+   "word": "por",
+   "start": 153.379,
+   "end": 153.62
+  },
+  {
+   "word": "um",
+   "start": 153.62,
+   "end": 153.801
+  },
+  {
+   "word": "caixão",
+   "start": 153.801,
+   "end": 154.223
+  },
+  {
+   "word": "de",
+   "start": 154.223,
+   "end": 154.404
+  },
+  {
+   "word": "segurança.",
+   "start": 154.404,
+   "end": 155.067
+  },
+  {
+   "word": "O",
+   "start": 155.517,
+   "end": 155.629
+  },
+  {
+   "word": "lado",
+   "start": 155.629,
+   "end": 155.911
+  },
+  {
+   "word": "bom",
+   "start": 155.911,
+   "end": 156.136
+  },
+  {
+   "word": "é",
+   "start": 156.136,
+   "end": 156.248
+  },
+  {
+   "word": "que",
+   "start": 156.248,
+   "end": 156.473
+  },
+  {
+   "word": "os",
+   "start": 156.473,
+   "end": 156.642
+  },
+  {
+   "word": "médicos",
+   "start": 156.642,
+   "end": 157.092
+  },
+  {
+   "word": "daquela",
+   "start": 157.092,
+   "end": 157.542
+  },
+  {
+   "word": "época",
+   "start": 157.542,
+   "end": 157.879
+  },
+  {
+   "word": "erravam",
+   "start": 157.879,
+   "end": 158.329
+  },
+  {
+   "word": "bem",
+   "start": 158.329,
+   "end": 158.554
+  },
+  {
+   "word": "menos",
+   "start": 158.554,
+   "end": 158.892
+  },
+  {
+   "word": "do",
+   "start": 158.892,
+   "end": 159.06
+  },
+  {
+   "word": "que",
+   "start": 159.06,
+   "end": 159.285
+  },
+  {
+   "word": "o",
+   "start": 159.285,
+   "end": 159.398
+  },
+  {
+   "word": "povo",
+   "start": 159.398,
+   "end": 159.679
+  },
+  {
+   "word": "achava.",
+   "start": 159.679,
+   "end": 160.129
+  },
+  {
+   "word": "E",
+   "start": 160.579,
+   "end": 160.694
+  },
+  {
+   "word": "\"salvo",
+   "start": 160.694,
+   "end": 161.097
+  },
+  {
+   "word": "pelo",
+   "start": 161.097,
+   "end": 161.384
+  },
+  {
+   "word": "gongo\"?",
+   "start": 161.384,
+   "end": 161.844
+  },
+  {
+   "word": "Não",
+   "start": 161.844,
+   "end": 162.074
+  },
+  {
+   "word": "vem",
+   "start": 162.074,
+   "end": 162.305
+  },
+  {
+   "word": "dos",
+   "start": 162.305,
+   "end": 162.535
+  },
+  {
+   "word": "caixões.",
+   "start": 162.535,
+   "end": 163.052
+  },
+  {
+   "word": "Vem",
+   "start": 163.052,
+   "end": 163.282
+  },
+  {
+   "word": "do",
+   "start": 163.282,
+   "end": 163.455
+  },
+  {
+   "word": "boxe.",
+   "start": 163.455,
+   "end": 163.8
+  },
+  {
+   "word": "Mesmo",
+   "start": 164.25,
+   "end": 164.606
+  },
+  {
+   "word": "assim,",
+   "start": 164.606,
+   "end": 165.022
+  },
+  {
+   "word": "até",
+   "start": 165.022,
+   "end": 165.259
+  },
+  {
+   "word": "George",
+   "start": 165.259,
+   "end": 165.675
+  },
+  {
+   "word": "Washington,",
+   "start": 165.675,
+   "end": 166.387
+  },
+  {
+   "word": "no",
+   "start": 166.387,
+   "end": 166.565
+  },
+  {
+   "word": "leito",
+   "start": 166.565,
+   "end": 166.921
+  },
+  {
+   "word": "de",
+   "start": 166.921,
+   "end": 167.099
+  },
+  {
+   "word": "morte,",
+   "start": 167.099,
+   "end": 167.515
+  },
+  {
+   "word": "pediu",
+   "start": 167.515,
+   "end": 167.871
+  },
+  {
+   "word": "para",
+   "start": 167.871,
+   "end": 168.168
+  },
+  {
+   "word": "só",
+   "start": 168.168,
+   "end": 168.346
+  },
+  {
+   "word": "ser",
+   "start": 168.346,
+   "end": 168.584
+  },
+  {
+   "word": "colocado",
+   "start": 168.584,
+   "end": 169.118
+  },
+  {
+   "word": "no",
+   "start": 169.118,
+   "end": 169.296
+  },
+  {
+   "word": "túmulo",
+   "start": 169.296,
+   "end": 169.711
+  },
+  {
+   "word": "três",
+   "start": 169.711,
+   "end": 170.008
+  },
+  {
+   "word": "dias",
+   "start": 170.008,
+   "end": 170.305
+  },
+  {
+   "word": "depois.",
+   "start": 170.305,
+   "end": 170.78
+  },
+  {
+   "word": "Então",
+   "start": 171.23,
+   "end": 171.575
+  },
+  {
+   "word": "me",
+   "start": 171.575,
+   "end": 171.748
+  },
+  {
+   "word": "diz:",
+   "start": 171.748,
+   "end": 172.036
+  },
+  {
+   "word": "você",
+   "start": 172.036,
+   "end": 172.324
+  },
+  {
+   "word": "ia",
+   "start": 172.324,
+   "end": 172.497
+  },
+  {
+   "word": "querer",
+   "start": 172.497,
+   "end": 172.899
+  },
+  {
+   "word": "um",
+   "start": 172.899,
+   "end": 173.072
+  },
+  {
+   "word": "sino",
+   "start": 173.072,
+   "end": 173.36
+  },
+  {
+   "word": "no",
+   "start": 173.36,
+   "end": 173.533
+  },
+  {
+   "word": "seu",
+   "start": 173.533,
+   "end": 173.763
+  },
+  {
+   "word": "caixão…",
+   "start": 173.763,
+   "end": 174.224
+  },
+  {
+   "word": "ou",
+   "start": 174.224,
+   "end": 174.396
+  },
+  {
+   "word": "pediria",
+   "start": 174.396,
+   "end": 174.857
+  },
+  {
+   "word": "pra",
+   "start": 174.857,
+   "end": 175.087
+  },
+  {
+   "word": "esperar",
+   "start": 175.087,
+   "end": 175.548
+  },
+  {
+   "word": "uns",
+   "start": 175.548,
+   "end": 175.778
+  },
+  {
+   "word": "dias",
+   "start": 175.778,
+   "end": 176.066
+  },
+  {
+   "word": "antes",
+   "start": 176.066,
+   "end": 176.411
+  },
+  {
+   "word": "do",
+   "start": 176.411,
+   "end": 176.584
+  },
+  {
+   "word": "enterro?",
+   "start": 176.584,
+   "end": 177.102
+  },
+  {
+   "word": "Comenta",
+   "start": 178.002,
+   "end": 178.675
+  },
+  {
+   "word": "aí.",
+   "start": 178.675,
+   "end": 179.012
+  }
+ ]
+}

@@ -1,0 +1,1063 @@
+{
+ "title": "O que aconteceria se você fosse enterrado vivo no século 19?",
+ "duration": 180.61,
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0,
+   "end": 5.021,
+   "line": "O que aconteceria se você fosse enterrado vivo no século 19?",
+   "scene": "Abertura: cemitério à noite; título",
+   "set": "cemetery",
+   "in": {
+    "type": "fade",
+    "dur": 0.3
+   },
+   "captions": false,
+   "sfx": [
+    {
+     "name": "riser",
+     "gain": -14,
+     "at": 0.1
+    },
+    {
+     "name": "ding",
+     "gain": -16,
+     "pitch": 0.5,
+     "at": 2.8
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s02",
+   "start": 5.021,
+   "end": 8.187,
+   "line": "Europa, 1830. Uma epidemia de cólera está",
+   "scene": "EUROPA / 1830: rua antiga ao entardecer",
+   "set": "street",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -12,
+     "at": 0.0
+    },
+    {
+     "name": "pop",
+     "gain": -14,
+     "at": 1.547
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s03",
+   "start": 8.187,
+   "end": 10.705,
+   "line": "matando gente em todo lugar.",
+   "scene": "Mapa da Europa com a cólera se espalhando",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 0.05
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 0.27
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 0.49
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 0.71
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 0.93
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 1.15
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 1.37
+    },
+    {
+     "name": "blip",
+     "gain": -16,
+     "at": 1.59
+    }
+   ]
+  },
+  {
+   "id": "s04",
+   "start": 10.705,
+   "end": 13.388,
+   "line": "Você pega uma febre forte… e apaga.",
+   "scene": "Close: você com febre; olhos se fecham",
+   "set": "face",
+   "sfx": [
+    {
+     "name": "heartbeat",
+     "gain": -10,
+     "bpm": 110,
+     "dur": 1.6,
+     "at": 0.2
+    },
+    {
+     "name": "slowmo",
+     "gain": -12,
+     "at": 1.819
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s05",
+   "start": 13.388,
+   "end": 16.649,
+   "line": "Seu coração bate tão fraco que ninguém sente.",
+   "scene": "Coração em traço fino, pulso quase reto",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "heartbeat",
+     "gain": -9,
+     "bpm": 40,
+     "dur": 3.0,
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "start": 16.649,
+   "end": 19.675,
+   "line": "O médico coloca um espelho na frente do seu nariz.",
+   "scene": "Médico se inclina com um espelho",
+   "set": "bedroom",
+   "sfx": [],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s07",
+   "start": 19.675,
+   "end": 21.287,
+   "line": "O espelho não embaça.",
+   "scene": "Close do espelho limpo: não embaça",
+   "set": "mirror",
+   "sfx": [
+    {
+     "name": "shimmer",
+     "gain": -16,
+     "at": 0.235
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s08",
+   "start": 21.287,
+   "end": 23.357,
+   "line": "Você é declarado morto.",
+   "scene": "Declarado morto: médico escreve, carimbo ÓBITO",
+   "set": "bedroom",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -8,
+     "at": 1.367
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s09",
+   "start": 23.357,
+   "end": 27.31,
+   "line": "Com medo do contágio, as vítimas da cólera eram enterradas rápido,",
+   "scene": "Carroça com caixões na rua, coveiros com lenço no rosto",
+   "set": "street",
+   "sfx": [
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 0.0
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 0.45
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 0.9
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 1.35
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 1.8
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 2.25
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 2.7
+    },
+    {
+     "name": "footstep",
+     "gain": -20,
+     "at": 3.15
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s10",
+   "start": 27.31,
+   "end": 32.605,
+   "line": "às vezes sem ninguém conferir direito quem estava morto e quem ainda estava morrendo.",
+   "scene": "Coveiros baixam o caixão às pressas",
+   "set": "cemetery",
+   "sfx": [
+    {
+     "name": "impact",
+     "gain": -12,
+     "pitch": 0.6,
+     "at": 4.49
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s11",
+   "start": 32.605,
+   "end": 34.832,
+   "line": "Horas depois, você acorda.",
+   "scene": "Escuro total; seus olhos se abrem",
+   "set": "coffin",
+   "sfx": [
+    {
+     "name": "freeze",
+     "gain": -16,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -30
+   }
+  },
+  {
+   "id": "s12",
+   "start": 34.832,
+   "end": 38.421,
+   "line": "Está tudo escuro. Você levanta a mão… e bate na madeira.",
+   "scene": "Sua mão sobe e bate na tampa de madeira",
+   "set": "coffin",
+   "sfx": [
+    {
+     "name": "kick",
+     "gain": -4,
+     "pitch": 0.6,
+     "at": 2.423
+    },
+    {
+     "name": "kick",
+     "gain": -7,
+     "pitch": 0.6,
+     "at": 2.773
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -30
+   }
+  },
+  {
+   "id": "s13",
+   "start": 38.421,
+   "end": 41.585,
+   "line": "Você está dentro de um caixão, debaixo da terra.",
+   "scene": "Corte do subsolo: caixão debaixo da terra",
+   "set": "underground",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -10,
+     "pitch": 0.6,
+     "at": 0.2
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s14",
+   "start": 41.585,
+   "end": 45.298,
+   "line": "Um caixão comum tem uns 880 litros de espaço.",
+   "scene": "Caixão em blueprint: 880 litros",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -10,
+     "at": 2.105
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "start": 45.298,
+   "end": 49.968,
+   "line": "Tirando o seu corpo, sobram cerca de 820 litros de ar.",
+   "scene": "Menos o corpo: 820 litros de ar",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "counter",
+     "gain": -14,
+     "at": 2.626
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 49.968,
+   "end": 53.627,
+   "line": "Parece muito. Mas o que te mata não é só o oxigênio acabando.",
+   "scene": "Medidor de oxigênio caindo devagar",
+   "set": "blueprint",
+   "sfx": []
+  },
+  {
+   "id": "s17",
+   "start": 53.627,
+   "end": 56.273,
+   "line": "É o gás carbônico que você mesmo solta.",
+   "scene": "Gás carbônico (CO2) se acumulando",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "buzz",
+     "gain": -18,
+     "at": 0.35
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 56.273,
+   "end": 60.746,
+   "line": "Em umas duas horas, o ar fica tão ruim que você começa a ficar confuso.",
+   "scene": "Relógio de bolso: 2 horas; você confuso",
+   "set": "face",
+   "sfx": [
+    {
+     "name": "clock",
+     "gain": -14,
+     "dur": 3.0,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s19",
+   "start": 60.746,
+   "end": 65.387,
+   "line": "E se você entrar em pânico e respirar rápido, isso chega ainda mais cedo.",
+   "scene": "Pânico: respiração rápida, CO2 subindo mais rápido",
+   "set": "coffin",
+   "sfx": [
+    {
+     "name": "heartbeat",
+     "gain": -8,
+     "bpm": 150,
+     "dur": 4.0,
+     "at": 0.3
+    },
+    {
+     "name": "riser",
+     "gain": -16,
+     "at": 1.5
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -30
+   }
+  },
+  {
+   "id": "s20",
+   "start": 65.387,
+   "end": 68.786,
+   "line": "Só que a sua família tinha medo exatamente disso.",
+   "scene": "Flashback quente: a família com medo",
+   "set": "bedroom",
+   "sfx": [],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s21",
+   "start": 68.786,
+   "end": 71.585,
+   "line": "Eles pagaram por um caixão de segurança.",
+   "scene": "CAIXÃO DE SEGURANÇA: o caixão com tubo e sino",
+   "set": "bedroom",
+   "sfx": [
+    {
+     "name": "shimmer",
+     "gain": -12,
+     "at": 1.939
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s22",
+   "start": 71.585,
+   "end": 76.051,
+   "line": "Tem cordinhas amarradas nas suas mãos, nos seus pés e na sua cabeça.",
+   "scene": "Cordinhas nas mãos, pés e cabeça",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "swish",
+     "gain": -14,
+     "at": 2.141
+    },
+    {
+     "name": "swish",
+     "gain": -14,
+     "at": 3.014
+    },
+    {
+     "name": "swish",
+     "gain": -14,
+     "at": 3.77
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "start": 76.051,
+   "end": 79.821,
+   "line": "Elas sobem por um tubo… até um sino em cima do seu túmulo.",
+   "scene": "O tubo sobe até o sino no túmulo",
+   "set": "underground",
+   "sfx": [
+    {
+     "name": "riser",
+     "gain": -16,
+     "at": 0.501
+    },
+    {
+     "name": "ding",
+     "gain": -12,
+     "at": 1.964
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s24",
+   "start": 79.821,
+   "end": 82.46,
+   "line": "Você puxa. Lá em cima, o sino toca.",
+   "scene": "Você puxa; o sino toca lá em cima",
+   "set": "coffin",
+   "sfx": [
+    {
+     "name": "swish",
+     "gain": -10,
+     "at": 0.524
+    },
+    {
+     "name": "ding",
+     "gain": -4,
+     "at": 0.889
+    },
+    {
+     "name": "ding",
+     "gain": -7,
+     "at": 1.589
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -30
+   }
+  },
+  {
+   "id": "s25",
+   "start": 82.46,
+   "end": 85.21,
+   "line": "O vigia noturno do cemitério ouve.",
+   "scene": "O vigia noturno ouve, lanterna na mão",
+   "set": "cemetery",
+   "sfx": [
+    {
+     "name": "ding",
+     "gain": -16,
+     "at": 0.1
+    },
+    {
+     "name": "ding",
+     "gain": -18,
+     "at": 1.1
+    },
+    {
+     "name": "footstep",
+     "gain": -18,
+     "at": 0.3
+    },
+    {
+     "name": "footstep",
+     "gain": -18,
+     "at": 0.8
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s26",
+   "start": 85.21,
+   "end": 89.354,
+   "line": "Ele enfia um segundo tubo no caixão e bombeia ar pra dentro com um fole,",
+   "scene": "O vigia bombeia ar com um fole",
+   "set": "cemetery",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -16,
+     "pitch": 0.5,
+     "at": 2.325
+    },
+    {
+     "name": "whoosh",
+     "gain": -16,
+     "pitch": 0.5,
+     "at": 3.225
+    },
+    {
+     "name": "whoosh",
+     "gain": -16,
+     "pitch": 0.5,
+     "at": 4.125
+    },
+    {
+     "name": "whoosh",
+     "gain": -16,
+     "pitch": 0.5,
+     "at": 5.025
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s27",
+   "start": 89.354,
+   "end": 91.588,
+   "line": "enquanto cavam pra te tirar dali.",
+   "scene": "Ar descendo pelo tubo enquanto cavam",
+   "set": "underground",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -18,
+     "at": 0.12
+    },
+    {
+     "name": "hit",
+     "gain": -18,
+     "at": 0.62
+    },
+    {
+     "name": "hit",
+     "gain": -18,
+     "at": 1.12
+    },
+    {
+     "name": "hit",
+     "gain": -18,
+     "at": 1.62
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s28",
+   "start": 91.588,
+   "end": 93.767,
+   "line": "Parece invenção, mas era real.",
+   "scene": "Parece invenção, mas era real: patentes",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "stinger",
+     "gain": -10,
+     "at": 1.897
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 93.767,
+   "end": 100.691,
+   "line": "Só na Alemanha, mais de 30 modelos de caixão de segurança foram patenteados no fim dos anos 1800.",
+   "scene": "Mais de 30 modelos patenteados na Alemanha",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "counter",
+     "gain": -14,
+     "at": 1.13
+    }
+   ]
+  },
+  {
+   "id": "s30",
+   "start": 100.691,
+   "end": 103.86,
+   "line": "Um médico alemão se enterrou vivo pra testar o dele.",
+   "scene": "Médico alemão (sem rosto) se enterra para testar",
+   "set": "underground",
+   "sfx": [],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s31",
+   "start": 103.86,
+   "end": 108.263,
+   "line": "Ficou horas lá embaixo… e comeu sopa, cerveja e linguiça por um tubo.",
+   "scene": "Sopa, cerveja e linguiça descendo pelo tubo",
+   "set": "underground",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 1.973
+    },
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 2.32
+    },
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 2.899
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s32",
+   "start": 108.263,
+   "end": 110.128,
+   "line": "Mas tem um problema.",
+   "scene": "Mas tem um problema: o sino parado na névoa",
+   "set": "cemetery",
+   "sfx": [
+    {
+     "name": "freeze",
+     "gain": -12,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s33",
+   "start": 110.128,
+   "end": 114.896,
+   "line": "Quando um corpo de verdade começa a se decompor, ele incha e se mexe sozinho.",
+   "scene": "Corpo se decompõe, incha e se mexe",
+   "set": "underground",
+   "sfx": [],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s34",
+   "start": 114.896,
+   "end": 116.926,
+   "line": "E isso puxava as cordas.",
+   "scene": "A corda puxa; o sino balança",
+   "set": "underground",
+   "sfx": [
+    {
+     "name": "ding",
+     "gain": -8,
+     "at": 1.062
+    },
+    {
+     "name": "ding",
+     "gain": -12,
+     "at": 1.762
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s35",
+   "start": 116.926,
+   "end": 122.404,
+   "line": "Imagina o vigia ouvindo um sino de madrugada… sem saber se é você ou só um morto inchando.",
+   "scene": "O vigia ouve o sino de madrugada: você ou um morto?",
+   "set": "face",
+   "sfx": [
+    {
+     "name": "ding",
+     "gain": -20,
+     "at": 0.3
+    },
+    {
+     "name": "ding",
+     "gain": -20,
+     "at": 1.6
+    },
+    {
+     "name": "riser",
+     "gain": -16,
+     "at": 3.164
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s36",
+   "start": 122.404,
+   "end": 125.745,
+   "line": "Na Alemanha criaram até \"casas de espera\" para os mortos.",
+   "scene": "MUNIQUE / CASAS DE ESPERA",
+   "set": "mortuary",
+   "sfx": [],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s37",
+   "start": 125.745,
+   "end": 131.773,
+   "line": "A maior, em Munique, tinha lugar para 120 corpos, com os dedos amarrados a um sino bem forte.",
+   "scene": "120 corpos, dedos amarrados a um sino",
+   "set": "mortuary",
+   "sfx": [
+    {
+     "name": "counter",
+     "gain": -14,
+     "at": 2.312
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s38",
+   "start": 131.773,
+   "end": 134.768,
+   "line": "Os corpos ficavam ali até começarem a apodrecer,",
+   "scene": "Os dias passando no salão",
+   "set": "mortuary",
+   "sfx": [
+    {
+     "name": "clock",
+     "gain": -18,
+     "dur": 3.0,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s39",
+   "start": 134.768,
+   "end": 139.548,
+   "line": "porque para os médicos da época esse era o único sinal de morte garantido.",
+   "scene": "O único sinal de morte garantido",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "ding",
+     "gain": -12,
+     "at": 2.66
+    }
+   ]
+  },
+  {
+   "id": "s40",
+   "start": 139.548,
+   "end": 142.65,
+   "line": "E sabe quantas pessoas essas casas salvaram?",
+   "scene": "Quantas pessoas essas casas salvaram?",
+   "set": "face",
+   "sfx": [],
+   "amb": {
+    "name": "roomtone",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s41",
+   "start": 142.65,
+   "end": 147.632,
+   "line": "Um historiador foi atrás de cada história de sino tocando e de morto acordando.",
+   "scene": "Historiador (sem rosto) com pilhas de registros",
+   "set": "bedroom",
+   "sfx": [],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s42",
+   "start": 147.632,
+   "end": 149.481,
+   "line": "Resultado: nenhuma.",
+   "scene": "Resultado: nenhuma — 0",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "impact",
+     "gain": -6,
+     "at": 0.989
+    }
+   ]
+  },
+  {
+   "id": "s43",
+   "start": 149.481,
+   "end": 155.297,
+   "line": "E até hoje não existe nenhum caso registrado de alguém salvo por um caixão de segurança.",
+   "scene": "Nenhum caso registrado de caixão de segurança",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -10,
+     "at": 1.968
+    }
+   ]
+  },
+  {
+   "id": "s44",
+   "start": 155.297,
+   "end": 160.359,
+   "line": "O lado bom é que os médicos daquela época erravam bem menos do que o povo achava.",
+   "scene": "Médicos erravam menos do que o povo achava",
+   "set": "bedroom",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -14,
+     "at": 2.582
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s45",
+   "start": 160.359,
+   "end": 164.03,
+   "line": "E \"salvo pelo gongo\"? Não vem dos caixões. Vem do boxe.",
+   "scene": "Salvo pelo gongo: vem do boxe",
+   "set": "ring",
+   "sfx": [
+    {
+     "name": "ding",
+     "gain": -6,
+     "pitch": 1.4,
+     "at": 1.025
+    },
+    {
+     "name": "cheer",
+     "gain": -22,
+     "dur": 2.5,
+     "at": 2.696
+    }
+   ],
+   "amb": {
+    "name": "murmur",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s46",
+   "start": 164.03,
+   "end": 171.01,
+   "line": "Mesmo assim, até George Washington, no leito de morte, pediu para só ser colocado no túmulo três dias depois.",
+   "scene": "George Washington (silhueta) no leito de morte: 3 dias",
+   "set": "bedroom",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 5.681
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s47",
+   "start": 171.01,
+   "end": 180.61,
+   "line": "Então me diz: você ia querer um sino no seu caixão… ou pediria pra esperar uns dias antes do enterro? Comenta aí.",
+   "scene": "Tela final: sino ou esperar? Comenta aí",
+   "set": "end",
+   "captions": false,
+   "sfx": [
+    {
+     "name": "shimmer",
+     "gain": -14,
+     "at": 0.2
+    },
+    {
+     "name": "pop",
+     "gain": -10,
+     "at": 6.992
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 32.605000000000004,
+   "mood": "mystery",
+   "intensity": 0.4
+  },
+  {
+   "start": 32.605000000000004,
+   "end": 65.387,
+   "mood": "tension",
+   "intensity": 0.55
+  },
+  {
+   "start": 65.387,
+   "end": 108.263,
+   "mood": "tension",
+   "intensity": 0.45
+  },
+  {
+   "start": 108.263,
+   "end": 139.548,
+   "mood": "dark",
+   "intensity": 0.6
+  },
+  {
+   "start": 139.548,
+   "end": 171.01,
+   "mood": "mystery",
+   "intensity": 0.4
+  },
+  {
+   "start": 171.01,
+   "end": 180.61,
+   "mood": "mystery",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": []
+}
