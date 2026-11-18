@@ -1,0 +1,989 @@
+{
+ "title": "O que aconteceria se você fosse preso numa cela toda rosa?",
+ "duration": 153.67,
+ "shots": [
+  {
+   "id": "s01",
+   "start": 0,
+   "end": 4.401,
+   "line": "O que aconteceria se você fosse preso numa cela toda rosa?",
+   "scene": "Abertura: porta de cela com luz rosa vazando no corredor escuro; título",
+   "set": "corredor",
+   "in": {
+    "type": "fade",
+    "dur": 0.3
+   },
+   "captions": false,
+   "sfx": [
+    {
+     "name": "riser",
+     "gain": -14,
+     "at": 0.1
+    },
+    {
+     "name": "hum",
+     "gain": -24,
+     "dur": 4.0,
+     "at": 0.2
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s02",
+   "start": 4.401,
+   "end": 8.759,
+   "line": "Suíça. Você está preso e acabou de arrumar briga com outro detento.",
+   "scene": "SUÍÇA; você empurra outro detento",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -12,
+     "at": 0.0
+    },
+    {
+     "name": "hit",
+     "gain": -6,
+     "at": 2.691
+    },
+    {
+     "name": "murmur",
+     "gain": -22,
+     "dur": 4.0,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s03",
+   "start": 8.759,
+   "end": 12.533,
+   "line": "Os guardas te seguram e te levam pra cela de castigo.",
+   "scene": "Dois guardas te seguram e te levam pelo corredor",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": -0.0
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 0.4
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 0.8
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 1.2
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 1.6
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 2.0
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 2.4
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 2.8
+    },
+    {
+     "name": "footstep",
+     "gain": -16,
+     "at": 3.2
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s04",
+   "start": 12.533,
+   "end": 15.197,
+   "line": "A porta abre… e tudo lá dentro é rosa.",
+   "scene": "A porta abre: luz rosa invade tudo",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "slowmo",
+     "gain": -14,
+     "at": 0.0
+    },
+    {
+     "name": "impact",
+     "gain": -8,
+     "pitch": 1.2,
+     "at": 2.093
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s05",
+   "start": 15.197,
+   "end": 19.515,
+   "line": "As paredes, o teto, até o chão. Um rosa forte, cor de chiclete.",
+   "scene": "Dentro: paredes, teto, chão rosa; amostra cor de chiclete",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 0.401
+    },
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 1.066
+    },
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 1.791
+    },
+    {
+     "name": "ding",
+     "gain": -12,
+     "pitch": 1.5,
+     "at": 3.484
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s06",
+   "start": 19.515,
+   "end": 22.051,
+   "line": "Isso não é piada. É de propósito.",
+   "scene": "Você sentado, confuso; carimbo DE PROPÓSITO",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -10,
+     "at": 1.631
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s07",
+   "start": 22.051,
+   "end": 23.756,
+   "line": "Tudo começou em 1979,",
+   "scene": "1979: laboratório; cartaz rosa no cavalete",
+   "set": "lab",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -12,
+     "at": 0.0
+    },
+    {
+     "name": "ding",
+     "gain": -16,
+     "at": 0.4
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s08",
+   "start": 23.756,
+   "end": 28.19,
+   "line": "com um pesquisador americano chamado Alexander Schauss.",
+   "scene": "Alexander Schauss (sem rosto)",
+   "set": "lab",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -14,
+     "at": 2.818
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s09",
+   "start": 28.19,
+   "end": 33.627,
+   "line": "Ele pedia pra homens olharem pra um cartaz rosa com os braços esticados pra frente.",
+   "scene": "Homem olha o cartaz rosa com os braços esticados",
+   "set": "lab",
+   "sfx": [],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s10",
+   "start": 33.627,
+   "end": 37.13,
+   "line": "Depois, alguém empurrava os braços deles pra baixo.",
+   "scene": "Alguém empurra os braços para baixo",
+   "set": "lab",
+   "sfx": [
+    {
+     "name": "swish",
+     "gain": -10,
+     "at": 1.101
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s11",
+   "start": 37.13,
+   "end": 40.747,
+   "line": "E, segundo ele, quem olhava pro rosa ficava mais fraco.",
+   "scene": "Força: olhando branco x olhando rosa",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "blip",
+     "gain": -12,
+     "at": 2.991
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "start": 40.747,
+   "end": 45.712,
+   "line": "Dois oficiais de uma prisão da Marinha americana, em Seattle, resolveram testar.",
+   "scene": "Prisão da Marinha em Seattle; dois oficiais sem rosto",
+   "set": "naval",
+   "sfx": [
+    {
+     "name": "wind",
+     "gain": -22,
+     "dur": 5.0,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "wind",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s13",
+   "start": 45.712,
+   "end": 49.695,
+   "line": "Misturaram um pote de tinta vermelha com um galão de tinta branca…",
+   "scene": "Tinta vermelha + galão branco = rosa",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 1.796
+    },
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 3.541
+    },
+    {
+     "name": "shimmer",
+     "gain": -14,
+     "at": 4.041
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "start": 49.695,
+   "end": 51.565,
+   "line": "e pintaram uma cela inteira.",
+   "scene": "Rolo pintando a cela de rosa",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -12,
+     "pitch": 0.6,
+     "at": 0.12
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s15",
+   "start": 51.565,
+   "end": 58.064,
+   "line": "Eles disseram que, nos 156 dias seguintes, nenhum preso que entrou ali ficou agressivo.",
+   "scene": "156 dias, 0 agressões",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "counter",
+     "gain": -14,
+     "at": 1.601
+    },
+    {
+     "name": "ding",
+     "gain": -12,
+     "at": 3.176
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "start": 58.064,
+   "end": 61.578,
+   "line": "E que a calma durava até meia hora depois de sair.",
+   "scene": "Preso sai calmo; relógio 30 min",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "clock",
+     "gain": -16,
+     "dur": 3.0,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s17",
+   "start": 61.578,
+   "end": 63.385,
+   "line": "A ideia se espalhou.",
+   "scene": "A ideia se espalha: pontos rosa no mapa",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.0
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.08
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.16
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.24
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.32
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.4
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.48
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.56
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.64
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.72
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.8
+    },
+    {
+     "name": "blip",
+     "gain": -18,
+     "at": 0.88
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "start": 63.385,
+   "end": 66.963,
+   "line": "Prisões e alas psiquiátricas pintaram celas de rosa.",
+   "scene": "Fileira de celas ficando rosa",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 0.6
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 0.78
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 0.96
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 1.14
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 1.32
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 1.5
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 1.68
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 1.86
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 2.04
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 2.22
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 2.4
+    },
+    {
+     "name": "pop",
+     "gain": -18,
+     "at": 2.58
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "start": 66.963,
+   "end": 72.8,
+   "line": "Um técnico de futebol americano nos Estados Unidos pintou de rosa o vestiário do time visitante,",
+   "scene": "Técnico (sem rosto) pinta o vestiário visitante de rosa",
+   "set": "vestiario",
+   "sfx": [
+    {
+     "name": "swish",
+     "gain": -18,
+     "at": 1.0
+    },
+    {
+     "name": "swish",
+     "gain": -18,
+     "at": 1.6
+    },
+    {
+     "name": "swish",
+     "gain": -18,
+     "at": 2.2
+    },
+    {
+     "name": "swish",
+     "gain": -18,
+     "at": 2.8
+    },
+    {
+     "name": "swish",
+     "gain": -18,
+     "at": 3.4
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s20",
+   "start": 72.8,
+   "end": 75.279,
+   "line": "pra deixar os adversários \"mansos\".",
+   "scene": "Jogadores visitantes mansos",
+   "set": "vestiario",
+   "sfx": [
+    {
+     "name": "ding",
+     "gain": -14,
+     "at": 1.658
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s21",
+   "start": 75.279,
+   "end": 78.806,
+   "line": "E até hoje esse vestiário é rosa. Até os mictórios.",
+   "scene": "Até hoje: mictórios rosa",
+   "set": "vestiario",
+   "sfx": [
+    {
+     "name": "impact",
+     "gain": -10,
+     "pitch": 1.3,
+     "at": 2.646
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -24
+   }
+  },
+  {
+   "id": "s22",
+   "start": 78.806,
+   "end": 81.353,
+   "line": "Agora, de volta pra você na cela.",
+   "scene": "De volta a você na cela rosa",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -12,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s23",
+   "start": 81.353,
+   "end": 87.537,
+   "line": "A psicóloga que trouxe o rosa pras prisões suíças diz que a raiva pode baixar em 15 minutos.",
+   "scene": "Psicóloga suíça (sem rosto): raiva baixa em 15 min",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 4.914
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "start": 87.537,
+   "end": 90.37,
+   "line": "Mas você vai ficar lá umas duas horas.",
+   "scene": "Relógio: 2 horas",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "clock",
+     "gain": -14,
+     "dur": 2.8,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s25",
+   "start": 90.37,
+   "end": 94.66,
+   "line": "E, enquanto isso, você não se sente calmo. Você se sente humilhado.",
+   "scene": "Close: humilhado",
+   "set": "face",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -10,
+     "at": 3.439
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s26",
+   "start": 94.66,
+   "end": 98.366,
+   "line": "Os outros presos dizem que parece quarto de menininha.",
+   "scene": "Outros presos rindo: quarto de menininha",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "murmur",
+     "gain": -16,
+     "dur": 3.6,
+     "at": 0.0
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s27",
+   "start": 98.366,
+   "end": 102.394,
+   "line": "Sair da cela rosa pode te fazer perder o respeito lá dentro.",
+   "scene": "Você sai da cela; respeito cai",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "glitch",
+     "gain": -14,
+     "at": 2.625
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s28",
+   "start": 102.394,
+   "end": 104.527,
+   "line": "E aqui vem a reviravolta.",
+   "scene": "A reviravolta",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "riser",
+     "gain": -14,
+     "at": -0.6
+    },
+    {
+     "name": "stinger",
+     "gain": -8,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "id": "s29",
+   "start": 104.527,
+   "end": 108.439,
+   "line": "No teste dos braços, quem empurrava também via a cor do cartaz…",
+   "scene": "Quem empurrava também via o cartaz",
+   "set": "lab",
+   "sfx": [
+    {
+     "name": "blip",
+     "gain": -12,
+     "at": 2.704
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s30",
+   "start": 108.439,
+   "end": 111.562,
+   "line": "e podia estar empurrando mais forte sem perceber.",
+   "scene": "Empurrando mais forte sem perceber",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -10,
+     "at": 1.738
+    }
+   ]
+  },
+  {
+   "id": "s31",
+   "start": 111.562,
+   "end": 115.859,
+   "line": "O próprio Schauss repetiu os testes depois e não viu a calma de novo.",
+   "scene": "Schauss repete os testes: sem efeito",
+   "set": "lab",
+   "sfx": [
+    {
+     "name": "hit",
+     "gain": -8,
+     "at": 2.693
+    }
+   ],
+   "amb": {
+    "name": "roomtone",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s32",
+   "start": 115.859,
+   "end": 120.509,
+   "line": "Ele até ficou com medo de que o rosa deixasse os presos mais violentos.",
+   "scene": "Medo: presos mais violentos",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "impact",
+     "gain": -8,
+     "at": 3.778
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s33",
+   "start": 120.509,
+   "end": 127.224,
+   "line": "Em 2014, cientistas fizeram o teste mais sério de todos, numa prisão de verdade, na Suíça.",
+   "scene": "2014, prisão de verdade na Suíça; cientistas",
+   "set": "corredor",
+   "sfx": [
+    {
+     "name": "whoosh",
+     "gain": -12,
+     "at": 0.0
+    },
+    {
+     "name": "ding",
+     "gain": -16,
+     "at": 0.4
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -28
+   }
+  },
+  {
+   "id": "s34",
+   "start": 127.224,
+   "end": 129.187,
+   "line": "Foram 59 presos de castigo.",
+   "scene": "59 presos de castigo",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "counter",
+     "gain": -16,
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "id": "s35",
+   "start": 129.187,
+   "end": 135.393,
+   "line": "Metade foi pra uma cela toda rosa, e a outra metade pra uma cela branca com chão cinza.",
+   "scene": "Metade cela rosa, metade cela branca com chão cinza",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 0.12
+    },
+    {
+     "name": "pop",
+     "gain": -12,
+     "at": 4.446
+    }
+   ]
+  },
+  {
+   "id": "s36",
+   "start": 135.393,
+   "end": 138.758,
+   "line": "Depois de três dias, todo mundo estava mais calmo.",
+   "scene": "Gráfico: todos mais calmos em 3 dias",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "riser",
+     "gain": -18,
+     "at": 0.0
+    }
+   ]
+  },
+  {
+   "id": "s37",
+   "start": 138.758,
+   "end": 141.697,
+   "line": "Mas a cor não fez nenhuma diferença.",
+   "scene": "As duas linhas iguais: nenhuma diferença",
+   "set": "blueprint",
+   "sfx": [
+    {
+     "name": "impact",
+     "gain": -8,
+     "at": 1.431
+    }
+   ]
+  },
+  {
+   "id": "s38",
+   "start": 141.697,
+   "end": 144.889,
+   "line": "Ou seja: o que te acalma não é o rosa. É o tempo.",
+   "scene": "Não é o rosa. É o tempo.",
+   "set": "cela",
+   "sfx": [
+    {
+     "name": "clock",
+     "gain": -14,
+     "dur": 2.0,
+     "at": 2.178
+    },
+    {
+     "name": "shimmer",
+     "gain": -12,
+     "at": 2.578
+    }
+   ],
+   "amb": {
+    "name": "hum",
+    "gain": -26
+   }
+  },
+  {
+   "id": "s39",
+   "start": 144.889,
+   "end": 153.67,
+   "line": "Então me diz: numa cela toda rosa, você ia ficar mais calmo… ou ainda mais irritado? Comenta aí.",
+   "scene": "Tela final: mais calmo ou mais irritado? Comenta aí",
+   "set": "end",
+   "captions": false,
+   "sfx": [
+    {
+     "name": "shimmer",
+     "gain": -14,
+     "at": 0.2
+    },
+    {
+     "name": "pop",
+     "gain": -10,
+     "at": 6.169
+    }
+   ]
+  }
+ ],
+ "music": [
+  {
+   "start": 0,
+   "end": 22.051000000000002,
+   "mood": "tension",
+   "intensity": 0.5
+  },
+  {
+   "start": 22.051000000000002,
+   "end": 78.806,
+   "mood": "playful",
+   "intensity": 0.4
+  },
+  {
+   "start": 78.806,
+   "end": 102.394,
+   "mood": "sad",
+   "intensity": 0.4
+  },
+  {
+   "start": 102.394,
+   "end": 144.889,
+   "mood": "mystery",
+   "intensity": 0.5
+  },
+  {
+   "start": 144.889,
+   "end": 153.67,
+   "mood": "mystery",
+   "intensity": 0.3
+  }
+ ],
+ "sfx": []
+}
