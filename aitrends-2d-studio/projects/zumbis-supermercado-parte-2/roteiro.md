@@ -1,9 +1,9 @@
-# O que aconteceria se... zumbis no supermercado — Parte 2
+# O que aconteceria se um surto zumbi começasse enquanto você está no supermercado? — Parte 2
 Escolha do público na Parte 1: entrar no escuro com uma lanterna para religar a luz.
 
 ## Narração
-1. O que aconteceria se você entrasse no escuro de um supermercado cheio de zumbis... só com uma lanterna?
-2. Vocês escolheram. A gente vai religar a luz.
+1. O que aconteceria se um surto zumbi começasse enquanto você está no supermercado? Parte dois.
+2. Vocês escolheram: entrar no escuro, só com uma lanterna, para religar a luz.
 3. São duas da manhã. Você está trancado no supermercado com mais dois sobreviventes. Lá fora, a horda.
 4. Aqui dentro, a energia acabou de cair. E isso é um problema: as fechaduras eletromagnéticas das portas se soltam quando falta energia. É uma regra de segurança contra incêndio. Sem luz, as portas abrem.
 5. As luzes de emergência têm bateria para mais ou menos uma hora. Já estão piscando.
@@ -22,7 +22,7 @@ Escolha do público na Parte 1: entrar no escuro com uma lanterna para religar a
 18. Você ligaria um por um... ou tudo de uma vez? Comenta aí.
 
 ## Cenas (resumo)
-- Abertura: fachada do supermercado à noite, horda na rua, título "O QUE ACONTECERIA / SE VOCÊ VOLTASSE AO / SUPERMERCADO · PARTE 2".
+- Abertura: fachada do supermercado à noite, horda na rua, título "O QUE ACONTECERIA / SE UM SURTO ZUMBI COMEÇASSE / NO SUPERMERCADO · PARTE 2".
 - Infográfico: fechadura eletromagnética abrindo sem energia; bateria da luz de emergência ~1 h.
 - Mapa em traço fino do mercado: caminho de 60 m até o quadro de força.
 - Lanterna coberta pela mão; corredor 7 com chão brilhando; tênis no chão.
@@ -33,5 +33,5 @@ Escolha do público na Parte 1: entrar no escuro com uma lanterna para religar a
 
 ## Textos de postagem
 TikTok: Vocês escolheram entrar no escuro com a lanterna. 🔦🧟 E agora: um disjuntor por vez ou tudo de uma vez? Comenta aí 👇 #zumbi #oqueaconteceria #terror #curiosidades #fyp
-YouTube (título): O que aconteceria se você religasse a luz de um supermercado cheio de zumbis? Parte 2 🧟 #shorts
+YouTube (título): O que aconteceria se um surto zumbi começasse enquanto você está no supermercado? Parte 2
 YouTube (descrição): Vocês escolheram: entrar no escuro só com uma lanterna para religar a luz. Mas o quadro de força guarda um problema. Um disjuntor por vez ou tudo de uma vez? Comenta aí 👇 #zumbi #oqueaconteceria #shorts
