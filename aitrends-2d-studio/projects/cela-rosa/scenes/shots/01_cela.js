@@ -157,7 +157,7 @@ registerShot('s13', { draw(g, t, info) {
   lata(g, 260, 900, 150, 180, '#d8303a', 'VERMELHA', ease.out(prog(t, tV - 0.3, tV)));
   text(g, '+', 440, 820, { size: 90, color: GOLD, font: FONTS.ui, weight: 900, alpha: ease.out(prog(t, tV, tV + 0.3)) });
   lata(g, 640, 900, 260, 300, '#f4f4f8', 'GALÃO BRANCO', ease.out(prog(t, tB - 0.3, tB)));
-  const k = ease.outBack(prog(t, tB + 0.4, tB + 0.8)); if (k > 0) { text(g, '=', E.W / 2, 1060, { size: 90, color: GOLD, font: FONTS.ui, weight: 900 }); g.save(); g.translate(E.W / 2, 1270); g.scale(k, k); lata(g, 0, 0, 200, 200, ROSA, 'ROSA', 1); g.restore(); }
+  const k = ease.outBack(prog(t, tB - 0.05, tB + 0.3)); if (prog(t, tB - 0.05, tB + 0.3) > 0.01) { text(g, '=', E.W / 2, 1060, { size: 90, color: GOLD, font: FONTS.ui, weight: 900 }); g.save(); g.translate(E.W / 2, 1270); g.scale(k, k); lata(g, 0, 0, 200, 200, ROSA, 'ROSA', 1); g.restore(); }
 } });
 
 // s14 — "e pintaram uma cela inteira." — o rolo de tinta passa
